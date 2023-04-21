@@ -2,7 +2,7 @@
   "firmware": [
     {
       "ID": "SFE-DATALOGGER-IOT",
-      "Version": "1.0.1",
+      "Version": "01.00.01",
       "VersionNumber": 010001,
       "Date" : "04-30-2023",
       "Description": "Final production release",
