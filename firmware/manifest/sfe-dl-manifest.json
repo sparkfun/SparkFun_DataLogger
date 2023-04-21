@@ -1,0 +1,13 @@
+{
+  "firmware": [
+    {
+      "ID": "SFE-DATALOGGER-IOT",
+      "Version": "1.0.1",
+      "VersionNumber": 010001,
+      "Date" : "04-30-2023",
+      "Description": "Final production release",
+      "URL": "https://raw.githubusercontent.com/gigapod/ota-demo-exp/main/bin/sfeDatalogger_01.00.01.bin",
+      "Hash" : "b56f40c6eadf128a06bda1dd45d7bbaf"
+    }
+  ]
+}
