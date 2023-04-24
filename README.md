@@ -1,4 +1,4 @@
-# SparkFun_DataLogger
+# SparkFun DataLogger
 
 
 
