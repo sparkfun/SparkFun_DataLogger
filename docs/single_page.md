@@ -47,7 +47,7 @@ icon: fontawesome/solid/scroll
 # Example - HTTP
 --8<-- "./docs/example_http.md"
 
-# Troubleshooting Tips
+# Troubleshooting
 --8<-- "./docs/troubleshooting.md"
 
 # Resources

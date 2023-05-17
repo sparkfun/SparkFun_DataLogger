@@ -105,4 +105,9 @@
          <lastmod>2023-05-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://sparkfun.github.io/SparkFun_DataLogger/javascript/</loc>
+         <lastmod>2023-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
