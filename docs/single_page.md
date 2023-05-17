@@ -23,7 +23,7 @@ icon: fontawesome/solid/scroll
 # Connecting to a WiFi Network
 --8<-- "./docs/wifi_network.md"
 
-# Adding Timestamp to Data
+# Adding a Timestamp to Data
 --8<-- "./docs/example_timestamp.md"
 
 # Example - Factory Reset

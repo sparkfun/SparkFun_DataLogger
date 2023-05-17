@@ -243,7 +243,7 @@ nav:
     - Configuration: configuration.md
     - Examples:
       - Connecting to a WiFi Network: wifi_network.md
-      - Adding Timestamp to Data: example_timestamp.md
+      - Adding a Timestamp to Data: example_timestamp.md
       - Factory Reset: factory_reset.md
       - Updating Firmware: updating_firmware.md
       - MQTT: example_mqtt.md
