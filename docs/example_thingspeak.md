@@ -4,7 +4,7 @@ One of the key features of the DataLogger IoT is it's simplified access to IoT s
 
 
 <div style="text-align: center">
-  <a href="https://thingspeak.com/"><img src="../assets/ThingSpeak_logo.png" width="300" length="300" alt="ThingSpeak Logo"></a>
+  <a href="https://thingspeak.com/"><img src="../assets/thingspeak_logo.png" width="300" length="300" alt="ThingSpeak Logo"></a>
   <br />
   <i>Image Courtesy of <a href="https://thingspeak.com/">ThingSpeak</a></i>
 </div>
