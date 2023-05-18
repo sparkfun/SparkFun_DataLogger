@@ -1,0 +1,258 @@
+# Documentation page information
+site_name: SparkFun DataLogger IoT Hookup Guide
+site_description: A hookup guide for the SparkFun Datalogger IoT
+site_url: https://sparkfun.github.io/SparkFun_DataLogger
+site_author: SparkFun Electronics
+
+repo_url: https://github.com/sparkfun/SparkFun_DataLogger
+repo_name: sparkfun/SparkFun_DataLogger
+
+copyright:
+  Copyright 2023 - <a href="https://www.sparkfun.com/" target="_blank" rel="noopener">SparkFun Electronics&#174;<br>
+  <a href="https://goo.gl/maps/vkstCpQZW6jZMjzYA" target="_blank" rel="noopener">6333 Dry Creek Parkway, Niwot, Colorado 80503</a>
+
+# Default edit/view actions to "main" branch, instead of "master"
+edit_uri: blob/main/docs/
+
+# Configuration for webpage theme
+theme:
+  # Theme: https://squidfunk.github.io/mkdocs-material/
+  name: material
+
+  # Icon in Browser Tab (must be square img - i.e. 32x32 pixels)
+  favicon: assets/sfe_logo_sq.png
+
+  # Page Font
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # Features to Include (ref. theme documentation)
+  features:
+
+    # Enable copy button on code blocks
+    - content.code.copy
+
+    # Enable annotations in code blocks
+    - content.code.annotate
+
+    # Enable "view source" and "edit this page" buttons
+    - content.action.edit
+    # - content.action.view
+
+    # Enable Navigation buttons in the footer (i.e. previous/next)
+    - navigation.footer
+
+    # Enables anchor tracking (updates page url with the section user is on)
+    # i.e. https://docs.sparkfun.com/<page link>/#<sub-section>
+    - navigation.tracking
+    - navigation.tabs.sticky
+
+    # Enables tabs for navigating the website
+    - navigation.tabs
+    # Keeps tabs visible in the header when scrolling
+    - navigation.tabs.sticky
+
+    # Adds pop-up button just below the header (when the user starts to scroll up)
+    # Allows users to easily jump to the beginning of the page
+    - navigation.top
+
+    # Renders path for page navigation at top of the page (makes page navigation more mobile friendly)
+    - navigation.path
+
+
+  # Adds light/dark theme to the webpage
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: grey
+      accent: red
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: grey
+      accent: red
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: grey
+      accent: red
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  # Configures icons
+  icon:
+    # Sets homepage icon
+    logo: sfe-logo
+
+    # Sets repo icon to GitHub icon
+    repo: fontawesome/brands/github
+
+    # Sets icons for "view source" (commented out) and "edit this page" buttons
+    edit: material/file-document-edit-outline
+    # view: material/file-code-outline
+
+    # Admonition Icons (callout boxes)
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: simple/sparkfun
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+      # Add custom admonitions
+      github: simple/github
+      arduino: simple/arduino
+      python: simple/python
+      code: fontawesome/regular/file-code
+      terminal: octicons/terminal-16
+      serial: fontawesome/solid/display
+      hot: material/fire-alert
+      # Permalink icon
+      link: octicons/link-16
+
+  # Adds overrides for stylesheets, html, etc.
+  custom_dir: overrides
+
+
+# Included MkDocs plugins
+# Add the installation of any new plugins to the ./github/workflows/mkdocs.yml file also
+plugins:
+  - search
+  - typeset
+  - redirects:
+      redirect_maps:
+          'index.md': 'introduction.md'
+  # Add revision date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  # Add git committers at bottom of the page
+  - git-committers:
+      repository: sparkfun/SparkFun_DataLogger
+      branch: main
+  # Add git authors at bottom of the page
+  - git-authors
+  # Enables use of Git submodules and larger code base
+  - monorepo
+  # For PDF rendering
+#  - with-pdf:
+#      author: SparkFun Electronics&#174;
+#      copyright: Copyright 2023 - SparkFun Electronics&#174;
+#      cover_subtitle: none
+#      cover_logo: img/sfe_logo_sm.png
+#      exclude_pages: [ "hard_copy", "single_page", "file_issue", "contribute" ]
+      # render_js: true
+      # headless_chrome_path: headless-chromium
+#      output_path: board_files/hookup_guide.pdf
+
+
+# Included Markdown extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      # base_path: ['./docs']
+      url_download: true
+      url_max_size: 0
+      url_timeout: 0
+      url_request_headers: {}
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.keys
+  - tables
+  - admonition
+  - md_in_html
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ''
+      # Link: &#x1F517; 🔗
+      # Chain: &#x26D3; ⛓
+
+
+
+extra:
+  # Configures the hyperlink for the logo in the header
+  homepage: https://www.sparkfun.com/
+
+  # Configures social icons in the footer
+  social:
+    - icon: sfe-logo
+      link: https://www.sparkfun.com/products/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/sparkfun
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/sparkfun
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/sparkfun
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/SparkFun
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/sparkfun
+
+
+# Configures styling for PDF rendering and webpage layout
+extra_css:
+  - stylesheet/extra.css
+
+# Enables support for rendering block and inline block equations through MathJax
+extra_javascript:
+#  # Enables support for rendering block and inline block equations through MathJax
+  - javascript/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Configures webpage navigation
+nav:
+  - Getting Started:
+    - Introduction: introduction.md
+    - Hardware Overview: hardware_overview.md
+    - Hardware Hookup: hardware_hookup.md
+    - Preparing Your MicroSD Card: prepare_your_microsd_card.md
+    - Configuration: configuration.md
+    - Examples:
+      - Connecting to a WiFi Network: wifi_network.md
+      - Adding a Timestamp to Data: example_timestamp.md
+      - Factory Reset: factory_reset.md
+      - Updating Firmware: updating_firmware.md
+      - MQTT: example_mqtt.md
+      - AWS: example_aws.md
+      - ThingSpeak: example_thingspeak.md
+      - Azure: example_azure.md
+      - HTTP: example_http.md
+  - Resources: resources.md
+  - Support:
+    - Troubleshooting: troubleshooting.md
+    - Submit Issues: file_issue.md
+    - Contribute: contribute.md
