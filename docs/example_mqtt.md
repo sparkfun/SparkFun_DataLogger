@@ -2,6 +2,12 @@
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers and servers. This document outlines how output from a DataLogger device is sent to an MQTT Broker.
 
+<div style="text-align: center">
+  <a href="https://mqtt.org/"><img src="../assets/MQTT_Logo.png" width="300" length="300" alt="MQTT Logo"></a>
+  <br />
+  <i>Image Courtesy of <a href="https://mqtt.org/">MQTT</a></i>
+</div>
+
 The following is covered by this document:
 
 * Overview of the MQTT connection
