@@ -209,7 +209,7 @@ extra:
   # Configures social icons in the footer
   social:
     - icon: sfe-logo
-      link: https://www.sparkfun.com/products/
+      link: https://www.sparkfun.com/
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/sparkfun
     - icon: fontawesome/brands/instagram
