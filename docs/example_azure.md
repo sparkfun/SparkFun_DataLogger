@@ -2,6 +2,12 @@
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how an Azure IoT device is used by the DataLogger IoT.
 
+<div style="text-align: center">
+    <a href="https://azure.microsoft.com/en-us/"><img src="../assets/Microsoft_Azure_Logo.png" width="300" length="300" alt="Microsoft Azure Logo"></a>
+    <br />
+    <i>Image Courtesy of <a href="https://azure.microsoft.com/en-us/">Microsoft Azure</a></i>
+</div>
+
 The following is covered by this document:
 
 * Device creation Azure
@@ -29,9 +35,11 @@ The actual IoT device communicates with it's Azure representation via a secure M
 
 ## Creating a Device in Azure IoT
 
-The following discussion outlines the basic steps taken to create a Device in Azure IoT that the DataLogger IoT can connect to.
+The following discussion outlines the basic steps taken to create a Device in Azure IoT that the DataLogger IoT can connect to. First step is to log into your Azure account and create an IoT Hub for your device.
 
-First step is to log into your Azure account and Select **Internet of Things > IoT Hub** from the menu of services.
+<div style="text-align: center"><a href="https://azure.microsoft.com/en-us/" target="azure" class="md-button">Click Here to Log into Microsoft Azure</a></div>
+
+Once logged into your Microsoft Azure account, select **Internet of Things > IoT Hub** from the menu of services.
 
 <div style="text-align: center">
   <a href="../assets/iot_az_iot_hub.png"><img src="../assets/iot_az_iot_hub.png" alt="Azure IoT Hub"></a>

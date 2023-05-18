@@ -2,6 +2,15 @@
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how a ThinkSpeak output is used by the DataLogger IoT.
 
+
+<div style="text-align: center">
+  <a href="https://thingspeak.com/"><img src="../assets/ThingSpeak_logo.png" width="300" length="300" alt="ThingSpeak Logo"></a>
+  <br />
+  <i>Image Courtesy of <a href="https://thingspeak.com/">ThingSpeak</a></i>
+</div>
+
+
+
 The following is covered by this document:
 
 * Creating a ThingSpeak Channel and MQTT Connection
@@ -39,12 +48,7 @@ The concept of Channels that contain Fields in ThingSpeak is similar to the Devi
   <a href="../assets/iot_ts_mapping.png"><img src="../assets/iot_ts_mapping.png" alt="DataLogger to ThingSpeak Mapping"></a>
 </div>
 
-    insert here
 
-
-
-
-    update image...
 
 During configuration of the DataLogger IoT, the mapping between the Device and ThingSpeak channel is specified. The data to field mapping is automatically created by the DataLogger IoT following the data reporting order from the specific device driver.
 
@@ -52,9 +56,11 @@ During configuration of the DataLogger IoT, the mapping between the Device and T
 
 ## Creating a Device to a ThingSpeak Channel
 
-The following discussion outlines the basic steps taken to create a Channel in ThingSpeak and then connect it to the DataLogger's Device.
+The following discussion outlines the basic steps taken to create a Channel in ThingSpeak and then connect it to the DataLogger's Device. First step is to log into your [ThingSpeak](https://thingspeak.com/) and create a Channel.
 
-First step is to log into your ThingSpeak and create a Channel. Once logged into your ThingSpeak account, select ***Channels > My Channels*** menu item and on the **My Channel** page, select the **New Channel** button.
+<div style="text-align: center"><a href="https://thingspeak.com/" target="thingspeak" class="md-button">Click Here to Log into ThingSpeak</a></div>
+
+Once logged into your ThingSpeak account, select ***Channels > My Channels*** menu item and on the **My Channel** page, select the **New Channel** button.
 
 <div style="text-align: center">
   <a href="../assets/iot_ts_channel.png"><img src="../assets/iot_ts_channel.png" alt="New Channel"></a>
@@ -93,10 +99,8 @@ On the presented dialog, enter a name for the MQTT connection and in the **Autho
 The selected Channel is then listed in the **Authorized Channel** table. Ensure that the Allow Publish and Allow Subscribe attributes are enabled for the added channel.
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_mqtt_channel_auth.png"><img src="../assets/iot_ts_mqtt_channel_auth.png" alt="MQTT on ThingSpeak"></a>
+  <a href="../assets/iot_ts_mqtt_channel_auth.png"><img src="../assets/iot_ts_mqtt_channel_auth.png" alt="MQTT Channel Authorization on ThingSpeak"></a>
 </div>
-
-Channel Authorization.
 
 At this point, the ThingSpeak Channel is setup for access by the DataLogger IoT.
 

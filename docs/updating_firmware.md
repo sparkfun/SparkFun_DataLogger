@@ -6,9 +6,9 @@ This action enables the ability to update the onboard firmware to an image file 
 
 This option is available on ESP32 devices that contained two update firmware (OTA type) partitions within the on-board device flash memory. Consult the specific products production and build system for further details.
 
-To download the latest firmware and update through the microSD card, you will need to head to the [GitHub repository containing the firmware](https://github.com/sparkfun/SparkFun_DataLogger/tree/main/firmware/bin). Select the firmware version and download.
+To download the latest firmware and update through the microSD card, you will need to head to the [GitHub repository containing the firmware](https://github.com/sparkfun/SparkFun_DataLogger/releases). Select the firmware version and download.
 
-<div style="text-align: center"><a href="https://github.com/sparkfun/SparkFun_DataLogger/tree/main/firmware/bin" target="sfe_datalogger_firmware" class="md-button">GitHub: SparkFun DataLogger > firmware > bin</a></div>
+<div style="text-align: center"><a href="https://github.com/sparkfun/SparkFun_DataLogger/releases" target="sfe_datalogger_firmware" class="md-button">GitHub: SparkFun DataLogger | Firmware Releases</a></div>
 
 Once downloaded, insert the microSD card into a card reader or USB adapter. Then move the files into the memory card's root directory. Below shows an image of v01.00.01 and v01.00.02 on a Windows OS.
 
