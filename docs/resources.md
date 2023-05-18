@@ -6,3 +6,4 @@ Now that you've successfully got your DataLogger IoT - 9DoF up and running, it's
 * [CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 * [Firmware](https://github.com/sparkfun/SparkFun_DataLogger/tree/main/firmware)
 * [GitHub Hardware Repo](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)
+* [SFE Showcase](https://youtu.be/RwCu-60sQOI)
