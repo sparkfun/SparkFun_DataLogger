@@ -3,7 +3,7 @@
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how an Azure IoT device is used by the DataLogger IoT.
 
 <div style="text-align: center">
-    <a href="https://azure.microsoft.com/en-us/"><img src="../assets/Microsoft_Azure_Logo.png" width="300" length="300" alt="Microsoft Azure Logo"></a>
+    <a href="https://azure.microsoft.com/en-us/"><img src="../assets/Microsoft_Azure_Logo.png" width="100" length="100" alt="Microsoft Azure Logo"></a>
     <br />
     <i>Image Courtesy of <a href="https://azure.microsoft.com/en-us/">Microsoft Azure</a></i>
 </div>
