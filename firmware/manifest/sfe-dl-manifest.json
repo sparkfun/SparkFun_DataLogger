@@ -8,6 +8,15 @@
       "Description": "Final production release",
       "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.01.bin",
       "Hash" : "b56f40c6eadf128a06bda1dd45d7bbaf"
+    },
+    {
+      "ID": "SFE-DATALOGGER-IOT",
+      "Version": "01.00.02",
+      "VersionNumber": 010002,
+      "Date" : "05-18-2023",
+      "Description": "Launch release/update",
+      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.02.bin",
+      "Hash" : "e0fa3646a7641bba9fa41f94a7dcbe83"
     }
   ]
 }
