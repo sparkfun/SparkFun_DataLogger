@@ -85,20 +85,20 @@ Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputtin
 
 The data scrolling up the screen show what each device's output is along with their associated unit if it is available.
 
-* MAX17048.Voltage (V)
-* MAX17048.State of Charge (%)
-* MAX17048.Charge Rate (%/hr)
-* ISM330.Accel X (milli-g)
-* ISM330.Accel Y (milli-g)
-* ISM330.Accel Z (milli-g)
-* ISM330.Gyro X (milli-dps)
-* ISM330.Gyro Y (milli-dps)
-* ISM330.Gyro Z (milli-dps)
-* ISM330.Temperature (C)
-* MMC5983.X Field (Gauss)
-* MMC5983.Y Field (Gauss)
-* MMC5983.Z Field (Gauss)
-* MMC5983.Temperature (C)
+* `MAX17048.Voltage (V)`
+* `MAX17048.State of Charge (%)`
+* `MAX17048.Charge Rate (%/hr)`
+* `ISM330.Accel X (milli-g)`
+* `ISM330.Accel Y (milli-g)`
+* `ISM330.Accel Z (milli-g)`
+* `ISM330.Gyro X (milli-dps)`
+* `ISM330.Gyro Y (milli-dps)`
+* `ISM330.Gyro Z (milli-dps)`
+* `ISM330.Temperature (C)`
+* `MMC5983.X Field (Gauss)`
+* `MMC5983.Y Field (Gauss)`
+* `MMC5983.Z Field (Gauss)`
+* `MMC5983.Temperature (C)`
 
 The output will vary depending on what is connected so you may get additional readings in the output and it may not be in the following order listed above. The logging rate defaults to about 0.067Hz (or 15000ms), so as the data scrolls past, you will see the last value settle at about 0.067Hz.
 
@@ -331,10 +331,10 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 !!! note
     The ESP32-WROOM can only connect to a 2.4GHz WiFi network. Unfortunately, 5GHz is not supported on the ESP32-WROOM module.
 
-In the Settings Menu, send a <kbd>4</kbd> to configure the WiFi settings.
+In the Settings Menu, send a <kbd>4</kbd> to configure the WiFi settings. As of firmware v01.00.02, up to 4 sets of WiFi credentials can be saved.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG" width="1000" height="667"></a>
 </div>
 
 Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
@@ -349,6 +349,24 @@ Once you are in the WiFi Network menu, you can enable/disable WiFi and save the 
 * <kbd>3</kbd> **Password** &mdash; The Password to connect to the WiFi network
     * Accepts a string:
         * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+* <kbd>4</kbd> **Network 2 Name** &mdash; Alternative network 2 SSID
+    * Accepts a string:
+        * For example, if my network name is "`MY_NETWORK_NAME_2`", you would manually type <kbd>MY_NETWORK_NAME_2</kbd>. When finished hit the <kbd>ENTER</kbd> key
+* <kbd>5</kbd> **Network 2 Password** &mdash; Alternative network 2 Password
+    * Accepts a string:
+        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_2`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_2</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+* <kbd>6</kbd> **Network 3 Name** &mdash; Alternative network 2 SSID
+    * Accepts a string:
+        * For example, if my network name is "`MY_NETWORK_NAME_3`", you would manually type <kbd>MY_NETWORK_NAME_3</kbd>. When finished hit the <kbd>ENTER</kbd> key
+* <kbd>7</kbd> **Network 3 Password** &mdash; Alternative network 3 Password
+    * Accepts a string:
+        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_3`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_3</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+* <kbd>8</kbd> **Network 4 Name** &mdash; Alternative network 2 SSID
+    * Accepts a string:
+        * For example, if my network name is "`MY_NETWORK_NAME_4`", you would manually type <kbd>MY_NETWORK_NAME_4</kbd>. When finished hit the <kbd>ENTER</kbd> key
+* <kbd>9</kbd> **Network 4 Password** &mdash; Alternative network 4 Password
+    * Accepts a string:
+        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_4`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_4</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
