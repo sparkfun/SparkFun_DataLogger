@@ -295,7 +295,7 @@ There are three LEDs populated on the board. These can be disabled with their re
     * White: A solid white LED indicates that the board is currently being configured through the configuration menu.
     * Green: A solid green LED indicates that the board is initializing. As of firmware v01.00.02, the LED blinks green when on battery power indicating that the battery level is VBATT > 50%.
     * Blue: A blinking blue LED indicates that the board is reading sensor data and logging the values.
-    * Yellow: A firmware update is in progress. As of firmware v01.00.02, the LED blinks yellow when on battery power indicating that the battery level is between 50% > VBATT > 10%.
+    * Yellow: A solid yellow LED indicates that a firmware update is in progress. As of firmware v01.00.02, the LED blinks yellow when on battery power indicating that the battery level is between 50% > VBATT > 10%.
     * Red: As of firmware v01.00.02, the LED blinks red when on battery power indicating that the battery level is VBATT < 10%.
 * **CHG**: The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.
 
