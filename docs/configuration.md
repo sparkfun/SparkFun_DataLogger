@@ -59,7 +59,7 @@ The messages in the serial terminal provide us with a lot of the DataLogger's co
 * As the DataLogger IoT is initializing, the system settings are being restored from the last saved preference.
 * There no WiFi credentials and the board has failed to connect. This output will change once you provide the WiFi credentials and are able to connect to the network.
 * There are 3x devices currently detected and they are connected through I<sup>2</sup>C through the Qwiic port and SPI. These are the on-board sensors for the DataLogger IoT. There may be more devices that are detected depending on the firmware and what is connected to the ports. Since these were recognized, they were loaded onto the DataLogger IoT.
-* The current date and time is shown (by default, the date and time is set to **1-1-1970** and **00:00:00**). This value will change depending on the clock source through NTP, RTC, or a u-blox GNSS module.
+* The current date and time is shown (by default), the date and time is set to **1-1-1970** and **00:00:00**). This value will change depending on the clock source through NTP, RTC, or a u-blox GNSS module.
 * The time the board has been running will be shown in the uptime.
 * The primary external time source that the board syncs is currently through the **NTP client**. This can be configured depending on your clock source.
 * The board name (in this case, it was **SparkFun DataLogger IoT - 9DoF**)
@@ -156,7 +156,7 @@ Let's start by configuring the DataLogger's system settings. Send a <kbd>1</kbd>
 </div>
 
 !!! note
-    You may notice after entering a <kbd>1</kbd> that there is a slight delay before the DataLogger IoT responds. The delay was added to allow some time for the DataLogger to receive an additional digit for any option greater than 9. If you want to head to option 1 immediately without the slight delay, you can hit the <kbd>Enter</kbd> key to enter the Application Settings.
+    You may notice after entering a <kbd>1</kbd> that there is a slight delay before the DataLogger IoT responds. The delay was added to allow some time for the DataLogger IoTto receive an additional digit for any option greater than 9. If you want to head to option 1 immediately without the slight delay, you can hit the <kbd>Enter</kbd> key to enter the Application Settings.
 
 We'll go over each of these options below.
 
@@ -165,7 +165,7 @@ We'll go over each of these options below.
 
 ### General: Application Settings
 
-In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial consol output and the menu system's timeout value.
+In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial console output and the menu system's timeout value.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG" width="1000" height="667"></a>
@@ -175,12 +175,12 @@ In the Application Settings Menu, users will be able to configure the WS2812's L
 
 * <kbd>1</kbd> **LED Enabled** &mdash; Enable/Disable the on-board RGB LED activity
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Menu Timeout** &mdash; Inactivity timeout period for the menu system
     * Accepts the following values:
         * <kbd>1</kbd> 30 Seconds = 30
-        * <kbd>2</kbd> 60 Seconds = 60
+        * <kbd>2</kbd> 60 Seconds = 60 _(default)_
         * <kbd>3</kbd> 2 Minutes = 120
         * <kbd>4</kbd> 5 Minutes = 300
         * <kbd>5</kbd> 10 Minutes = 600
@@ -188,26 +188,26 @@ In the Application Settings Menu, users will be able to configure the WS2812's L
 * <kbd>3</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
-        * <kbd>2</kbd> CSV format (default) = 1
+        * <kbd>2</kbd> CSV format _(default)_ = 1
         * <kbd>3</kbd> JSON format = 2
 * <kbd>4</kbd> **Serial Console Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
-        * <kbd>2</kbd> CSV format (default) = 1
+        * <kbd>2</kbd> CSV format _(default)_ = 1
         * <kbd>3</kbd> JSON format = 2
 * <kbd>5</kbd> **Terminal Baud Rate** &mdash; Update terminal baud rate. Changes take effect on restart.
     * Accepts an unsigned integer between **1200** to **50000**:
-        * **115200** (default)
+        * **115200** _(default)_
 * <kbd>6</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>7</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
     * Accepts an integer between <kbd>5</kbd> to <kbd>86400</kbd> :
-        * <kbd>30</kbd> seconds (default)
+        * <kbd>30</kbd> seconds _(default)_
 * <kbd>8</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
     * Accepts an integer between <kbd>60</kbd> to <kbd>86400</kbd> :
-        * <kbd>120</kbd> seconds (default)
+        * <kbd>120</kbd> seconds _(default)_
 * <kbd>9</kbd> **About...** &mdash; Details about the system
 * <kbd>b</kbd> **Back**
 
@@ -234,12 +234,12 @@ In the Save Settings Menu, users will be able to save, restore, or clear any pre
 
 * <kbd>1</kbd> **Fallback Restore** &mdash; If unable to restore settings, use the fallback source (JSON File)
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Fallback Save** &mdash; Save settings also saves on the fallback storage (JSON File)
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>3</kbd> **Save Settings** &mdash; Save current settings to persistent storage
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
@@ -292,22 +292,22 @@ In this menu, you will have options to update the primary reference clock, updat
 * <kbd>1</kbd> **Reference Clock** &mdash; The current reference clock source
     * Accepts the following values:
         * <kbd>1</kbd> for no clock
-        * <kbd>2</kbd> for NTP Client (default)
+        * <kbd>2</kbd> for NTP Client _(default)_
 * <kbd>2</kbd> **Update Interval** &mdash; Main clock update interval in minutes. 0 = No update
     * Accepts an unsigned integer:
         * <kbd>0</kbd> = No update
-        * <kbd>60</kbd> seconds (default)
+        * <kbd>60</kbd> seconds _(default)_
 * <kbd>3</kbd> **Enable Clock Fallback** &mdash; Use a valid reference clock if the primary is not available
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>4</kbd> **Dependant Interval** &mdash; Connected depedant clock update interval in minutes. 0 = No update
     * Accepts an unsigned integer:
         * <kbd>0</kbd> = No update
-        * <kbd>60</kbd> seconds (default)
+        * <kbd>60</kbd> seconds _(default)_
 * <kbd>5</kbd> **Update Connected** &mdash; Update connected clocks on main clock update
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>b</kbd> **Back**
 
@@ -355,7 +355,7 @@ Once you are in the WiFi Network menu, you can enable/disable WiFi and save the 
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the WiFi Network connection
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Network Name** &mdash; The SSID of the WiFi network
     * Accepts a string:
@@ -415,17 +415,17 @@ In this menu, users will have the option to enable/disable the NTP client, selec
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the NTP Client
     * Accepts a boolean value:
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **NTP Server One** &mdash; The primary NTP Server to use
     * Accepts a string:
-        * <kbd>time.nist.gov</kbd> (default)
+        * <kbd>time.nist.gov</kbd> _(default)_
 * <kbd>3</kbd> **NTP Server Two** &mdash;  The secondary NTP Server to use
     * Accepts a string:
-        * <kbd>pool.ntp.org</kbd> (default)
+        * <kbd>pool.ntp.org</kbd> _(default)_
 * <kbd>4</kbd> **The Time Zone** &mdash; Time zone setting string for the device
     * Accepts a string:
-        * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> (default)
+        * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 !!! note
@@ -450,7 +450,7 @@ In the Settings menu, send a <kbd>6</kbd> to adjust how data is logged.
 In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
 
 * <kbd>1</kbd> **Timestamp Mode** &mdash; Enable timestamp output and set the format of a log entry timestamp
-    * <kbd>1</kbd> for no timestamp (default) = 0
+    * <kbd>1</kbd> for no timestamp _(default)_ = 0
     * <kbd>2</kbd> for milliseconds since program start = 1
     * <kbd>3</kbd> for seconds since Epoch = 2
     * <kbd>4</kbd> for Date Time - USA Date format = 3
@@ -460,23 +460,23 @@ In the Logger menu, users will have the option to add a timestamp, increment sam
 * <kbd>2</kbd> **Sample Numbering** &mdash; An incremental count of the current log entry
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>3</kbd> **Numbering Increment** &mdash; Increment amount for Sample Numbering
     * Accepts an unsigned integer between <kbd>1</kbd> to <kbd>10000</kbd>:
-        * <kbd>1</kbd> (default)
+        * <kbd>1</kbd> _(default)_
 * <kbd>4</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts an integer:
         * <kbd>1</kbd> to disable  = 0
-        * <kbd>2</kbd> CSV format  = 1 (default)
+        * <kbd>2</kbd> CSV format  = 1 _(default)_
         * <kbd>3</kbd> JSON format = 2
 * <kbd>5</kbd> **Serial Console Format** &mdash; Enable and set the output format
     * Accepts an integer:
         * <kbd>1</kbd> to disable  = 0
-        * <kbd>2</kbd> CSV format  = 1 (default)
+        * <kbd>2</kbd> CSV format  = 1 _(default)_
         * <kbd>3</kbd> JSON format = 2
 * <kbd>6</kbd> **Reset Sample Counter** &mdash; Reset the sample number counter to the provided value
     * Accepts an unsigned integer between <kbd>0</kbd> to <kbd>10000</kbd>:
-        * <kbd>0</kbd> (default)
+        * <kbd>0</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -505,7 +505,7 @@ Adjusting the interval for the Logging Timer will change the amount of time betw
 
 * <kbd>1</kbd> **Interval** &mdash; The timer interval in milliseconds
     * Accepts an integer:
-        * <kbd>15000</kbd> milliseconds (default)
+        * <kbd>15000</kbd> milliseconds _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -530,15 +530,15 @@ Adjusting these parameters allows you to change the filename prefix, the number 
     * Accepts the following values:
         * <kbd>1</kbd> for 6 hours = 6
         * <kbd>2</kbd> for 12 hours  = 12
-        * <kbd>3</kbd> for 1 day (24 hours)  = 24 (default)
+        * <kbd>3</kbd> for 1 day (24 hours)  = 24 _(default)_
         * <kbd>4</kbd> for 2 days (48 hours)  = 48
         * <kbd>5</kbd> for 1 week (168 hours)  = 168
 * <kbd>2</kbd> **File Start Number** &mdash; The number the filename rotation starts with
     * Accepts an unsigned integer:
-        * <kbd>1</kbd> (default)
+        * <kbd>1</kbd> _(default)_
 * <kbd>3</kbd> **Filename Prefix** &mdash; The prefix string for the generated filenames
     * Accepts a string:
-        * <kbd>sfe</kbd> (default)
+        * <kbd>sfe</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -568,10 +568,10 @@ In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Clien
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Client
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> (default)
+        * <kbd>1883</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -584,7 +584,7 @@ In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Clien
     * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
     * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size (default)
+        * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>b</kbd> **Back**
 
 
@@ -600,10 +600,10 @@ In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secu
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Secure Client
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> (default)
+        * <kbd>1883</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -616,7 +616,7 @@ In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secu
     * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
     * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size (default)
+        * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
     * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
@@ -638,15 +638,15 @@ In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable AWS IoT
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> (default)
+        * <kbd>1883</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
     * Accepts a string
-        * **$aws/things//shadow/update** (default)
+        * **$aws/things//shadow/update** _(default)_
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
     * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
@@ -655,7 +655,7 @@ In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
     * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
     * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size (default)
+        * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
     * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
@@ -677,10 +677,10 @@ In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQ
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable ThingSpeak MQTT
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> (default)
+        * <kbd>1883</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -693,7 +693,7 @@ In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQ
     * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
     * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size (default)
+        * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
     * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
@@ -717,10 +717,10 @@ In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable Azure IoT
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1</kbd> (default)
+        * <kbd>1</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -733,7 +733,7 @@ In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT
     * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
     * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size (default)
+        * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
     * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
@@ -759,7 +759,7 @@ In the Settings menu, send an <kbd>14</kbd> to adjust settings for the Azure IoT
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **URL** &mdash; The URL to call with log information
     * Accepts a string
 * <kbd>3</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
@@ -779,7 +779,7 @@ In the Settings menu, send an <kbd>15</kbd> to adjust settings for MachineChat.
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable (default)
+        * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **URL** &mdash; The URL to call with log information
     * Accepts a string
 * <kbd>3</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
@@ -840,13 +840,13 @@ This will bring up the connected devices that are currently available. You can c
 
 * <kbd>1</kbd> **MAX17048** &mdash; MAX17048 LiPo Battery Fuel Gauge
     * <kbd>1</kbd> **Voltage (V)** &mdash; Battery voltage (Volts)
-        * <kbd>1</kbd> to enable Voltage (V) (default)
+        * <kbd>1</kbd> to enable Voltage (V) _(default)_
         * <kbd>2</kbd> to disable Voltage (V)
     * <kbd>2</kbd> **State of Charge (%)** &mdash; Battery state of charge (%)
-        * <kbd>1</kbd> to enable state of charge (%) (default)
+        * <kbd>1</kbd> to enable state of charge (%) _(default)_
         * <kbd>2</kbd> to disable state of charge  (%)
     * <kbd>3</kbd> **Charge Rate (%/hr)** &mdash; Battery charge change rate (%/hr)
-        * <kbd>1</kbd> to enable change rate (%/hr) (default)
+        * <kbd>1</kbd> to enable change rate (%/hr) _(default)_
         * <kbd>2</kbd> to disable change rate (%/hr)
 * <kbd>2</kbd> **ISM330** &mdash; ISM330 Inertial Measurement Unit
     * <kbd>1</kbd> **Accel Data Rate (HZ)** &mdash; Accelerometer Data Rate (Hz)
@@ -854,7 +854,7 @@ This will bring up the connected devices that are currently available. You can c
         * <kbd>2</kbd> for 12.5 Hz
         * <kbd>3</kbd> for 26 Hz
         * <kbd>4</kbd> for 52 Hz
-        * <kbd>5</kbd> for 104 Hz (default)
+        * <kbd>5</kbd> for 104 Hz _(default)_
         * <kbd>6</kbd> for 208 Hz
         * <kbd>7</kbd> for 416 Hz
         * <kbd>8</kbd> for 833 Hz
@@ -865,14 +865,14 @@ This will bring up the connected devices that are currently available. You can c
     * <kbd>2</kbd> **Accel Full Scale (g)** &mdash; Accelerometer Full Scall (g)
         * <kbd>1</kbd> for 2 g
         * <kbd>2</kbd> for 16 g
-        * <kbd>3</kbd> for 4 g (default)
+        * <kbd>3</kbd> for 4 g _(default)_
         * <kbd>4</kbd> for 8 g
     * <kbd>3</kbd> **Gyro Data Rate (Hz)** &mdash; Gyro Data Rate (Hz)
         * <kbd>1</kbd> for Off
         * <kbd>2</kbd> for 12.5 Hz
         * <kbd>3</kbd> for 26 Hz
         * <kbd>4</kbd> for 52 Hz
-        * <kbd>5</kbd> for 104 Hz (default)
+        * <kbd>5</kbd> for 104 Hz _(default)_
         * <kbd>6</kbd> for 208 Hz
         * <kbd>7</kbd> for 416 Hz
         * <kbd>8</kbd> for 833 Hz
@@ -882,22 +882,22 @@ This will bring up the connected devices that are currently available. You can c
     * <kbd>4</kbd> **Gyro Full Scale (dps)** &mdash; Gyro Full Scale (dps)
         * <kbd>1</kbd> for 125 dps
         * <kbd>2</kbd> for 250 dps
-        * <kbd>3</kbd> for 500 dps (default)
+        * <kbd>3</kbd> for 500 dps _(default)_
         * <kbd>4</kbd> for 1000 dps
         * <kbd>5</kbd> for 2000 dps
         * <kbd>6</kbd> for 4000 dps
     * <kbd>5</kbd> **Accel Filter LP2** &mdash; Accelerometer Filter LP2
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>2</kbd> to disable
     * <kbd>6</kbd> **Gyro Filter LP1** &mdash; Gyro Filter LP1
-        * <kbd>1</kbd> to enable (default)
+        * <kbd>1</kbd> to enable _(default)_
         * <kbd>2</kbd> to disable
     * <kbd>7</kbd> **Accel Slope Filter** &mdash; Accelerometer Slope Filter
         * <kbd>1</kbd> for ODR/4
         * <kbd>2</kbd> for ODR/10
         * <kbd>3</kbd> for for ODR/20
         * <kbd>4</kbd> for ODR/45
-        * <kbd>5</kbd> for ODR/100 (default)
+        * <kbd>5</kbd> for ODR/100 _(default)_
         * <kbd>6</kbd> for ODR/200
         * <kbd>7</kbd> for ODR/400
         * <kbd>8</kbd> for ODR/800
@@ -905,7 +905,7 @@ This will bring up the connected devices that are currently available. You can c
         * <kbd>1</kbd> Ultra Light
         * <kbd>2</kbd> Very Light
         * <kbd>3</kbd> Light
-        * <kbd>4</kbd> Medium (default)
+        * <kbd>4</kbd> Medium _(default)_
         * <kbd>5</kbd> Strong
         * <kbd>6</kbd> Very Strong
         * <kbd>7</kbd> Aggressive
@@ -933,7 +933,7 @@ This will bring up the connected devices that are currently available. You can c
         * <kbd>2</kbd> to disable
 * <kbd>3</kbd> **MMC5983** &mdash; MMC5983 Magnetometer
     * <kbd>1</kbd> **Filter Bandwidth (Hz)** &mdash; The filter bandwidth in Hz
-        * <kbd>1</kbd> 100 Hz (default)
+        * <kbd>1</kbd> 100 Hz _(default)_
         * <kbd>2</kbd> 200 Hz
         * <kbd>3</kbd> 400 Hz
         * <kbd>4</kbd> 800 Hz

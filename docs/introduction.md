@@ -1,15 +1,12 @@
 <!--    TODO
 
-    ✘ math extension
     ____ center all images
     ____ alt text
-    ____ screenshots update firmware over the air on release
-    ____ remove notes about UART, Digital I/O, Analog, SPI pins?
     ____ Low Power Considerations?
 
 -->
 
-The [SparkFun DataLogger IoT - 9DOF](https://www.sparkfun.com/products/20594) is a data logger that comes preprogrammed to automatically log IMU, GPS, and various pressure, humidity, and distance sensors. All without writing a single line of code! The DataLogger automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data to a CSV or JSON file, and get back to their larger project. Save the data to a microSD card or send it wirelessly to your preferred Internet of Things (IoT) service!
+The [SparkFun DataLogger IoT - 9DoF](https://www.sparkfun.com/products/20594) is a data logger that comes preprogrammed to automatically log IMU, GPS, and various pressure, humidity, and distance sensors. All without writing a single line of code! The DataLogger automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data to a CSV or JSON file, and get back to their larger project. Save the data to a microSD card or send it wirelessly to your preferred Internet of Things (IoT) service!
 
 <center>
 <div class="grid cards" style="width:500px;" markdown>
@@ -23,7 +20,7 @@ The [SparkFun DataLogger IoT - 9DOF](https://www.sparkfun.com/products/20594) is
     ---
 
     <a href="https://www.sparkfun.com/products/20594">
-      <b>SparkFun DataLogger IoT - 9DOF</b>
+      <b>SparkFun DataLogger IoT - 9DoF</b>
       <br />
       DEV-20594
       <br />
@@ -149,9 +146,9 @@ The DataLogger IoT - 9DoF is preprogrammed to automatically log data from all of
     * [ZOE-M8Q](https://www.sparkfun.com/products/15193) 1.5m Compact GPS
     * [NEO-M9N](https://www.sparkfun.com/products/15712) 1.5m GPS
     * [MAX-M10S](https://www.sparkfun.com/products/18037) 1.5m Ultra-Low Power GPS
-* Inertial Measurement Unit (Accelerometer and Gyro)
+* Inertial Measurement Unit (Accelerometer and Gyro):
     * [ISM330DHCX](https://www.sparkfun.com/products/19764) IMU (Built-in)
-* Magnetometer
+* Magnetometer:
     * [MMC5983](https://www.sparkfun.com/products/19921) (Built-in)
 * Distance:
     * [TMF8820](https://www.sparkfun.com/products/19036) dToF Imager
