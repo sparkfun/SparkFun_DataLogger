@@ -20,7 +20,7 @@ theme:
   name: material
 
   # Icon in Browser Tab (must be square img - i.e. 32x32 pixels)
-  favicon: assets/sfe_logo_sq.png
+  favicon: assets/sfe_logo_sm.png
 
   # Page Font
   font:
