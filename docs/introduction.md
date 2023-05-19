@@ -200,7 +200,6 @@ The DataLogger IoT - 9DoF is preprogrammed to automatically log data from all of
       * [NAU7802](https://www.sparkfun.com/products/15242)	Qwiic Scale Load Cell Amplifier
 * Miscellaneous:
       * [Qwiic Button](https://www.sparkfun.com/products/15932)
-      * [TCA9548A](https://www.sparkfun.com/products/16784) Qwiic Mux 8 Channel
       * [Qwiic Twist](https://www.sparkfun.com/products/15083) RGB Rotary Encoder
 * Analog Voltage:
       * [ADS1015](https://www.sparkfun.com/products/15334) 12-bit 4-channel Differential ADC

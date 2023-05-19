@@ -90,7 +90,7 @@ Sometimes you might want to connect more than one of the same type of sensor to 
 Typically one would use a multiplexor. However, we currently do not have the DataLogger IoT configured to work with any multiplexors (i.e. Qwiic Mux Breakout).
 
 !!! note
-    Currently the Qwiic Mux does not compatible with the DataLogger IoT.
+    Currently the Qwiic Mux is not compatible with the DataLogger IoT.
 
 
 

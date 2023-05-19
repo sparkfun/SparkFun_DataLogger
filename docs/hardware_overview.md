@@ -165,7 +165,7 @@ Connected to the line I<sup>2</sup>C line is the MAX17048 LiPo fuel gauge (7-bit
 Sometimes you might want to connect more than one of the same type of sensor to the DataLogger IoT. On the I<sup>2</sup>C bus, each device needs to have a unique address. On many of our boards, there are jumpers links which you can use to change the address and some have addresses that can be configured in software. But there are some where you cannot change the address. Typically, one would use a multiplexor. However, we currently do not have the DataLogger IoT configured to work with any multiplexors (i.e. Qwiic Mux Breakout).
 
 !!! note
-    Currently the Qwiic Mux does not compatible with the DataLogger IoT.
+    Currently the Qwiic Mux is not compatible with the DataLogger IoT.
 
 The DataLogger IoT includes a dedicated 3.3V regulator for the Qwiic connector. This has several advantages including:
 
@@ -254,7 +254,7 @@ There are three 12-bit analog pins available and broken out on edge of the board
 There are two buttons available on the board for reset and boot. These are also broken out on the edge of the board as PTHs. If you have your DataLogger IoT mounted in an enclosure, you can also attach an external boot or reset switch too. Any Single Pole Normally-Open Push-To-Close momentary switch will do. Solder pin headers or wires to the RST and GND breakout pins and connect your external switch to those.
 
 * **<span STYLE="text-decoration:overline">RESET</span>**: Pressing this button will pull the pin LOW and reset the program running on the ESP32 without unplugging the board.
-* **BOOT**: The boot button usually allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32. The ESP32 will remain in this mode until there is a power cycle or the reset button is pressed. This is connected to pin `0` on the ESP32.
+* **BOOT**: The boot button usually allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32. The ESP32 will remain in this mode until there is a power cycle or the reset button is pressed. As of firmware v01.00.02, this button has an extra function: pressing down on the user button for 20 seconds will erase on-board preference storage and restart the board. This is connected to pin `0` on the ESP32.
 
 <div style="text-align: center;">
   <table>
@@ -292,10 +292,11 @@ There are three LEDs populated on the board. These can be disabled with their re
 
 * **STAT**: The status LED is connected to pin `25`.
 * **RGB**: The WS2812-2020 RGB addressable LED is connected to pin `26`. In addition to being disabled through the jumper on the back, you can also disable the LED through software. The following colors represent different states that the board is in.
-    * Green: The board is initializing.
-    * Blue: The board is reading sensor data and logging the values.
-    * White: The board is currently being configured through the configuration menu.
-    * Yellow: A firmware update is in progress.
+    * White: A solid white LED indicates that the board is currently being configured through the configuration menu.
+    * Green: A solid green LED indicates that the board is initializing. As of firmware v01.00.02, the LED blinks green when on battery power indicating that the battery level is VBATT > 50%.
+    * Blue: A blinking blue LED indicates that the board is reading sensor data and logging the values.
+    * Yellow: A firmware update is in progress. As of firmware v01.00.02, the LED blinks yellow when on battery power indicating that the battery level is between 50% > VBATT > 10%.
+    * Red: As of firmware v01.00.02, the LED blinks red when on battery power indicating that the battery level is VBATT < 10%.
 * **CHG**: The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.
 
 <div style="text-align: center;">
