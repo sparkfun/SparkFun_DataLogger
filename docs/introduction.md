@@ -42,7 +42,7 @@ The [SparkFun DataLogger IoT - 9DOF](https://www.sparkfun.com/products/20594) is
 
 !!! warning "Battery Polarity"
 
-    Please make sure that you use one of our recommended Lithium Ion batteries. Some batteries use the same JST connector as ours but have the [opposite polarity](https://learn.sparkfun.com/tutorials/polarity/all#other-polarized-components). Connecting one of these to your OLA will destroy it. If you are going to use your own battery, it is up to you to ensure it has the correct polarity.
+    Please make sure that you use one of our recommended Lithium Ion batteries. Some batteries use the same JST connector as ours but have the [opposite polarity](https://learn.sparkfun.com/tutorials/polarity/all#other-polarized-components). Connecting one of these to your DataLogger IoT will destroy it. If you are going to use your own battery, it is up to you to ensure it has the correct polarity.
 
 To follow along with this tutorial, you will need the following materials. You may not need everything though depending on what you have. Add it to your cart, read through the guide, and adjust the cart as necessary.
 
@@ -139,7 +139,7 @@ To follow along with this tutorial, you will need the following materials. You m
 
 Straight out of the ~~box~~ anti-static bag the DataLogger IoT [DEV-20594] is ready to log data from its built-in ISM330DHCX Inertial Measurement Unit (IMU) and MMC5983MA Magnetometer. Only want to log magnetometer, accelerometer, gyro or temperature data? You’re good to go! But the fun is only just beginning…
 
-The DataLogger IoT - 9DoF is preprogrammed to automatically log data from all of the following sensors, so you may wish to add one or more of these to your shopping cart too. (More sensors are being added all the time and it is really easy to upgrade the OLA to support them. But we'll get to that in a moment!). Currently, auto-detection is supported on the following Qwiic-enabled products:
+The DataLogger IoT - 9DoF is preprogrammed to automatically log data from all of the following sensors, so you may wish to add one or more of these to your shopping cart too. (More sensors are being added all the time and it is really easy to upgrade the DataLogger IoT to support them. But we'll get to that in a moment!). Currently, auto-detection is supported on the following Qwiic-enabled products:
 
 * Any u-Blox GNSS Modules (Lat/Long, Altitude, Velocity, SIV, Time, Date) such as:
     * [ZED-F9P](https://www.sparkfun.com/products/15136) 1cm High Precision GPS
