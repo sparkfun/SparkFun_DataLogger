@@ -165,40 +165,54 @@ We'll go over each of these options below.
 
 ### General: Application Settings
 
-In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings.
+In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial consol output and the menu system's timeout value.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG" width="1000" height="667"></a>
 </div>
 
-In the Application Settings Menu, users will be able to configure the WS2812's blue LED through software, microSD card's output format, serial console's output format, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
+In the Application Settings Menu, users will be able to configure the WS2812's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
 
-* <kbd>1</kbd> **LED Enabled** &mdash; Enable/Disable the on-board LED activity
+* <kbd>1</kbd> **LED Enabled** &mdash; Enable/Disable the on-board RGB LED activity
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable (default)
         * <kbd>0</kbd> to disable
-* <kbd>2</kbd> **SD Card Format** &mdash; Enable and set the output format
+* <kbd>2</kbd> **Menu Timeout** &mdash; Inactivity timeout period for the menu system
+    * Accepts the following values:
+        * <kbd>1</kbd> 30 Seconds = 30
+        * <kbd>2</kbd> 60 Seconds = 60
+        * <kbd>3</kbd> 2 Minutes = 120
+        * <kbd>4</kbd> 5 Minutes = 300
+        * <kbd>5</kbd> 10 Minutes = 600
+        * <kbd>b</kbd> Back
+* <kbd>3</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
         * <kbd>2</kbd> CSV format (default) = 1
         * <kbd>3</kbd> JSON format = 2
-* <kbd>3</kbd> **Serial Console Format** &mdash; Enable and set the output format
+* <kbd>4</kbd> **Serial Console Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
         * <kbd>2</kbd> CSV format (default) = 1
         * <kbd>3</kbd> JSON format = 2
-* <kbd>4</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
+* <kbd>5</kbd> **Terminal Baud Rate** &mdash; Update terminal baud rate. Changes take effect on restart.
+    * Accepts an unsigned integer between **1200** to **50000**:
+        * **115200** (default)
+* <kbd>6</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
         * <kbd>0</kbd> to disable (default)
-* <kbd>5</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
+* <kbd>7</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
     * Accepts an integer between <kbd>5</kbd> to <kbd>86400</kbd> :
         * <kbd>30</kbd> seconds (default)
-* <kbd>6</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
+* <kbd>8</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
     * Accepts an integer between <kbd>60</kbd> to <kbd>86400</kbd> :
         * <kbd>120</kbd> seconds (default)
-* <kbd>7</kbd> **About...** &mdash; Details about the system
+* <kbd>9</kbd> **About...** &mdash; Details about the system
 * <kbd>b</kbd> **Back**
+
+!!! note
+    Once the baud rate is changed and saved, make sure to adjust the baud rate of your serial terminal when the board is reset. If you forgot the baud rate, you can hold the BOOT button down for 20 seconds to erase the on-board preferences (besides the baud rate, this also includes any other settings that were saved) and restart the board.
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
