@@ -37,7 +37,7 @@ There are a variety of power and power-related nets broken out to connectors and
 
 ### USB-C and 5V
 
-The DataLogger IoT comes equipped with a USB type C socket which you can use to connect it to your computer for configuration through the serial terminal; upload new firmware; or plug in a USB-C power supply. The DataLogger IoT includes the configuration channel resistors needed to tell the power supply to deliver **5V**. You can use your USB-C laptop charger as the power source should you need to, even though it normally delivers a much higher voltage. There is also a **5V** pin. However, this is not connected to the same USB bus.
+The DataLogger IoT comes equipped with a USB type C socket which you can use to connect it to your computer to view the output and configuration through the serial terminal, or plug in a USB-C power supply. The DataLogger IoT includes the configuration channel resistors needed to tell the power supply to deliver **5V**. You can use your USB-C laptop charger as the power source should you need to, even though it normally delivers a much higher voltage. There is also a **5V** pin. However, this is not connected to the same USB bus.
 
 <div style="text-align: center;">
   <table>
@@ -254,7 +254,7 @@ There are three 12-bit analog pins available and broken out on edge of the board
 There are two buttons available on the board for reset and boot. These are also broken out on the edge of the board as PTHs. If you have your DataLogger IoT mounted in an enclosure, you can also attach an external boot or reset switch too. Any Single Pole Normally-Open Push-To-Close momentary switch will do. Solder pin headers or wires to the RST and GND breakout pins and connect your external switch to those.
 
 * **<span STYLE="text-decoration:overline">RESET</span>**: Pressing this button will pull the pin LOW and reset the program running on the ESP32 without unplugging the board.
-* **BOOT**: The boot button allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32.The ESP32 will remain in this mode until there is a power cycle, code is uploaded, or the reset button is pressed. This is connected to pin `0` on the ESP32.
+* **BOOT**: The boot button usually allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32. The ESP32 will remain in this mode until there is a power cycle or the reset button is pressed. This is connected to pin `0` on the ESP32.
 
 <div style="text-align: center;">
   <table>
@@ -265,13 +265,24 @@ There are two buttons available on the board for reset and boot. These are also 
   </table>
 </div>
 
-Like other ESP32 development boards, these buttons are populated so that users can place the ESP32 module in bootloader mode. For users that need to place the board in booltoader mode when powered, you will need to:
+Like other ESP32 development boards, these buttons are populated so that users can place the ESP32 module in bootloader mode. For users that need to place the board in bootloader mode when powered, you will need to:
 
 * Press the BOOT button.
 * While holding on the BOOT button, press the RESET button momentarily.
 * Finally, release the BOOT button.
 
 Most of the time, users will simply have the board executing the firmware that is loaded on the ESP32 module and updating through the configuration menu either through the microSD card or OTA.
+
+
+!!! danger
+
+    Please think very carefully before uploading any Arduino sketches to your DataLogger IoT.
+
+    **You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.**
+
+    The DataLogger IoT – 9DoF comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
+
+    Really. We mean it.
 
 
 

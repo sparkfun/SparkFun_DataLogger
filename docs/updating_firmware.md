@@ -1,3 +1,13 @@
+!!! danger
+
+    Please think very carefully before uploading any Arduino sketches to your DataLogger IoT.
+
+    **You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.**
+
+    The DataLogger IoT – 9DoF comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
+
+    Really. We mean it.
+
 
 
 ## Firmware Update - SD Card
