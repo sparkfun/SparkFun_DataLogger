@@ -67,7 +67,7 @@ To follow along with this tutorial, you will need the following materials. You m
     ---
 
     <a href="https://www.sparkfun.com/products/20594">
-      <b>SparkFun SparkFun DataLogger IoT - 9DoF</b>
+      <b>SparkFun DataLogger IoT - 9DoF</b>
       <br />
       DEV-20594
     </a>
