@@ -30,9 +30,13 @@ Configuration details are outlined in [DataLogger IoT Documentation](https://doc
 
 The functionality of the DataLogger IoT firmware will continue to grow as SparkFun develops new qwiic sensor boards, adds additional IoT services and product features. The board is easily updated via the on-board settings system. See below for future information on updates and the latest Firmware release.  
 
+## Documentation
+
+* **[GitHub Hardware Repo](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF/tree/main)**
+
 ## Supported Products
 
-* [DEV-20594](https://www.sparkfun.com/products/20594) - SparkFun DataLogger IoT - 9DOF
+* **[DEV-20594](https://www.sparkfun.com/products/20594)** - SparkFun DataLogger IoT - 9DOF
 
 ## Firmware Updates
 
