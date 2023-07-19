@@ -1,5 +1,5 @@
 # Contribute: Help Fix our Mistake!
-Spot something wrong? Feel free to contribute our open-source design and documentation. <a href="https://github.com/sparkfun/SparkFun_DataLogger/pulls" alt="Pull Requests"><img src="https://img.shields.io/github/issues-pr/sparkfun/SparkFun_DataLogger.svg" /></a>
+Spot something wrong? Feel free to contribute our documentation. <a href="https://github.com/sparkfun/SparkFun_DataLogger/pulls" alt="Pull Requests"><img src="https://img.shields.io/github/issues-pr/sparkfun/SparkFun_DataLogger.svg" /></a>
 
 ## Improve our Documentation
 All of this documentation can be modified by you! Please help us make it better.
@@ -14,9 +14,9 @@ All of this documentation can be modified by you! Please help us make it better.
     * We will review your suggested improvements to make sure they are correct and fit within our documentation standards.
 
 ## Improve our Hardware Design
-All of our designs are open-source! Please help us make it better.
+This hardware design is open-source! Please help us make it better.
 
-* Our board design files are contained in the [`Hardware` folder of the SparkFun DataLogger IoT repository](https://github.com/sparkfun/SparkFun_DataLogger/tree/main/Hardware).
+* Our board design files are contained in the [`Hardware` folder of the SparkFun DataLogger IoT repository](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF/tree/main/Hardware).
 
 ### Submit a Design Improvement
 1. Fork this repo
