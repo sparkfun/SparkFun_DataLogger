@@ -94,7 +94,7 @@ On the presented dialog, enter a name for the MQTT connection and in the **Autho
 </div>
 
 !!! note
-    When the MQTT device is created, a set of credentials (Client ID, Username and Password) is provided. **Copy or download** these values, since the password in not accessible after this step.
+    When the MQTT device is created, a set of credentials (Client ID, Username, and Password) is provided. **Copy or download** these values, since the password in not accessible after this step.
 
 The selected Channel is then listed in the **Authorized Channel** table. Ensure that the Allow Publish and Allow Subscribe attributes are enabled for the added channel.
 
@@ -140,7 +140,7 @@ The Username is found under MQTT connection details listed in the ***Devices > M
 
 ### Password
 
-The connection password was provided when the MQTT device was created. If you lost this value, you can regenerate a password in the for the connection on the MQTT Device information page.
+The connection password was provided when the MQTT device was created. If you lost this value, you can regenerate a password on the MQTT Device information page.
 
 
 
@@ -158,7 +158,7 @@ The above property values must be set on the DataLogger IoT before use. They can
 
 ```json
 "ThingSpeak MQTT": {
-    "Enabled": false,
+    "Enabled": true,
     "Port": 8883,
     "Server": "mqtt3.thingspeak.com",
     "MQTT Topic": "",
@@ -174,7 +174,9 @@ The above property values must be set on the DataLogger IoT before use. They can
 !!! note
     The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma.
 
+Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert Filename`, and `Channels`, you will need to also ensure that the `port` is set to `8883`. The default in certain firmware versions is currently `1883`. You will need to adjust the port value to properly connect to the ThingSpeak service.
 
+If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
 
 
 ## Monitoring Output

@@ -156,7 +156,7 @@ The specifics for the AWS IoT Thing must be configured. This includes the follow
 
 ### Server Name/Hostname
 
-This value is obtained from the AWS IoT Device page for the created device. When on this page, select the ***Device Shadows*** tab, and then select the ***Classic Shadow*** shadow, which is listed.
+This value is obtained from the AWS IoT Device page for the created device. When on this page, select the ***Device Shadows*** tab, and then select the ***Classic Shadow*** shadow, which is listed. Note a secure connection is used, so the port for the connection is `8883`.
 
 <div style="text-align: center">
   <a href="../assets/iot_aws_iot_dev_attr.png"><img src="../assets/iot_aws_iot_dev_attr.png" alt="Shadow Details"></a>
@@ -195,11 +195,13 @@ This value was downloaded as a file during the creation process. The contents of
 
 ## Setting Properties
 
-The above property values must be set on the DataLogger before use. They can be passed on via a JSON file that is loaded by the system at startup. For the DataLogger IoT example outlined in this document, the entries in the settings JSON file are as follows:
+The above property values must be set on the DataLogger before use. They can be passed on via a JSON file that is loaded by the system at startup. Of course, you can also manually set the values using the menu system like the previous MQTT example.
+
+For the DataLogger IoT example outlined in this document, the entries in the settings JSON file are as follows:
 
 ```json
 "AWS IoT": {
-    "Enabled": false,
+    "Enabled": true,
     "Port": 8883,
     "Server": "avgpd2wdr5s6u-ats.iot.us-east-1.amazonaws.com",
     "MQTT Topic": "$aws/things/TestThing23/shadow/update",
@@ -215,6 +217,10 @@ The above property values must be set on the DataLogger before use. They can be 
     "Client Key Filename": "TestThing23_Private.key"
   },
 ```
+
+Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in certain firmware versions is currently `1883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`.
+
+If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
 
 ## Operation
 

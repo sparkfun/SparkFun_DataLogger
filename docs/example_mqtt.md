@@ -144,14 +144,14 @@ If a JSON file is being used as an option to import settings into the DataLogger
 
 Where:
 
-* `Enabled` - set to true to enable the connection
-* `Port` - Set to the broker port
-* `Server` - The MQTT broker server
-* `MQTT Topic` - The topic to publish to
-* `Client Name` - optional client name
-* `Buffer Size` - internal transfer buffer size
-* `Username` - Broker user name if being used
-* `Password` - Broker password if being used
+* `Enabled` - Set to `true` to enable the connection.
+* `Port` - Set to the broker port.
+* `Server` - The MQTT broker server.
+* `MQTT Topic` - The topic to publish to.
+* `Client Name` - Optional client name.
+* `Buffer Size` - Internal transfer buffer size.
+* `Username` - Broker user name if being used.
+* `Password` - Broker password if being used.
 
 ## Testing the MQTT Connection
 

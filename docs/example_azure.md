@@ -14,7 +14,7 @@ The following is covered by this document:
 * Securely connecting the device
 * How data is posted from the DataLogger IoT to the Azure Device
 
-Currently, the Azure IoT device connection is is a single direction - it is used to post data from the hardware to the Azure IoT Device. Configuration information from Azure IoT to the DataLogger IoT is currently not implemented.
+Currently, the Azure IoT device connection is a single direction - it is used to post data from the hardware to the Azure IoT Device. Configuration information from Azure IoT to the DataLogger IoT is currently not implemented.
 
 
 
@@ -102,7 +102,7 @@ Once the DataLogger IoT is integrated into the application, the specifics for th
 
 ### Server Name/Hostname
 
-This value is hostname of the created IoT Hub and is obtained from the Overview page of the IoT Hub.
+This value is hostname of the created IoT Hub and is obtained from the Overview page of the IoT Hub. Note a secure connection is used, so the port for the connection is `8883`.
 
 <div style="text-align: center">
   <a href="../assets/iot_az_iot_hub_details.png"><img src="../assets/iot_az_iot_hub_details.png" alt="Hub Details"></a>
@@ -144,11 +144,13 @@ The file to download is the ***Baltimore CyberTrust Root*** entry in the **Root 
 
 ## Setting Properties
 
-The above property values must be set on the DataLogger IoT before use. They can be set via a JSON file that is loaded by the system at startup. For the example outlined in this document, the entries in the settings JSON file are as follows:
+The above property values must be set on the DataLogger IoT before use. They can be set via a JSON file that is loaded by the system at startup. Of course, you can also manually set the values using the menu system like the previous MQTT example.
+
+For the example outlined in this document, the entries in the settings JSON file are as follows:
 
 ```json
 "Azure IoT": {
-    "Enabled": false,
+    "Enabled": true,
     "Port": 8883,
     "Server": "sparkfun-datalogger-hub.azure-devices.net",
     "MQTT Topic": "",
@@ -162,6 +164,9 @@ The above property values must be set on the DataLogger IoT before use. They can
   },
 ```
 
+Besides updating the `Server`, `Device Key`, `Device ID`, and `CA Cert Filename`, you will need to also ensure that the `port` is set to `8883`. The default in certain firmware versions is currently `1883`. You will need to adjust the port value to properly connect to the Azure IoT service.
+
+If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
 
 
 ## Operation and Monitoring

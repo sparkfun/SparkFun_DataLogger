@@ -125,9 +125,9 @@ If a JSON file is being used as an option to import settings into the DataLogger
 
 Where:
 
-* `Enabled` - set to true to enable the connection
-* `URL` - Set to the URL for the connection
-* `CA Cert Filename` - set to the cert filename on the SD card if being used.
+* `Enabled` - Set to `true` to enable the connection.
+* `URL` - Set to the URL for the connection.
+* `CA Cert Filename` - Set to the cert filename on the SD card if being used.
 
 
 
@@ -140,7 +140,7 @@ In this example, a simple HTTP Server is creating using Node JS, and the HTTP co
 
 ### The Server
 
-The following javascript/node code creates a HTTP server on port 8090, and outputs received data to the console.
+The following javascript/node code creates a HTTP server on port `8090`, and outputs received data to the console.
 
 ```javascript
 var http = require('http');
