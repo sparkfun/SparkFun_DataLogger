@@ -162,13 +162,13 @@ To test the connection, you need a MQTT broker available. A quick method to setu
 <div style="text-align: center">
   <table>
     <tr>
-     <td>
+     <td style="text-align: center; vertical-align: middle;">
      <div style="text-align: center"><a href="https://learn.sparkfun.com/tutorials/introduction-to-mqtt"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/8/2/7/mqtt-explanation2.png" alt="Introduction to MQTT" title="Introduction to MQTT"></a>
      </div>
     </td>
     </tr>
     <tr>
-      <td><div style="text-align: left"><b><a href="https://learn.sparkfun.com/tutorials/introduction-to-mqtt">Introduction to MQTT</a></b></div></td>
+      <td style="text-align: center; vertical-align: middle;"><div style="text-align: left"><b><a href="https://learn.sparkfun.com/tutorials/introduction-to-mqtt">Introduction to MQTT</a></b></div></td>
     </tr>
   </table>
 </div>

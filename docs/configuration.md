@@ -26,7 +26,7 @@ If this is the your first time using a terminal window, We recommend checking ou
 <div style="text-align: center">
   <table>
     <tr>
-      <td>
+      <td style="text-align: center; vertical-align: middle;">
         <a href="https://learn.sparkfun.com/tutorials/terminal-basics">
           <div style="text-align: center"><img src="https://cdn.sparkfun.com/assets/learn_tutorials/1/1/2/terminalThumb.jpg" alt="Serial Terminal Basics" style="width:500px; height:282px; object-fit:contain;"></div>
           <hr />
@@ -316,9 +316,9 @@ In this menu, you will have options to update the primary reference clock, updat
 
     <div style="text-align: center;">
       <table>
-        <tr align="center">
-         <td><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" alt="u-blox GNSS Module Attached via Qwiic"></a></td>
-         <td><a href="../DataLogger_IoT_Qwiic_RTC.jpg"><img src="../assets/DataLogger_IoT_Qwiic_RTC.jpg" alt="Qwiic Real Time Clock Module - RV-8803 Attached via Qwiic"></a></td>
+        <tr style="vertical-align:middle;">
+         <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" alt="u-blox GNSS Module Attached via Qwiic"></a></td>
+         <td style="text-align: center; vertical-align: middle;"><a href="../DataLogger_IoT_Qwiic_RTC.jpg"><img src="../assets/DataLogger_IoT_Qwiic_RTC.jpg" alt="Qwiic Real Time Clock Module - RV-8803 Attached via Qwiic"></a></td>
         </tr>
       </table>
     </div>

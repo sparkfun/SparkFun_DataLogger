@@ -2,9 +2,9 @@ In this section, we will highlight the hardware and pins that are broken out on 
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-9DOF_top.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-9DOF_top.jpg" alt="Top View"></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg" alt="Bottom View"></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-9DOF_top.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-9DOF_top.jpg" alt="Top View"></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg" alt="Bottom View"></a></td>
     </tr>
   </table>
 </div>
@@ -43,9 +43,9 @@ There is also a **5V** power input pin. You can use this to feed in 5V power fro
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Power_In_USB_5V_PTH.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Power_In_USB_5V_PTH.jpg" alt="USB C Connector, 3.3V Voltage regulator, 5V PTH"></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Power_In_5V_PTH.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Power_In_5V_PTH.jpg" alt="5V PTH"></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Power_In_USB_5V_PTH.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Power_In_USB_5V_PTH.jpg" alt="USB C Connector, 3.3V Voltage regulator, 5V PTH"></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Power_In_5V_PTH.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Power_In_5V_PTH.jpg" alt="5V PTH"></a></td>
     </tr>
   </table>
 </div>
@@ -69,9 +69,9 @@ But of course you’re going to want to use the DataLogger IoT to log sensor dat
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_MAX17043_Fuel_Gauge_LiPo_Charger_MCP73831_Battery_Input.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_MAX17043_Fuel_Gauge_LiPo_Charger_MCP73831_Battery_Input.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Battery_Input.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Battery_Input.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_MAX17043_Fuel_Gauge_LiPo_Charger_MCP73831_Battery_Input.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_MAX17043_Fuel_Gauge_LiPo_Charger_MCP73831_Battery_Input.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Battery_Input.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Battery_Input.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -82,9 +82,9 @@ For those going the old school route, you can also bypass the voltage regulators
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_3V3_System_Qwiic.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_3V3_System_Qwiic.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_3V3_System_Qwiic.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_3V3_System_Qwiic.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_3V3_System_Qwiic.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_3V3_System_Qwiic.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_3V3_System_Qwiic.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_3V3_System_Qwiic.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -103,7 +103,7 @@ The driver should automatically install on most operating systems. However, ther
 <div style="text-align: center">
   <table>
     <tr>
-      <td>
+      <td style="text-align: center; vertical-align: middle;">
         <a href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers">
           <div style="text-align: center"><img src="https://cdn.sparkfun.com/c/178-100/assets/learn_tutorials/9/0/8/USB-to-serial_converter_CH340-closeup.jpg" alt="How to Install CH340 Drivers" style="width:500px; height:282px; object-fit:contain;"></div>
           <hr />
@@ -130,9 +130,9 @@ The hardware serial UART pins are broken out on the edge of the board. For more 
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_UARTs.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_UARTs.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_UART.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_UART.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_UARTs.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_UARTs.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_UART.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_UART.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -150,9 +150,9 @@ The board is populated with vertical and horizontal Qwiic connectors. These are 
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Qwiic_I2C.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Qwiic_I2C.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Qwiic_I2C.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Qwiic_I2C.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Qwiic_I2C.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Qwiic_I2C.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Qwiic_I2C.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Qwiic_I2C.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -189,9 +189,9 @@ The SPI pins are broken out on the edge of the board. For those that are unfamil
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_SPI.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_SPI.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_SPI.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_SPI.jpg"" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_SPI.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_SPI.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_SPI.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_SPI.jpg"" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -241,9 +241,9 @@ There are three 12-bit analog pins available and broken out on edge of the board
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg" alt=""></a></td>   
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg" alt=""></a></td>   
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -260,9 +260,9 @@ There are two buttons available on the board for reset and boot. These are also 
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Reset_Boot_Buttons.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Reset_Boot_Buttons.jpg" alt=""></a></td>
-     <td><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Reset_Boot_Buttons.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Reset_Boot_Buttons.jpg" alt=""></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Reset_Boot_Buttons.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Reset_Boot_Buttons.jpg" alt=""></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Reset_Boot_Buttons.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Reset_Boot_Buttons.jpg" alt=""></a></td>
     </tr>
   </table>
 </div>
@@ -303,25 +303,25 @@ There are three LEDs populated on the board. These can be disabled with their re
 
 <div style="text-align: center;">
   <table>
-      <tr align="center">
-          <td><b>Charge State</b></td>
-          <td><b>LED status</b></td>
+      <tr style="vertical-align:middle;">
+          <td style="text-align: center; vertical-align: middle;"><b>Charge State</b></td>
+          <td style="text-align: center; vertical-align: middle;"><b>LED status</b></td>
       </tr>
-      <tr align="center">
-          <td>No Battery</td>
-          <td>Floating (should be OFF, but may flicker)</td>
+      <tr style="vertical-align:middle;">
+          <td style="text-align: center; vertical-align: middle;">No Battery</td>
+          <td style="text-align: center; vertical-align: middle;">Floating (should be OFF, but may flicker)</td>
       </tr>
-      <tr align="center">
-          <td>Shutdown</td>
-          <td>Floating (should be OFF, but may flicker)</td>
+      <tr style="vertical-align:middle;">
+          <td style="text-align: center; vertical-align: middle;">Shutdown</td>
+          <td style="text-align: center; vertical-align: middle;">Floating (should be OFF, but may flicker)</td>
       </tr>
-      <tr align="center">
-          <td>Charging</td>
-          <td>ON</td>
+      <tr style="vertical-align:middle;">
+          <td style="text-align: center; vertical-align: middle;">Charging</td>
+          <td style="text-align: center; vertical-align: middle;">ON</td>
       </tr>
-      <tr align="center">
-          <td>Charge Complete</td>
-          <td>OFF</td>
+      <tr style="vertical-align:middle;">
+          <td style="text-align: center; vertical-align: middle;">Charge Complete</td>
+          <td style="text-align: center; vertical-align: middle;">OFF</td>
       </tr>
   </table>
 </div>

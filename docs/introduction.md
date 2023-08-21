@@ -210,13 +210,13 @@ If you aren't familiar with the Qwiic system, we recommend reading [here for an 
 <div style="text-align: center">
   <table style="border-style:none">
     <tr>
-     <td>
+     <td style="text-align: center; vertical-align: middle;">
      <div style="text-align: center"><a href="https://www.sparkfun.com/qwiic"><img src="../assets/Qwiic-registered-updated.png" alt="Qwiic Connect System" title="Click to learn more about the Qwiic Connect System!"></a>
      </div>
     </td>
     </tr>
     <tr>
-      <td><div style="text-align: center"><i><a href="https://www.sparkfun.com/qwiic">Qwiic Connect System</a></i></div></td>
+      <td style="text-align: center; vertical-align: middle;"><div style="text-align: center"><i><a href="https://www.sparkfun.com/qwiic">Qwiic Connect System</a></i></div></td>
     </tr>
   </table>
 </div>

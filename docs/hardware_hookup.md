@@ -71,11 +71,11 @@ Plug one end of your Qwiic cable into the DataLogger IoT and plug the other end 
 
 <div style="text-align:center">
 <table>
-  <tr align="center">
-   <td><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" width="1000" height="667"  alt="DataLogger IoT and a Qwiic Device"></a></td>
-   <td><a href="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg"><img src="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg" width="1000" height="667" alt="DataLogger and several Qwiic-Enabled Devices Daisy Chained"></a></td>
+  <tr style="vertical-align:middle;">
+   <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" width="1000" height="667"  alt="DataLogger IoT and a Qwiic Device"></a></td>
+   <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg"><img src="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg" width="1000" height="667" alt="DataLogger and several Qwiic-Enabled Devices Daisy Chained"></a></td>
   </tr>
-  <tr align="center">
+  <tr style="vertical-align:middle;">
     <td style="text-align:center"><i>DataLogger IoT and a Qwiic-Enabled Device</i></td>
     <td style="text-align:center"><i>DataLogger IoT and several Qwiic-Enabled Devices Daisy Chained</i></td>
   </tr>

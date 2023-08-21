@@ -31,9 +31,9 @@ Once the files are copied to the memory card, eject the microSD card from your c
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
-     <td><a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg"><img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Insert MicroSD Card"></a></td>
-     <td><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a></td>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg"><img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Insert MicroSD Card"></a></td>
+     <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a></td>
     </tr>
   </table>
 </div>

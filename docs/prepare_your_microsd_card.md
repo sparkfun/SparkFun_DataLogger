@@ -91,7 +91,7 @@ Once the memory card has finished formatting, eject the microSD from your comput
 
 <div style="text-align: center;">
   <table>
-    <tr align="center">
+    <tr style="vertical-align:middle;">
      <td style="vertical-align:middle;"><a href="../assets/microSD_Card_Check_File_System_FAT32.JPG">
      <img src="../assets/microSD_Card_Check_File_System_FAT32.JPG" width="439" height="439" alt="Check File System Windows"></a></td>
      <td style="vertical-align:middle;"><a href="../assets/mac_microSD_FAT32.png">
