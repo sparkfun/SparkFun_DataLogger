@@ -1,5 +1,4 @@
 <!--    TODO
-
     ____ center all images
     ____ alt text
     ____ Low Power Considerations?
@@ -33,6 +32,7 @@ The [SparkFun DataLogger IoT - 9DoF](https://www.sparkfun.com/products/20594) is
 <div style="text-align: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/RwCu-60sQOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
 
 
 ### Required Materials
@@ -137,6 +137,9 @@ To follow along with this tutorial, you will need the following materials. You m
 Straight out of the ~~box~~ anti-static bag the DataLogger IoT [DEV-20594] is ready to log data from its built-in ISM330DHCX Inertial Measurement Unit (IMU) and MMC5983MA Magnetometer. Only want to log magnetometer, accelerometer, gyro or temperature data? You’re good to go! But the fun is only just beginning…
 
 The DataLogger IoT - 9DoF is preprogrammed to automatically log data from all of the following sensors, so you may wish to add one or more of these to your shopping cart too. (More sensors are being added all the time and it is really easy to upgrade the DataLogger IoT to support them. But we'll get to that in a moment!). Currently, auto-detection is supported on the following Qwiic-enabled products:
+
+!!! note
+    For a list of supported devices based on the firmware, you can check out the [supported_devices.MD](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/supported_devices.md) file located in the the GitHub repository. We simply categorized the supported devices below based on the type. 
 
 * Any u-Blox GNSS Modules (Lat/Long, Altitude, Velocity, SIV, Time, Date) such as:
     * [ZED-F9P](https://www.sparkfun.com/products/15136) 1cm High Precision GPS
