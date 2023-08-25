@@ -10,12 +10,26 @@
 
     <div style="text-align: center"><a href="https://forum.sparkfun.com/ucp.php?mode=register" class="md-button">Create New Forum Account</a>&nbsp;&nbsp;&nbsp;<a href="https://forum.sparkfun.com/index.php" class="md-button md-button--primary">Log Into SparkFun Forums</a></div>
 
+### Issues Connecting to IoT Service
+
+Having trouble connecting your DataLogger IoT to an IoT service? Make sure to check your credentials and ensure that the configuration matches the IoT Service (such as your WiFi network, port, server, topic, certificates, keys, etc. to name a few). Make sure to also include the associated certificates and keys in the microSD card as well. You may see an output similar to the following message and image shown below.
+
+``` bash
+[W] AWS IoT disconnected - reconnecting.......[E] AWS IoT: MQTT connection failed. Error Code: -2
+```
+
+<div style="text-align: center">
+  <a href="../assets/Incorrect_Configuration_Connection_Failed_IoT_Service_AWS.JPG">
+  <img src="../assets/Incorrect_Configuration_Connection_Failed_IoT_Service_AWS.JPG" width="600px" height="600px" alt="Configuration entered incorrectly, DataLogger not connecting to IoT Service"></a>
+</div>
+
+In this case, the DataLogger Iot failed to connect to AWS IoT service because port was using the default value that was saved: `1883`. Ensure that the port is set to `8883` for your IoT service (e.g. AWS IoT, Azure, and ThingSpeak) and saved in persistent memory in order for the DataLogger IoT to successfully connect.
 
 
 
 ### U-Blox I<sup>2</sup>C Device Disappears when IoT DataLogger Initializes
 
-If you have issues where a u-blox device that is connected to the I<sup>2</sup>C port fails to connect a second time when the IoT DataLogger initializes, this is due to a bug in the firmware from an initial release. You may see an output similar to the following line and image shown below.
+If you have issues where a u-blox device that is connected to the I<sup>2</sup>C port fails to connect a second time when the IoT DataLogger initializes, this is due to a bug in the firmware from an initial release. You may see an output similar to the following message and image shown below.
 
 ``` bash
 [W] GNSS::isConnected no traffic seen (first attempt)

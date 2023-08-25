@@ -7,3 +7,8 @@ Now that you've successfully got your DataLogger IoT - 9DoF up and running, it's
 * [Firmware](https://github.com/sparkfun/SparkFun_DataLogger/tree/main/firmware)
 * [GitHub Hardware Repo](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)
 * [SFE Showcase](https://youtu.be/RwCu-60sQOI)
+
+Or check out these related blog posts.
+
+* [IoT Platforms and Protocols](https://www.sparkfun.com/news/6808)
+* [Extending the Reach of Data Logging](https://www.sparkfun.com/news/7373)
