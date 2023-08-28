@@ -12,3 +12,4 @@ Or check out these related blog posts.
 
 * [IoT Platforms and Protocols](https://www.sparkfun.com/news/6808)
 * [Extending the Reach of Data Logging](https://www.sparkfun.com/news/7373)
+* [Send Sensor Data to AWS All In Under 15 Minutes](https://www.sparkfun.com/news/8028)
