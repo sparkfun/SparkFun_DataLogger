@@ -45,12 +45,13 @@ The above guides will show you how to open the correct port for the DataLogger I
     For users with an Arduino IDE, you could also use the Arduino Serial Monitor by setting the line ending to **Newline**. Users will also need to <kbd>CTRL</kbd> + <kbd>Enter</kbd> when sending any character to the DataLogger IoT. However, we recommend using one of the terminals mentioned earlier.
 
 
+
 ## Initialization and Serial Output
 
-Connect the DataLogger IoT to a USB cable and connect to your computer. The WS2812 LED will light up green as it initializes. When you open the serial terminal you should see the following output when the board initializes:
+Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. When you open the serial terminal you should see the following output when the board initializes:
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Initializing.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Initializing.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing.JPG" width="600" height="600" alt="Output when DataLogger IoT - 9DoF is initializing"></a>
 </div>
 
 The messages in the serial terminal provide us with a lot of the DataLogger's configuration:
@@ -71,19 +72,19 @@ The messages in the serial terminal provide us with a lot of the DataLogger's co
 * The board will also show the available IoT services that are enabled for the DataLogger IoT.
 * The output will finish by telling you what devices are connected to the DataLogger IoT again.
 
-Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputting comma separated values (CSV). This is the default output that is set for the DataLogger IoT.
+Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputting comma separated values (CSV). This is the default output that is set for the DataLogger IoT - 9DoF. Of course, you will not have as many readings on the DataLogger IoT since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="600" height="600" alt="CSV Output on the DataLogger IoT - 9DoF"></a>
 </div>
 
 !!! note
     Depending on your DataLogger IoT preferences, your device may output as a JSON format like the image shown below.
      <div style="text-align: center">
-       <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="1000" height="667"></a>
+       <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="600" height="600" alt="JSON Output on the DataLogger -IoT - 9DoF"></a>
      </div>
 
-The data scrolling up the screen show what each device's output is along with their associated unit if it is available.
+The data scrolling up the screen show what each device's output is along with their associated unit if it is available. Your milage will vary depending on the board version that you have and what device is connected
 
 * `MAX17048.Voltage (V)`
 * `MAX17048.State of Charge (%)`
@@ -108,12 +109,11 @@ The output will vary depending on what is connected so you may get additional re
 
 Right! Let's open the main menu by pressing on any key in the serial terminal program.
 
-
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG" width="600" height="600" alt="DataLogger IoT Main Menu"></a>
 </div>
 
-You will be prompted with a few options. Once in the configuration menu, all three colors of the WS2812 LED will turn on to mix to produce the color white indicating that you are navigating through the menu.
+You will be prompted with a few options. Once in the configuration menu, all three colors of the addressable RGB LED will turn on to mix to produce the color white indicating that you are navigating through the menu.
 
 
 
@@ -122,7 +122,7 @@ You will be prompted with a few options. Once in the configuration menu, all thr
 When exiting the menu's, you will be prompted with either an <kbd>x</kbd> or <kbd>b</kbd>. You can use either one when exiting the menus as well as <kbd>X</kbd> or <kbd>B</kbd>. Note that you will need to use either of these keys when making a change in order for the DataLogger IoT to save any changes in memory. Make sure that you receive the following message indicating that the settings were saved: <code>[I] Saving System Settings</code>. The DataLogger IoT will the continue reading the devices and outputting the readings through the serial terminal.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings"></a>
 </div>
 
 
@@ -132,7 +132,7 @@ When exiting the menu's, you will be prompted with either an <kbd>x</kbd> or <kb
 You can also use any of your <kbd>Esc</kbd> or arrow keys (i.e. <kbd>&#8593;</kbd>, <kbd>&#8595;</kbd>, <kbd>&#8592;</kbd>, <kbd>&#8594;</kbd>) to exit. However, using the escape or arrow keys will not save any changes in memory once the reset button is hit or whenever power is cycled.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG" width="600" height="600" alt="Output when Cancelling Changes"></a>
 </div>
 
 
@@ -142,7 +142,7 @@ You can also use any of your <kbd>Esc</kbd> or arrow keys (i.e. <kbd>&#8593;</kb
 The menus will slowly exit out after 2 minutes of inactivity, so if you do not press a key the DataLogger IoT will return to its previous menu. It will continue to move back until it reaches the main menu. After another additional 2 minutes of inactivity, the board will exit begin logging data again. When the menu exits from inactivity, any changes will not be saved in memory as well.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG" width="600" height="600" alt="Output when Timing Out"></a>
 </div>
 
 
@@ -152,7 +152,7 @@ The menus will slowly exit out after 2 minutes of inactivity, so if you do not p
 Let's start by configuring the DataLogger's system settings. Send a <kbd>1</kbd> through the serial terminal. You will have the option to adjust various settings ranging from the your preferences, time source to synchronize the date and time, WiFi network, how the device logs data, which IoT service to use, and firmware updates.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG" width="600" height="600" alt="Settings Menu Options"></a>
 </div>
 
 !!! note
@@ -168,10 +168,10 @@ We'll go over each of these options below.
 In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial console output and the menu system's timeout value.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG" width="600" height="600" alt="Application Settings Options"></a>
 </div>
 
-In the Application Settings Menu, users will be able to configure the WS2812's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
+In the Application Settings Menu, users will be able to configure the addressable RGB's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
 
 * <kbd>1</kbd> **LED Enabled** &mdash; Enable/Disable the on-board RGB LED activity
     * Accepts a boolean value:
@@ -217,7 +217,7 @@ In the Application Settings Menu, users will be able to configure the WS2812's L
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Save Settings Menu"></a>
 </div>
 
 
@@ -227,7 +227,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings menu, send a <kbd>2</kbd> to adjust the Save Settings.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"" width="600" height="600"></a>
 </div>
 
 In the Save Settings Menu, users will be able to save, restore, or clear any preferences in memory (i.e. persistent storage) or a saved file to a fallback device (i.e. microSD card). Note that any passwords and secret keys are not saved in the save settings file. You will need to manually enter those values in the file saved on the microSD card.
@@ -265,13 +265,13 @@ In the Save Settings Menu, users will be able to save, restore, or clear any pre
 If you have the Fallback Save enabled or selected the option **Save to Fallback**, you will notice an additional file called **datalogger.json** saved in the microSD card. This is the fallback file that is saved. Using a text editor, you can edit this file to adjust the settings or provide WiFi credentials, certificates, and keys. You can use option <kbd>7</kbd> to restore the settings on your DataLogger IoT.
 
 <div style="text-align: center">
-  <a href="../assets/Datalogger_IoT_Preferences_saved_fallback_file.JPG"><img src="../assets/Datalogger_IoT_Preferences_saved_fallback_file.JPG" width="1000" height="667"></a>
+  <a href="../assets/Datalogger_IoT_Preferences_saved_fallback_file.JPG"><img src="../assets/Datalogger_IoT_Preferences_saved_fallback_file.JPG" width="600" height="600" alt="Fall Back Saved Settings Saved in the MicroSD Card as a JSON File"></a>
 </div>
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 
@@ -284,7 +284,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings Menu, send <kbd>3</kbd> to manage the time reference sources.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG" width="600" height="600" alt="Time Source Menu Options"></a>
 </div>
 
 In this menu, you will have options to update the primary reference clock, update interval, add a secondary reference clock, and update it's interval. By default, the primary reference clock is set to use the Network Time Protocol (NTP). To synchronization the time, you will need to connect to a 2.4GHz WiFi network in order to update the time. To add a secondary clock, make sure to connect a compatible Qwiic-enabled devices that can keep track of time (i.e. Qwiic Real Time Clock Module - RV-8803 or a Qwiic-enabled u-blox GNSS module).
@@ -317,8 +317,8 @@ In this menu, you will have options to update the primary reference clock, updat
     <div style="text-align: center;">
       <table>
         <tr style="vertical-align:middle;">
-         <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" alt="u-blox GNSS Module Attached via Qwiic"></a></td>
-         <td style="text-align: center; vertical-align: middle;"><a href="../DataLogger_IoT_Qwiic_RTC.jpg"><img src="../assets/DataLogger_IoT_Qwiic_RTC.jpg" alt="Qwiic Real Time Clock Module - RV-8803 Attached via Qwiic"></a></td>
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" alt="u-blox GNSS Module Attached via Qwiic"></a></td>
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../DataLogger_IoT_Qwiic_RTC.jpg"><img src="../assets/DataLogger_IoT_Qwiic_RTC.jpg" alt="Qwiic Real Time Clock Module - RV-8803 Attached via Qwiic"></a></td>
         </tr>
       </table>
     </div>
@@ -326,7 +326,7 @@ In this menu, you will have options to update the primary reference clock, updat
     Once attached, you will be prompted with additional options to select a primary reference clock.
 
     <div style="text-align: center">
-      <a href="../assets/Additional_Time_Sources_GNSS_RTC.PNG"><img src="../assets/Additional_Time_Sources_GNSS_RTC.PNG" width="1000" height="667"></a>
+      <a href="../assets/Additional_Time_Sources_GNSS_RTC.PNG"><img src="../assets/Additional_Time_Sources_GNSS_RTC.PNG" width="600" height="600" alt="Time Source Reference Clock Options"></a>
     </div>
 
     If you are using a u-blox GNSS module, make sure that you have enough satellites in view. The option to add or configure the GNSS will not be available if there are not enough satellites in view. If you are using the Qwiic Real Time Clock Module - RV-8803, you may need to go into the device settings to manually adjust the date and time.
@@ -335,7 +335,7 @@ In this menu, you will have options to update the primary reference clock, updat
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 
@@ -348,7 +348,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings Menu, send a <kbd>4</kbd> to configure the WiFi settings. As of firmware v01.00.02, up to 4 sets of WiFi credentials can be saved.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu_2.JPG" width="600" height="600" alt="WiFi Network Menu Options"></a>
 </div>
 
 Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
@@ -386,13 +386,13 @@ Once you are in the WiFi Network menu, you can enable/disable WiFi and save the 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 Press the reset button or cycle power to restart the DataLogger IoT. You can also go through the menu and reset the device through software as well. Once the board is reset, the DataLogger will attempt to connect to a WiFi network. If you are successful, the output will indicate that the board connected to a WiFi network and will update the current time through a NTP Client.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Initializing_WiFi_Connected.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing_WiFi_Connected.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Initializing_WiFi_Connected.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing_WiFi_Connected.JPG" width="600" height="600" alt="DataLogger IoT Re-initializing and Outputting WiFi Connected Message"></a>
 </div>
 
 !!! note
@@ -408,7 +408,7 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
 In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG" width="600" height="600" alt="NTP Client Menu Options"></a>
 </div>
 
 In this menu, users will have the option to enable/disable the NTP client, select the primary/secondary server, or adjust the time zone for your area.
@@ -434,7 +434,7 @@ In this menu, users will have the option to enable/disable the NTP client, selec
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 
@@ -444,7 +444,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings menu, send a <kbd>6</kbd> to adjust how data is logged.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG" width="600" height="600" alt="Logger Menu Options"></a>
 </div>
 
 In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
@@ -482,13 +482,13 @@ In the Logger menu, users will have the option to add a timestamp, increment sam
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 Press the reset button or cycle power to restart the DataLogger IoT. You can also go through the menu and reset the device through software as well. Below is an example with the ISO08601 time that was added to the output.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG" width="600" height="600" alt="DataLogger IoT Re-initializing and Outputting Time in ISO08601 Time Format"></a>
 </div>
 
 
@@ -498,7 +498,7 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
 In the Settings menu, send an <kbd>7</kbd> to adjust the Logging Timer.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Timer_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Timer_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Timer_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Timer_Menu.JPG" width="600" height="600" alt="Logging Timer Menu Options"></a>
 </div>
 
 Adjusting the interval for the Logging Timer will change the amount of time between log entries.
@@ -511,7 +511,7 @@ Adjusting the interval for the Logging Timer will change the amount of time betw
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 
@@ -521,7 +521,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings menu, send an <kbd>8</kbd> to adjust the Logging Data File.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG" width="600" height="600" alt="Data File Menu Options"></a>
 </div>
 
 Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. THe DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
@@ -544,7 +544,7 @@ Adjusting these parameters allows you to change the filename prefix, the number 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 The contents of the file will depend on how the data was saved (either CSV or JSON). Make sure that the SD Card format is enabled to either CSV or JSON with your desired device outputs turned on so that the DataLogger can save the readings.
@@ -552,7 +552,7 @@ The contents of the file will depend on how the data was saved (either CSV or JS
 When removing the microSD card, make sure to remove your power source. Then insert into it into microSD card adapter or USB reader. When connecting the memory card to your computer, you can use a text editor to view the saved readings. In this case, a Windows operating system was viewing the file **sfe0000.txt** and it was only file available in the microSD card.
 
  <div style="text-align: center">
-   <a href="../assets/Datalogger_IoT_text_file.JPG"><img src="../assets/Datalogger_IoT_text_file.JPG" width="1000" height="667"></a>
+   <a href="../assets/Datalogger_IoT_text_file.JPG"><img src="../assets/Datalogger_IoT_text_file.JPG" width="600" height="600" alt="Readings Saved in Text File Shown in a Windows File Explorer"></a>
  </div>
 
 
@@ -562,7 +562,7 @@ When removing the microSD card, make sure to remove your power source. Then inse
 In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Client.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG" width="600" height="600" alt="MQTT Client Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Client
@@ -594,7 +594,7 @@ In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Clien
 In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secure Client.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_MQTT_Secure_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MQTT_Secure_Client_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_MQTT_Secure_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MQTT_Secure_Client_Menu.JPG" width="600" height="600" alt="MQTT Secure Client Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Secure Client
@@ -603,7 +603,7 @@ In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secu
         * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> _(default)_
+        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -632,7 +632,7 @@ In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secu
 In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG" width="600" height="600" alt="AWS IoT Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable AWS IoT
@@ -641,7 +641,7 @@ In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
         * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> _(default)_
+        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -671,7 +671,7 @@ In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
 In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQTT
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG" width="600" height="600" alt="ThingSpeak MQTT Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable ThingSpeak MQTT
@@ -680,7 +680,7 @@ In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQ
         * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1883</kbd> _(default)_
+        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -711,7 +711,7 @@ In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQ
 In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG" width="600" height="600" alt="Azure IoT Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable Azure IoT
@@ -720,7 +720,7 @@ In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT
         * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
     * Accepts an unsigned integer:
-        * <kbd>1</kbd> _(default)_
+        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
     * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
@@ -753,7 +753,7 @@ In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT
 In the Settings menu, send an <kbd>14</kbd> to adjust settings for the Azure IoT.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG" width="600" height="600" alt="HTTP IoT Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
@@ -773,7 +773,7 @@ In the Settings menu, send an <kbd>14</kbd> to adjust settings for the Azure IoT
 In the Settings menu, send an <kbd>15</kbd> to adjust settings for MachineChat.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_MachineChat_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MachineChat_Menu.JPG" width="1000" height="667" alt=""></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_MachineChat_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MachineChat_Menu.JPG" width="600" height="600" alt="Machine Chat Menu Options"></a>
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
@@ -799,7 +799,7 @@ New sensors and features are being added all the time and we've made it really e
 This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>16</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
 </div>
 
 
@@ -824,7 +824,7 @@ This functionality is accessed via the Settings Menu, which is required to use t
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 
@@ -833,10 +833,10 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Main Menu, send a <kbd>2</kbd> through the serial terminal to adjust the devices settings.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu.JPG" width="600" height="600" alt="Device Settings Menu Options"></a>
 </div>
 
-This will bring up the connected devices that are currently available. You can configure each device and enable/disable each output. Below is a sample of the on-board devices available for the DataLogger IoT when only the MAX17048, ISM330, and MMC5983 are connected. As the DataLogger IoT initializes, the board will populate additional devices in this window if they are detected.
+This will bring up the connected devices that are currently available. You can configure each device and enable/disable each output. Below is a sample of the on-board devices available for the DataLogger IoT - 9DoF when only the MAX17048, ISM330, and MMC5983 are connected. As the DataLogger IoT - 9DoF initializes, the board will populate additional devices in this window if they are detected. Your mileage will vary depending on what is connected. On the DataLogger IoT you will not see the ISM330 or MMC5983  as an option since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
 * <kbd>1</kbd> **MAX17048** &mdash; MAX17048 LiPo Battery Fuel Gauge
     * <kbd>1</kbd> **Voltage (V)** &mdash; Battery voltage (Volts)
@@ -957,11 +957,11 @@ This will bring up the connected devices that are currently available. You can c
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt=" Output Save Settings Confirmation"></a>
 </div>
 
 !!! warning
-    As you connect additional devices to the DataLogger IoT, the values associated with each device in this menu will change! Make sure to check your device settings menu after additional devices are attached.
+    As you connect additional devices to the DataLogger IoT, the values associated with each device in this menu will change! Make sure to check your device settings menu after additional devices are attached should you decide to configure the additional devices and enable/disable their outputs.
     <div style="text-align: center">
-      <a href="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu_Additional_Devices.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu_Additional_Devices.JPG" width="1000" height="667"></a>
+      <a href="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu_Additional_Devices.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Device_Settings_Menu_Additional_Devices.JPG" width="600" height="600" alt="Additional Devices Connected and Showing up as Menu Options"></a>
     </div>

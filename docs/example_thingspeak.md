@@ -17,6 +17,8 @@ The following is covered by this document:
 * Securely connecting the ThingSpeak
 * How data is posted from the DataLogger IoT to ThingSpeak
 
+
+
 ## General Operation
 
 ### ThingSpeak Structure
@@ -29,11 +31,9 @@ As data is reported to a ThingSpeak channel, the field values are accessible for
 
 
 
-
 ### Data Structure
 
 The DataLogger IoT is constructed around the concept of ***Devices*** which are often a type of sensor that can output a set of data values per observation or sample.
-
 
 
 
@@ -45,10 +45,8 @@ The concept of Channels that contain Fields in ThingSpeak is similar to the Devi
 * **Data == Fields**
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_mapping.png"><img src="../assets/iot_ts_mapping.png" alt="DataLogger to ThingSpeak Mapping"></a>
+  <a href="../assets/iot_ts_mapping.png"><img src="../assets/iot_ts_mapping.png"  width="1000" height="667" alt="DataLogger to ThingSpeak Mapping"></a>
 </div>
-
-
 
 During configuration of the DataLogger IoT, the mapping between the Device and ThingSpeak channel is specified. The data to field mapping is automatically created by the DataLogger IoT following the data reporting order from the specific device driver.
 
@@ -63,13 +61,13 @@ The following discussion outlines the basic steps taken to create a Channel in T
 Once logged into your ThingSpeak account, select ***Channels > My Channels*** menu item and on the **My Channel** page, select the **New Channel** button.
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_channel.png"><img src="../assets/iot_ts_channel.png" alt="New Channel"></a>
+  <a href="../assets/iot_ts_channel.png"><img src="../assets/iot_ts_channel.png"  width="600" height="600" alt="New Channel"></a>
 </div>
 
 On the presented channel page, name the channel and fill in the specific channel fields. The fields should map to the data fields reported from the Device being linked to this channel. Order is important, and is determined by looking at output of a device to the serial device (or reviewing the device driver code).
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_new_channel.png"><img src="../assets/iot_ts_new_channel.png" alt="New Channel"></a>
+  <a href="../assets/iot_ts_new_channel.png"><img src="../assets/iot_ts_new_channel.png" width="600" height="600" alt="New Channel"></a>
 </div>
 
 Once the values are entered, select save. ThingSpeak will now show list of **Channel Stats**, made up of line plots for each field specified for the channel.
@@ -90,7 +88,7 @@ On the presented dialog, enter a name for the MQTT connection and in the **Autho
     More channels can be added later.
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_mqtt.png"><img src="../assets/iot_ts_mqtt.png" alt="MQTT on ThingSpeak"></a>
+  <a href="../assets/iot_ts_mqtt.png"><img src="../assets/iot_ts_mqtt.png" width="600" height="600" alt="MQTT on ThingSpeak"></a>
 </div>
 
 !!! note
@@ -99,7 +97,7 @@ On the presented dialog, enter a name for the MQTT connection and in the **Autho
 The selected Channel is then listed in the **Authorized Channel** table. Ensure that the Allow Publish and Allow Subscribe attributes are enabled for the added channel.
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_mqtt_channel_auth.png"><img src="../assets/iot_ts_mqtt_channel_auth.png" alt="MQTT Channel Authorization on ThingSpeak"></a>
+  <a href="../assets/iot_ts_mqtt_channel_auth.png"><img src="../assets/iot_ts_mqtt_channel_auth.png" width="600" height="600" alt="MQTT Channel Authorization on ThingSpeak"></a>
 </div>
 
 At this point, the ThingSpeak Channel is setup for access by the DataLogger IoT.
@@ -116,6 +114,8 @@ Once the device is integrated into the application, the specifics for the ThingS
 * Password
 * Device to Channel mapping
 * CA Certificate Chain
+
+
 
 ### Server Name/Hostname
 
@@ -154,7 +154,9 @@ You can download the cert file for ThingSpeak.com page using a web-browser. Clic
 
 ## Setting Properties
 
-The above property values must be set on the DataLogger IoT before use. They can be set via a JSON file that is loaded by the system at startup. For the ThingSpeak example outlined in this document, the entries in the settings JSON file are as follows:
+The above property values must be set on the DataLogger IoT before use. They can be set via a JSON file that is loaded by the system at startup. Of course, you can also manually set the values using the menu system like the previous MQTT example.
+
+For the ThingSpeak example outlined in this document, the entries in the settings JSON file are as follows:
 
 ```json
 "ThingSpeak MQTT": {
@@ -174,9 +176,10 @@ The above property values must be set on the DataLogger IoT before use. They can
 !!! note
     The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma.
 
-Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert Filename`, and `Channels`, you will need to also ensure that the `port` is set to `8883`. The default in certain firmware versions is currently `1883`. You will need to adjust the port value to properly connect to the ThingSpeak service.
+Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert Filename`, and `Channels`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the ThingSpeak service.
 
 If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
+
 
 
 ## Monitoring Output
@@ -184,5 +187,5 @@ If the JSON file is saved in the microSD card, you will need to load the credent
 Once the connector is configured and the DataLogger IoT is connected to ThingSpeak, as data is posted, the results are show on the Channel Stats page for your Channel. For the above example, the output of a SparkFun BME280 sensor produces the following output:
 
 <div style="text-align: center">
-  <a href="../assets/iot_ts_channel_data.png"><img src="../assets/iot_ts_channel_data.png" alt="ThingSpeak Stats"></a>
+  <a href="../assets/iot_ts_channel_data.png"><img src="../assets/iot_ts_channel_data.png" width="600" height="600" alt="ThingSpeak Stats"></a>
 </div>

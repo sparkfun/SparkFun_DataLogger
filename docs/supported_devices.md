@@ -1,6 +1,6 @@
 # DataLogger IoT Supported Devices
 
-The following table lists the devices/boards supported by the DataLogger IoT Boards, broken down by firmware version
+The following table lists the devices/boards supported by the DataLogger IoT Boards, broken down by firmware version.
 
 ## Version 1.0
 
@@ -55,6 +55,3 @@ The following table lists the devices/boards supported by the DataLogger IoT Boa
 * [Ambient Light Sensor - VEML7700 (Qwiic)](https://www.sparkfun.com/products/18981)
 * [SparkFun Distance Sensor Breakout - 4 Meter, VL53L1X (Qwiic)](https://www.sparkfun.com/products/14722)
 * [SparkFun Qwiic ToF Imager - VL53L5CX](https://www.sparkfun.com/products/18642)
-
-
-

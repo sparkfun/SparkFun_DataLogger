@@ -47,6 +47,9 @@ icon: fontawesome/solid/scroll
 # Example - HTTP
 --8<-- "./docs/example_http.md"
 
+# Appendix - Supported Qwiic Devices
+--8<-- "./docs/supported_devices.md"
+
 # Troubleshooting
 --8<-- "./docs/troubleshooting.md"
 

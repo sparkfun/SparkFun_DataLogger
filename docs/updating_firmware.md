@@ -4,7 +4,7 @@
 
     **You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.**
 
-    The DataLogger IoT – 9DoF comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
+    Each DataLogger IoT comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
 
     Really. We mean it.
 
@@ -24,7 +24,7 @@ Once downloaded, insert the microSD card into a card reader or USB adapter. Then
 
 <div style="text-align: center">
   <a href="../assets/Explorer_MicroSD_Card_Firmware_Files.PNG">
-  <img src="../assets/Explorer_MicroSD_Card_Firmware_Files.PNG" width="1000" height="667" alt="microSD Card Firmware Files"></a>
+  <img src="../assets/Explorer_MicroSD_Card_Firmware_Files.PNG" width="600" height="600" alt="microSD Card Firmware Files"></a>
 </div>
 
 Once the files are copied to the memory card, eject the microSD card from your computer. Insert the card back into the DataLogger IoT's microSD card socket. Connect the DataLogger IoT to your computer using a USB cable.
@@ -32,17 +32,17 @@ Once the files are copied to the memory card, eject the microSD card from your c
 <div style="text-align: center;">
   <table>
     <tr style="vertical-align:middle;">
-     <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg"><img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Insert MicroSD Card"></a></td>
-     <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg"><img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Insert MicroSD Card"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a></td>
     </tr>
   </table>
 </div>
 
-Open a Serial Terminal at **115200** baud. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>3</kbd> to update the firmware from the microSD card. You should see an image similar to the output below.
+Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>3</kbd> to update the firmware from the microSD card. You should see an image similar to the output below.
 
 <div style="text-align: center">
   <a href="../assets/act_sysfirm_up_sel.png">
-  <img src="../assets/act_sysfirm_up_sel.png" width="1000" height="667" alt="Firmware Files"></a>
+  <img src="../assets/act_sysfirm_up_sel.png" width="600" height="600" alt="Firmware Files"></a>
 </div>
 
 The system will search the root directory of the on-board SD card for available firmware files. The firmware files are selected using the following criteria:
@@ -56,14 +56,14 @@ Once a file is selected, the system new firmware is read off the SD card and wri
 
 <div style="text-align: center">
   <a href="../assets/act_sysfirm_updating.png">
-  <img src="../assets/act_sysfirm_updating.png" width="1000" height="667" alt="Updating"></a>
+  <img src="../assets/act_sysfirm_updating.png" width="600" height="600" alt="Updating"></a>
 </div>
 
 And once updated, the system is rebooted and starts using the new firmware image!
 
 <div style="text-align: center">
   <a href="../assets/act_sysfirm_up-boot.png">
-  <img src="../assets/act_sysfirm_up-boot.png" width="1000" height="667" alt="Reboot"></a>
+  <img src="../assets/act_sysfirm_up-boot.png" width="600" height="600" alt="Reboot"></a>
 </div>
 
 
@@ -83,17 +83,17 @@ If you have not already, connect the DataLogger IoT to your computer using a USB
 </div>
 
 
-Open a Serial Terminal at **115200** baud. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>4</kbd> to update the firmware over-the-air.
+Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>4</kbd> to update the firmware over-the-air.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
 </div>
 
 When this option is selected, the system will contact the update server and search for available upgrade firmware, selecting the latest version available. If a newer version is found, a prompt is presented to confirm the upgrade.
 
 <div style="text-align: center">
   <a href="../assets/DataLogger_IoT_OTA_Update_1.PNG">
-  <img src="../assets/DataLogger_IoT_OTA_Update_1.PNG" width="1000" height="667" alt="Select OTA Update"></a>
+  <img src="../assets/DataLogger_IoT_OTA_Update_1.PNG" width="600" height="600" alt="Select OTA Update"></a>
 </div>
 
 !!! note
@@ -104,7 +104,7 @@ Typing <kbd>Y</kbd> (or hitting enter) starts the update operation. As the firmw
 
 <div style="text-align: center">
   <a href="../assets/DataLogger_IoT_OTA_Update_2.PNG">
-  <img src="../assets/DataLogger_IoT_OTA_Update_2.PNG" width="1000" height="667" alt="OTA Update Downloading"></a>
+  <img src="../assets/DataLogger_IoT_OTA_Update_2.PNG" width="600" height="600" alt="OTA Update Downloading"></a>
 </div>
 
 
@@ -112,5 +112,5 @@ Once the update file is downloaded, it is verified as being the correct file. On
 
 <div style="text-align: center">
   <a href="../assets/DataLogger_IoT_OTA_Update_3.PNG">
-  <img src="../assets/DataLogger_IoT_OTA_Update_3.PNG" width="1000" height="667" alt="Updated OTA and Rebooted"></a>
+  <img src="../assets/DataLogger_IoT_OTA_Update_3.PNG" width="600" height="600" alt="Updated OTA and Rebooted"></a>
 </div>

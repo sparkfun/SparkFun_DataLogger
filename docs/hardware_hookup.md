@@ -1,3 +1,7 @@
+In this section, we will go over how to connect to the SparkFun DataLogger IoT. At the time of writing, we used the DataLogger IoT - 9DoF. This hardware hookup explained in this section also applies for the DataLogger IoT.
+
+
+
 ## Soldering to the PTHs
 
 !!! note
@@ -45,7 +49,7 @@ You probably already have a microSD card laying around but if you need any addit
   <img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Inserting MicroSD card"></a>
 </div>
 
-You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data. You can tell when the board has just logged by observing the WS2812 LED. When enabled, the LED will blink blue after it has logged one data point.
+You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data. You can tell when the board has just logged by observing the addressable RGB LED. When enabled, the LED will blink blue after it has logged one data point.
 
 After you’ve logged some data, you will find a new file on your SD card. There may also be additional files if you manually saved the firmware or preferences to the memory card.
 
@@ -72,8 +76,8 @@ Plug one end of your Qwiic cable into the DataLogger IoT and plug the other end 
 <div style="text-align:center">
 <table>
   <tr style="vertical-align:middle;">
-   <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" width="1000" height="667"  alt="DataLogger IoT and a Qwiic Device"></a></td>
-   <td style="text-align: center; vertical-align: middle;"><a href="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg"><img src="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg" width="1000" height="667" alt="DataLogger and several Qwiic-Enabled Devices Daisy Chained"></a></td>
+   <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg"><img src="../assets/DataLogger_IoT_Qwiic_u-blox_GNSS_SAM-M10Q_Module.jpg" width="1000" height="667"  alt="DataLogger IoT and a Qwiic Device"></a></td>
+   <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg"><img src="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg" width="1000" height="667" alt="DataLogger and several Qwiic-Enabled Devices Daisy Chained"></a></td>
   </tr>
   <tr style="vertical-align:middle;">
     <td style="text-align:center"><i>DataLogger IoT and a Qwiic-Enabled Device</i></td>
@@ -84,14 +88,12 @@ Plug one end of your Qwiic cable into the DataLogger IoT and plug the other end 
 
 Our Qwiic sensors usually all have power indicator LEDs and I<sup>2</sup>C pull-up resistors. Depending on your application, you may want or need to disable these by cutting the jumper links on the sensor circuit boards. We have a [tutorial](https://learn.sparkfun.com/tutorials/how-to-work-with-jumper-pads-and-pcb-traces) that will show you how to do that safely.
 
-
 Sometimes you might want to connect more than one of the same type of sensor to the DataLogger IoT. On the I<sup>2</sup>C bus, each device needs to have a unique address. On many of our boards, there are jumpers links which you can use to change the address and some have addresses that can be configured in software. But there are some where you cannot change the address - the [NAU7802 Qwiic Scale](https://www.sparkfun.com/products/15242) being one example.
 
 Typically one would use a multiplexor. However, we currently do not have the DataLogger IoT configured to work with any multiplexors (i.e. Qwiic Mux Breakout).
 
 !!! note
     Currently the Qwiic Mux is not compatible with the DataLogger IoT.
-
 
 
 
@@ -133,9 +135,9 @@ Depending on what ports your computer has available, you will need one of the fo
 * [USB 3.1 A to C Cable](https://www.sparkfun.com/products/14743)
 * [USB 2.0 C to C Cable](https://www.sparkfun.com/products/16395)
 
-Use the cable to connect your DataLogger IoT to your computer and you will see the LEDs light as the DataLogger IoT starts up. The WS2812 RGB LED will light up green for a second or two while the DataLogger IoT configures itself. It will flash blue while data is being logged to the microSD card. If you have jumped the gun and have a LiPo battery already connected, the yellow CHG charging LED may light up too.
+Use the cable to connect your DataLogger IoT to your computer and you will see the LEDs light as the DataLogger IoT starts up. The addressable RGB RGB LED will light up green for a second or two while the DataLogger IoT configures itself. It will flash blue while data is being logged to the microSD card. If you have jumped the gun and have a LiPo battery already connected, the yellow CHG charging LED may light up too.
 
-If the WS2812 RGB LED does not light up, your DataLogger IoT is probably in deep sleep following a previous logging session. Pressing the RST reset button will wake it.
+If the addressable RGB LED does not light up, your DataLogger IoT is probably in deep sleep following a previous logging session. Pressing the RST reset button will wake it.
 
 You’ll find full instructions on how to configure the DataLogger IoT later in this tutorial.
 

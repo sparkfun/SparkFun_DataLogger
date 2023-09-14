@@ -1,32 +1,32 @@
 !!! note
     The ESP32-WROOM can only connect to a 2.4GHz WiFi network. Unfortunately, 5GHz is not supported on the ESP32-WROOM module.
 
-To take advantage of syncing DataLogger to the Network Time Protocol (NTP), logging data to an IoT service, or updating firmware OTA, you will need to connect to a 2.4GHz WiFi network.
+To take advantage of syncing the DataLogger to the Network Time Protocol (NTP), logging data to an IoT service, or updating firmware OTA, you will need to connect to a 2.4GHz WiFi network.
 
-In the Settings Menu, send a <kbd>4</kbd> to configure the WiFi settings.
+Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then send a <kbd>4</kbd> to configure the WiFi settings.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG" width="1000" height="667"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_WiFi_Network_Menu.JPG" width="600" height="600" alt="WiFi Network Menu Options"></a>
 </div>
 
 Send a <kbd>2</kbd> to set the WiFi Network Name. You'll be prompted to set the network name. In this case, the network name is `sparkfun`. Once you enter the name, hit the <kbd>enter</kbd> key.
 
 <div style="text-align: center">
   <a href="../assets/Configure_WiFi_Network.PNG">
-  <img src="../assets/Configure_WiFi_Network.PNG" width="1000" height="667" alt="Configure WiFi Network"></a>
+  <img src="../assets/Configure_WiFi_Network.PNG" width="600" height="600" alt="Configure WiFi Network"></a>
 </div>
 
 Send a <kbd>2</kbd> to set the WiFi  password. You'll be prompted to set the password. As you send the password, each character will be masked by a asterisk (i.e. &ast;) Once you enter the name, hit the <kbd>enter</kbd> key.
 
 <div style="text-align: center">
   <a href="../assets/Configure_WiFi_Password.PNG">
-  <img src="../assets/Configure_WiFi_Password.PNG" width="1000" height="667" alt="Configure WiFi Password"></a>
+  <img src="../assets/Configure_WiFi_Password.PNG" width="600" height="600" alt="Configure WiFi Password"></a>
 </div>
 
 Follow the prompts to exit out of the menu properly so that the DataLogger IoT saves the settings.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="1000" height="667" alt="Save Settings Menu"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
 
 Once you see the message `[I] Saving System Settings` and data on the output, hit the reset button on the board. You can also use the menu to perform a device restart, however you will need to ensure that you receive the message indicating that the settings were saved before restarting the device.
@@ -35,5 +35,5 @@ Once the device has restarted, the DataLogger will provide an output as it is in
 
 <div style="text-align: center">
   <a href="../assets/WiFi_Connected_NTP_Synced.PNG">
-  <img src="../assets/WiFi_Connected_NTP_Synced.PNG" width="1000" height="667" alt="Configure WiFi Password"></a>
+  <img src="../assets/WiFi_Connected_NTP_Synced.PNG" width="600" height="600" alt="Configure WiFi Password"></a>
 </div>
