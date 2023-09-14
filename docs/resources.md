@@ -13,7 +13,9 @@ Now that you've successfully got your DataLogger IoT up and running, it's time t
 * GitHub Hardware Repo
     * [SparkFun DataLogger IoT - 9DoF](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)
     * [SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger_IoT)
-* [SFE Showcase](https://youtu.be/RwCu-60sQOI)
+* SFE Showcase
+    * [DataLogger IoT - 9DoF](https://youtu.be/RwCu-60sQOI)
+    * [DataLogger IoT](https://youtu.be/iGVVyN-xJf0?si=zM0wO_6Qbf9--GVS)
 
 Or check out these related blog posts.
 

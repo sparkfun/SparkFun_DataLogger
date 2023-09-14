@@ -44,8 +44,17 @@ The SparkFun DataLogger IoT is a data logger that comes preprogrammed to automat
     </a>
 </div>
 
-<div style="text-align: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/RwCu-60sQOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="text-align: center">
+  <table>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/RwCu-60sQOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </td>
+      <td style="text-align: center; vertical-align: middle;">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/iGVVyN-xJf0?si=d3GTB3DwZ8cHWhl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </td>
+    </tr>
+  </table>
 </div>
 
 
