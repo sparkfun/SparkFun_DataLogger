@@ -9,6 +9,9 @@ Now that you've successfully got your DataLogger IoT up and running, it's time t
     * [Eagle Files (ZIP)](../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT-V11.zip)
     * [Board Dimensions (PNG)](../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png)
 * [CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
+* Fritzing Part
+    * [DataLogger IoT - 9DoF (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/20594_sfe_datalogger_iot_9dof_esp32_fuel_gauge_imu_micro_sd_card_qwiic.fzpz)
+    * [DataLogger IoT (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/22462_sfe_datalogger_iot_esp32_fuel_gauge_micro_sd_card_qwiic.fzpz)
 * [Firmware](https://github.com/sparkfun/SparkFun_DataLogger/releases)
 * GitHub Hardware Repo
     * [SparkFun DataLogger IoT - 9DoF](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)
