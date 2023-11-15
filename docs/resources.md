@@ -4,14 +4,13 @@ Now that you've successfully got your DataLogger IoT up and running, it's time t
     * [Schematic (PDF)](../assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Schematic_v11.pdf)
     * [Eagle Files (ZIP)](../assets/board_files/DataLogger_IoT_9DoF/SparkFun_DataLogger_IoT_9DOF_v11.zip)
     * [Board Dimensions (PNG)](../assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png)
+    * [Fritzing Part (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/20594_sfe_datalogger_iot_9dof_esp32_fuel_gauge_imu_micro_sd_card_qwiic.fzpz)
 * DataLogger IoT
     * [Schematic (PDF)](../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Schematic_V11.pdf)
     * [Eagle Files (ZIP)](../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT-V11.zip)
     * [Board Dimensions (PNG)](../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png)
+    * [Fritzing Part (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/22462_sfe_datalogger_iot_esp32_fuel_gauge_micro_sd_card_qwiic.fzpz)
 * [CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
-* Fritzing Part
-    * [DataLogger IoT - 9DoF (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/20594_sfe_datalogger_iot_9dof_esp32_fuel_gauge_imu_micro_sd_card_qwiic.fzpz)
-    * [DataLogger IoT (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/22462_sfe_datalogger_iot_esp32_fuel_gauge_micro_sd_card_qwiic.fzpz)
 * [Firmware](https://github.com/sparkfun/SparkFun_DataLogger/releases)
 * GitHub Hardware Repo
     * [SparkFun DataLogger IoT - 9DoF](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)
@@ -22,7 +21,7 @@ Now that you've successfully got your DataLogger IoT up and running, it's time t
 
 Or check out these related blog posts.
 
-<div class="grid cards hide col-4" markdown>
+<div class="grid cards col-4" markdown>
 
 -   <a href="https://www.sparkfun.com/news/6808">
       <figure markdown>

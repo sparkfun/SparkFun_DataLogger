@@ -144,9 +144,15 @@ The file to download is the ***Baltimore CyberTrust Root*** entry in the **Root 
 
 ## Setting Properties
 
-The above property values must be set on the DataLogger IoT before use. They can be set via a JSON file that is loaded by the system at startup. Of course, you can also manually set the values using the menu system like the previous MQTT example.
+The above property values must be set on the DataLogger IoT before use. They can be set manually by using the menu system like the previous MQTT example.
 
-For the example outlined in this document, the entries in the settings JSON file are as follows:
+For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>13</kbd> to enter the Azure IoT Menu. When the menu system for the Azure IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Azure_Menu.JPG" width="600" height="600"  alt="Azure IoT Menu"></a>
+</div>
+
+The alternative to using the menu system is a JSON file. These values can be set using a JSON file that is loaded by the system at startup. For the example outlined in this document, the entries in the settings JSON file are as follows:
 
 ```json
 "Azure IoT": {
@@ -164,10 +170,11 @@ For the example outlined in this document, the entries in the settings JSON file
   },
 ```
 
-Besides updating the `Server`, `Device Key`, `Device ID`, and `CA Cert Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the Azure IoT service.
+Besides updating the `Server`, `Device Key`, `Device ID`, and `CA Cert Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the Azure IoT service. Don't forget to enable Azure IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
-If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
 
+!!! tip
+    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the Azure IoT as well.
 
 
 ## Operation and Monitoring

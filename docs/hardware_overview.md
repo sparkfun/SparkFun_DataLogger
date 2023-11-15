@@ -458,7 +458,7 @@ The overall length and width with the antenna connector is about 1.66" x 2.00". 
        <a href="../assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png"><img src="../assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png" width="600px" height="600px" alt="DataLogger IoT - 9DoF Board Dimensions"></a>
       </td>
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">
-       <a href="../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png/"><img src="../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png" width="600px" height="600px"  alt="DataLogger IoT Board Dimensions"></a>
+       <a href="../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png"><img src="../assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png" width="600px" height="600px"  alt="DataLogger IoT Board Dimensions"></a>
        </td>
     </tr>
     <tr style="vertical-align:middle;">

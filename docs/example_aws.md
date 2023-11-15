@@ -174,7 +174,8 @@ Selecting the ***Classic Shadow*** entry provides the Server Name/Hostname for t
   <a href="../assets/iot_aws_iot_shadow_details.png"><img src="../assets/iot_aws_iot_shadow_details.png" width="600" height="600" alt="Shadow Details"></a>
 </div>
 
-Note: The server name is obtained from the Device Shadow URL entry
+!!! note
+    The server name is obtained from the Device Shadow URL entry
 
 
 
@@ -182,7 +183,7 @@ Note: The server name is obtained from the Device Shadow URL entry
 
 The MQTT topic value is based uses the ***MQTT topic prefix*** from above, and has the value ***update*** added to it. So for this example, the MQTT topic is:
 
-```$aws/things/TestThing23/shadow/update```
+    $aws/things/TestThing23/shadow/update
 
 
 
@@ -212,9 +213,15 @@ This value was downloaded as a file during the creation process. The contents of
 
 ## Setting Properties
 
-The above property values must be set on the DataLogger before use. They can be passed on via a JSON file that is loaded by the system at startup. Of course, you can also manually set the values using the menu system like the previous MQTT example.
+The above property values must be set on the DataLogger before use. They can be set manually by using the menu system like the previous MQTT example.
 
-For the DataLogger IoT example outlined in this document, the entries in the settings JSON file are as follows:
+For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>11</kbd> to enter the AWS IoT Menu. When the menu system for the AWS IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG" width="600" height="600"  alt="AWS IoT Menu"></a>
+</div>
+
+The alternative to using the menu system is a JSON file. These values can be set using a JSON file that is loaded by the system at startup. For the DataLogger IoT example outlined in this document, the entries in the settings JSON file are as follows:
 
 ```json
 "AWS IoT": {
@@ -235,11 +242,10 @@ For the DataLogger IoT example outlined in this document, the entries in the set
   },
 ```
 
-Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`.
+Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT. 
 
-If the JSON file is saved in the microSD card, you will need to load the credentials to the DataLogger IoT. Of course, you can manually update the values through the command line as well to save the credentials to the ESP32's persistent memory.
-
-
+!!! tip
+    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the AWS IoT as well.
 
 ## Operation
 
