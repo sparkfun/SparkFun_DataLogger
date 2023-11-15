@@ -251,6 +251,7 @@ nav:
       - ThingSpeak: example_thingspeak.md
       - Azure: example_azure.md
       - HTTP: example_http.md
+      - Arduino IoT Cloud: example_arduino_iot_cloud.md
     - Appendix - Supported Qwiic Devices: supported_devices.md
   - Resources: resources.md
   - Support:

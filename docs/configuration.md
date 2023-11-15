@@ -1,3 +1,9 @@
+<!--
+Note for future screen shots with Tera Term.
+The size is about width="80px" height="35px".
+
+-->
+
 Configuring the settings is as easy as opening a serial menu. You can use any serial monitor or terminal emulator to quickly and easily change and store the DataLogger IoT settings via its USB-C interface.
 
 There are plenty of free alternatives out there to configure the DataLogger IoT. For the scope of this tutorial we will be using Tera Term.
@@ -524,7 +530,7 @@ In the Settings menu, send an <kbd>8</kbd> to adjust the Logging Data File.
   <a href="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG" width="600" height="600" alt="Data File Menu Options"></a>
 </div>
 
-Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. THe DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
+Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. The DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
 
 * <kbd>1</kbd> **Rotate Period** &mdash; Time between file rotation
     * Accepts the following values:
@@ -787,6 +793,33 @@ In the Settings menu, send an <kbd>15</kbd> to adjust settings for MachineChat.
 * <kbd>b</kbd> **Back**
 
 
+### IoT Services: Arduino IoT Cloud
+
+In the Settings menu, send an <kbd>16</kbd> to adjust settings for Arduino IoT Cloud.
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_DataLogger_IoT_Arduino_IoT_Cloud_Menu.JPG"><img src="../assets/SparkFun_DataLogger_IoT_Arduino_IoT_Cloud_Menu.JPG" width="600" height="600" alt="Arduino IoT Cloud Menu Options"></a>
+</div>
+
+* <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the Arduino IoT Client
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>2</kbd> **Thing Name** &mdash; The Thing Name to use for the IoT Device connection
+    * Accepts a string
+* <kbd>3</kbd> **Thing ID** &mdash; The Thing ID to use for the IoT Device connection
+    * Accepts a string
+* <kbd>4</kbd> **API Client ID** &mdash; The Arduino Cloud API Client ID
+    * Accepts a string
+* <kbd>5</kbd> **API Secret** &mdash; The Arduino Cloud API Secret
+    * Accepts a string
+* <kbd>6</kbd> **Device Secret** &mdash; The Arduino IoT Device Secret
+    * Accepts a string
+* <kbd>7</kbd> **Device ID** &mdash; The Arduino IoT Cloud Device ID
+    * Accepts a string
+* <kbd>b</kbd> **Back**
+
+
 
 ### Advanced: System Update
 
@@ -796,7 +829,10 @@ New sensors and features are being added all the time and we've made it really e
 * Performing a Factory Reset on the device
 * Updated the device firmware from a file on an SD Card.
 
-This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>16</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
+!!! note
+    What's going on here?!? This tutorial was updated for firmware version **01.01.00**!!! You will notice this menu option has changed to <kbd>17</kbd> !!!
+
+This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>17</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
