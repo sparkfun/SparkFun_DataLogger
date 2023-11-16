@@ -29,12 +29,12 @@
     },
     {
       "ID": "SFE-DATALOGGER-IOT",
-      "Version": "01.01.00",
-      "VersionNumber": 010100,
-      "Date" : "11-15-2023",
-      "Description": "Version 1.1.0 feature release",
-      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.01.00.bin",
-      "Hash" : "9e93bc704349413714121e241ee9fe44"
+      "Version": "01.01.01",
+      "VersionNumber": 010101,
+      "Date" : "11-16-2023",
+      "Description": "Version 1.1.01 feature release",
+      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.01.01.bin",
+      "Hash" : "81f95d19e9e70a0c203a1707d2c1fe4a"
     }
   ]
 }
