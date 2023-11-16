@@ -20,10 +20,10 @@ icon: fontawesome/solid/scroll
 # Configuration
 --8<-- "./docs/configuration.md"
 
-# Connecting to a WiFi Network
+# Example - Connecting to a WiFi Network
 --8<-- "./docs/wifi_network.md"
 
-# Adding a Timestamp to Data
+# Example - Adding a Timestamp to Data
 --8<-- "./docs/example_timestamp.md"
 
 # Example - Factory Reset
@@ -46,6 +46,12 @@ icon: fontawesome/solid/scroll
 
 # Example - HTTP
 --8<-- "./docs/example_http.md"
+
+# Example - Arduino IoT Cloud
+--8<-- "./docs/example_arduino_iot_cloud.md"
+
+# Example - How to Convert Comma Separated Values (CSV) to a Spreadsheet
+--8<-- "./docs/example_CSV_to_spreadsheet.md"
 
 # Appendix - Supported Qwiic Devices
 --8<-- "./docs/supported_devices.md"
