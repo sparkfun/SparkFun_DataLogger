@@ -111,6 +111,7 @@ This menu takes you to a list of existing API Keys. If you have not created one 
 
 !!! note
     Users will need a service plan in order to take advantage of the API.
+    
     <div style="text-align: center">
       <a href="../assets/aiot_cloud_plan_limits.JPG"><img src="../assets/aiot_cloud_plan_limits.JPG" width="600" height="600" alt="Arduino IoT Cloud Upgrade Plan"></a>
     </div>
