@@ -47,7 +47,7 @@ icon: fontawesome/solid/scroll
 # Example - HTTP
 --8<-- "./docs/example_http.md"
 
-# Example - Arduino IoT Cloud
+# Example - Arduino Cloud
 --8<-- "./docs/example_arduino_iot_cloud.md"
 
 # Example - How to Convert Comma Separated Values (CSV) to a Spreadsheet

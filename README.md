@@ -22,7 +22,7 @@ This repository contains the latest firmware for the SparkFun DataLogger IoT pro
 
 The current list of SparkFun boards supported by the SparkFun DataLogger IoT are listed in the [DataLogger Supported Device List](../supported_devices).
 
-SparkFun DataLogger IoT products include Internet connectivity built in, and includes connections for a variety of IoT service services and end-point types. Connection types include MQTT, HTTP, AWS IoT, Azure IoT, ThingSpeak, Arduino IoT Cloud. To enable connectivity, connect the DataLogger IoT to a WiFi network, enter the required credentials for the specific IoT service being used, and the DataLogger IoT will do the rest - no programming required.
+SparkFun DataLogger IoT products include Internet connectivity built in, and includes connections for a variety of IoT service services and end-point types. Connection types include MQTT, HTTP, AWS IoT, Azure IoT, ThingSpeak, Arduino Cloud. To enable connectivity, connect the DataLogger IoT to a WiFi network, enter the required credentials for the specific IoT service being used, and the DataLogger IoT will do the rest - no programming required.
 
 The DataLogger IoT products are highly configurable via an easily to use serial interface. Simply plug in a USB C cable and open a terminal at 115200 Kbps. By default the logging output is automatically streamed to the serial terminal - pressing any key will bring up the menu system. Device settings are also configurable via a JSON file contained on an inserted SD card - enabling rapid configuration for multiple devices.
 

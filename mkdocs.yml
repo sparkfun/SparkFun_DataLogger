@@ -251,7 +251,7 @@ nav:
       - ThingSpeak: example_thingspeak.md
       - Azure: example_azure.md
       - HTTP: example_http.md
-      - Arduino IoT Cloud: example_arduino_iot_cloud.md
+      - Arduino Cloud: example_arduino_iot_cloud.md
       - How to Convert Comma Separated Values (CSV) to a Spreadsheet: example_CSV_to_spreadsheet.md
     - Appendix - Supported Qwiic Devices: supported_devices.md
   - Resources: resources.md
