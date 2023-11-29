@@ -299,6 +299,9 @@ In the Settings Menu, send <kbd>3</kbd> to manage the time reference sources. As
 
 In this menu, you will have options to update the primary reference clock, update interval, add a secondary reference clock, and update it's interval. By default, the primary reference clock is set to use the Network Time Protocol (NTP). To synchronization the time, you will need to connect to a 2.4GHz WiFi network in order to update the time. To add a secondary clock, make sure to connect a compatible Qwiic-enabled devices that can keep track of time (i.e. Qwiic Real Time Clock Module - RV-8803 or a Qwiic-enabled u-blox GNSS module).
 
+!!! note
+    To adjust the time zone, you will need to enter a POSIX timezone string variable. Try [checking out this CSV in this GitHub repo](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv) and searching for the timezone string variable in your area. For more information about [POSIX format specification check out this article from IBM](https://developer.ibm.com/articles/au-aix-posix/).
+
 * <kbd>1</kbd> **The Time Zone** &mdash; Time zone setting string for the device
     * Accepts a string:
         * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default, as of firmware v01.01.01)_
@@ -418,7 +421,7 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
 
 ### Network: NTP Client
 
-In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings. As of firmware v01.01.01, time sonze support is at the clock level, not tied to the NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
+In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings. As of firmware v01.01.01, time zone support is at the clock level, not tied to the NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG" width="600" height="600" alt="NTP Client Menu Options"></a>
@@ -437,9 +440,6 @@ In this menu, users will have the option to enable/disable the NTP client, selec
     * Accepts a string:
         * <kbd>pool.ntp.org</kbd> _(default)_
 * <kbd>b</kbd> **Back**
-
-!!! note
-    To adjust the time zone, you will need to enter a POSIX timezone string variable. Try [checking out this CSV in this GitHub repo](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv) and searching for the timezone string variable in your area. For more information about [POSIX format specification check out this article from IBM](https://developer.ibm.com/articles/au-aix-posix/).
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
