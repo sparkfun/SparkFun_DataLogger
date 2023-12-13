@@ -1,6 +1,4 @@
 
-
-
 ![SparkFun DataLogger](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/img/Applications_DataLogger_Banner.jpg "SparkFun DataLogger")
 
 # SparkFun DataLogger
@@ -14,7 +12,7 @@ Documentation and Firmware for the SparkFun DataLogger IoT line of products
           <img src="https://img.shields.io/twitter/follow/sparkfun.svg?style=social&logo=twitter"
              alt="follow on Twitter"></a>
    <a href="https://github.com/sparkfun/SparkFun_DataLogger/actions" alt="Actions">
-		     <img src="https://github.com/sparkfun/SparkFun_DataLogger/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
+       <img src="https://github.com/sparkfun/SparkFun_DataLogger/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
 
 </p>
 
@@ -30,18 +28,21 @@ Configuration details are outlined in [DataLogger IoT Documentation](https://doc
 
 The functionality of the DataLogger IoT firmware will continue to grow as SparkFun develops new Qwiic sensor boards, adds additional IoT services and product features. The board is easily updated via the on-board settings system. See below for future information on updates and the latest Firmware release.  
 
+### Latest Firmware
+
+* Version 01.1.01 - [Overview of the Release](docs/relnotes/rn_v010101.md)
+
 ## Documentation
 
 * **[Hookup Guide](https://docs.sparkfun.com/SparkFun_DataLogger/)** - Basic hookup guide for the Datalogger IoT 9DoF and DataLogger IoT
 * **GitHub Hardware Repo**
-    * **[SparkFun DataLogger IoT - 9DoF](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)**
-    * **[SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger_IoT)**
+  * **[SparkFun DataLogger IoT - 9DoF](https://github.com/sparkfun/SparkFun_DataLogger_IoT_9DoF)**
+  * **[SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger_IoT)**
 
 ## Supported Products
 
 * **[DEV-22462](https://www.sparkfun.com/products/22462)** - SparkFun DataLogger IoT, v1.1
 * **[DEV-20594](https://www.sparkfun.com/products/20594)** - SparkFun DataLogger IoT - 9DOF, v1.1
-
 
 ## Firmware Updates
 
