@@ -1,3 +1,9 @@
+<!--
+Note for future screen shots with Tera Term.
+The size is about width="80px" height="35px".
+
+-->
+
 Configuring the settings is as easy as opening a serial menu. You can use any serial monitor or terminal emulator to quickly and easily change and store the DataLogger IoT settings via its USB-C interface.
 
 There are plenty of free alternatives out there to configure the DataLogger IoT. For the scope of this tutorial we will be using Tera Term.
@@ -224,11 +230,12 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 
 ### General: Save Settings
 
-In the Settings menu, send a <kbd>2</kbd> to adjust the Save Settings.
+In the Settings menu, send a <kbd>2</kbd> to adjust the Save Settings. As of firmware v01.01.01, the JSON output buffer size is now user configurable. This will be under option "**JSON File Buffer Size**" when in the Save Settings Menu.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"" width="600" height="600"></a>
 </div>
+
 
 In the Save Settings Menu, users will be able to save, restore, or clear any preferences in memory (i.e. persistent storage) or a saved file to a fallback device (i.e. microSD card). Note that any passwords and secret keys are not saved in the save settings file. You will need to manually enter those values in the file saved on the microSD card.
 
@@ -240,23 +247,26 @@ In the Save Settings Menu, users will be able to save, restore, or clear any pre
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
         * <kbd>0</kbd> to disable _(default)_
-* <kbd>3</kbd> **Save Settings** &mdash; Save current settings to persistent storage
+* <kbd>3</kbd> **JSON File Buffer Size** &mdash; The size in bytes used for the internal I/O buffer
+    * Accepts an unsigned integer:
+    * <kbd>6400</kbd> _(default, as of firmware v01.01.01)_
+* <kbd>4</kbd> **Save Settings** &mdash; Save current settings to persistent storage
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
          * <kbd>N</kbd> or <kbd>n</kbd> for no
-* <kbd>4</kbd> **Restore Settings** &mdash; Restore saved settings
+* <kbd>5</kbd> **Restore Settings** &mdash; Restore saved settings
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
          * <kbd>N</kbd> or <kbd>n</kbd> for no
-* <kbd>5</kbd> **Clear Settings** &mdash; Erase the saved settings on the device
+* <kbd>6</kbd> **Clear Settings** &mdash; Erase the saved settings on the device
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
          * <kbd>N</kbd> or <kbd>n</kbd> for no
-* <kbd>6</kbd> **Save to Fallback** &mdash; Save System Settings to the fallback storage (JSON File)
+* <kbd>7</kbd> **Save to Fallback** &mdash; Save System Settings to the fallback storage (JSON File)
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
          * <kbd>N</kbd> or <kbd>n</kbd> for no
-* <kbd>7</kbd> **Restore from Fallback** &mdash; Restore system settings from the fallback storage (JSON File)
+* <kbd>8</kbd> **Restore from Fallback** &mdash; Restore system settings from the fallback storage (JSON File)
     * Accepts a yes/no:
          * <kbd>Y</kbd> or <kbd>y</kbd> for yes
          * <kbd>N</kbd> or <kbd>n</kbd> for no
@@ -281,7 +291,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 !!! note
     Make sure to connect the ESP32-WROOM to a 2.4GHz WiFi network and ensure that is not a guest network that requires you to sign in. Unfortunately, 5GHz WiFi is not supported on the ESP32-WROOM module.
 
-In the Settings Menu, send <kbd>3</kbd> to manage the time reference sources.
+In the Settings Menu, send <kbd>3</kbd> to manage the time reference sources. As of firmware v01.01.01, time zone support is at the clock level, not tied to NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Time_Sources_Menu.JPG" width="600" height="600" alt="Time Source Menu Options"></a>
@@ -289,23 +299,29 @@ In the Settings Menu, send <kbd>3</kbd> to manage the time reference sources.
 
 In this menu, you will have options to update the primary reference clock, update interval, add a secondary reference clock, and update it's interval. By default, the primary reference clock is set to use the Network Time Protocol (NTP). To synchronization the time, you will need to connect to a 2.4GHz WiFi network in order to update the time. To add a secondary clock, make sure to connect a compatible Qwiic-enabled devices that can keep track of time (i.e. Qwiic Real Time Clock Module - RV-8803 or a Qwiic-enabled u-blox GNSS module).
 
-* <kbd>1</kbd> **Reference Clock** &mdash; The current reference clock source
+!!! note
+    To adjust the time zone, you will need to enter a POSIX timezone string variable. Try [checking out this CSV in this GitHub repo](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv) and searching for the timezone string variable in your area. For more information about [POSIX format specification check out this article from IBM](https://developer.ibm.com/articles/au-aix-posix/).
+
+* <kbd>1</kbd> **The Time Zone** &mdash; Time zone setting string for the device
+    * Accepts a string:
+        * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default, as of firmware v01.01.01)_
+* <kbd>2</kbd> **Reference Clock** &mdash; The current reference clock source
     * Accepts the following values:
         * <kbd>1</kbd> for no clock
         * <kbd>2</kbd> for NTP Client _(default)_
-* <kbd>2</kbd> **Update Interval** &mdash; Main clock update interval in minutes. 0 = No update
+* <kbd>3</kbd> **Update Interval** &mdash; Main clock update interval in minutes. 0 = No update
     * Accepts an unsigned integer:
         * <kbd>0</kbd> = No update
         * <kbd>60</kbd> seconds _(default)_
-* <kbd>3</kbd> **Enable Clock Fallback** &mdash; Use a valid reference clock if the primary is not available
+* <kbd>4</kbd> **Enable Clock Fallback** &mdash; Use a valid reference clock if the primary is not available
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
-* <kbd>4</kbd> **Dependant Interval** &mdash; Connected depedant clock update interval in minutes. 0 = No update
+* <kbd>5</kbd> **Dependant Interval** &mdash; Connected depedant clock update interval in minutes. 0 = No update
     * Accepts an unsigned integer:
         * <kbd>0</kbd> = No update
         * <kbd>60</kbd> seconds _(default)_
-* <kbd>5</kbd> **Update Connected** &mdash; Update connected clocks on main clock update
+* <kbd>6</kbd> **Update Connected** &mdash; Update connected clocks on main clock update
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
@@ -405,7 +421,7 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
 
 ### Network: NTP Client
 
-In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings.
+In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings. As of firmware v01.01.01, time zone support is at the clock level, not tied to the NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_NTP_Client_Menu.JPG" width="600" height="600" alt="NTP Client Menu Options"></a>
@@ -423,13 +439,7 @@ In this menu, users will have the option to enable/disable the NTP client, selec
 * <kbd>3</kbd> **NTP Server Two** &mdash;  The secondary NTP Server to use
     * Accepts a string:
         * <kbd>pool.ntp.org</kbd> _(default)_
-* <kbd>4</kbd> **The Time Zone** &mdash; Time zone setting string for the device
-    * Accepts a string:
-        * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default)_
 * <kbd>b</kbd> **Back**
-
-!!! note
-    To adjust the time zone, you will need to enter a POSIX timezone string variable. Try [checking out this CSV in this GitHub repo](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv) and searching for the timezone string variable in your area. For more information about [POSIX format specification check out this article from IBM](https://developer.ibm.com/articles/au-aix-posix/).
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
@@ -524,7 +534,7 @@ In the Settings menu, send an <kbd>8</kbd> to adjust the Logging Data File.
   <a href="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_File_Rotation_Menu.JPG" width="600" height="600" alt="Data File Menu Options"></a>
 </div>
 
-Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. THe DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
+Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. The DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
 
 * <kbd>1</kbd> **Rotate Period** &mdash; Time between file rotation
     * Accepts the following values:
@@ -787,6 +797,36 @@ In the Settings menu, send an <kbd>15</kbd> to adjust settings for MachineChat.
 * <kbd>b</kbd> **Back**
 
 
+### IoT Services: Arduino Cloud
+
+!!! arduino
+    At the time of writing, Arduino's IoT service was referred to as the "Arduino IoT Cloud." [Arduino updated the service with a different UI and is now referring to the service as the "Arduino Cloud"](https://blog.arduino.cc/2023/11/15/announcing-a-better-arduino-cloud-together/)."  When referencing the Arduino IoT or Arduino IoT Cloud in this tutorial, we are referring to the Arduino Cloud.
+
+In the Settings menu, send an <kbd>16</kbd> to adjust settings for Arduino Cloud. This feature was added as of firmware v01.01.01.
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_DataLogger_IoT_Arduino_IoT_Cloud_Menu.JPG"><img src="../assets/SparkFun_DataLogger_IoT_Arduino_IoT_Cloud_Menu.JPG" width="600" height="600" alt="Arduino Cloud Menu Options"></a>
+</div>
+
+* <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the Arduino IoT Client
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>2</kbd> **Thing Name** &mdash; The Thing Name to use for the IoT Device connection
+    * Accepts a string
+* <kbd>3</kbd> **Thing ID** &mdash; The Thing ID to use for the IoT Device connection
+    * Accepts a string
+* <kbd>4</kbd> **API Client ID** &mdash; The Arduino Cloud API Client ID
+    * Accepts a string
+* <kbd>5</kbd> **API Secret** &mdash; The Arduino Cloud API Secret
+    * Accepts a string
+* <kbd>6</kbd> **Device Secret** &mdash; The Arduino IoT Device Secret
+    * Accepts a string
+* <kbd>7</kbd> **Device ID** &mdash; The Arduino IoT Cloud Device ID
+    * Accepts a string
+* <kbd>b</kbd> **Back**
+
+
 
 ### Advanced: System Update
 
@@ -796,7 +836,10 @@ New sensors and features are being added all the time and we've made it really e
 * Performing a Factory Reset on the device
 * Updated the device firmware from a file on an SD Card.
 
-This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>16</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
+!!! note
+    What's going on here?!? This tutorial was updated for firmware version **01.01.00**!!! You will notice this menu option has changed to <kbd>17</kbd> !!!
+
+This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>17</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>

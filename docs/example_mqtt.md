@@ -94,7 +94,7 @@ These values are set using the standard DataLogger methods - the interactive men
 
 We'll need to adjust the settings for the MQTT Client using the MQTT Menu System.
 
-Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**.  Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>9</kbd> to enter the MQTT Client Menu. When the menu system for the MQTT connection is presented, the following options are displayed:
+For users that are interested in using the menu system, open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**.  Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>9</kbd> to enter the MQTT Client Menu. When the menu system for the MQTT connection is presented, the following options are displayed:
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG" width="600" height="600"  alt="MQTT Menu"></a>
@@ -151,7 +151,8 @@ Where:
 * `Username` - Broker user name if being used.
 * `Password` - Broker password if being used.
 
-
+!!! tip
+    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the MQTT Client as well.
 
 ## Testing the MQTT Connection
 

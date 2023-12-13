@@ -9,7 +9,7 @@ In this section, we will go over how to connect to the SparkFun DataLogger IoT. 
 
 For users that are interested in soldering to the edge of the board, we recommend [soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering) headers to the PTHs on the breakout for a permanent connection and using jumper wires. Of course, you could also solder wires to the breakout board as well. For a temporary connection during prototyping, you can use [IC hooks like these](https://www.sparkfun.com/products/9741).
 
-<div class="grid cards hide col-4" markdown>
+<div class="grid cards col-4" markdown>
 
 -   <a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering">
       <figure markdown>

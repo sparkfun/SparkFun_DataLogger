@@ -79,7 +79,7 @@ These values are set using the standard DataLogger methods - the interactive men
 
 ### Menu System
 
-When the menu system for the HTTP connection is presented, the following options are displayed:
+For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>14</kbd> to enter the HTTP IoT Menu. When the menu system for the HTTP IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
 
 <div style="text-align: center">
   <a href="../assets/assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG" width="600" height="600" alt="HTTP Menu"></a>
@@ -128,6 +128,11 @@ Where:
 * `Enabled` - Set to `true` to enable the connection.
 * `URL` - Set to the URL for the connection.
 * `CA Cert Filename` - Set to the cert filename on the SD card if being used.
+
+ If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
+
+!!! tip
+    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the HTTP IoT as well.
 
 
 

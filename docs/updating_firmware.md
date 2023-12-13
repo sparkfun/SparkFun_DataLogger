@@ -38,7 +38,10 @@ Once the files are copied to the memory card, eject the microSD card from your c
   </table>
 </div>
 
-Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>3</kbd> to update the firmware from the microSD card. You should see an image similar to the output below.
+!!! note
+    What's going on here?!? This tutorial was updated for firmware version **01.01.00**!!! You will notice this menu option has changed to <kbd>17</kbd> !!!
+
+Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>17</kbd> to enter the System Update Menu. Finally, type <kbd>3</kbd> to update the firmware from the microSD card. You should see an image similar to the output below.
 
 <div style="text-align: center">
   <a href="../assets/act_sysfirm_up_sel.png">
