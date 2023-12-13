@@ -1,20 +1,14 @@
 
-![SparkFun DataLogger](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/img/Applications_DataLogger_Banner.jpg "SparkFun DataLogger")
+![SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/img/Applications_DataLogger_Banner.jpg "SparkFun DataLogger")
 
-# SparkFun DataLogger
+# SparkFun DataLogger IoT
 
 Documentation and Firmware for the SparkFun DataLogger IoT line of products
 
-<p align="center">
-  <a href="https://github.com/sparkfun/SparkFun_DataLogger/issues" alt="Issues">
-    <img src="https://img.shields.io/github/issues/sparkfun/SparkFun_DataLogger.svg" /></a>
-  <a href="https://twitter.com/intent/follow?screen_name=sparkfun">
-          <img src="https://img.shields.io/twitter/follow/sparkfun.svg?style=social&logo=twitter"
-             alt="follow on Twitter"></a>
-   <a href="https://github.com/sparkfun/SparkFun_DataLogger/actions" alt="Actions">
-       <img src="https://github.com/sparkfun/SparkFun_DataLogger/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
-
-</p>
+![GitHub release (with filter)](https://img.shields.io/github/v/release/sparkfun/SparkFun_DataLogger)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/sparkfun/SparkFun_DataLogger)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/sparkfun/SparkFun_DataLogger/pages%2Fpages-build-deployment?label=Documentation)
+![GitHub issues](https://img.shields.io/github/issues/sparkfun/SparkFun_DataLogger)
 
 This repository contains the latest firmware for the SparkFun DataLogger IoT products. The DataLogger IoT product line are pre-programmed to automatically log data from 50+ SparkFun [Qwiic](https://www.sparkfun.com/qwiic) sensors, all without requiring any hardware setup or code development. Just plug in a qwiic board and log data. The DataLogger IoT automatically detects the connected sensor, configures the device and enables logging information locally, or to a variety of IoT data services.
 
