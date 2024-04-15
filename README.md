@@ -24,8 +24,7 @@ The functionality of the DataLogger IoT firmware will continue to grow as SparkF
 
 ### Latest Firmware
 
-* Version 01.1.99 - *Version 1.2 - Release Candidate* - [Overview of the Release](docs/relnotes/rn_v010200.md)
-  * >Note: OTA installation is not supported - Install via SD Card
+* Version 01.2.00 - [Overview of the Release](docs/relnotes/rn_v010200.md)
 * Version 01.1.01 - [Overview of the Release](docs/relnotes/rn_v010101.md)
 
 ## Documentation

@@ -1,40 +1,49 @@
 {
-  "firmware": [
-    {
-      "ID": "SFE-DATALOGGER-IOT",
-      "Version": "01.00.01",
-      "VersionNumber": 010001,
-      "Date" : "04-30-2023",
-      "Description": "Final production release",
-      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.01.bin",
-      "Hash" : "b56f40c6eadf128a06bda1dd45d7bbaf"
-    },
-    {
-      "ID": "SFE-DATALOGGER-IOT",
-      "Version": "01.00.02",
-      "VersionNumber": 010002,
-      "Date" : "05-18-2023",
-      "Description": "Launch release/update",
-      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.02.bin",
-      "Hash" : "e0fa3646a7641bba9fa41f94a7dcbe83"
-    },
-    {
-      "ID": "SFE-DATALOGGER-IOT",
-      "Version": "01.00.03",
-      "VersionNumber": 010003,
-      "Date" : "07-14-2023",
-      "Description": "Bug Fix - GNSS",
-      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.03.bin",
-      "Hash" : "0a3620761c377353ee1ac33e13c640b4"
-    },
-    {
-      "ID": "SFE-DATALOGGER-IOT",
-      "Version": "01.01.01",
-      "VersionNumber": 010101,
-      "Date" : "11-16-2023",
-      "Description": "Version 1.1.01 feature release",
-      "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.01.01.bin",
-      "Hash" : "81f95d19e9e70a0c203a1707d2c1fe4a"
-    }
-  ]
+    "firmware": [
+        {
+            "ID": "SFE-DATALOGGER-IOT",
+            "Version": "01.00.01",
+            "VersionNumber": 010001,
+            "Date": "04-30-2023",
+            "Description": "Final production release",
+            "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.01.bin",
+            "Hash": "b56f40c6eadf128a06bda1dd45d7bbaf"
+        },
+        {
+            "ID": "SFE-DATALOGGER-IOT",
+            "Version": "01.00.02",
+            "VersionNumber": 010002,
+            "Date": "05-18-2023",
+            "Description": "Launch release/update",
+            "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.02.bin",
+            "Hash": "e0fa3646a7641bba9fa41f94a7dcbe83"
+        },
+        {
+            "ID": "SFE-DATALOGGER-IOT",
+            "Version": "01.00.03",
+            "VersionNumber": 010003,
+            "Date": "07-14-2023",
+            "Description": "Bug Fix - GNSS",
+            "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.00.03.bin",
+            "Hash": "0a3620761c377353ee1ac33e13c640b4"
+        },
+        {
+            "ID": "SFE-DATALOGGER-IOT",
+            "Version": "01.01.01",
+            "VersionNumber": 010101,
+            "Date": "11-16-2023",
+            "Description": "Version 1.1.01 feature release",
+            "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.01.01.bin",
+            "Hash": "81f95d19e9e70a0c203a1707d2c1fe4a"
+        },
+        {
+            "ID": "SFE-DATALOGGER-IOT",
+            "Version": "01.02.00",
+            "VersionNumber": 010200,
+            "Date": "04-15-2024",
+            "Description": "Version 1.2.00 feature release",
+            "URL": "https://raw.githubusercontent.com/sparkfun/SparkFun_DataLogger/main/firmware/bin/SparkFun_DataLoggerIoT_01.02.00.bin",
+            "Hash": "476f8e823321a254537fc1173fabe6ad"
+        }
+    ]
 }
