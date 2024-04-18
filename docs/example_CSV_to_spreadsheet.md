@@ -23,7 +23,14 @@ At this point, we will assume that you have configured connected your devices to
 !!! note
     For users that require a timestamp with their datasets, make sure to [enable timestamp](https://docs.sparkfun.com/SparkFun_DataLogger/example_timestamp/).
 
-When ready, remove power from the DataLogger IoT and eject the microSD card from the socket. Insert the microSD card into an adapter and connect to your computer.
+### Download the Log Files
+
+Users can download the log files to your computer with the IoT Web Server. You will need to update firmware to v01.02.00 and enable this feature. For more information, check out the [previous example to view and download log files using the IoT web server](../example_iot_web_server/).
+
+<div style="text-align: center"><a href="../example_iot_web_server" class="md-button">Examples: Viewing and Downloading Log Files using the IoT Web Server</a></div>
+
+
+Of course, users can follow the old school method and manually grab the files using a microSD card reader. When ready, remove power from the DataLogger IoT and eject the microSD card from the socket. Insert the microSD card into an adapter and connect to your computer.
 
 <div style="text-align: center">
   <a href="https://cdn.sparkfun.com//assets/parts/7/6/3/6/11609-Action.jpg">

@@ -154,6 +154,8 @@ Where:
 !!! tip
     To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the MQTT Client as well.
 
+
+
 ## Testing the MQTT Connection
 
 Use of a MQTT connection is fairly straightforward - just requiring the entry of broker details into the connection settings.

@@ -1,6 +1,6 @@
 # DataLogger IoT Supported Devices
 
-The following table lists the devices/boards supported by the DataLogger IoT Boards, broken down by firmware version.
+The following lists the devices/boards supported by the DataLogger IoT boards. New drivers to support a device will be listed under the firmware version.
 
 
 

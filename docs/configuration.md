@@ -54,15 +54,30 @@ The above guides will show you how to open the correct port for the DataLogger I
 
 ## Initialization and Serial Output
 
-Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. When you open the serial terminal you should see the following output when the board initializes:
+Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. As of firmware **v1.0.2.00 - build 00013e**, a **Startup Menu** was added to the system. This allows you to change the behavior of the DataLogger at start-up. This change only affects the current system session.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Initializing.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing.JPG" width="600" height="600" alt="Output when DataLogger IoT - 9DoF is initializing"></a>
+  <a href="../assets/SparkFun_DataLogger_IoT-ESP32_Start-Up_Menu.jpg"><img src="../assets/SparkFun_DataLogger_IoT-ESP32_Start-Up_Menu.jpg" width="600" height="600" alt="Output when DataLogger IoT - 9DoF Start-up menu"></a>
 </div>
 
-The messages in the serial terminal provide us with a lot of the DataLogger's configuration:
+* 'n' &mdash; Normal startup
+* 'a' &mdash; Disable I2C device auto load on startup
+* 'l' &mdash; List the I2C devices supported. This device table is discarded after auto-load
+* 'w' &mdash; Disable WiFi
+* 's' &mdash; Disable preference restore during startup
 
-* The DataLogger IoT software version (in this case is **v01.00.00 - build 000072**).
+!!! note
+    The amount of time the start-up menu is displayed is adjustable. This settings can be configured in the **Settings/Application Settings** page, under the Advanced section.
+
+You should see the following output when the board initializes:
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_Datalogger_IoT_Initializing_v1p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing_v1p02p00.JPG" width="600" height="600" alt="Output when DataLogger IoT - 9DoF is initializing"></a>
+</div>
+
+The messages in the serial terminal provide us with the DataLogger's configuration and will vary depending on the firmware version that is loaded on the board.
+
+* The DataLogger IoT software version (in this case is **v01.02.00 - build 00013e**).
 * As the DataLogger IoT is initializing, the system settings are being restored from the last saved preference.
 * There no WiFi credentials and the board has failed to connect. This output will change once you provide the WiFi credentials and are able to connect to the network.
 * There are 3x devices currently detected and they are connected through I<sup>2</sup>C through the Qwiic port and SPI. These are the on-board sensors for the DataLogger IoT. There may be more devices that are detected depending on the firmware and what is connected to the ports. Since these were recognized, they were loaded onto the DataLogger IoT.
@@ -70,27 +85,38 @@ The messages in the serial terminal provide us with a lot of the DataLogger's co
 * The time the board has been running will be shown in the uptime.
 * The primary external time source that the board syncs is currently through the **NTP client**. This can be configured depending on your clock source.
 * The board name (in this case, it was **SparkFun DataLogger IoT - 9DoF**)
-* The board ID (in this case it was **SFD16C8F0D1AD6B8**)
+* The board ID (in this case, it was **SFD16C8F0D1AD6B8**)
 * The microSD card has been found, the type of memory card it is, the size of the memory card, how much memory is used, and how much is available.
 * If there is a WiFi network name saved, the SSID will be shown along with information indicating whether the board was able to connect to the WiFi network. By default there is no SSID saved in memory.
+* If there is a battery connected, the LiPo Battery Fuel Guage will indicate if there is one attached to the board.
 * Parameters for low power mode will be provided indicating if deep sleep is enabled, sleep interval, and wake interval.
 * Parameters for logging are also provided for the logging interval, the format for the serial output, format for the microSD card, current saved filename, and file rotation period.
 * The board will also show the available IoT services that are enabled for the DataLogger IoT.
+* Current settings to download log files via a web interface (included in firmware v01.02.00)
+* Supported devices through Qwiic or SPI will be listed if they are connected.
 * The output will finish by telling you what devices are connected to the DataLogger IoT again.
+
+!!! note
+    As of firmware v01.02.00, there is also a compact mode! By adjusting the setting, the ESP32 will output less at startup. This settings can be configured in the **Settings/Application Settings** page, under the Advanced section.
+
+    <div style="text-align: center">
+      <a href="../assets/SparkFun_Datalogger_IoT_Initializing_Compactv1p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing_Compactv1p02p00.JPG" width="600" height="600" alt="Output when DataLogger IoT - 9DoF is initializing, compact"></a>
+    </div>
+
 
 Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputting comma separated values (CSV). This is the default output that is set for the DataLogger IoT - 9DoF. Of course, you will not have as many readings on the DataLogger IoT since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="600" height="600" alt="CSV Output on the DataLogger IoT - 9DoF"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Output_v1p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_v1p02p00.JPG" width="600" height="600" alt="CSV Output on the DataLogger IoT - 9DoF v01.02.00"></a>
 </div>
 
 !!! note
     Depending on your DataLogger IoT preferences, your device may output as a JSON format like the image shown below.
      <div style="text-align: center">
-       <a href="../assets/SparkFun_Datalogger_IoT_Output.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output.JPG" width="600" height="600" alt="JSON Output on the DataLogger -IoT - 9DoF"></a>
+       <a href="../assets/SparkFun_Datalogger_IoT_Output_JSON_v01p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_JSON_v01p02p00.JPG" width="600" height="600" alt="JSON Output on the DataLogger -IoT - 9DoF"></a>
      </div>
 
-The data scrolling up the screen show what each device's output is along with their associated unit if it is available. Your milage will vary depending on the board version that you have and what device is connected
+The data scrolling up the screen show what each device's output is along with their associated unit if it is available. Your mileage will vary depending on the board version that you have and what device is connected:
 
 * `MAX17048.Voltage (V)`
 * `MAX17048.State of Charge (%)`
@@ -119,13 +145,223 @@ Right! Let's open the main menu by pressing on any key in the serial terminal pr
   <a href="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Main_Menu.JPG" width="600" height="600" alt="DataLogger IoT Main Menu"></a>
 </div>
 
-You will be prompted with a few options. Once in the configuration menu, all three colors of the addressable RGB LED will turn on to mix to produce the color white indicating that you are navigating through the menu.
+You will be prompted with a few options. Once in the configuration menu, all three colors of the addressable RGB LED will turn on to produce the color white indicating that you are navigating through the menu. Before we dive into the settings, lets check out a few commands and saving settings.
+
+
+### Quick (!) Command Reference
+
+As of firmware v01.02.00, commands can be executed directly from the serial console thus bypassing the serial menu system! The following commands are supported.
+
+<div style="text-align: center;">
+    <table>
+        <tr>
+            <th style="text-align: center; border: solid 1px #cccccc; width:300px">Quick Command
+            </th>
+            <th style="text-align: center; border: solid 1px #cccccc; width:500px"> Command Description
+            </th>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!about</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Display the system about page
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!clear-settings</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Clear the on board system preferences with a yes/no prompt
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!clear-settings-forced</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Clear the on board system preferences with no prompt
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!devices</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              List the currently connected devices
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!factory-reset</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Perform a factory reset - presents a Y/N prompt
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!heap</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Display the current system heap memory usage
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!help</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              List the available quick commands
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!json-settings</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              For setting the device settings via a serial connection. When this command is sent, the system expects to receive a JSON settings file
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!log-now</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Perform a log observation event
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!log-rate</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              If log rate measurement is enabled, the current log rate is printed
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!reset-device</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Reset the device - erasing any saved settings and restarting the device
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!reset-device-forced</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Reset the device, but without a Y/N prompt
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!restart</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Restart the device
+            </td>
+        </tr><tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!restart-forced</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Restart the device without a Y/N prompt
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!save-settings</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Save the current settings to on-board flash
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!sdcard</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Output the current SD card usage statistics
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!systime</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Output current system time
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!uptime</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              The uptime of the device
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!device-id</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              The ID for the device
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!version</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              The version of the firmware
+            </td>
+        </tr>
+        <tr>        
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              <kbd>!wifi</kbd>
+            </td>
+            </td>
+            <td style="text-align: center; border: solid 1px #cccccc;">
+              Output current system WiFi state
+            </td>
+        </tr>
+    </table>
+</div>
+
+Typing a quick command and hitting the <kbd>Enter</kbd> button will result in the DataLogger IoT executing the command without the need to go through the menu system. Below is an example showing the `!about` quick command being sent and then executing the command as the DataLogger IoT is outputting CSV values to the serial terminal.
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_Datalogger_IoT_Output_Quick_Command.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_Quick_Command.JPG" width="600" height="600" alt="Quick Command Entered"></a>
+</div>
 
 
 
 ### Exiting and Saving
 
-When exiting the menu's, you will be prompted with either an <kbd>x</kbd> or <kbd>b</kbd>. You can use either one when exiting the menus as well as <kbd>X</kbd> or <kbd>B</kbd>. Note that you will need to use either of these keys when making a change in order for the DataLogger IoT to save any changes in memory. Make sure that you receive the following message indicating that the settings were saved: <code>[I] Saving System Settings</code>. The DataLogger IoT will the continue reading the devices and outputting the readings through the serial terminal.
+When exiting the menus, you will be prompted with either an <kbd>x</kbd> or <kbd>b</kbd>. You can use either character when exiting the menus as well as <kbd>X</kbd> or <kbd>B</kbd>. Note that you will need to use either of these keys when making a change in order for the DataLogger IoT to save any changes in memory. Make sure that you receive the following message indicating that the settings were saved: <code>[I] Saving System Settings</code>. The DataLogger IoT will the continue reading the devices and outputting the readings through the serial terminal.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings"></a>
@@ -158,11 +394,11 @@ The menus will slowly exit out after 2 minutes of inactivity, so if you do not p
 Let's start by configuring the DataLogger's system settings. Send a <kbd>1</kbd> through the serial terminal. You will have the option to adjust various settings ranging from the your preferences, time source to synchronize the date and time, WiFi network, how the device logs data, which IoT service to use, and firmware updates.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Settings_Menu.JPG" width="600" height="600" alt="Settings Menu Options"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Settings_Menu_v01p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Settings_Menu_v01p02p00.JPG" width="600" height="600" alt="Settings Menu Options"></a>
 </div>
 
 !!! note
-    You may notice after entering a <kbd>1</kbd> that there is a slight delay before the DataLogger IoT responds. The delay was added to allow some time for the DataLogger IoTto receive an additional digit for any option greater than 9. If you want to head to option 1 immediately without the slight delay, you can hit the <kbd>Enter</kbd> key to enter the Application Settings.
+    You may notice after entering a <kbd>1</kbd> that there is a slight delay before the DataLogger IoT responds. The delay was added to allow some time for the DataLogger IoT to receive an additional digit for any option greater than 9. If you want to head to option 1 immediately without the slight delay, you can hit the <kbd>Enter</kbd> key to enter the Application Settings.
 
 We'll go over each of these options below.
 
@@ -174,7 +410,7 @@ We'll go over each of these options below.
 In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial console output and the menu system's timeout value.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2.JPG" width="600" height="600" alt="Application Settings Options"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2-v01p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Applications_Settings_Menu_2-v01p02p00.JPG" width="600" height="600" alt="Application Settings Options"></a>
 </div>
 
 In the Application Settings Menu, users will be able to configure the addressable RGB's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
@@ -191,30 +427,51 @@ In the Application Settings Menu, users will be able to configure the addressabl
         * <kbd>4</kbd> 5 Minutes = 300
         * <kbd>5</kbd> 10 Minutes = 600
         * <kbd>b</kbd> Back
-* <kbd>3</kbd> **SD Card Format** &mdash; Enable and set the output format
+* <kbd>3</kbd> **Color Output** &mdash; Use color output with the Serial console. _(added as of firmware v01.02.00)_
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable _(default)_
+        * <kbd>0</kbd> to disable
+* <kbd>4</kbd> **Board Name** &mdash; A specific name for this DataLogger
+    * Accaps a string
+* <kbd>5</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
         * <kbd>2</kbd> CSV format _(default)_ = 1
         * <kbd>3</kbd> JSON format = 2
-* <kbd>4</kbd> **Serial Console Format** &mdash; Enable and set the output format
+* <kbd>6</kbd> **Serial Console Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
         * <kbd>2</kbd> CSV format _(default)_ = 1
         * <kbd>3</kbd> JSON format = 2
-* <kbd>5</kbd> **Terminal Baud Rate** &mdash; Update terminal baud rate. Changes take effect on restart.
+* <kbd>7</kbd> **JSON Buffer Size** &mdash; Output buffer size in bytes
+    * Accepts an integer between <kbd>100</kbd> to <kbd>5000</kbd> :
+        * 1600 bytes _(default)_
+* <kbd>8</kbd> **Terminal Baud Rate** &mdash; Update terminal baud rate. Changes take effect on restart.
     * Accepts an unsigned integer between **1200** to **50000**:
         * **115200** _(default)_
-* <kbd>6</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
+* <kbd>9</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
     * Accepts a boolean value:
         * <kbd>1</kbd> to enable
         * <kbd>0</kbd> to disable _(default)_
-* <kbd>7</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
+* <kbd>10</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
     * Accepts an integer between <kbd>5</kbd> to <kbd>86400</kbd> :
         * <kbd>30</kbd> seconds _(default)_
-* <kbd>8</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
-    * Accepts an integer between <kbd>60</kbd> to <kbd>86400</kbd> :
+* <kbd>11</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
+    * Accepts an unsigned integer between <kbd>60</kbd> to <kbd>86400</kbd> :
         * <kbd>120</kbd> seconds _(default)_
-* <kbd>9</kbd> **About...** &mdash; Details about the system
+* <kbd>12</kbd> **Startup Messages** Level of message output at startup
+    * Accepts a value between <kbd>1</kbd> to <kbd>3</kbd> :
+      * <kbd>1</kbd> Normal = 0 _(default)_
+      * <kbd>2</kbd> Compact = 1
+      * <kbd>3</kbd> Disabled = 2
+* <kbd>13</kbd> **Startup Delay** Startup Menu Delay in Seconds
+    * Accepts a value between <kbd>0</kbd> to <kbd>60</kbd> :
+        * <kbd>2</kbd> seconds _(default)_
+* <kbd>14</kbd> **Device Names** Name always includes the device address
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable _(default)_
+        * <kbd>0</kbd> to disable
+* <kbd>15</kbd> **About...** &mdash; Details about the system
 * <kbd>b</kbd> **Back**
 
 !!! note
@@ -454,7 +711,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 In the Settings menu, send a <kbd>6</kbd> to adjust how data is logged.
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Menu.JPG" width="600" height="600" alt="Logger Menu Options"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_Logger_Menu_v01p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Logger_Menu_v01p02p00.JPG" width="600" height="600" alt="Logger Menu Options"></a>
 </div>
 
 In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
@@ -474,17 +731,33 @@ In the Logger menu, users will have the option to add a timestamp, increment sam
 * <kbd>3</kbd> **Numbering Increment** &mdash; Increment amount for Sample Numbering
     * Accepts an unsigned integer between <kbd>1</kbd> to <kbd>10000</kbd>:
         * <kbd>1</kbd> _(default)_
-* <kbd>4</kbd> **SD Card Format** &mdash; Enable and set the output format
+* <kbd>4</kbd> **Output ID** &mdash; Include the Board ID in the log output _(added as of firmware v01.02.00)_
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>5</kbd> **Output Name** &mdash; Include the Board Name in the log output _(added as of firmware v01.02.00)_
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>6</kbd> **Rate Metric** &mdash; Enable to record the logging rate data _(added as of firmware v01.02.00)_
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>7</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts an integer:
         * <kbd>1</kbd> to disable  = 0
         * <kbd>2</kbd> CSV format  = 1 _(default)_
         * <kbd>3</kbd> JSON format = 2
-* <kbd>5</kbd> **Serial Console Format** &mdash; Enable and set the output format
+* <kbd>8</kbd> **Serial Console Format** &mdash; Enable and set the output format
     * Accepts an integer:
         * <kbd>1</kbd> to disable  = 0
         * <kbd>2</kbd> CSV format  = 1 _(default)_
         * <kbd>3</kbd> JSON format = 2
-* <kbd>6</kbd> **Reset Sample Counter** &mdash; Reset the sample number counter to the provided value
+* <kbd>9</kbd> **System Info** &mdash; Log system information _(added as of firmware v01.02.00)_
+    * Accepts a boolean value:
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>10</kbd> **Reset Sample Counter** &mdash; Reset the sample number counter to the provided value
     * Accepts an unsigned integer between <kbd>0</kbd> to <kbd>10000</kbd>:
         * <kbd>0</kbd> _(default)_
 * <kbd>b</kbd> **Back**
@@ -828,6 +1101,47 @@ In the Settings menu, send an <kbd>16</kbd> to adjust settings for Arduino Cloud
 
 
 
+
+### IoT Web Server
+
+As of firmware v01.02.00, log files can be viewed and downloaded using the IoT Web Server feature if mDNS (multicast DNS) is supported on your network. This functionality is accessed via the Settings Menu, Type <kbd>17</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
+
+<div style="text-align: center">
+  <a href="../assets/SparkFun_Datalogger_IoT_Web_Server_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Web_Server_Menu.JPG" width="600" height="600" alt="IoT Web Server Options"></a>
+</div>
+
+* <kbd>1</kbd> **Enabled** &mdash; Enabled or Disable the Web Server
+    * Accepts a boolean value
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>2</kbd> **Username** &mdash; Web access control. Leave empty to disable authentication
+    * Accepts a string
+* <kbd>3</kbd> **Password** &mdash; Web access control.
+    * Accepts a string
+* <kbd>4</kbd> **mDNS Support** &mdash; Enable a name for the web address this device
+    * Accepts a boolean value
+        * <kbd>1</kbd> to enable
+        * <kbd>0</kbd> to disable _(default)_
+* <kbd>5</kbd> **mDNS Name** &mdash; mDNS Name used for this device address
+    * Accepts a string
+        * dataloggerXXXXX, where XXXXX is the taken from the last 5x characters from your DataLogger IoT's board ID _(default)_
+* <kbd>b</kbd> **Back**
+
+!!! note
+    You will need to make sure that the ESP32 is on the same network as your computer in order to access the log files.
+
+!!! note
+    When authentication is enabled, some browsers might require a second login depending on user settings.
+
+!!! note
+    The SparkFun Datalogger IoT requires restarting if the web interface is enabled.
+
+For more information on how to use this feature, check out the [section on viewing and downloading log files using the IoT web server](../example_iot_web_server/).
+
+<div style="text-align: center"><a href="../example_iot_web_server" class="md-button">Examples: Viewing and Downloading Log Files using the IoT Web Server</a></div>
+
+
+
 ### Advanced: System Update
 
 New sensors and features are being added all the time and we've made it really easy for you to keep your DataLogger IoT up to date. The System Update option provides the following functionality to the end user:
@@ -837,15 +1151,13 @@ New sensors and features are being added all the time and we've made it really e
 * Updated the device firmware from a file on an SD Card.
 
 !!! note
-    What's going on here?!? This tutorial was updated for firmware version **01.01.00**!!! You will notice this menu option has changed to <kbd>17</kbd> !!!
+    What's going on here?!? This tutorial was updated for firmware version **01.02.00**!!! You will notice this menu option has changed to <kbd>18</kbd> !!!
 
-This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>17</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
+This functionality is accessed via the Settings Menu, which is required to use this capability. Type <kbd>18</kbd> to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
 
 <div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
+  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware_v01p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware_v01p02p00.JPG" width="600" height="600" alt="System Update Menu Options"></a>
 </div>
-
-
 
 * <kbd>1</kbd> **Device Restart** &mdash; Restart/reboot the device
     * Accepts the following values:
@@ -869,6 +1181,11 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
+
+For more information on how to update firmware manually or over-the-air, check out the section under [Examples: Updating Firmware](../updating_firmware/).
+
+<div style="text-align: center"><a href="../updating_firmware/" class="md-button">Examples: Updating Firmware</a></div>
+
 
 
 ## Device Settings

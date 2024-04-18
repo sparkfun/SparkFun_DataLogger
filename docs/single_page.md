@@ -50,6 +50,9 @@ icon: fontawesome/solid/scroll
 # Example - Arduino Cloud
 --8<-- "./docs/example_arduino_iot_cloud.md"
 
+# Viewing and Downloading Log Files using the IoT Web Server
+--8<-- "./docs/example_iot_web_server.md"
+
 # Example - How to Convert Comma Separated Values (CSV) to a Spreadsheet
 --8<-- "./docs/example_CSV_to_spreadsheet.md"
 
