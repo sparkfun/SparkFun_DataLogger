@@ -7,8 +7,8 @@ In this section, we will highlight the hardware and pins that are broken out on 
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-9DOF_bottom.jpg" width="600px" height="600px" alt="DataLogger IoT - 9DoF (Bottom View)"></a></td>
     </tr>
     <tr style="vertical-align:middle;">
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT - 9DoF (Top View)</td>
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT - 9DoF (Bottom View)</td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT - 9DoF (Top View)</i></td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT - 9DoF (Bottom View)</i></td>
     </tr>
   </table>
 </div>
@@ -32,10 +32,9 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
      </td>
     </tr>
     <tr style="vertical-align:middle;">
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT (Top View)</td>
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT (Bottom View)</td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT (Top View)</i></td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT (Bottom View)</i></td>
     </tr>
-  </table>
   </table>
 </div>
 
@@ -45,7 +44,11 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
 The DataLogger IoT is populated with [Espressif's ESP32-WROOM-32E module](https://www.sparkfun.com/products/17830). Espressif's ESP32 WROOM ubiquitous IoT microcontroller is a powerful WiFi, BT, and BLE MCU module that targets a wide variety of applications. For the DataLogger IoT, the firmware currently utilizes the WiFi feature.
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32.jpg" width="600px" height="600px" alt="ESP32-WROOM Highlighted on the DataLogger IoT - 9DoF"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32.jpg" width="600px" height="600px" alt="ESP32-WROOM Highlighted on the DataLogger IoT - 9DoF"></a></td>
+   </tr>
+  </table>
 </div>
 
 !!! note
@@ -129,7 +132,11 @@ For those going the old school route, you can also bypass the voltage regulators
 The top side of the board includes a CH340 USB-to-Serial Converter. The chip can be used to send serial data between the device and computer. You can view the output or configure the device through a serial terminal.
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_CH340_USB-to-Serial.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_CH340_USB-to-Serial.jpg" alt="CH340 Highlighted on the DataLogger IoT - 9DoF (Top View)"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_CH340_USB-to-Serial.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_CH340_USB-to-Serial.jpg" alt="CH340 Highlighted on the DataLogger IoT - 9DoF (Top View)"></a></td>
+    </tr>
+  </table>
 </div>
 
 The driver should automatically install on most operating systems. However, there is a wide range of operating systems out there. You may need to install drivers the first time you connect the chip to your computer's USB port or when there are operating system updates. For more information, check out our [How to Install CH340 Drivers Tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers).
@@ -137,7 +144,7 @@ The driver should automatically install on most operating systems. However, ther
 <div style="text-align: center">
   <table>
     <tr>
-      <td style="text-align: center; vertical-align: middle;">
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">
         <a href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers">
           <div style="text-align: center"><img src="https://cdn.sparkfun.com/c/178-100/assets/learn_tutorials/9/0/8/USB-to-serial_converter_CH340-closeup.jpg" alt="How to Install CH340 Drivers" style="width:500px; height:282px; object-fit:contain;"></div>
           <hr />
@@ -251,8 +258,11 @@ Not shown in the image are the chip select (CS) pins. The 6DoF IMU's CS pin is c
 The DataLogger IoT supports full 4-bit SDIO for fast logging and uses common microSD cards to record clear text, comma separated files. Flip over the DataLogger IoT and you'll see the latching microSD card socket. You probably already have a microSD card laying around. However, if you need any additional units, we have plenty [in the SparkFun catalog](https://www.sparkfun.com/categories/351). The DataLogger can use any size microSD card and supports FAT32 cards in addition to FAT16. Please ensure that your SD card is formatted correctly; we recommend the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/).
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_microSD_Card.jpg">
-  <img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_microSD_Card.jpg" width="600px" height="600px" alt="MicroSD Card"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_microSD_Card.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_microSD_Card.jpg" width="600px" height="600px" alt="MicroSD Card"></a></td>
+    </tr>
+  </table>
 </div>
 
 Slide in your formatted SD card and it will click neatly into place. The edge of the SD card will stick out on the edge of the circuit board when it is inserted correctly.
@@ -268,8 +278,11 @@ Slide in your formatted SD card and it will click neatly into place. The edge of
 As stated earlier, included on every DataLogger IoT - 9DoF is a 6DoF Inertial Measurement Unit (IMU) for built-in logging of triple-axis accelerometer and gyro. There is also a built-in triple-axis magnetometer for a complete 9 degrees of freedom. Beside each IC is a silkcreen showing the reference axis. Both are connected to the ESP32 via the SPI port. Combined, you have 9 degrees of inertial measurement! Whereas the [original 9DOF Razor](https://www.sparkfun.com/products/14001) used the old MPU-9250, this uses the ISM330DHCX and MMC5983MA. Oh, and if that wasn’t enough, it comes with a built-in temperature sensor on each IC too. So if you want to use the DataLogger IoT as a transportation logger, it will do that straight out of the anti-static bag!  
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_9DoF_IMU_Accelerometer_Gyro_Magnetometer.jpg">
-  <img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_9DoF_IMU_Accelerometer_Gyro_Magnetometer.jpg" width="600px" height="600px" alt="Accelerometer, Gyro, and Magnetometer"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_9DoF_IMU_Accelerometer_Gyro_Magnetometer.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_9DoF_IMU_Accelerometer_Gyro_Magnetometer.jpg" width="600px" height="600px" alt="Accelerometer, Gyro, and Magnetometer"></a></td>
+    </tr>
+  </table>
 </div>
 
 !!!note
@@ -376,42 +389,49 @@ There are three LEDs populated on the board. These can be disabled with their re
     * **Red**: As of firmware v01.00.02, the LED blinks red when on battery power indicating that the battery level is _VBATT_ < 10%.
 * **CHG**: The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.
 
+
 <div style="text-align: center;">
   <table>
       <tr style="vertical-align:middle;">
-          <td style="text-align: center; vertical-align: middle;"><b>Charge State</b></td>
-          <td style="text-align: center; vertical-align: middle;"><b>LED status</b></td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><b>Charge State</b></td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><b>LED status</b></td>
       </tr>
       <tr style="vertical-align:middle;">
-          <td style="text-align: center; vertical-align: middle;">No Battery</td>
-          <td style="text-align: center; vertical-align: middle;">Floating (should be OFF, but may flicker)</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">No Battery</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">Floating (should be OFF, but may flicker)</td>
       </tr>
       <tr style="vertical-align:middle;">
-          <td style="text-align: center; vertical-align: middle;">Shutdown</td>
-          <td style="text-align: center; vertical-align: middle;">Floating (should be OFF, but may flicker)</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">Shutdown</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">Floating (should be OFF, but may flicker)</td>
       </tr>
       <tr style="vertical-align:middle;">
-          <td style="text-align: center; vertical-align: middle;">Charging</td>
-          <td style="text-align: center; vertical-align: middle;">ON</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">Charging</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">ON</td>
       </tr>
       <tr style="vertical-align:middle;">
-          <td style="text-align: center; vertical-align: middle;">Charge Complete</td>
-          <td style="text-align: center; vertical-align: middle;">OFF</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">Charge Complete</td>
+          <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">OFF</td>
       </tr>
   </table>
 </div>
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg">
-  <img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg" width="600px" height="600px" alt="LEDs"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg" width="600px" height="600px" alt="LEDs"></a></td>
+    </tr>
+   </table>
 </div>
 
 !!! note
     On the DataLogger IoT, we included the B3DQ3BRG addressable RGB LED instead of the WS2812 with the light emitting from the top of the IC. This side emitting LED uses the same protocol as the WS2812 and was a design choice for users placing the board in an enclosure.
 
     <div style="text-align: center">
-      <a href="../assets/22462-_DEV-_SparkFun_DataLogger_IoT_RGB_LED.jpg">
-      <img src="../assets/22462-_DEV-_SparkFun_DataLogger_IoT_RGB_LED.jpg" width="600px" height="600px" alt="side emitting B3DQ3BRG Addressable RGB LED"></a>
+      <table>
+        <tr style="vertical-align:middle;">
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/22462-_DEV-_SparkFun_DataLogger_IoT_RGB_LED.jpg"><img src="../assets/22462-_DEV-_SparkFun_DataLogger_IoT_RGB_LED.jpg" width="600px" height="600px" alt="side emitting B3DQ3BRG Addressable RGB LED"></a></td>
+        </tr>
+      </table>
     </div>
 
 
@@ -429,8 +449,11 @@ There are seven jumpers on the back of the DataLogger IoT - 9DoF. For more infor
 * **MAG INT**: This jumper connects the MMC5983MA  magnetometer's interrupt pin to pin `35` and it is open by default. Add a solder jumper to connect.
 
 <div style="text-align: center">
-  <a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Jumpers.jpg">
-  <img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Jumpers.jpg" width="600px" height="600px" alt="Jumpers"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Jumpers.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Jumpers.jpg" width="600px" height="600px" alt="Jumpers"></a></td>
+    </tr>
+  </table>
 </div>
 
 !!! note
@@ -462,8 +485,8 @@ The overall length and width with the antenna connector is about 1.66" x 2.00". 
        </td>
     </tr>
     <tr style="vertical-align:middle;">
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT - 9DoF</td>
-      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">DataLogger IoT</td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT - 9DoF</i></td>
+      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT</i></td>
     </tr>
   </table>
 </div>

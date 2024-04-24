@@ -81,15 +81,17 @@ This option is available on ESP32 devices that contained two update firmware (OT
 If you have not already, connect the DataLogger IoT to your computer using a USB cable.
 
 <div style="text-align: center">
-  <a href="../assets/DataLogger_IoT_USB.jpg">
-  <img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="DataLogger IoT Connecting USB"></a></td>
+ <tr>
+</table>
 </div>
 
 
 Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>16</kbd> to enter the System Update Menu. Finally, type <kbd>4</kbd> to update the firmware over-the-air.
 
-<div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
+<div style="text-align: center"><a href="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG" width="600" height="600" alt="System Update Menu Options"></a>
 </div>
 
 When this option is selected, the system will contact the update server and search for available upgrade firmware, selecting the latest version available. If a newer version is found, a prompt is presented to confirm the upgrade.

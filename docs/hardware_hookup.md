@@ -45,8 +45,11 @@ If all you want to do is display your sensor readings in a serial terminal or mo
 You probably already have a microSD card laying around but if you need any additional units, we have plenty [in the store](https://www.sparkfun.com/products/15107). The DataLogger IoT can use any size microSD card as long as it is formatted correctly. Please ensure your SD card is formatted correctly. There are different software tools available. Some are built into your operating system. We recommend using the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/) to easily format the memory card as FAT32 using the GUI. Flip over the DataLogger IoT and you’ll see the latching microSD card socket. Slide in your formatted SD card and it will click neatly into place. Part of the edge of the SD card will stick out when fully inserted in the microSD card socket.
 
 <div style="text-align: center">
-  <a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg">
-  <img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Inserting MicroSD card"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg"><img src="../assets/DataLogger_IoT_Insert_MicroSD_Card.jpg" width="1000" height="667" alt="Inserting MicroSD card"></a></td>
+    <tr>
+  </table>
 </div>
 
 You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data. You can tell when the board has just logged by observing the addressable RGB LED. When enabled, the LED will blink blue after it has logged one data point.
@@ -61,8 +64,11 @@ To remove the microSD card, make sure power is disconnected from the DataLogger 
 
 
 <div style="text-align: center">
-  <a href="https://cdn.sparkfun.com//assets/parts/7/6/3/6/11609-Action.jpg">
-  <img src="https://cdn.sparkfun.com//assets/parts/7/6/3/6/11609-Action.jpg" width="500" height="500" alt="Memory Card Adapter and USB Reader for microSD cards"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="https://cdn.sparkfun.com//assets/parts/7/6/3/6/11609-Action.jpg"><img src="https://cdn.sparkfun.com//assets/parts/7/6/3/6/11609-Action.jpg" width="500" height="500" alt="Memory Card Adapter and USB Reader for microSD cards"></a></td>
+    <tr>
+  </table>
 </div>
 
 
@@ -80,8 +86,8 @@ Plug one end of your Qwiic cable into the DataLogger IoT and plug the other end 
    <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg"><img src="../assets/DataLogger_IoT_Qwiic_Daisy_Chained.jpg" width="1000" height="667" alt="DataLogger and several Qwiic-Enabled Devices Daisy Chained"></a></td>
   </tr>
   <tr style="vertical-align:middle;">
-    <td style="text-align:center"><i>DataLogger IoT and a Qwiic-Enabled Device</i></td>
-    <td style="text-align:center"><i>DataLogger IoT and several Qwiic-Enabled Devices Daisy Chained</i></td>
+    <td style="text-align:center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT and a Qwiic-Enabled Device</i></td>
+    <td style="text-align:center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT and several Qwiic-Enabled Devices Daisy Chained</i></td>
   </tr>
 </table>
 </div>
@@ -105,8 +111,11 @@ Typically one would use a multiplexor. However, we currently do not have the Dat
 Now is a good time to attach a LiPo battery, if you want the DataLogger IoT to keep logging when you disconnect USB-C.
 
 <div style="text-align: center">
-  <a href="../assets/DataLogger_IoT_LiPo_Battery.jpg">
-  <img src="../assets/DataLogger_IoT_LiPo_Battery.jpg" width="1000" height="667" alt="LiPo Battery Inserted"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;">  <a href="../assets/DataLogger_IoT_LiPo_Battery.jpg"><img src="../assets/DataLogger_IoT_LiPo_Battery.jpg" width="1000" height="667" alt="LiPo Battery Inserted"></a></td>
+    <tr>
+  </table>
 </div>
 
 You can connect one of our standard single cell LiPo batteries to the DataLogger IoT and power it for hours, days or weeks depending on what sensors you have attached and how often you log data. The DataLogger IoT has a built-in charger too which will charge your battery at **500mA** when USB-C is connected. Please make sure your battery capacity is at least 500mAh (0.5Ah); bad things will happen if you try to charge our smallest batteries at 500mA. The yellow CHG charging LED will light up while the battery is charging and will go out once charging is complete.
@@ -121,8 +130,11 @@ You can connect one of our standard single cell LiPo batteries to the DataLogger
 The USB-C connector provides power to the DataLogger IoT and acts as a serial interface for configuration and data display.
 
 <div style="text-align: center">
-  <a href="../assets/DataLogger_IoT_USB.jpg">
-  <img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="Insert USB"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_USB.jpg"><img src="../assets/DataLogger_IoT_USB.jpg" width="1000" height="667" alt="Insert USB"></a></td>
+    <tr>
+  </table>
 </div>
 
 If you are going to use a microSD card to store your data, and why wouldn’t you, then insert that first before attaching your USB cable. You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data.
@@ -148,6 +160,9 @@ You’ll find full instructions on how to configure the DataLogger IoT later in 
 For users interested in stacking the Qwiic-enabled device on the DataLogger IoT or mounting in an enclosure, you will need some [standoffs](https://www.sparkfun.com/categories/257) to mount the boards. When mounting, note that all four mounting holes are not positioned exactly for a 1.0"x1.0" sized Qwiic board. Only two of the four mounting holes are compatible for a 1.0"x1.0" sized Qwiic board. For example the image below shows the boards stacked on each side of the DataLogger IoT. On top, the Qwiic GPS (SAM-M10Q) breakout was also able to stack by rotating the board slightly and aligning the mounting holes on the 1.6"x1.6" sized board to the other mounting holes
 
 <div style="text-align: center">
-  <a href="../assets/DataLogger_IoT_Stacked_Standoffs.jpg">
-  <img src="../assets/DataLogger_IoT_Stacked_Standoffs.jpg" width="1000" height="667" alt="Qwiic-enabled boards connected and stacked on the DataLogger Using Standoffs"></a>
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Stacked_Standoffs.jpg"><img src="../assets/DataLogger_IoT_Stacked_Standoffs.jpg" width="1000" height="667" alt="Qwiic-enabled boards connected and stacked on the DataLogger Using Standoffs"></a></td>
+    <tr>
+  </table>
 </div>

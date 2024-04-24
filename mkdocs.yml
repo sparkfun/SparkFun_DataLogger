@@ -166,6 +166,7 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       # base_path: ['./docs']

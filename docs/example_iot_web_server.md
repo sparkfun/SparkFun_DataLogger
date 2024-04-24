@@ -89,10 +89,10 @@ Once the DataLogger IoT has finished initializing, open web browser. Connect the
 </div>
 
 !!! note
-    If mDNS is not supported, you can also enter the IP address of the Datalogger IoT into a web browser to view and download the log files.
+    If mDNS is not supported, you can also enter the IP address of the Datalogger IoT into a web browser to view and download the log files. You can view the IP address when the DataLogger IoT is initializing. If you have administrative privileges to the WiFi Network, you can also view the IP address through your  WiFi router as well.
 
     <div style="text-align: center">
       <a href="../assets/iot_web_server-Chrome_Browser-Available_Log_Files_IP_Address.JPG"><img src="../assets/iot_web_server-Chrome_Browser-Available_Log_Files_IP_Address.JPG" width="600" height="600" alt="Viewing Available Log Files through a Web Browser using IP Address"></a>
     </div>
 
-Now that you have downloaded the log files, try graphing the data on a spreadsheet.
+Now that you have downloaded the log files, try graphing the data on a spreadsheet!

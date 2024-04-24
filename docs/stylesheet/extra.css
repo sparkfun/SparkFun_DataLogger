@@ -25,6 +25,11 @@
   max-height: var(--md-codeblock-height, 800px);
 } */
 
+/* Word wrap code blocks (no horizontal scroll) */
+pre code {
+  white-space : pre-wrap;
+}
+
 
 /* ================================================================================== */
 /* Icons                                                                              */
@@ -409,7 +414,7 @@
     display: table;
     table-layout: fixed;
   }
-  
+
   /* Sets images size in tables */
   .md-typeset table:not([class]) td img {
     width: 100%;
@@ -459,8 +464,8 @@
 	width: 25%;
 	font-size: 8px;
   } */
-  
-  
+
+
   /* Sets maximum image size */
   .md-typeset img {
     max-width:  200px;
@@ -469,11 +474,11 @@
   /* Fixes positioning of admonition icon */
   .md-typeset :is(.admonition-title,summary):before {
     top: 0.6rem;
-    left: 0.6rem; 
+    left: 0.6rem;
   }
   /* Fixes appearance of admonition icon */
   .md-typeset :is(.admonition,details)>:last-child {
-	  background-color: transparent; 
+	  background-color: transparent;
   }
   /* Fixes margin spacing for lists */
   .md-typeset ol,ul {
