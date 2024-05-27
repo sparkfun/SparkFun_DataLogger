@@ -12,7 +12,7 @@ Documentation and Firmware for the SparkFun DataLogger IoT line of products
 
 This repository contains the latest firmware for the SparkFun DataLogger IoT products. The DataLogger IoT product line are pre-programmed to automatically log data from 50+ SparkFun [Qwiic](https://www.sparkfun.com/qwiic) sensors, all without requiring any hardware setup or code development. Just plug in a qwiic board and log data. The DataLogger IoT automatically detects the connected sensor, configures the device and enables logging information locally, or to a variety of IoT data services.
 
-The current list of SparkFun boards supported by the SparkFun DataLogger IoT are listed in the [DataLogger Supported Device List](../supported_devices).
+The current list of SparkFun boards supported by the SparkFun DataLogger IoT are listed in the ~[DataLogger Supported Device List](../supported_devices)~.
 
 SparkFun DataLogger IoT products include Internet connectivity built in, and includes connections for a variety of IoT service services and end-point types. Connection types include MQTT, HTTP, AWS IoT, Azure IoT, ThingSpeak, Arduino Cloud. To enable connectivity, connect the DataLogger IoT to a WiFi network, enter the required credentials for the specific IoT service being used, and the DataLogger IoT will do the rest - no programming required.
 
