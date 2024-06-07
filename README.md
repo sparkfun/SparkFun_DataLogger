@@ -36,7 +36,7 @@ The functionality of the DataLogger IoT firmware will continue to grow as SparkF
 
 ## Supported Products
 
-* **[DEV-22462](https://www.sparkfun.com/products/22462)** - SparkFun DataLogger IoT, v1.1
+* **[DEV-22462](https://www.sparkfun.com/products/22462)** - SparkFun DataLogger IoT,  v1.1 & v1.2 (minor silkscreen change)
 * **[DEV-20594](https://www.sparkfun.com/products/20594)** - SparkFun DataLogger IoT - 9DOF, v1.1
 
 ## Firmware Updates
