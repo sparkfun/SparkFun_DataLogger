@@ -419,6 +419,7 @@ There are three LEDs populated on the board. These can be disabled with their re
   <table>
     <tr style="vertical-align:middle;">
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_User_LED_RGB_WS2812.jpg" width="600px" height="600px" alt="LEDs"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_User_LED_RGB_WS2812.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_User_LED_RGB_WS2812.jpg" width="600px" height="600px" alt="PTHS connected to LEDs"></a></td>
     </tr>
    </table>
 </div>
