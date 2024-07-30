@@ -35,6 +35,23 @@ In this case, the DataLogger IoT failed to connect to AWS IoT service because th
 
 
 
+#### ThinkSpeak IoT Error
+
+The following error occurred when the DataLogger IoT was initializing with ThingSpeak.
+
+``` bash
+[I] ThingSpeak MQTT: connecting to MQTT endpoint mqtt3.thingspeak.com:8883 .......[E] ThingSpeak MQTT: Connection Error [4]
+```
+
+<div style="text-align: center">
+  <a href="../assets/Incorrect_Configuration_Connection_Failed_IoT_Service_ThingSpeak.JPG">
+  <img src="../assets/Incorrect_Configuration_Connection_Failed_IoT_Service_ThingSpeak.JPG" width="600px" height="600px" alt="Configuration entered incorrectly, DataLogger not connecting to IoT Service - ThingSpeak"></a>
+</div>
+
+In this case, the DataLogger IoT failed to connect to ThingSpeak service because the credentials were entered incorrectly. Ensure that the  and saved in persistent memory in order for the DataLogger IoT to successfully connect.
+
+
+
 #### Arduino Cloud Error 1
 
 The following error was occurred when the DataLogger IoT was initializing with Arduino Cloud.
@@ -54,6 +71,7 @@ The following error was occurred when the DataLogger IoT was initializing with A
 </div>
 
 In this case, the DataLogger IoT failed to connect to the Arduino Cloud service because the credentials were incorrect. Ensure that the credentials (i.e. API client ID, API secret, device secret, device ID) are entered correctly and saved in persistent memory in order for the DataLogger IoT to successfully connect.
+
 
 
 #### Arduino Cloud Error 2
@@ -85,6 +103,38 @@ ArduinoIoTCloudTCP::handle_ConnectMqttBroker 2 connection attempt at tick time 3
 ```
 
 In this case, the DataLogger IoT failed to connect to the Arduino Cloud service because there was already a Thing that was created. By deleting the Thing in the Arduino Cloud, the DataLogger IoT was able to automatically create another Thing and setup the variables.
+
+
+
+### ThingSpeak Data Points Not Updating
+
+If your DataLogger IoT is connected to ThingSpeak but you do not see any data, ensure that the device name matches the Qwiic device that is connect to the DataLogger IoT. For example, the DataLogger IoT and Qwiic-enabled ENS160 was able to connect to ThingSpeak as shown in the image on the bottom left. However, there were no data points in any of the graphs as shown on ThingSpeak as shown in the image on the bottom right.
+
+<div style="text-align: center; pointer-events:none;">
+  <table style="border:none;>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: none;"><a href="../assets/DataLogger_Connected_ThingSpeak.JPG"><img src="../assets/DataLogger_Connected_ThingSpeak.JPG" width="600px" height="600px" alt="DataLogger Connected to ThingSpeak"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: none;"><a href="../assets/ThingSpeak_ENS160_No_Data.JPG"><img src="../assets/ThingSpeak_ENS160_No_Data.JPG" width="600px" height="600px" alt="No Data Points in ThingSpeak Channel"></a></td>
+    </tr>
+  </table>
+</div>
+
+If you head back into the configuration menu for the DataLogger's ThingSpeak channel, make sure that the _<device name>_ matches the connected Qwiic device's name that was shown during initialization.  In this case, the device that was loaded and detected was **ENS160**. Then add the channel ID before saving the system settings.
+
+<div style="text-align: center">
+  <a href="../assets/Device_Name_ENS160.JPG">
+  <img src="../assets/Device_Name_ENS160.JPG" width="600px" height="600px" alt="Matching Device Name with Qwiic-Enabled ENS160 Breakout Board"></a>
+</div>
+
+!!! note
+    Only one device can be loaded per channel! ThingSpeak is not able graph two different devices in the same channel.
+
+Head back to your ThingSpeak Channel to verify that data is being plotted on the graphs.
+
+<div style="text-align: center">
+  <a href="../assets/ThingSpeak_ENS160_with_Data.JPG">
+  <img src="../assets/ThingSpeak_ENS160_with_Data.JPG" width="600px" height="600px" alt="ThingSpeak Outputting ENS160 Sensor Data on Graphs"></a>
+</div>
 
 
 

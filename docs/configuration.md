@@ -432,7 +432,7 @@ In the Application Settings Menu, users will be able to configure the addressabl
         * <kbd>1</kbd> to enable _(default)_
         * <kbd>0</kbd> to disable
 * <kbd>4</kbd> **Board Name** &mdash; A specific name for this DataLogger
-    * Accaps a string
+    * Accepts a string
 * <kbd>5</kbd> **SD Card Format** &mdash; Enable and set the output format
     * Accepts the following values:
         * <kbd>1</kbd> to disable = 0
