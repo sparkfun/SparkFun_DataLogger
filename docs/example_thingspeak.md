@@ -70,7 +70,7 @@ On the presented channel page, name the channel and fill in the specific channel
   <a href="../assets/iot_ts_new_channel.png"><img src="../assets/iot_ts_new_channel.png" width="600" height="600" alt="New Channel"></a>
 </div>
 
-Once the values are entered, select save. ThingSpeak will now show list of **Channel Stats**, made up of line plots for each field specified for the channel.
+Once the values are entered, select **Save Channel**. ThingSpeak will now show list of **Channel Stats**, made up of line plots for each field specified for the channel.
 
 
 !!! note
@@ -78,7 +78,7 @@ Once the values are entered, select save. ThingSpeak will now show list of **Cha
 
 
 
-### Setting Up ThingSpeak MQTT
+## Setting Up ThingSpeak MQTT
 
 The DataLogger IoT uses MQTT to post data to a channel. From the ThingSpeak menu, select ***Devices > MQTT***, which displays a list of your MQTT devices. From this page, select the **Add a new device** button.
 
@@ -170,17 +170,17 @@ The alternative to using the menu system is a JSON file. These values can be set
     "Port": 8883,
     "Server": "mqtt3.thingspeak.com",
     "MQTT Topic": "",
-    "Client Name": "MQTT Device Client ID",
+    "Client Name": "MQTT_Device_Client_ID",
     "Buffer Size": 0,
-    "Username": "MQTT Device Username",
-    "Password": "MQTT Device Password",
+    "Username": "MQTT_Device_Username",
+    "Password": "MQTT_Device_Password",
     "CA Cert Filename": "ThingspeakCA.cer",
-    "Channels" : "BME280=<channel id>"
+    "Channels" : "BME280=2054891"
   }
 ```
 
 !!! note
-    The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma.
+    The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma. In this case, the device name `BME280` and the channel ID was `2054891`. Make sure to match the device name that was loaded on start up with the unique channel ID that was generated when creating a ThingSpeak Channel.
 
 Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert Filename`, and `Channels`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the ThingSpeak service. Don't forget to enable ThingSpeak MQTT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
@@ -195,4 +195,129 @@ Once the connector is configured and the DataLogger IoT is connected to ThingSpe
 
 <div style="text-align: center">
   <a href="../assets/iot_ts_channel_data.png"><img src="../assets/iot_ts_channel_data.png" width="600" height="600" alt="ThingSpeak Stats"></a>
+</div>
+
+
+
+## Setting Up 2x or More Devices
+
+For users that are setting up 2x or more devices on the DataLogger IoT, you will need to ensure that each device has their own ThingSpeak Channel. Unfortunately, you are not able to plot sensor readings from two devices in the same channel.
+
+The following example demonstrates how to set up two devices for ThingSpeak on the DataLogger IoT. In this case, we will use the BME688 and BME680 and their respective default I<sup>2</sup>C address. This is also a good example of what to do when two devices use the same device driver. Head to ThingSpeak to create a channel for each device connected to the DataLogger IoT. Include a field for each device data that the DataLogger provides. The name of the channel does not need to match the device name or I<sup>2</sup>C address.
+
+<div style="text-align: center;">
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_New_Channel_BME688_0x76.JPG"><img src="../assets/ThingSpeak_New_Channel_BME688_0x76.JPG" width="600px" height="600px" alt="Creating a Channel for the BME688"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_New_Channel_BME680_0x77.JPG"><img src="../assets/ThingSpeak_New_Channel_BME680_0x77.JPG" width="600px" height="600px" alt="Creating a Channel for the BME680"></a></td>
+    </tr>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>Creating a Channel for the BME688</i></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>Creating a Channel for the BME680</i></td>
+    </tr>
+  </table>
+</div>
+
+Once the channels are created, you will be provided with a unique channel ID for each channel. Make sure to take note of the number as explained earlier.
+
+!!! note
+    The alternative I<sup>2</sup>C address for the BME688 and BME680 uses the same address as the default of the other sensor:
+
+    * BME680: **0x77 (Default)** or 0x76
+    * BME688: **0x76 (Default)** or 0x77
+
+    Make sure to avoid using the same address when connecting the sensors to the same DataLogger IoT.
+
+When setting up the connection, you will need to authorize both channels. In this example, we included the channels for the BME688 [x076] and BME680 [x077].
+
+<div style="text-align: center;">
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_Setting_Up_MQTT_Authorize_2x_Channels.JPG"><img src="../assets/ThingSpeak_Setting_Up_MQTT_Authorize_2x_Channels.JPG" width="600px" height="600px" alt="Authorizing 2x Channels through the Same Connection"></a></td>
+    </tr>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>Authorizing 2x Channels through the Same Connection</i></td>
+    </tr>
+  </table>
+</div>
+
+Now that the ThingSpeak MQTT connection is setup, adjust the ThingSpeak configuration for the DataLogger IoT by including the credentials (i.e. Client Name, Username, and Password) and channels. We will assume that you have included the ThingSpeak CA certificate file in the root directory of the microSD card already. When including the device name with their respective channel, ensure that the device name matches the name that was loaded on startup. For example, the BME688 and BME680 were loaded on startup as `BME68x` and `BME68x [x77]`, respectively. Since we are only interested in plotting the BME688 and BME680, we will ignore the MAX17048 that was loaded on startup as well. Under **/Settings/ThingSpeak MQTT/Channels**, you will enter the string for the device names, each of their respective channel IDs, and a comma separating the two channels like so: <kbd>BME68x=2613826, BME68x [x77]=2613825</kbd>.
+
+<div style="text-align: center;">
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Device_Name_Loaded.JPG"><img src="../assets/DataLogger_IoT_Device_Name_Loaded.JPG" width="600px" height="600px" alt="DataLogger IoT Device Name Loaded during Startup"></a></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_Same_Device_Name_Unique_Address.JPG"><img src="../assets/ThingSpeak_Same_Device_Name_Unique_Address.JPG" width="600px" height="600px" alt="Device Name and Channel for Both Sensors"></a></td>
+    </tr>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT Device Name Loaded during Startup</i></td>
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>Device Name and Channel for Both Sensors</i></td>
+    </tr>
+  </table>
+</div>
+
+!!! note
+    Whenever there are multiple devices using the same device driver (each with unique I<sup>2</sup>C addresses), the DataLogger IoT will display the device address for each additional device that is loading the same driver. As shown above, the first device name did not include the device's I<sup>2</sup>C address. The second device name using the same driver included its I<sup>2</sup>C address. Of course, there is an configuration that enables you to always include the address of all the device names.
+
+The alternative to using the menu system is the JSON file. In this case, we updated channels for the BME688 and BME680. Not shown are the ThingSpeak Client Name, Username, and Password.
+
+``` json
+"ThingSpeak MQTT": {
+    "Enabled": true,
+    "Port": 8883,
+    "Server": "mqtt3.thingspeak.com",
+    "MQTT Topic": "",
+    "Client Name": "MQTT_Device_Client_ID",
+    "Buffer Size": 0,
+    "Username": "MQTT_Device_Username",
+    "Password": "MQTT_Device_Password",
+    "CA Cert Filename": "ThingspeakCA.cer",
+    "Channels" : "BME68x=2613826, BME68x [x77]=2613825"
+  }
+```
+
+!!! note
+    If users configure the DataLogger IoT to always include the device address with the device names (i.e. **/Settings/Application Settings** with Device Names=1), you will need to match the device names for BME688 and BME680 that were loaded on startup as `BME68x [x76]` and `BME68x [x77]`, respectively. Note the BME688 device name included a space and `[x76]` in this case. Remember, we are only interested in plotting hte BME688 and BME680 in this case so we will ignore the MAX17048 that was loaded on startup.
+
+    <div style="text-align: center;">
+      <table>
+        <tr style="vertical-align:middle;">
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/DataLogger_IoT_Device_Name_Address_Loaded.JPG"><img src="../assets/DataLogger_IoT_Device_Name_Address_Loaded.JPG" width="600px" height="600px" alt="DataLogger IoT Device Names Loaded during Startup"></a></td>
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_Device_Name_Address.JPG"><img src="../assets/ThingSpeak_Device_Name_Address.JPG" width="600px" height="600px" alt="Device Name and Channel for Both Sensors with Respective Addresses"></a></td>
+        </tr>
+        <tr style="vertical-align:middle;">
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>DataLogger IoT Device Names Loaded during Startup</i></td>
+         <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>Device Name and Channel for Both Sensors with Respective Addresses</i></td>
+        </tr>
+      </table>
+    </div>
+
+    Again, the alternative to using the menu system is the JSON file. In this case, we updated channels for the BME688 and BME680. We also included the address name for the BME688 like the configuration menu. Not shown are the ThingSpeak Client Name, Username, and Password.
+
+    ``` json
+    "ThingSpeak MQTT": {
+        "Enabled": true,
+        "Port": 8883,
+        "Server": "mqtt3.thingspeak.com",
+        "MQTT Topic": "",
+        "Client Name": "MQTT_Device_Client_ID",
+        "Buffer Size": 0,
+        "Username": "MQTT_Device_Username",
+        "Password": "MQTT_Device_Password",
+        "CA Cert Filename": "ThingspeakCA.cer",
+        "Channels" : "BME68x [x76]=2613826, BME68x [x77]=2613825"
+      }
+    ```
+
+Save the configuration to persistent memory and exit out of the configuration menu. Wait a few seconds for the DataLogger IoT to read the sensors and output the readings to the Serial Terminal. Open ThingSpeak channels in separate browser windows. In this case, we had the BME688 and the BME680 in private view. You should see sensor readings update and plot on the charts.
+
+<div style="text-align: center;">
+  <table>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/ThingSpeak_Channels_Separate_Windows_BME680_BME688.JPG"><img src="../assets/ThingSpeak_Channels_Separate_Windows_BME680_BME688.JPG" width="1000px" height="1000px" alt="ThingSpeak Graphing the BME688 and BME680 in Seperate Channels on Two Browser Windows"></a></td>
+    </tr>
+    <tr style="vertical-align:middle;">
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><i>ThingSpeak Graphing the BME688 and BME680 in Seperate Channels on Two Browser Windows</i></td>
+    </tr>
+  </table>
 </div>
