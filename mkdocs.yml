@@ -222,7 +222,7 @@ extra:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/sparkfun
     - icon: fontawesome/solid/cookie-bite
-      link: /#__consent
+      link: ./#__consent
       name: Change cookie settings
 
   # Configures Google Analytics
