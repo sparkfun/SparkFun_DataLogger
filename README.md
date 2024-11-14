@@ -27,6 +27,12 @@ The functionality of the DataLogger IoT firmware will continue to grow as SparkF
 * Version 01.2.00 - [Overview of the Release](docs/relnotes/rn_v010200.md)
 * Version 01.1.01 - [Overview of the Release](docs/relnotes/rn_v010101.md)
 
+### Firmware Source Code
+
+The source for the SparkFun DataLogger IoT boards is located [here](https://github.com/sparkfun/sfe-datalogger).
+
+The SparkFun DataLogger is built on top of the SparkFun flux-sdk, which is located [here](https://github.com/sparkfun/flux-sdk)
+
 ## Documentation
 
 * **[Hookup Guide](https://docs.sparkfun.com/SparkFun_DataLogger/)** - Basic hookup guide for the Datalogger IoT 9DoF and DataLogger IoT
