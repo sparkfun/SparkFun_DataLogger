@@ -1,19 +1,7 @@
 
 The SparkFun DataLogger IoT is a data logger that comes preprogrammed to automatically log IMU, GPS, and various pressure, humidity, and distance sensors.  All without writing a single line of code! They come in two flavors: The [SparkFun DataLogger IoT - 9DoF](https://www.sparkfun.com/products/20594) and the [SparkFun DataLogger IoT](https://www.sparkfun.com/products/22462). Both versions of the DataLogger IoT automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data to a CSV or JSON file, and get back to their larger project. Save the data to a microSD card or send it wirelessly to your preferred Internet of Things (IoT) service!
 
-<div class="grid" markdown>
-
-- SparkFun DataLogger IoT - 9DOF
-
-    ![DataLoggerIoT 9DOV](assets/20594-SparkFun_DataLogger_IoT-ESP32_01.jpg)
-    [:octicons-arrow-right-24: At SparkFun.com](https://www.sparkfun.com/products/20594)
-
-- SparkFun DataLogger IoT
-
-    ![DataLoggerIoT 9DOV](assets/22462-_DEV_SparkFun_DataLogger_IoT-1.jpg)
-    [:octicons-arrow-right-24: At SparkFun.com](https://www.sparkfun.com/products/22462)
-
-</div>
+![SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/img/Applications_DataLogger_Banner.jpg "SparkFun DataLogger")
 
 <div class="grid cards col-2" markdown>
 
