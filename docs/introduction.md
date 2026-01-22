@@ -15,14 +15,12 @@ This guide covers the use of the following SparkFun DataLogger Products:
 
 To follow along with this tutorial, you will need the following materials - all available at <a href="https://www.sparkfun.com" target="_blank" rel="noopener noreferrer">sparkfun.com :octicons-link-external-24: </a>.
 
-|  |
-|--|
-| A supported [SparkFun DataLogger IoT](https://www.sparkfun.com/products/22462) board|
-|  [microSD card formatted with FAT32 [COM-15107]](https://www.sparkfun.com/products/15107)|
-| [USB C Cable](https://www.sparkfun.com/usb-c-to-usb-c-cable-1-meter-flexible-silicone.html) for communication and power|
-| A [qwiic Cable](https://www.sparkfun.com/products/14426)|
-|At least one [Qwiic enabled devices that is compatible](../supported_devices)|
-| For battery powered operation, a [Lithium Ion Battery](https://www.sparkfun.com/products/18286)|
+* A supported [SparkFun DataLogger IoT](https://www.sparkfun.com/products/22462) board|
+* [microSD card formatted with FAT32 [COM-15107]](https://www.sparkfun.com/products/15107)|
+* [USB C Cable](https://www.sparkfun.com/usb-c-to-usb-c-cable-1-meter-flexible-silicone.html) for communication and power|
+* A [qwiic Cable](https://www.sparkfun.com/products/14426)|
+* At least one [Qwiic enabled devices that is compatible](../supported_devices)|
+* For battery powered operation, a [Lithium Ion Battery](https://www.sparkfun.com/products/18286)|
 
 ### The Sensors
 
