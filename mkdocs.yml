@@ -8,7 +8,7 @@ repo_url: https://github.com/sparkfun/SparkFun_DataLogger
 repo_name: sparkfun/SparkFun_DataLogger
 
 copyright:
-  Copyright 2023 - <a href="https://www.sparkfun.com/" target="_blank" rel="noopener">SparkFun Electronics&#174;<br>
+  Copyright 2023-2026 - <a href="https://www.sparkfun.com/" target="_blank" rel="noopener">SparkFun Electronics&#174;<br>
   <a href="https://goo.gl/maps/vkstCpQZW6jZMjzYA" target="_blank" rel="noopener">6333 Dry Creek Parkway, Niwot, Colorado 80503</a>
 
 # Default edit/view actions to "main" branch, instead of "master"
@@ -236,6 +236,8 @@ extra:
       - manage
       - reject
 
+  generator: false
+
 # Configures styling for PDF rendering and webpage layout
 extra_css:
   - stylesheet/extra.css
@@ -256,8 +258,8 @@ nav:
       - Preparing Your MicroSD Card: prepare_your_microsd_card.md
       - Configuration: configuration.md
       - Supported Qwiic Devices: supported_devices.md
-      - Suggested Reading: suggested_reading.md
-      - Supported Qwiic Devices2: supported_devices.md
+      - Suggested Reading: suggested-reading.md
+
   - Examples:
       - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md

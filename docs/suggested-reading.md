@@ -1,5 +1,5 @@
 ---
-icon: material/cog
+icon: material/book-open-variant
 ---
 
 # Suggested Reading
