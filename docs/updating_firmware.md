@@ -1,15 +1,7 @@
 ---
 icon: material/download
 ---
-!!! danger
 
-    Please think very carefully before uploading any Arduino sketches to your DataLogger IoT.
-
-    **You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.**
-
-    Each DataLogger IoT comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
-
-    Really. We mean it.
 
 ## Firmware Update - SD Card
 
@@ -74,3 +66,9 @@ Typing ```Y``` (or hitting enter) starts the update operation. As the firmware i
 Once the update file is downloaded, it is verified as being the correct file. Once verified, the system is rebooted and starts using the new firmware image! You will notice the firmware version change as the DataLogger IoT initializes.
 
 ![Updated OTA and Rebooted](assets/DataLogger_IoT_OTA_Update_3.PNG)
+
+## If the Firmware is overwritten by an Arduino Sketch
+
+Flashing an Arduino sketch to a DataLogger IoT board removes the ability for easy firmware updates and will require a full low-level flash of the latest software, which includes the bootloader and partition map for the device. These files are now provided as part of the DataLogger IoT firmware updates.
+
+To perform this level of update, please view the [Build and Update Instructions](https://github.com/sparkfun/sfe-datalogger/blob/main/docs/build_update.md#firmware-upload)
