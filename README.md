@@ -1,5 +1,5 @@
 
-![SparkFun DataLogger IoT](https://github.com/sparkfun/SparkFun_DataLogger/blob/main/docs/img/Applications_DataLogger_Banner.jpg "SparkFun DataLogger")
+![SparkFun DataLogger IoT](docs/img/gh-banner-datalogger.png)
 
 # SparkFun DataLogger IoT
 
