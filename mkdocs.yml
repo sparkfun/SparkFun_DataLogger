@@ -257,6 +257,7 @@ nav:
       - Configuration: configuration.md
       - Supported Qwiic Devices: supported_devices.md
       - Suggested Reading: suggested_reading.md
+      - Supported Qwiic Devices2: supported_devices.md
   - Examples:
       - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md
