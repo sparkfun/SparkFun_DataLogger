@@ -1,3 +1,7 @@
+---
+icon: material/magnify
+---
+
 In this section, we will highlight the hardware and pins that are broken out on the SparkFun DataLogger IoT. At the time of writing, we highlighted the SparkFun DataLogger IoT - 9DoF. However, this also applies for the SparkFun DataLogger IoT.
 
 <div style="text-align: center;">
@@ -27,7 +31,7 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
   <table>
     <tr style="vertical-align:middle;">
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/22462-DEV_SparkFun_DataLogger_IoT-Top.jpg"><img src="../assets/22462-DEV_SparkFun_DataLogger_IoT-Top.jpg" width="600px" height="600px" alt="DataLogger IoT (Top View)"></a>
-     </td>   
+     </td>
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/22462-DEV_SparkFun_DataLogger_IoT-Bottom.jpg"><img src="../assets/22462-DEV_SparkFun_DataLogger_IoT-Bottom.jpg" width="600px" height="600px" alt="DataLogger IoT (Bottom View)"></a>
      </td>
     </tr>
@@ -37,7 +41,6 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
     </tr>
   </table>
 </div>
-
 
 ## ESP32-WROOM Module
 
@@ -54,8 +57,6 @@ The DataLogger IoT is populated with [Espressif's ESP32-WROOM-32E module](https:
 !!! note
     Currently the DataLogger IoT does not have BT or BLE. However, BT or BLE is being considered on a future firmware build to include this as a feature.
 
-
-
 ## Power
 
 There are a variety of power and power-related nets broken out to connectors and through hole pads. Below list a few methods of powering the board up. There are protection diodes for the USB-C, 5V pin, and single cell LiPo battery. Power is regulated down to [3.3V for the system voltage](https://learn.sparkfun.com/tutorials/logic-levels/all).  Depending on the settings and what is connected to the DataLogger IoT, the board can pull a minimum of 200&micro;A in low power mode by itself.
@@ -64,8 +65,6 @@ There are a variety of power and power-related nets broken out to connectors and
 * 5V Pin
 * Single Cell LiPo Battery
 * 3V3 Pin
-
-
 
 ### USB-C and 5V
 
@@ -91,9 +90,6 @@ For customers in North America, our [NEMA Raspberry Pi Wall Adapter](https://www
 * Our [USB 2.0 A to C Cable - CAB-15092](https://www.sparkfun.com/products/15092) will do nicely
 * Our [USB 3.1 A to C Cable - CAB-14743](https://www.sparkfun.com/products/14743) is a good choice too
 
-
-
-
 ### LiPo Battery Input, Charger, and Fuel Gauge
 
 !!! warning
@@ -110,8 +106,6 @@ But of course you’re going to want to use the DataLogger IoT to log sensor dat
   </table>
 </div>
 
-
-
 ### 3V3 Pins
 
 For those going the old school route, you can also bypass the voltage regulators by [soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering) directly to the 3V3 and GND pin to provide power if your application has a regulated 3.3V. Note that this is only connected to the system voltage. You will also need to provide power to the 3V3 SWCH or Qwiic-enabled devices should you decide to bypass the voltage regulator.
@@ -124,8 +118,6 @@ For those going the old school route, you can also bypass the voltage regulators
     </tr>
   </table>
 </div>
-
-
 
 ## CH340 USB-to-Serial Converter
 
@@ -157,8 +149,6 @@ The driver should automatically install on most operating systems. However, ther
   </table>
 </div>
 
-
-
 ## UART
 
 The hardware serial UART pins are broken out on the edge of the board. For more information about Serial UART, check out the tutorial about [Serial Communication](https://learn.sparkfun.com/tutorials/serial-communication/all#wiring-and-hardware) for more information.
@@ -177,8 +167,6 @@ The hardware serial UART pins are broken out on the edge of the board. For more 
     </tr>
   </table>
 </div>
-
-
 
 ## Qwiic and I<sup>2</sup>C
 
@@ -215,8 +203,6 @@ The DataLogger IoT includes a dedicated 3.3V regulator for the Qwiic connector. 
 * The DataLogger IoT can completely power-down the I<sup>2</sup>C sensors during sleep to prolong your battery life
 * There’s no risk of the Qwiic bus gulping too much current and causing problems for the ESP32
 
-
-
 ## SPI
 
 !!! note
@@ -251,8 +237,6 @@ Not shown in the image are the chip select (CS) pins. The 6DoF IMU's CS pin is c
       </table>
     </div>
 
-
-
 ## MicroSD Card Socket
 
 The DataLogger IoT supports full 4-bit SDIO for fast logging and uses common microSD cards to record clear text, comma separated files. Flip over the DataLogger IoT and you'll see the latching microSD card socket. You probably already have a microSD card laying around. However, if you need any additional units, we have plenty [in the SparkFun catalog](https://www.sparkfun.com/categories/351). The DataLogger can use any size microSD card and supports FAT32 cards in addition to FAT16. Please ensure that your SD card is formatted correctly; we recommend the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/).
@@ -270,8 +254,6 @@ Slide in your formatted SD card and it will click neatly into place. The edge of
 !!! Warning
 
     You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data.
-
-
 
 ## 9 Degrees of Freedom (9DOF)
 
@@ -299,9 +281,6 @@ As stated earlier, included on every DataLogger IoT - 9DoF is a 6DoF Inertial Me
       </table>
     </div>
 
-
-
-
 ## Analog Pins
 
 !!! note
@@ -316,7 +295,7 @@ There are three 12-bit analog pins available and broken out on edge of the board
 <div style="text-align: center;">
   <table>
     <tr style="vertical-align:middle;">
-     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg" width="600px" height="600px" alt="Analog Pins Highlighted on the DataLogger IoT (Top View)"></a></td>   
+     <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Top_Analog.jpg" width="600px" height="600px" alt="Analog Pins Highlighted on the DataLogger IoT (Top View)"></a></td>
      <td style="text-align: center; vertical-align: middle; border: solid 1px #cccccc;"><a href="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg"><img src="../assets/20594-SparkFun_DataLogger_IoT-ESP32_Bottom_Analog.jpg" width="600px" height="600px" alt="Analog Pins Highlighted on the DataLogger IoT (Bottom View)"></a></td>
     </tr>
   </table>
@@ -333,8 +312,6 @@ There are three 12-bit analog pins available and broken out on edge of the board
         </tr>
       </table>
     </div>
-
-
 
 ## Reset and Boot Buttons
 
@@ -363,7 +340,6 @@ Like other ESP32 development boards, these buttons are populated so that users c
 
 Most of the time, users will simply have the board executing the firmware that is loaded on the ESP32 module and updating through the configuration menu either through the microSD card or OTA.
 
-
 !!! danger
 
     Please think very carefully before uploading any Arduino sketches to your DataLogger IoT.
@@ -374,21 +350,18 @@ Most of the time, users will simply have the board executing the firmware that i
 
     Really. We mean it.
 
-
-
 ## LEDs
 
 There are three LEDs populated on the board. These can be disabled with their respective jumpers on the back of the board.
 
 * **STAT**: The status LED is connected to pin `25`.
 * **RGB**: The WS2812-2020 RGB addressable LED is connected to pin `26`. In addition to being disabled through the jumper on the back, you can also disable the LED through software. The following colors represent different states that the board is in.
-    * **White**: A solid white LED indicates that the board is currently being configured through the configuration menu.
-    * **Green**: A solid green LED indicates that the board is initializing. As of firmware v01.00.02, the LED blinks green when on battery power indicating that the battery level is _VBATT_ > 50%.
-    * **Blue**: A blinking blue LED indicates that the board is reading sensor data and logging the values.
-    * **Yellow**: A solid yellow LED indicates that a firmware update is in progress. As of firmware v01.00.02, the LED blinks yellow when on battery power indicating that the battery level is between 50% > _VBATT_ > 10%.
-    * **Red**: As of firmware v01.00.02, the LED blinks red when on battery power indicating that the battery level is _VBATT_ < 10%.
+  * **White**: A solid white LED indicates that the board is currently being configured through the configuration menu.
+  * **Green**: A solid green LED indicates that the board is initializing. As of firmware v01.00.02, the LED blinks green when on battery power indicating that the battery level is _VBATT_ > 50%.
+  * **Blue**: A blinking blue LED indicates that the board is reading sensor data and logging the values.
+  * **Yellow**: A solid yellow LED indicates that a firmware update is in progress. As of firmware v01.00.02, the LED blinks yellow when on battery power indicating that the battery level is between 50% > _VBATT_ > 10%.
+  * **Red**: As of firmware v01.00.02, the LED blinks red when on battery power indicating that the battery level is _VBATT_ < 10%.
 * **CHG**: The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.
-
 
 <div style="text-align: center;">
   <table>
@@ -435,8 +408,6 @@ There are three LEDs populated on the board. These can be disabled with their re
       </table>
     </div>
 
-
-
 ## Jumpers
 
 There are seven jumpers on the back of the DataLogger IoT - 9DoF. For more information, check out our [tutorial on working with jumper pads and PCB traces](https://learn.sparkfun.com/tutorials/how-to-work-with-jumper-pads-and-pcb-traces/all) should you decide to cut the traces with a hobby knife.
@@ -468,8 +439,6 @@ There are seven jumpers on the back of the DataLogger IoT - 9DoF. For more infor
         </tr>
       </table>
     </div>
-
-
 
 ## Board Dimensions
 

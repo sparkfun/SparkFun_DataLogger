@@ -1,3 +1,6 @@
+---
+icon: material/information
+---
 
 ![SparkFun DataLogger IoT]( assets/gh-banner-hug-datalogger.png)
 
@@ -5,6 +8,7 @@ The SparkFun DataLogger IoT is a data logger that comes preprogrammed to automat
 
 This guide covers the use of the following SparkFun Products:
 
+* <a href="https://www.sparkfun.com/products/22462" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT   :octicons-link-external-24: </a>
 * SparkFun DataLogger IoT   [:octicons-link-external-24: @SparkFun.com](https://www.sparkfun.com/products/22462)
 * SparkFun DataLogger IoT - 9DoF  [:octicons-link-external-24: @sparkfun.com](https://www.sparkfun.com/products/20594)
 

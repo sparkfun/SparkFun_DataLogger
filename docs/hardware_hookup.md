@@ -1,6 +1,8 @@
+---
+icon: material/wrench
+---
+
 In this section, we will go over how to connect to the SparkFun DataLogger IoT. At the time of writing, we used the DataLogger IoT - 9DoF. This hardware hookup explained in this section also applies for the DataLogger IoT.
-
-
 
 ## Soldering to the PTHs
 
@@ -11,7 +13,7 @@ For users that are interested in soldering to the edge of the board, we recommen
 
 <div class="grid cards col-4" markdown>
 
--   <a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering">
+- <a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering">
       <figure markdown>
         <img src="https://cdn.sparkfun.com/c/500-282/assets/e/3/9/9/4/51d9fbe1ce395f7a2a000000.jpg" style="width:264px; height:148px; object-fit:contain;" alt="How to Solder: Through-Hole Soldering">
       </figure>
@@ -23,7 +25,7 @@ For users that are interested in soldering to the edge of the board, we recommen
       <b>How to Solder: Through-Hole Soldering</b>
     </a>
 
--   <a href="https://learn.sparkfun.com/tutorials/working-with-wire">
+- <a href="https://learn.sparkfun.com/tutorials/working-with-wire">
       <figure markdown>
         <img src="https://cdn.sparkfun.com/assets/0/5/0/0/f/5138de3cce395fbb1b000002.JPG" style="width:264px; height:148px; object-fit:contain;" alt="Working with Wire">
       </figure>
@@ -34,9 +36,8 @@ For users that are interested in soldering to the edge of the board, we recommen
     <a href="https://learn.sparkfun.com/tutorials/working-with-wire">
       <b>Working with Wire</b>
     </a>
+
 </div>
-
-
 
 ## MicroSD Card
 
@@ -56,12 +57,11 @@ You should only insert or remove the SD card while the power is turned off or di
 
 After you’ve logged some data, you will find a new file on your SD card. There may also be additional files if you manually saved the firmware or preferences to the memory card.
 
-* **sfe0001.txt**: This is the file that contains the CSV or JSON sensor data. The format will depend on how you configured the DataLogger's output. We use .TXT as the file type so that your computer can open it in a simple text editor. The contents are all human-readable. But, if you want to, you can rename it as .CSV or .JSON instead. The file number is incremented for the next logging session.
-* **datalogger.json**: This file only appears when you save the settings as your fallback storage. The file will include all preferences saved for any connected device, WiFi credentials, certificates, and keys.
-* **SparkFun_DataLoggerIoT*.bin**: This file only appears when you save the firmware to the microSD card. Note that the asterisk (**&ast;**) is the firmware version number (i.e. **SparkFunDataLoggerIoT_01.00.01.bin**).
+- **sfe0001.txt**: This is the file that contains the CSV or JSON sensor data. The format will depend on how you configured the DataLogger's output. We use .TXT as the file type so that your computer can open it in a simple text editor. The contents are all human-readable. But, if you want to, you can rename it as .CSV or .JSON instead. The file number is incremented for the next logging session.
+- **datalogger.json**: This file only appears when you save the settings as your fallback storage. The file will include all preferences saved for any connected device, WiFi credentials, certificates, and keys.
+- **SparkFun_DataLoggerIoT*.bin**: This file only appears when you save the firmware to the microSD card. Note that the asterisk (**&ast;**) is the firmware version number (i.e. **SparkFunDataLoggerIoT_01.00.01.bin**).
 
 To remove the microSD card, make sure power is disconnected from the DataLogger IoT. Then press the microSD card into the microSD socket. The memory card will be ejected and you will hear a click again. Once the card is ejected, you can insert it into a microSD card adapter or USB reader to be read on a computer.
-
 
 <div style="text-align: center">
   <table>
@@ -70,8 +70,6 @@ To remove the microSD card, make sure power is disconnected from the DataLogger 
     <tr>
   </table>
 </div>
-
-
 
 ## Qwiic Sensors
 
@@ -101,8 +99,6 @@ Typically one would use a multiplexor. However, we currently do not have the Dat
 !!! note
     Currently the Qwiic Mux is not compatible with the DataLogger IoT.
 
-
-
 ## LiPo Battery
 
 !!! warning "Battery Polarity"
@@ -123,8 +119,6 @@ You can connect one of our standard single cell LiPo batteries to the DataLogger
 !!! danger "Warning"
     The MCP73831 charge IC on the board is used on a few SparkFun products. For more information about the CHG status LED, we recommend taking look at the Hardware Overview. We also recommend taking a look at this tutorial for [Single Cell LiPo Battery Care](https://learn.sparkfun.com/tutorials/single-cell-lipo-battery-care).
 
-
-
 ## USB Cable
 
 The USB-C connector provides power to the DataLogger IoT and acts as a serial interface for configuration and data display.
@@ -143,17 +137,15 @@ Likewise, it is a good idea to only attach or disconnect Qwiic sensors when the 
 
 Depending on what ports your computer has available, you will need one of the following cables:
 
-* [USB 2.0 A to C Cable](https://www.sparkfun.com/products/15092)
-* [USB 3.1 A to C Cable](https://www.sparkfun.com/products/14743)
-* [USB 2.0 C to C Cable](https://www.sparkfun.com/products/16395)
+- [USB 2.0 A to C Cable](https://www.sparkfun.com/products/15092)
+- [USB 3.1 A to C Cable](https://www.sparkfun.com/products/14743)
+- [USB 2.0 C to C Cable](https://www.sparkfun.com/products/16395)
 
 Use the cable to connect your DataLogger IoT to your computer and you will see the LEDs light as the DataLogger IoT starts up. The addressable RGB RGB LED will light up green for a second or two while the DataLogger IoT configures itself. It will flash blue while data is being logged to the microSD card. If you have jumped the gun and have a LiPo battery already connected, the yellow CHG charging LED may light up too.
 
 If the addressable RGB LED does not light up, your DataLogger IoT is probably in deep sleep following a previous logging session. Pressing the RST reset button will wake it.
 
 You’ll find full instructions on how to configure the DataLogger IoT later in this tutorial.
-
-
 
 ## Standoffs
 
