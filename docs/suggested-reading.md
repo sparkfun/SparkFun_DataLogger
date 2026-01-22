@@ -1,3 +1,7 @@
+---
+icon: material/book-open-blank-variant-outline
+---
+
 # Suggested Reading
 
 * If you aren't familiar with the Qwiic system, we recommend reading [here for an overview](https://www.sparkfun.com/qwiic).

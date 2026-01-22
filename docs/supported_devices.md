@@ -1,8 +1,10 @@
+---
+icon: material/gauge
+---
+
 # DataLogger IoT Supported Devices
 
 The following lists the devices/boards supported by the DataLogger IoT boards. New drivers to support a device will be listed under the firmware version.
-
-
 
 ## Version 01.01.00
 
@@ -11,8 +13,6 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun Human Presence and Motion Sensor - STHS34PF80 (Qwiic)](https://www.sparkfun.com/products/22494)
 * [SparkFun Tristimulus Color Sensor - OPT4048DTSR](https://www.sparkfun.com/products/22638)
 * [SparkFun Triad Spectroscopy Sensor - AS7265x](https://www.sparkfun.com/products/15050)
-
-
 
 ## Version 01.00.00
 
@@ -28,7 +28,7 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun Environmental Sensor - BME688 (Qwiic)](https://www.sparkfun.com/products/19096)
 * [SparkFun Pressure Sensor - BMP384 (Qwiic)](https://www.sparkfun.com/products/19662)
 * [SparkFun Pressure Sensor - BMP581 (Qwiic)](https://www.sparkfun.com/products/20170)
-* [SparkFun Qwiic Button ](https://www.sparkfun.com/products/15932)
+* [SparkFun Qwiic Button](https://www.sparkfun.com/products/15932)
 * [SparkFun Air Velocity Sensor Breakout - FS3000-1015 (Qwiic)](https://www.sparkfun.com/products/18768)
 * [SparkFun Air Velocity Sensor Breakout - FS3000-1005 (Qwiic)](https://www.sparkfun.com/products/18377)
 * [SparkFun GPS-RTK2 Board - ZED-F9P (Qwiic)](https://www.sparkfun.com/products/15136)

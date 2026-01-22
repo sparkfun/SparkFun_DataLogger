@@ -1,8 +1,6 @@
-<!--
-Note for future screen shots with Tera Term.
-The size is about width="80px" height="35px".
-
--->
+---
+icon: material/cog
+---
 
 Configuring the settings is as easy as opening a serial menu. You can use any serial monitor or terminal emulator to quickly and easily change and store the DataLogger IoT settings via its USB-C interface.
 
@@ -12,7 +10,6 @@ There are plenty of free alternatives out there to configure the DataLogger IoT.
 * [RealTerm (Windows)](https://learn.sparkfun.com/tutorials/terminal-basics/all#real-term-windows)
 * Minicom (Linux, Unix, MacOS)
 * [Screen (Linux, Unix, MacOS)](https://learn.sparkfun.com/tutorials/terminal-basics/all#command-line-windows-mac-linux)
-
 
 !!! note
     You will need a serial terminal client that supports edit characters. Most if not all modern serial terminal programs will have the ability to support interactive edits. Unfortunately, we have not had any success with CoolTerm. We have tested the DataLogger IoT with Tera Term, Minicom, and Screen.
@@ -54,8 +51,6 @@ The above guides will show you how to open the correct port for the DataLogger I
 
 !!! note
     For users with an Arduino IDE, you could also use the Arduino Serial Monitor by setting the line ending to **Newline**. Users will also need to <kbd>CTRL</kbd> + <kbd>Enter</kbd> when sending any character to the DataLogger IoT. However, we recommend using one of the terminals mentioned earlier.
-
-
 
 ## Initialization and Serial Output
 
@@ -108,7 +103,6 @@ The messages in the serial terminal provide us with the DataLogger's configurati
       <a href="../assets/SparkFun_Datalogger_IoT_Initializing_Compactv1p02p00.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Initializing_Compactv1p02p00.JPG" width="600" height="600" alt="Output when DataLogger IoT - 9DoF is initializing, compact"></a>
     </div>
 
-
 Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputting comma separated values (CSV). This is the default output that is set for the DataLogger IoT - 9DoF. Of course, you will not have as many readings on the DataLogger IoT since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
 <div style="text-align: center">
@@ -140,8 +134,6 @@ The data scrolling up the screen show what each device's output is along with th
 
 The output will vary depending on what is connected so you may get additional readings in the output and it may not be in the following order listed above. The logging rate defaults to about 0.067Hz (or 15000ms), so as the data scrolls past, you will see the last value settle at about 0.067Hz.
 
-
-
 ## Main Menu
 
 Right! Let's open the main menu by pressing on any key in the serial terminal program.
@@ -151,7 +143,6 @@ Right! Let's open the main menu by pressing on any key in the serial terminal pr
 </div>
 
 You will be prompted with a few options. Once in the configuration menu, all three colors of the addressable RGB LED will turn on to produce the color white indicating that you are navigating through the menu. Before we dive into the settings, lets check out a few commands and saving settings.
-
 
 ### Quick (!) Command Reference
 
@@ -165,7 +156,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
             <th style="text-align: center; border: solid 1px #cccccc; width:500px"> Command Description
             </th>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!about</kbd>
             </td>
@@ -174,7 +165,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Display the system about page
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!clear-settings</kbd>
             </td>
@@ -183,7 +174,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Clear the on board system preferences with a yes/no prompt
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!clear-settings-forced</kbd>
             </td>
@@ -192,7 +183,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Clear the on board system preferences with no prompt
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!devices</kbd>
             </td>
@@ -201,7 +192,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               List the currently connected devices
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!factory-reset</kbd>
             </td>
@@ -210,7 +201,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Perform a factory reset - presents a Y/N prompt
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!heap</kbd>
             </td>
@@ -219,7 +210,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Display the current system heap memory usage
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!help</kbd>
             </td>
@@ -228,7 +219,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               List the available quick commands
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!json-settings</kbd>
             </td>
@@ -237,7 +228,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               For setting the device settings via a serial connection. When this command is sent, the system expects to receive a JSON settings file
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!log-now</kbd>
             </td>
@@ -246,7 +237,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Perform a log observation event
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!log-rate</kbd>
             </td>
@@ -255,7 +246,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               If log rate measurement is enabled, the current log rate is printed
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!reset-device</kbd>
             </td>
@@ -264,7 +255,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Reset the device - erasing any saved settings and restarting the device
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!reset-device-forced</kbd>
             </td>
@@ -273,7 +264,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Reset the device, but without a Y/N prompt
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!restart</kbd>
             </td>
@@ -281,7 +272,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
             <td style="text-align: center; border: solid 1px #cccccc;">
               Restart the device
             </td>
-        </tr><tr>        
+        </tr><tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!restart-forced</kbd>
             </td>
@@ -290,7 +281,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Restart the device without a Y/N prompt
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!save-settings</kbd>
             </td>
@@ -299,7 +290,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Save the current settings to on-board flash
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!sdcard</kbd>
             </td>
@@ -308,7 +299,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Output the current SD card usage statistics
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!systime</kbd>
             </td>
@@ -317,7 +308,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               Output current system time
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!uptime</kbd>
             </td>
@@ -326,7 +317,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               The uptime of the device
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!device-id</kbd>
             </td>
@@ -335,7 +326,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               The ID for the device
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!version</kbd>
             </td>
@@ -344,7 +335,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
               The version of the firmware
             </td>
         </tr>
-        <tr>        
+        <tr>
             <td style="text-align: center; border: solid 1px #cccccc;">
               <kbd>!wifi</kbd>
             </td>
@@ -362,8 +353,6 @@ Typing a quick command and hitting the <kbd>Enter</kbd> button will result in th
   <a href="../assets/SparkFun_Datalogger_IoT_Output_Quick_Command.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_Quick_Command.JPG" width="600" height="600" alt="Quick Command Entered"></a>
 </div>
 
-
-
 ### Exiting and Saving
 
 When exiting the menus, you will be prompted with either an <kbd>x</kbd> or <kbd>b</kbd>. You can use either character when exiting the menus as well as <kbd>X</kbd> or <kbd>B</kbd>. Note that you will need to use either of these keys when making a change in order for the DataLogger IoT to save any changes in memory. Make sure that you receive the following message indicating that the settings were saved: <code>[I] Saving System Settings</code>. The DataLogger IoT will the continue reading the devices and outputting the readings through the serial terminal.
@@ -371,8 +360,6 @@ When exiting the menus, you will be prompted with either an <kbd>x</kbd> or <kbd
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings"></a>
 </div>
-
-
 
 ### Cancelling Changes
 
@@ -382,8 +369,6 @@ You can also use any of your <kbd>Esc</kbd> or arrow keys (i.e. <kbd>&#8593;</kb
   <a href="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Escape_Menu.JPG" width="600" height="600" alt="Output when Cancelling Changes"></a>
 </div>
 
-
-
 ### Timeout from Inactivity
 
 The menus will slowly exit out after 2 minutes of inactivity, so if you do not press a key the DataLogger IoT will return to its previous menu. It will continue to move back until it reaches the main menu. After another additional 2 minutes of inactivity, the board will exit begin logging data again. When the menu exits from inactivity, any changes will not be saved in memory as well.
@@ -391,8 +376,6 @@ The menus will slowly exit out after 2 minutes of inactivity, so if you do not p
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_No_User_Input_Exit_Menu.JPG" width="600" height="600" alt="Output when Timing Out"></a>
 </div>
-
-
 
 ## Settings
 
@@ -407,9 +390,6 @@ Let's start by configuring the DataLogger's system settings. Send a <kbd>1</kbd>
 
 We'll go over each of these options below.
 
-
-
-
 ### General: Application Settings
 
 In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial console output and the menu system's timeout value.
@@ -421,61 +401,61 @@ In the Settings Menu, send a <kbd>1</kbd> to adjust the Application Settings. As
 In the Application Settings Menu, users will be able to configure the addressable RGB's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
 
 * <kbd>1</kbd> **LED Enabled** &mdash; Enable/Disable the on-board RGB LED activity
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Menu Timeout** &mdash; Inactivity timeout period for the menu system
-    * Accepts the following values:
-        * <kbd>1</kbd> 30 Seconds = 30
-        * <kbd>2</kbd> 60 Seconds = 60 _(default)_
-        * <kbd>3</kbd> 2 Minutes = 120
-        * <kbd>4</kbd> 5 Minutes = 300
-        * <kbd>5</kbd> 10 Minutes = 600
-        * <kbd>b</kbd> Back
+  * Accepts the following values:
+    * <kbd>1</kbd> 30 Seconds = 30
+    * <kbd>2</kbd> 60 Seconds = 60 _(default)_
+    * <kbd>3</kbd> 2 Minutes = 120
+    * <kbd>4</kbd> 5 Minutes = 300
+    * <kbd>5</kbd> 10 Minutes = 600
+    * <kbd>b</kbd> Back
 * <kbd>3</kbd> **Color Output** &mdash; Use color output with the Serial console. _(added as of firmware v01.02.00)_
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>4</kbd> **Board Name** &mdash; A specific name for this DataLogger
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **SD Card Format** &mdash; Enable and set the output format
-    * Accepts the following values:
-        * <kbd>1</kbd> to disable = 0
-        * <kbd>2</kbd> CSV format _(default)_ = 1
-        * <kbd>3</kbd> JSON format = 2
+  * Accepts the following values:
+    * <kbd>1</kbd> to disable = 0
+    * <kbd>2</kbd> CSV format _(default)_ = 1
+    * <kbd>3</kbd> JSON format = 2
 * <kbd>6</kbd> **Serial Console Format** &mdash; Enable and set the output format
-    * Accepts the following values:
-        * <kbd>1</kbd> to disable = 0
-        * <kbd>2</kbd> CSV format _(default)_ = 1
-        * <kbd>3</kbd> JSON format = 2
+  * Accepts the following values:
+    * <kbd>1</kbd> to disable = 0
+    * <kbd>2</kbd> CSV format _(default)_ = 1
+    * <kbd>3</kbd> JSON format = 2
 * <kbd>7</kbd> **JSON Buffer Size** &mdash; Output buffer size in bytes
-    * Accepts an integer between <kbd>100</kbd> to <kbd>5000</kbd> :
-        * 1600 bytes _(default)_
+  * Accepts an integer between <kbd>100</kbd> to <kbd>5000</kbd> :
+    * 1600 bytes _(default)_
 * <kbd>8</kbd> **Terminal Baud Rate** &mdash; Update terminal baud rate. Changes take effect on restart.
-    * Accepts an unsigned integer between **1200** to **50000**:
-        * **115200** _(default)_
+  * Accepts an unsigned integer between **1200** to **50000**:
+    * **115200** _(default)_
 * <kbd>9</kbd> **Enable System Sleep** &mdash; If enabled, sleep the system
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>10</kbd> **Sleep Interval (sec)** &mdash; The interval the system will sleep for
-    * Accepts an integer between <kbd>5</kbd> to <kbd>86400</kbd> :
-        * <kbd>30</kbd> seconds _(default)_
+  * Accepts an integer between <kbd>5</kbd> to <kbd>86400</kbd> :
+    * <kbd>30</kbd> seconds _(default)_
 * <kbd>11</kbd> **Wake Interval (sec)** &mdash; The interval the system will operate between sleep period
-    * Accepts an unsigned integer between <kbd>60</kbd> to <kbd>86400</kbd> :
-        * <kbd>120</kbd> seconds _(default)_
+  * Accepts an unsigned integer between <kbd>60</kbd> to <kbd>86400</kbd> :
+    * <kbd>120</kbd> seconds _(default)_
 * <kbd>12</kbd> **Startup Messages** Level of message output at startup
-    * Accepts a value between <kbd>1</kbd> to <kbd>3</kbd> :
-      * <kbd>1</kbd> Normal = 0 _(default)_
-      * <kbd>2</kbd> Compact = 1
-      * <kbd>3</kbd> Disabled = 2
+  * Accepts a value between <kbd>1</kbd> to <kbd>3</kbd> :
+    * <kbd>1</kbd> Normal = 0 _(default)_
+    * <kbd>2</kbd> Compact = 1
+    * <kbd>3</kbd> Disabled = 2
 * <kbd>13</kbd> **Startup Delay** Startup Menu Delay in Seconds
-    * Accepts a value between <kbd>0</kbd> to <kbd>60</kbd> :
-        * <kbd>2</kbd> seconds _(default)_
+  * Accepts a value between <kbd>0</kbd> to <kbd>60</kbd> :
+    * <kbd>2</kbd> seconds _(default)_
 * <kbd>14</kbd> **Device Names** Name always includes the device address
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>15</kbd> **About...** &mdash; Details about the system
 * <kbd>b</kbd> **Back**
 
@@ -488,8 +468,6 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Save Settings Menu"></a>
 </div>
 
-
-
 ### General: Save Settings
 
 In the Settings menu, send a <kbd>2</kbd> to adjust the Save Settings. As of firmware v01.01.01, the JSON output buffer size is now user configurable. This will be under option "**JSON File Buffer Size**" when in the Save Settings Menu.
@@ -498,40 +476,39 @@ In the Settings menu, send a <kbd>2</kbd> to adjust the Save Settings. As of fir
   <a href="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Save_Settings_Menu.JPG"" width="600" height="600"></a>
 </div>
 
-
 In the Save Settings Menu, users will be able to save, restore, or clear any preferences in memory (i.e. persistent storage) or a saved file to a fallback device (i.e. microSD card). Note that any passwords and secret keys are not saved in the save settings file. You will need to manually enter those values in the file saved on the microSD card.
 
 * <kbd>1</kbd> **Fallback Restore** &mdash; If unable to restore settings, use the fallback source (JSON File)
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Fallback Save** &mdash; Save settings also saves on the fallback storage (JSON File)
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>3</kbd> **JSON File Buffer Size** &mdash; The size in bytes used for the internal I/O buffer
-    * Accepts an unsigned integer:
-    * <kbd>6400</kbd> _(default, as of firmware v01.01.01)_
+  * Accepts an unsigned integer:
+  * <kbd>6400</kbd> _(default, as of firmware v01.01.01)_
 * <kbd>4</kbd> **Save Settings** &mdash; Save current settings to persistent storage
-    * Accepts a yes/no:
-         * <kbd>Y</kbd> or <kbd>y</kbd> for yes
-         * <kbd>N</kbd> or <kbd>n</kbd> for no
+  * Accepts a yes/no:
+    * <kbd>Y</kbd> or <kbd>y</kbd> for yes
+    * <kbd>N</kbd> or <kbd>n</kbd> for no
 * <kbd>5</kbd> **Restore Settings** &mdash; Restore saved settings
-    * Accepts a yes/no:
-         * <kbd>Y</kbd> or <kbd>y</kbd> for yes
-         * <kbd>N</kbd> or <kbd>n</kbd> for no
+  * Accepts a yes/no:
+    * <kbd>Y</kbd> or <kbd>y</kbd> for yes
+    * <kbd>N</kbd> or <kbd>n</kbd> for no
 * <kbd>6</kbd> **Clear Settings** &mdash; Erase the saved settings on the device
-    * Accepts a yes/no:
-         * <kbd>Y</kbd> or <kbd>y</kbd> for yes
-         * <kbd>N</kbd> or <kbd>n</kbd> for no
+  * Accepts a yes/no:
+    * <kbd>Y</kbd> or <kbd>y</kbd> for yes
+    * <kbd>N</kbd> or <kbd>n</kbd> for no
 * <kbd>7</kbd> **Save to Fallback** &mdash; Save System Settings to the fallback storage (JSON File)
-    * Accepts a yes/no:
-         * <kbd>Y</kbd> or <kbd>y</kbd> for yes
-         * <kbd>N</kbd> or <kbd>n</kbd> for no
+  * Accepts a yes/no:
+    * <kbd>Y</kbd> or <kbd>y</kbd> for yes
+    * <kbd>N</kbd> or <kbd>n</kbd> for no
 * <kbd>8</kbd> **Restore from Fallback** &mdash; Restore system settings from the fallback storage (JSON File)
-    * Accepts a yes/no:
-         * <kbd>Y</kbd> or <kbd>y</kbd> for yes
-         * <kbd>N</kbd> or <kbd>n</kbd> for no
+  * Accepts a yes/no:
+    * <kbd>Y</kbd> or <kbd>y</kbd> for yes
+    * <kbd>N</kbd> or <kbd>n</kbd> for no
 * <kbd>b</kbd> **Back**
 
 If you have the Fallback Save enabled or selected the option **Save to Fallback**, you will notice an additional file called **datalogger.json** saved in the microSD card. This is the fallback file that is saved. Using a text editor, you can edit this file to adjust the settings or provide WiFi credentials, certificates, and keys. You can use option <kbd>7</kbd> to restore the settings on your DataLogger IoT.
@@ -545,8 +522,6 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
-
-
 
 ### General: Time Sources
 
@@ -565,28 +540,28 @@ In this menu, you will have options to update the primary reference clock, updat
     To adjust the time zone, you will need to enter a POSIX timezone string variable. Try [checking out this CSV in this GitHub repo](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv) and searching for the timezone string variable in your area. For more information about [POSIX format specification check out this article from IBM](https://developer.ibm.com/articles/au-aix-posix/).
 
 * <kbd>1</kbd> **The Time Zone** &mdash; Time zone setting string for the device
-    * Accepts a string:
-        * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default, as of firmware v01.01.01)_
+  * Accepts a string:
+    * <kbd>MST7MDT,M3.2.0,M11.1.0</kbd> _(default, as of firmware v01.01.01)_
 * <kbd>2</kbd> **Reference Clock** &mdash; The current reference clock source
-    * Accepts the following values:
-        * <kbd>1</kbd> for no clock
-        * <kbd>2</kbd> for NTP Client _(default)_
+  * Accepts the following values:
+    * <kbd>1</kbd> for no clock
+    * <kbd>2</kbd> for NTP Client _(default)_
 * <kbd>3</kbd> **Update Interval** &mdash; Main clock update interval in minutes. 0 = No update
-    * Accepts an unsigned integer:
-        * <kbd>0</kbd> = No update
-        * <kbd>60</kbd> seconds _(default)_
+  * Accepts an unsigned integer:
+    * <kbd>0</kbd> = No update
+    * <kbd>60</kbd> seconds _(default)_
 * <kbd>4</kbd> **Enable Clock Fallback** &mdash; Use a valid reference clock if the primary is not available
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>5</kbd> **Dependant Interval** &mdash; Connected depedant clock update interval in minutes. 0 = No update
-    * Accepts an unsigned integer:
-        * <kbd>0</kbd> = No update
-        * <kbd>60</kbd> seconds _(default)_
+  * Accepts an unsigned integer:
+    * <kbd>0</kbd> = No update
+    * <kbd>60</kbd> seconds _(default)_
 * <kbd>6</kbd> **Update Connected** &mdash; Update connected clocks on main clock update
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>b</kbd> **Back**
 
 !!! note
@@ -609,14 +584,11 @@ In this menu, you will have options to update the primary reference clock, updat
 
     If you are using a u-blox GNSS module, make sure that you have enough satellites in view. The option to add or configure the GNSS will not be available if there are not enough satellites in view. If you are using the Qwiic Real Time Clock Module - RV-8803, you may need to go into the device settings to manually adjust the date and time.
 
-
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
-
-
 
 ### Network: WiFi Network
 
@@ -632,33 +604,33 @@ In the Settings Menu, send a <kbd>4</kbd> to configure the WiFi settings. As of 
 Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the WiFi Network connection
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **Network Name** &mdash; The SSID of the WiFi network
-    * Accepts a string:
-        * For example, if my network name is "`MY_NETWORK_NAME`", you would manually type <kbd>MY_NETWORK_NAME</kbd>. When finished hit the <kbd>ENTER</kbd> key
+  * Accepts a string:
+    * For example, if my network name is "`MY_NETWORK_NAME`", you would manually type <kbd>MY_NETWORK_NAME</kbd>. When finished hit the <kbd>ENTER</kbd> key
 * <kbd>3</kbd> **Password** &mdash; The Password to connect to the WiFi network
-    * Accepts a string:
-        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+  * Accepts a string:
+    * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
 * <kbd>4</kbd> **Network 2 Name** &mdash; Alternative network 2 SSID
-    * Accepts a string:
-        * For example, if my network name is "`MY_NETWORK_NAME_2`", you would manually type <kbd>MY_NETWORK_NAME_2</kbd>. When finished hit the <kbd>ENTER</kbd> key
+  * Accepts a string:
+    * For example, if my network name is "`MY_NETWORK_NAME_2`", you would manually type <kbd>MY_NETWORK_NAME_2</kbd>. When finished hit the <kbd>ENTER</kbd> key
 * <kbd>5</kbd> **Network 2 Password** &mdash; Alternative network 2 Password
-    * Accepts a string:
-        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_2`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_2</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+  * Accepts a string:
+    * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_2`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_2</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
 * <kbd>6</kbd> **Network 3 Name** &mdash; Alternative network 2 SSID
-    * Accepts a string:
-        * For example, if my network name is "`MY_NETWORK_NAME_3`", you would manually type <kbd>MY_NETWORK_NAME_3</kbd>. When finished hit the <kbd>ENTER</kbd> key
+  * Accepts a string:
+    * For example, if my network name is "`MY_NETWORK_NAME_3`", you would manually type <kbd>MY_NETWORK_NAME_3</kbd>. When finished hit the <kbd>ENTER</kbd> key
 * <kbd>7</kbd> **Network 3 Password** &mdash; Alternative network 3 Password
-    * Accepts a string:
-        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_3`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_3</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+  * Accepts a string:
+    * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_3`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_3</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
 * <kbd>8</kbd> **Network 4 Name** &mdash; Alternative network 2 SSID
-    * Accepts a string:
-        * For example, if my network name is "`MY_NETWORK_NAME_4`", you would manually type <kbd>MY_NETWORK_NAME_4</kbd>. When finished hit the <kbd>ENTER</kbd> key
+  * Accepts a string:
+    * For example, if my network name is "`MY_NETWORK_NAME_4`", you would manually type <kbd>MY_NETWORK_NAME_4</kbd>. When finished hit the <kbd>ENTER</kbd> key
 * <kbd>9</kbd> **Network 4 Password** &mdash; Alternative network 4 Password
-    * Accepts a string:
-        * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_4`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_4</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
+  * Accepts a string:
+    * For example, if my network name is "`MY_SUPER_SECRET_PASSWORD_4`", you would manually type <kbd>MY_SUPER_SECRET_PASSWORD_4</kbd>. Note that as you type the password, each character will be replaced with an asterisk (`*`). When finished hit the <kbd>ENTER</kbd> key.
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -679,8 +651,6 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
 !!! note
     If you saved your preferences to a JSON file on your microSD card's root directory, you can also save your WiFi credentials and load the system settings from the menu as well!
 
-
-
 ### Network: NTP Client
 
 In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings. As of firmware v01.01.01, time zone support is at the clock level, not tied to the NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
@@ -692,15 +662,15 @@ In the Settings menu, send a <kbd>5</kbd> to adjust the NTP Client settings. As 
 In this menu, users will have the option to enable/disable the NTP client, select the primary/secondary server, or adjust the time zone for your area.
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the NTP Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>0</kbd> to disable
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>0</kbd> to disable
 * <kbd>2</kbd> **NTP Server One** &mdash; The primary NTP Server to use
-    * Accepts a string:
-        * <kbd>time.nist.gov</kbd> _(default)_
+  * Accepts a string:
+    * <kbd>time.nist.gov</kbd> _(default)_
 * <kbd>3</kbd> **NTP Server Two** &mdash;  The secondary NTP Server to use
-    * Accepts a string:
-        * <kbd>pool.ntp.org</kbd> _(default)_
+  * Accepts a string:
+    * <kbd>pool.ntp.org</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -708,8 +678,6 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
-
-
 
 ### Logging: Logger
 
@@ -722,49 +690,49 @@ In the Settings menu, send a <kbd>6</kbd> to adjust how data is logged.
 In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
 
 * <kbd>1</kbd> **Timestamp Mode** &mdash; Enable timestamp output and set the format of a log entry timestamp
-    * <kbd>1</kbd> for no timestamp _(default)_ = 0
-    * <kbd>2</kbd> for milliseconds since program start = 1
-    * <kbd>3</kbd> for seconds since Epoch = 2
-    * <kbd>4</kbd> for Date Time - USA Date format = 3
-    * <kbd>5</kbd> for Date Time = 4
-    * <kbd>6</kbd> for ISO08601 Timestamp = 5
-    * <kbd>7</kbd> for ISO08601 Timestamp with Time Zone = 6
+  * <kbd>1</kbd> for no timestamp _(default)_ = 0
+  * <kbd>2</kbd> for milliseconds since program start = 1
+  * <kbd>3</kbd> for seconds since Epoch = 2
+  * <kbd>4</kbd> for Date Time - USA Date format = 3
+  * <kbd>5</kbd> for Date Time = 4
+  * <kbd>6</kbd> for ISO08601 Timestamp = 5
+  * <kbd>7</kbd> for ISO08601 Timestamp with Time Zone = 6
 * <kbd>2</kbd> **Sample Numbering** &mdash; An incremental count of the current log entry
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>3</kbd> **Numbering Increment** &mdash; Increment amount for Sample Numbering
-    * Accepts an unsigned integer between <kbd>1</kbd> to <kbd>10000</kbd>:
-        * <kbd>1</kbd> _(default)_
+  * Accepts an unsigned integer between <kbd>1</kbd> to <kbd>10000</kbd>:
+    * <kbd>1</kbd> _(default)_
 * <kbd>4</kbd> **Output ID** &mdash; Include the Board ID in the log output _(added as of firmware v01.02.00)_
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>5</kbd> **Output Name** &mdash; Include the Board Name in the log output _(added as of firmware v01.02.00)_
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>6</kbd> **Rate Metric** &mdash; Enable to record the logging rate data _(added as of firmware v01.02.00)_
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>7</kbd> **SD Card Format** &mdash; Enable and set the output format
-    * Accepts an integer:
-        * <kbd>1</kbd> to disable  = 0
-        * <kbd>2</kbd> CSV format  = 1 _(default)_
-        * <kbd>3</kbd> JSON format = 2
+  * Accepts an integer:
+    * <kbd>1</kbd> to disable  = 0
+    * <kbd>2</kbd> CSV format  = 1 _(default)_
+    * <kbd>3</kbd> JSON format = 2
 * <kbd>8</kbd> **Serial Console Format** &mdash; Enable and set the output format
-    * Accepts an integer:
-        * <kbd>1</kbd> to disable  = 0
-        * <kbd>2</kbd> CSV format  = 1 _(default)_
-        * <kbd>3</kbd> JSON format = 2
+  * Accepts an integer:
+    * <kbd>1</kbd> to disable  = 0
+    * <kbd>2</kbd> CSV format  = 1 _(default)_
+    * <kbd>3</kbd> JSON format = 2
 * <kbd>9</kbd> **System Info** &mdash; Log system information _(added as of firmware v01.02.00)_
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>10</kbd> **Reset Sample Counter** &mdash; Reset the sample number counter to the provided value
-    * Accepts an unsigned integer between <kbd>0</kbd> to <kbd>10000</kbd>:
-        * <kbd>0</kbd> _(default)_
+  * Accepts an unsigned integer between <kbd>0</kbd> to <kbd>10000</kbd>:
+    * <kbd>0</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -779,8 +747,6 @@ Press the reset button or cycle power to restart the DataLogger IoT. You can als
   <a href="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG"><img src="../assets/SparkFun_Datalogger_IoT_Output_Timestamp.JPG" width="600" height="600" alt="DataLogger IoT Re-initializing and Outputting Time in ISO08601 Time Format"></a>
 </div>
 
-
-
 ### Logging: Logging Timer
 
 In the Settings menu, send an <kbd>7</kbd> to adjust the Logging Timer.
@@ -792,8 +758,8 @@ In the Settings menu, send an <kbd>7</kbd> to adjust the Logging Timer.
 Adjusting the interval for the Logging Timer will change the amount of time between log entries.
 
 * <kbd>1</kbd> **Interval** &mdash; The timer interval in milliseconds
-    * Accepts an integer:
-        * <kbd>15000</kbd> milliseconds _(default)_
+  * Accepts an integer:
+    * <kbd>15000</kbd> milliseconds _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -801,8 +767,6 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 <div style="text-align: center">
   <a href="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_System_Save_Settings_Menu.JPG" width="600" height="600" alt="Output Save Settings Confirmation"></a>
 </div>
-
-
 
 ### Logging: Data File
 
@@ -815,18 +779,18 @@ In the Settings menu, send an <kbd>8</kbd> to adjust the Logging Data File.
 Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. The DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
 
 * <kbd>1</kbd> **Rotate Period** &mdash; Time between file rotation
-    * Accepts the following values:
-        * <kbd>1</kbd> for 6 hours = 6
-        * <kbd>2</kbd> for 12 hours  = 12
-        * <kbd>3</kbd> for 1 day (24 hours)  = 24 _(default)_
-        * <kbd>4</kbd> for 2 days (48 hours)  = 48
-        * <kbd>5</kbd> for 1 week (168 hours)  = 168
+  * Accepts the following values:
+    * <kbd>1</kbd> for 6 hours = 6
+    * <kbd>2</kbd> for 12 hours  = 12
+    * <kbd>3</kbd> for 1 day (24 hours)  = 24 _(default)_
+    * <kbd>4</kbd> for 2 days (48 hours)  = 48
+    * <kbd>5</kbd> for 1 week (168 hours)  = 168
 * <kbd>2</kbd> **File Start Number** &mdash; The number the filename rotation starts with
-    * Accepts an unsigned integer:
-        * <kbd>1</kbd> _(default)_
+  * Accepts an unsigned integer:
+    * <kbd>1</kbd> _(default)_
 * <kbd>3</kbd> **Filename Prefix** &mdash; The prefix string for the generated filenames
-    * Accepts a string:
-        * <kbd>sfe</kbd> _(default)_
+  * Accepts a string:
+    * <kbd>sfe</kbd> _(default)_
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -843,8 +807,6 @@ When removing the microSD card, make sure to remove your power source. Then inse
    <a href="../assets/Datalogger_IoT_text_file.JPG"><img src="../assets/Datalogger_IoT_text_file.JPG" width="600" height="600" alt="Readings Saved in Text File Shown in a Windows File Explorer"></a>
  </div>
 
-
-
 ### IoT Services: MQTT Client
 
 In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Client.
@@ -854,28 +816,26 @@ In the Settings menu, send an <kbd>9</kbd> to adjust settings for the MQTT Clien
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
-    * Accepts an unsigned integer:
-        * <kbd>1883</kbd> _(default)_
+  * Accepts an unsigned integer:
+    * <kbd>1883</kbd> _(default)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Password** &mdash; Password to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
-    * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size _(default)_
+  * Accepts an unsigned int16:
+    * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: MQTT Secure Client
 
@@ -886,34 +846,32 @@ In the Settings menu, send an <kbd>10</kbd> to adjust settings for the MQTT Secu
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable MQTT Secure Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
-    * Accepts an unsigned integer:
-        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
+  * Accepts an unsigned integer:
+    * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Password** &mdash; Password to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
-    * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size _(default)_
+  * Accepts an unsigned int16:
+    * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>11</kbd> **Client Key Filename** &mdash; The File to load the client key from
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: AWS IoT
 
@@ -924,35 +882,33 @@ In the Settings menu, send an <kbd>11</kbd> to adjust settings for the AWS IoT.
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable AWS IoT
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
-    * Accepts an unsigned integer:
-        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
+  * Accepts an unsigned integer:
+    * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
-    * Accepts a string
-        * **$aws/things//shadow/update** _(default)_
+  * Accepts a string
+    * **$aws/things//shadow/update** _(default)_
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Password** &mdash; Password to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
-    * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size _(default)_
+  * Accepts an unsigned int16:
+    * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>11</kbd> **Client Key Filename** &mdash; The File to load the client key from
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: ThingSpeak MQTT
 
@@ -963,36 +919,34 @@ In the Settings menu, send an <kbd>12</kbd> to adjust settings for ThingSpeak MQ
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable ThingSpeak MQTT
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
-    * Accepts an unsigned integer:
-        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
+  * Accepts an unsigned integer:
+    * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Password** &mdash; Password to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
-    * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size _(default)_
+  * Accepts an unsigned int16:
+    * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>11</kbd> **Client Key Filename** &mdash; The File to load the client key from
-    * Accepts a string
+  * Accepts a string
 * <kbd>12</kbd> **Channels** &mdash; Comma separated list of <device name>=<thingspeak channel ID>
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: Azure IoT
 
@@ -1003,38 +957,36 @@ In the Settings menu, send an <kbd>13</kbd> to adjust settings for the Azure IoT
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable Azure IoT
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Port** &mdash; The MQTT broker port to connect to
-    * Accepts an unsigned integer:
-        * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
+  * Accepts an unsigned integer:
+    * <kbd>8883</kbd> _(default, as of firmware v01.00.04)_
 * <kbd>3</kbd> **Server** &mdash; The MQTT server to connect to
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **MQTT Topic** &mdash; The MQTT  topic to publish to
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **Client Name** &mdash; Name of this device used for MQTT Communications
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Username** &mdash; Username to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Password** &mdash; Password to connect to an MQTT broker, if required.
-    * Accepts a string
+  * Accepts a string
 * <kbd>8</kbd> **Buffer Size** &mdash; MQTT payload buffer size. If 0, the buffer size is dynamic
-    * Accepts an unsigned int16:
-        * <kbd>0</kbd> for dynamic buffer size _(default)_
+  * Accepts an unsigned int16:
+    * <kbd>0</kbd> for dynamic buffer size _(default)_
 * <kbd>9</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>10</kbd> **Client Cert Filename** &mdash; The File to load the client certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>11</kbd> **Client Key Filename** &mdash; The File to load the client key from
-    * Accepts a string
+  * Accepts a string
 * <kbd>11</kbd> **Device ID** &mdash; The device id for the Azure IoT device
-    * Accepts a string
+  * Accepts a string
 * <kbd>12</kbd> **Device Key** &mdash; The device key for the Azure IoT device
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: HTTP IoT
 
@@ -1045,16 +997,14 @@ In the Settings menu, send an <kbd>14</kbd> to adjust settings for the Azure IoT
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **URL** &mdash; The URL to call with log information
-    * Accepts a string
+  * Accepts a string
 * <kbd>3</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
 
 ### IoT Services: MachineChat
 
@@ -1065,15 +1015,14 @@ In the Settings menu, send an <kbd>15</kbd> to adjust settings for MachineChat.
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the HTTP Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **URL** &mdash; The URL to call with log information
-    * Accepts a string
+  * Accepts a string
 * <kbd>3</kbd> **CA Cert Filename** &mdash; The File to load the certificate from
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
 
 ### IoT Services: Arduino Cloud
 
@@ -1087,25 +1036,22 @@ In the Settings menu, send an <kbd>16</kbd> to adjust settings for Arduino Cloud
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enable or Disable the Arduino IoT Client
-    * Accepts a boolean value:
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value:
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Thing Name** &mdash; The Thing Name to use for the IoT Device connection
-    * Accepts a string
+  * Accepts a string
 * <kbd>3</kbd> **Thing ID** &mdash; The Thing ID to use for the IoT Device connection
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **API Client ID** &mdash; The Arduino Cloud API Client ID
-    * Accepts a string
+  * Accepts a string
 * <kbd>5</kbd> **API Secret** &mdash; The Arduino Cloud API Secret
-    * Accepts a string
+  * Accepts a string
 * <kbd>6</kbd> **Device Secret** &mdash; The Arduino IoT Device Secret
-    * Accepts a string
+  * Accepts a string
 * <kbd>7</kbd> **Device ID** &mdash; The Arduino IoT Cloud Device ID
-    * Accepts a string
+  * Accepts a string
 * <kbd>b</kbd> **Back**
-
-
-
 
 ### IoT Web Server
 
@@ -1116,20 +1062,20 @@ As of firmware v01.02.00, log files can be viewed and downloaded using the IoT W
 </div>
 
 * <kbd>1</kbd> **Enabled** &mdash; Enabled or Disable the Web Server
-    * Accepts a boolean value
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>2</kbd> **Username** &mdash; Web access control. Leave empty to disable authentication
-    * Accepts a string
+  * Accepts a string
 * <kbd>3</kbd> **Password** &mdash; Web access control.
-    * Accepts a string
+  * Accepts a string
 * <kbd>4</kbd> **mDNS Support** &mdash; Enable a name for the web address this device
-    * Accepts a boolean value
-        * <kbd>1</kbd> to enable
-        * <kbd>0</kbd> to disable _(default)_
+  * Accepts a boolean value
+    * <kbd>1</kbd> to enable
+    * <kbd>0</kbd> to disable _(default)_
 * <kbd>5</kbd> **mDNS Name** &mdash; mDNS Name used for this device address
-    * Accepts a string
-        * dataloggerXXXXX, where XXXXX is the taken from the last 5x characters from your DataLogger IoT's board ID _(default)_
+  * Accepts a string
+    * dataloggerXXXXX, where XXXXX is the taken from the last 5x characters from your DataLogger IoT's board ID _(default)_
 * <kbd>b</kbd> **Back**
 
 !!! note
@@ -1144,8 +1090,6 @@ As of firmware v01.02.00, log files can be viewed and downloaded using the IoT W
 For more information on how to use this feature, check out the [section on viewing and downloading log files using the IoT web server](../example_iot_web_server/).
 
 <div style="text-align: center"><a href="../example_iot_web_server" class="md-button">Examples: Viewing and Downloading Log Files using the IoT Web Server</a></div>
-
-
 
 ### Advanced: System Update
 
@@ -1165,20 +1109,20 @@ This functionality is accessed via the Settings Menu, which is required to use t
 </div>
 
 * <kbd>1</kbd> **Device Restart** &mdash; Restart/reboot the device
-    * Accepts the following values:
-        * <kbd>Y</kbd> or <kbd>Y</kbd> to restart or reboot the device using the current firmware and system preferences
-        * <kbd>N</kbd> or <kbd>n</kbd> to cancel
+  * Accepts the following values:
+    * <kbd>Y</kbd> or <kbd>Y</kbd> to restart or reboot the device using the current firmware and system preferences
+    * <kbd>N</kbd> or <kbd>n</kbd> to cancel
 * <kbd>2</kbd> **Factory Reset** &mdash; Erase all settings and revert to original firmware
-    * Accepts the following values:
-        * <kbd>Y</kbd> or <kbd>Y</kbd> to factory reset the device
-        * <kbd>N</kbd> or <kbd>n</kbd> to cancel
+  * Accepts the following values:
+    * <kbd>Y</kbd> or <kbd>Y</kbd> to factory reset the device
+    * <kbd>N</kbd> or <kbd>n</kbd> to cancel
 * <kbd>3</kbd> **Update Firmware - SD Card** &mdash; Update the firmware from the SD card
-    * Accepts firmware in the **/root** directory of the microSD card with the file naming pattern **SparkFunDataLoggerIoT*.bin**, where the asterisk **&ast;** is the firmware version number (i.e. **SparkFunDataLoggerIoT_01.00.01.bin**).
+  * Accepts firmware in the **/root** directory of the microSD card with the file naming pattern __SparkFunDataLoggerIoT_.bin_*, where the asterisk **&ast;** is the firmware version number (i.e. **SparkFunDataLoggerIoT_01.00.01.bin**).
 * <kbd>4</kbd> **Update Firmware - OTA** &mdash; Update the firmware over-the-air
-    * Connects to a server and searches for the latest firmware that is available. Note that you must be connected to a WiFi network to be able to update the board over-the-air.
-    * Accepts the following values if there is new firmware available.
-        * <kbd>Y</kbd> or <kbd>Y</kbd> to update over-the-air
-        * <kbd>N</kbd> or <kbd>n</kbd> to cancel
+  * Connects to a server and searches for the latest firmware that is available. Note that you must be connected to a WiFi network to be able to update the board over-the-air.
+  * Accepts the following values if there is new firmware available.
+    * <kbd>Y</kbd> or <kbd>Y</kbd> to update over-the-air
+    * <kbd>N</kbd> or <kbd>n</kbd> to cancel
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.
@@ -1191,8 +1135,6 @@ For more information on how to update firmware manually or over-the-air, check o
 
 <div style="text-align: center"><a href="../updating_firmware/" class="md-button">Examples: Updating Firmware</a></div>
 
-
-
 ## Device Settings
 
 In the Main Menu, send a <kbd>2</kbd> through the serial terminal to adjust the devices settings.
@@ -1204,119 +1146,119 @@ In the Main Menu, send a <kbd>2</kbd> through the serial terminal to adjust the 
 This will bring up the connected devices that are currently available. You can configure each device and enable/disable each output. Below is a sample of the on-board devices available for the DataLogger IoT - 9DoF when only the MAX17048, ISM330, and MMC5983 are connected. As the DataLogger IoT - 9DoF initializes, the board will populate additional devices in this window if they are detected. Your mileage will vary depending on what is connected. On the DataLogger IoT you will not see the ISM330 or MMC5983  as an option since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
 * <kbd>1</kbd> **MAX17048** &mdash; MAX17048 LiPo Battery Fuel Gauge
-    * <kbd>1</kbd> **Voltage (V)** &mdash; Battery voltage (Volts)
-        * <kbd>1</kbd> to enable Voltage (V) _(default)_
-        * <kbd>2</kbd> to disable Voltage (V)
-    * <kbd>2</kbd> **State of Charge (%)** &mdash; Battery state of charge (%)
-        * <kbd>1</kbd> to enable state of charge (%) _(default)_
-        * <kbd>2</kbd> to disable state of charge  (%)
-    * <kbd>3</kbd> **Charge Rate (%/hr)** &mdash; Battery charge change rate (%/hr)
-        * <kbd>1</kbd> to enable change rate (%/hr) _(default)_
-        * <kbd>2</kbd> to disable change rate (%/hr)
+  * <kbd>1</kbd> **Voltage (V)** &mdash; Battery voltage (Volts)
+    * <kbd>1</kbd> to enable Voltage (V) _(default)_
+    * <kbd>2</kbd> to disable Voltage (V)
+  * <kbd>2</kbd> **State of Charge (%)** &mdash; Battery state of charge (%)
+    * <kbd>1</kbd> to enable state of charge (%) _(default)_
+    * <kbd>2</kbd> to disable state of charge  (%)
+  * <kbd>3</kbd> **Charge Rate (%/hr)** &mdash; Battery charge change rate (%/hr)
+    * <kbd>1</kbd> to enable change rate (%/hr) _(default)_
+    * <kbd>2</kbd> to disable change rate (%/hr)
 * <kbd>2</kbd> **ISM330** &mdash; ISM330 Inertial Measurement Unit
-    * <kbd>1</kbd> **Accel Data Rate (HZ)** &mdash; Accelerometer Data Rate (Hz)
-        * <kbd>1</kbd> for Off
-        * <kbd>2</kbd> for 12.5 Hz
-        * <kbd>3</kbd> for 26 Hz
-        * <kbd>4</kbd> for 52 Hz
-        * <kbd>5</kbd> for 104 Hz _(default)_
-        * <kbd>6</kbd> for 208 Hz
-        * <kbd>7</kbd> for 416 Hz
-        * <kbd>8</kbd> for 833 Hz
-        * <kbd>9</kbd> for 1666 Hz
-        * <kbd>10</kbd> for 3332 Hz
-        * <kbd>11</kbd> for 6667 Hz
-        * <kbd>12</kbd> for 1.6 Hz
-    * <kbd>2</kbd> **Accel Full Scale (g)** &mdash; Accelerometer Full Scall (g)
-        * <kbd>1</kbd> for 2 g
-        * <kbd>2</kbd> for 16 g
-        * <kbd>3</kbd> for 4 g _(default)_
-        * <kbd>4</kbd> for 8 g
-    * <kbd>3</kbd> **Gyro Data Rate (Hz)** &mdash; Gyro Data Rate (Hz)
-        * <kbd>1</kbd> for Off
-        * <kbd>2</kbd> for 12.5 Hz
-        * <kbd>3</kbd> for 26 Hz
-        * <kbd>4</kbd> for 52 Hz
-        * <kbd>5</kbd> for 104 Hz _(default)_
-        * <kbd>6</kbd> for 208 Hz
-        * <kbd>7</kbd> for 416 Hz
-        * <kbd>8</kbd> for 833 Hz
-        * <kbd>9</kbd> for 1666 Hz
-        * <kbd>10</kbd> for 3332 Hz
-        * <kbd>11</kbd> for 6667 Hz
-    * <kbd>4</kbd> **Gyro Full Scale (dps)** &mdash; Gyro Full Scale (dps)
-        * <kbd>1</kbd> for 125 dps
-        * <kbd>2</kbd> for 250 dps
-        * <kbd>3</kbd> for 500 dps _(default)_
-        * <kbd>4</kbd> for 1000 dps
-        * <kbd>5</kbd> for 2000 dps
-        * <kbd>6</kbd> for 4000 dps
-    * <kbd>5</kbd> **Accel Filter LP2** &mdash; Accelerometer Filter LP2
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>2</kbd> to disable
-    * <kbd>6</kbd> **Gyro Filter LP1** &mdash; Gyro Filter LP1
-        * <kbd>1</kbd> to enable _(default)_
-        * <kbd>2</kbd> to disable
-    * <kbd>7</kbd> **Accel Slope Filter** &mdash; Accelerometer Slope Filter
-        * <kbd>1</kbd> for ODR/4
-        * <kbd>2</kbd> for ODR/10
-        * <kbd>3</kbd> for for ODR/20
-        * <kbd>4</kbd> for ODR/45
-        * <kbd>5</kbd> for ODR/100 _(default)_
-        * <kbd>6</kbd> for ODR/200
-        * <kbd>7</kbd> for ODR/400
-        * <kbd>8</kbd> for ODR/800
-    * <kbd>8</kbd> **Gyro LP1 Filter Bandwidth** &mdash;  Gyro LP1 Filter Bandwidth
-        * <kbd>1</kbd> Ultra Light
-        * <kbd>2</kbd> Very Light
-        * <kbd>3</kbd> Light
-        * <kbd>4</kbd> Medium _(default)_
-        * <kbd>5</kbd> Strong
-        * <kbd>6</kbd> Very Strong
-        * <kbd>7</kbd> Aggressive
-        * <kbd>8</kbd> Extreme
-    * <kbd>9</kbd> **Accel X (milli-g)** &mdash; Accelerometer X (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>10</kbd> **Accel Y (milli-g)** &mdash; Accelerometer Y (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>11</kbd> **Accel Z (milli-g)** &mdash; Accelerometer Z (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>12</kbd> **Gyro X (milli-dps)** &mdash; Gyro X (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>13</kbd> **Gyro Y (milli-dps)** &mdash; Gyro Y (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>14</kbd> **Gyro Z (milli-dps)** &mdash; Gyro Z (milli-g)
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>15</kbd> **Temperature (C)** &mdash; The temperature in degrees C
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
+  * <kbd>1</kbd> **Accel Data Rate (HZ)** &mdash; Accelerometer Data Rate (Hz)
+    * <kbd>1</kbd> for Off
+    * <kbd>2</kbd> for 12.5 Hz
+    * <kbd>3</kbd> for 26 Hz
+    * <kbd>4</kbd> for 52 Hz
+    * <kbd>5</kbd> for 104 Hz _(default)_
+    * <kbd>6</kbd> for 208 Hz
+    * <kbd>7</kbd> for 416 Hz
+    * <kbd>8</kbd> for 833 Hz
+    * <kbd>9</kbd> for 1666 Hz
+    * <kbd>10</kbd> for 3332 Hz
+    * <kbd>11</kbd> for 6667 Hz
+    * <kbd>12</kbd> for 1.6 Hz
+  * <kbd>2</kbd> **Accel Full Scale (g)** &mdash; Accelerometer Full Scall (g)
+    * <kbd>1</kbd> for 2 g
+    * <kbd>2</kbd> for 16 g
+    * <kbd>3</kbd> for 4 g _(default)_
+    * <kbd>4</kbd> for 8 g
+  * <kbd>3</kbd> **Gyro Data Rate (Hz)** &mdash; Gyro Data Rate (Hz)
+    * <kbd>1</kbd> for Off
+    * <kbd>2</kbd> for 12.5 Hz
+    * <kbd>3</kbd> for 26 Hz
+    * <kbd>4</kbd> for 52 Hz
+    * <kbd>5</kbd> for 104 Hz _(default)_
+    * <kbd>6</kbd> for 208 Hz
+    * <kbd>7</kbd> for 416 Hz
+    * <kbd>8</kbd> for 833 Hz
+    * <kbd>9</kbd> for 1666 Hz
+    * <kbd>10</kbd> for 3332 Hz
+    * <kbd>11</kbd> for 6667 Hz
+  * <kbd>4</kbd> **Gyro Full Scale (dps)** &mdash; Gyro Full Scale (dps)
+    * <kbd>1</kbd> for 125 dps
+    * <kbd>2</kbd> for 250 dps
+    * <kbd>3</kbd> for 500 dps _(default)_
+    * <kbd>4</kbd> for 1000 dps
+    * <kbd>5</kbd> for 2000 dps
+    * <kbd>6</kbd> for 4000 dps
+  * <kbd>5</kbd> **Accel Filter LP2** &mdash; Accelerometer Filter LP2
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>2</kbd> to disable
+  * <kbd>6</kbd> **Gyro Filter LP1** &mdash; Gyro Filter LP1
+    * <kbd>1</kbd> to enable _(default)_
+    * <kbd>2</kbd> to disable
+  * <kbd>7</kbd> **Accel Slope Filter** &mdash; Accelerometer Slope Filter
+    * <kbd>1</kbd> for ODR/4
+    * <kbd>2</kbd> for ODR/10
+    * <kbd>3</kbd> for for ODR/20
+    * <kbd>4</kbd> for ODR/45
+    * <kbd>5</kbd> for ODR/100 _(default)_
+    * <kbd>6</kbd> for ODR/200
+    * <kbd>7</kbd> for ODR/400
+    * <kbd>8</kbd> for ODR/800
+  * <kbd>8</kbd> **Gyro LP1 Filter Bandwidth** &mdash;  Gyro LP1 Filter Bandwidth
+    * <kbd>1</kbd> Ultra Light
+    * <kbd>2</kbd> Very Light
+    * <kbd>3</kbd> Light
+    * <kbd>4</kbd> Medium _(default)_
+    * <kbd>5</kbd> Strong
+    * <kbd>6</kbd> Very Strong
+    * <kbd>7</kbd> Aggressive
+    * <kbd>8</kbd> Extreme
+  * <kbd>9</kbd> **Accel X (milli-g)** &mdash; Accelerometer X (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>10</kbd> **Accel Y (milli-g)** &mdash; Accelerometer Y (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>11</kbd> **Accel Z (milli-g)** &mdash; Accelerometer Z (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>12</kbd> **Gyro X (milli-dps)** &mdash; Gyro X (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>13</kbd> **Gyro Y (milli-dps)** &mdash; Gyro Y (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>14</kbd> **Gyro Z (milli-dps)** &mdash; Gyro Z (milli-g)
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>15</kbd> **Temperature (C)** &mdash; The temperature in degrees C
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
 * <kbd>3</kbd> **MMC5983** &mdash; MMC5983 Magnetometer
-    * <kbd>1</kbd> **Filter Bandwidth (Hz)** &mdash; The filter bandwidth in Hz
-        * <kbd>1</kbd> 100 Hz _(default)_
-        * <kbd>2</kbd> 200 Hz
-        * <kbd>3</kbd> 400 Hz
-        * <kbd>4</kbd> 800 Hz
-    * <kbd>2</kbd> **Auto-Reset** &mdash; Auto-Reset
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>3</kbd> **X Field (Gauss)** &mdash; The X Field strength in Gauss
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>4</kbd> **Y Field (Gauss)** &mdash; The Y Field strength in Gauss
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>5</kbd> **Z Field (Gauss)** &mdash; The Z Field strength in Gauss
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
-    * <kbd>6</kbd> **Temperature (C)** &mdash; The ambient temperature in degrees C
-        * <kbd>1</kbd> to enable
-        * <kbd>2</kbd> to disable
+  * <kbd>1</kbd> **Filter Bandwidth (Hz)** &mdash; The filter bandwidth in Hz
+    * <kbd>1</kbd> 100 Hz _(default)_
+    * <kbd>2</kbd> 200 Hz
+    * <kbd>3</kbd> 400 Hz
+    * <kbd>4</kbd> 800 Hz
+  * <kbd>2</kbd> **Auto-Reset** &mdash; Auto-Reset
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>3</kbd> **X Field (Gauss)** &mdash; The X Field strength in Gauss
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>4</kbd> **Y Field (Gauss)** &mdash; The Y Field strength in Gauss
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>5</kbd> **Z Field (Gauss)** &mdash; The Z Field strength in Gauss
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
+  * <kbd>6</kbd> **Temperature (C)** &mdash; The ambient temperature in degrees C
+    * <kbd>1</kbd> to enable
+    * <kbd>2</kbd> to disable
 * <kbd>b</kbd> **Back**
 
 When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a <kbd>b</kbd> to exit out this menu, <kbd>b</kbd> to exit out of the DataLogger IoT settings, and <kbd>x</kbd> to exit out of the main menu.

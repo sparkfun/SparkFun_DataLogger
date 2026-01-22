@@ -1,12 +1,12 @@
+---
+icon: material/sd
+---
+
 Not all microSD cards are created equal. The [capacity, read/write speed, and format](https://learn.sparkfun.com/tutorials/sd-cards-and-writing-images) vary depending on the manufacturer. In order to log data to the microSD card, you will need to ensure that your memory card is formatted as **FAT32**. You can also use FAT16. If the memory card is formatted as a different memory card, the DataLogger IoT will not be able to recognize the microSD card.
-
-
 
 ## Checking MicroSD Card Format
 
 While you can simply insert the microSD card into your DataLogger IoT and start logging, there may be a chance that the it will not recognize the memory card due to the format.
-
-
 
 ### Checking MicroSD Card Format - Windows
 
@@ -24,8 +24,6 @@ Once the properties are open, you should be able to tell what file system that t
   <img src="../assets/microSD_Card_Check_File_System_exFAT.JPG" width="439" height="439" alt="Check File System Windows"></a>
 </div>
 
-
-
 ### Checking MicroSD Card Format - macOS
 
 To check to see if it is the correct format on a macOS, you could head to the drive on your desktop. Then right click, and select **Get Info**.
@@ -42,15 +40,11 @@ A window will pop up indicating the microSD card properties. Under **General:** 
   <img src="../assets/mac_microSD_exFat.png" width="300" height="300" alt="exFAT"></a>
 </div>
 
-
-
 ## Download Raspberry Pi Imager
 
 There are a few methods and programs available to reformat your microSD card as a FAT32. We found it easier to use the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/). Of course, you will only be using the tool to erase the contents of the microSD card and formatting it as a FAT32 system. You will not actually flash any image to the memory card. Click on the button below to download the tool from the Raspberry Pi Foundation. It is supported on *Windows*, *macOS*, and *Ubuntu for x86*.
 
 <div style="text-align: center"><a href="https://www.raspberrypi.com/software/" target="rpi_imager_tool" class="md-button">Raspberry Pi Imager Tool</a></div>
-
-
 
 ## Formatting as FAT32 using the Raspberry Pi Imager
 

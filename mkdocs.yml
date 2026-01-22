@@ -268,8 +268,8 @@ nav:
           - Arduino Cloud: example_arduino_iot_cloud.md
           - Viewing and Downloading Log Files using the IoT Web Server: example_iot_web_server.md
           - How to Convert Comma Separated Values (CSV) to a Spreadsheet: example_CSV_to_spreadsheet.md
-      - Appendix - Supported Qwiic Devices: supported_devices.md
-      - Appendix - Suggested Reading: suggested_reading.md
+      - Supported Qwiic Devices: supported_devices.md
+      - Suggested Reading: suggested_reading.md
   - Resources: resources.md
   - Support:
       - Troubleshooting: troubleshooting.md
