@@ -1,12 +1,10 @@
+---
+icon: material/microsoft-azure
+---
+
 # Creating and Connecting to an Azure IoT Device
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how an Azure IoT device is used by the DataLogger IoT.
-
-<div style="text-align: center">
-    <a href="https://azure.microsoft.com/en-us/"><img src="../assets/Microsoft_Azure_Logo.png" width="100" length="100" alt="Microsoft Azure Logo"></a>
-    <br />
-    <i>Image Courtesy of <a href="https://azure.microsoft.com/en-us/">Microsoft Azure</a></i>
-</div>
 
 The following is covered by this document:
 
@@ -16,8 +14,6 @@ The following is covered by this document:
 
 Currently, the Azure IoT device connection is a single direction - it is used to post data from the hardware to the Azure IoT Device. Configuration information from Azure IoT to the DataLogger IoT is currently not implemented.
 
-
-
 ## General Operation
 
 Azure IoT enables connectivity between an IoT / Edge device and the Azure Cloud Platform, implementing secure endpoints and device models within the Azure infrastructure. This infrastructure allows edge devices to post updates, status and state to the Azure infrastructure for analytics, monitoring and reporting.
@@ -26,11 +22,7 @@ In Azure IoT, an virtual representation of an actual device is created and refer
 
 The actual IoT device communicates with it's Azure representation via a secure MQTT connection, posting JSON document payloads to a set of pre-defined topics. Updates are posted directly to the Azure device, which is then accessed within Azure for further process as defined by the users particular cloud implementation.
 
-<div style="text-align: center">
-  <a href="../assets/iot_az_iot_overview.png"><img src="../assets/iot_az_iot_overview.png" width="1000" height="667" alt="Azure IoT Overview"></a>
-</div>
-
-
+![Azure IoT Overview](assets/iot_az_iot_overview.png)
 
 ## Creating a Device in Azure IoT
 
@@ -44,8 +36,6 @@ Once logged into your Microsoft Azure account, select **Internet of Things > IoT
   <a href="../assets/iot_az_iot_hub.png"><img src="../assets/iot_az_iot_hub.png" width="600" height="600" alt="Azure IoT Hub"></a>
 </div>
 
-
-
 ### Create an IoT Hub
 
 This IoT Hub page lists all the IoT hubs available for your account. To add a device, you need to create a new IoT Hub.
@@ -54,12 +44,10 @@ Follow the Hub Creation workflow - key settings used for a DataLogger demo devic
 
 * Used the "Free Tier" for testing and development.
 * Networking
-    * Connectivity - ***Public Access***
-    * Minimum TLS Version - ***1.0***
+  * Connectivity - ***Public Access***
+  * Minimum TLS Version - ***1.0***
 
 The remaining settings were set at their default values.
-
-
 
 ## Create a Device
 
@@ -87,8 +75,6 @@ Once created, the device is listed in the ***Devices*** list of the IoT Hub. Sel
   <a href="../assets/iot_az_device_details.png"><img src="../assets/iot_az_device_details.png" width="600" height="600" alt="Azure IoT Device Details"></a>
 </div>
 
-
-
 ## Azure Configuration
 
 Once the DataLogger IoT is integrated into the application, the specifics for the Azure IoT Thing must be configured. This includes the following:
@@ -97,8 +83,6 @@ Once the DataLogger IoT is integrated into the application, the specifics for th
 * Device Key
 * Device ID
 * CA Certificate Chain
-
-
 
 ### Server Name/Hostname
 
@@ -116,16 +100,12 @@ The Device ID is obtained from the device detail page. This page is accessible v
   <a href="../assets/iot_az_device_details.png"><img src="../assets/iot_az_device_details.png" width="600" height="600" alt="Azure IoT Device Details"></a>
 </div>
 
-
-
 ### Device Primary Key
 
 This is obtained via the Device details page, as outlined in the previous section.
 
 !!! note
     You view and copy the key via the icons on the right of the key entry line.
-
-
 
 ### Root Certificate Authority - CA file
 
@@ -138,9 +118,6 @@ The file to download is the ***Baltimore CyberTrust Root*** entry in the **Root 
 <div style="text-align: center">
   <a href="../assets/iot_az_ca_file.png"><img src="../assets/iot_az_ca_file.png" width="600" height="600" alt="Azure Root CA"></a>
 </div>
-
-
-
 
 ## Setting Properties
 
@@ -172,10 +149,8 @@ The alternative to using the menu system is a JSON file. These values can be set
 
 Besides updating the `Server`, `Device Key`, `Device ID`, and `CA Cert Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the Azure IoT service. Don't forget to enable Azure IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
-
 !!! tip
     To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the Azure IoT as well.
-
 
 ## Operation and Monitoring
 
@@ -188,8 +163,6 @@ The easiest method to view the Telemetry data being sent to an Azure Iot Device 
 </div>
 
 Once installed, and connected to Azure via the Azure Account extension, you can connect to the target IoT Hub, and monitor telemetry data for a IoT device.
-
-
 
 ### Connect to Your Azure IoT Hub
 
@@ -210,9 +183,6 @@ The hub is then displayed in the **AZURE IOT HUB** section of the editor Explore
 <div style="text-align: center">
   <a href="../assets/iot_az_iot_hub_exp.png"><img src="../assets/iot_az_iot_hub_exp.png" width="600" height="600"  alt="Select IoT Hub"></a>
 </div>
-
-
-
 
 ### Monitoring
 

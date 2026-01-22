@@ -1,12 +1,10 @@
+---
+icon: material/aws
+---
+
 # Creating and Connecting to an AWS IoT Device (Thing)
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how an AWS IoT device is used by the DataLogger IoT.
-
-<div style="text-align: center">
-    <a href="https://aws.amazon.com/iot-core/"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" width="200" length="200" alt="Powered by AWS IoT"></a>
-    <br />
-    <i>Image Courtesy of <a href="https://aws.amazon.com/iot-core/">Amazon Web Services (AWS)</a></i>
-</div>
 
 The following is covered by this document:
 
@@ -16,8 +14,6 @@ The following is covered by this document:
 
 Currently, the AWS IoT device connection is a single direction - used to post data from the hardware to the IoT AWS Device via the AWS IoT devices **shadow**. Configuration information from AWS IoT to the DataLogger IoT is currently not implemented.
 
-
-
 ## General Operation
 
 AWS IoT enables connectivity between an IoT / Edge device and the AWS Cloud Platform, implementing secure endpoints and device models within the AWs infrastructure. This infrastructure allows edge devices to post updates, status and state to the AWS infrastructure for analytics, monitoring and reporting.
@@ -26,12 +22,7 @@ In AWS IoT, an virtual representation of an actual device is created and referre
 
 The actual IoT device communicates with it's AWS representation via a secure MQTT connection, posting JSON document payloads to a set of pre-defined topics. Updates are posted to the AWS IoT device **shadow**, which is then accessed within AWS for further process as defined by the users particular cloud implementation.
 
-
-<div style="text-align: center">
-  <a href="../assets/iot_aws_overview.png"><img src="../assets/iot_aws_overview.png" width="1000" height="667" alt="MQTT Menu"></a>
-</div>
-
-
+![AWS Overview](assets/iot_aws_overview.png)
 
 ## Creating a Device in AWS IoT
 
@@ -144,8 +135,6 @@ Once the policy is created, go back to the IoT Device/Thing created above and as
 
 At this point, AWS IoT is ready for a device to connect and receive data.
 
-
-
 ## AWS Configuration
 
 The specifics for the AWS IoT Thing must be configured. This includes the following:
@@ -157,8 +146,6 @@ The specifics for the AWS IoT Thing must be configured. This includes the follow
 * Client Certificate
 * Client Key
 
-
-
 ### Server Name/Hostname
 
 This value is obtained from the AWS IoT Device page for the created device. When on this page, select the ***Device Shadows*** tab, and then select the ***Classic Shadow*** shadow, which is listed. Note a secure connection is used, so the port for the connection is `8883`.
@@ -166,7 +153,6 @@ This value is obtained from the AWS IoT Device page for the created device. When
 <div style="text-align: center">
   <a href="../assets/iot_aws_iot_dev_attr.png"><img src="../assets/iot_aws_iot_dev_attr.png" width="600" height="600" alt="Shadow Details"></a>
 </div>
-
 
 Selecting the ***Classic Shadow*** entry provides the Server Name/Hostname for the device, as well as the MQTT topic for this device.
 
@@ -177,39 +163,27 @@ Selecting the ***Classic Shadow*** entry provides the Server Name/Hostname for t
 !!! note
     The server name is obtained from the Device Shadow URL entry
 
-
-
 ### MQTT Topic
 
 The MQTT topic value is based uses the ***MQTT topic prefix*** from above, and has the value ***update*** added to it. So for this example, the MQTT topic is:
 
     $aws/things/TestThing23/shadow/update
 
-
-
 ### Client Name
 
 This is the AWS IoT name of the thing. For the provided example, the value is ***TestThing23***
-
-
 
 ### CA Certificate Chain
 
 This value was downloaded as a file during the creation process. The contents of this file can be passed on to the DataLogger IoT by copying the file containing the data onto a devices SD Card and setting the filename property for the DataLogger IoT.
 
-
-
 ### Client Certificate
 
 This value was downloaded as a file during the creation process. The contents of this file can be passed on to the DataLogger IoT by copying the file containing the data onto a devices SD Card and setting the filename property for the DataLogger IoT.
 
-
-
 ### Client Key
 
 This value was downloaded as a file during the creation process. The contents of this file can be passed on to the DataLogger IoT by copying the file containing the data onto a devices SD Card and setting the filename property for the DataLogger IoT.
-
-
 
 ## Setting Properties
 
@@ -242,7 +216,7 @@ The alternative to using the menu system is a JSON file. These values can be set
   },
 ```
 
-Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT. 
+Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
 !!! tip
     To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the AWS IoT as well.

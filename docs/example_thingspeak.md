@@ -1,23 +1,16 @@
+---
+icon: material/message-reply-outline
+---
+
 # Creating and Connecting to ThingSpeak
 
 One of the key features of the DataLogger IoT is it's simplified access to IoT service providers. This document outlines how a ThinkSpeak output is used by the DataLogger IoT.
-
-
-<div style="text-align: center">
-  <a href="https://thingspeak.com/"><img src="../assets/thingspeak_logo.png" width="300" length="300" alt="ThingSpeak Logo"></a>
-  <br />
-  <i>Image Courtesy of <a href="https://thingspeak.com/">ThingSpeak</a></i>
-</div>
-
-
 
 The following is covered by this document:
 
 * Creating a ThingSpeak Channel and MQTT Connection
 * Securely connecting the ThingSpeak
 * How data is posted from the DataLogger IoT to ThingSpeak
-
-
 
 ## General Operation
 
@@ -29,13 +22,9 @@ The fields of a channel are enumerated as ***Field1, Field2, ..., Field8***, but
 
 As data is reported to a ThingSpeak channel, the field values are accessible for further processing or visualization output.
 
-
-
 ### Data Structure
 
 The DataLogger IoT is constructed around the concept of ***Devices*** which are often a type of sensor that can output a set of data values per observation or sample.
-
-
 
 ### Mapping Data to ThingSpeak
 
@@ -49,8 +38,6 @@ The concept of Channels that contain Fields in ThingSpeak is similar to the Devi
 </div>
 
 During configuration of the DataLogger IoT, the mapping between the Device and ThingSpeak channel is specified. The data to field mapping is automatically created by the DataLogger IoT following the data reporting order from the specific device driver.
-
-
 
 ## Creating a Device to a ThingSpeak Channel
 
@@ -72,11 +59,8 @@ On the presented channel page, name the channel and fill in the specific channel
 
 Once the values are entered, select **Save Channel**. ThingSpeak will now show list of **Channel Stats**, made up of line plots for each field specified for the channel.
 
-
 !!! note
     Key note - at the top of this page is listed the **Channel ID**. Note this number - it is used to map a Device to a ThingSpeak Channel.
-
-
 
 ## Setting Up ThingSpeak MQTT
 
@@ -102,8 +86,6 @@ The selected Channel is then listed in the **Authorized Channel** table. Ensure 
 
 At this point, the ThingSpeak Channel is setup for access by the DataLogger IoT.
 
-
-
 ## ThingSpeak Configuration
 
 Once the device is integrated into the application, the specifics for the ThingSpeak Channel(s) must be configured. This includes the following:
@@ -115,42 +97,25 @@ Once the device is integrated into the application, the specifics for the ThingS
 * Device to Channel mapping
 * CA Certificate Chain
 
-
-
 ### Server Name/Hostname
 
 This value is hostname of the ThingSpeak mqtt connection, which is **mqtt3.thingspeak.com** as note at [ThingSpeakMQTT Basics](https://www.mathworks.com/help/thingspeak/mqtt-basics.html) page. Note a secure connection is used, so the port for the connection is `8883`.
-
-
-
 
 ### Client Name/ID
 
 The Client Name/ID is found under MQTT connection details listed in the ***Devices > MQTT*** section of ThingSpeak.
 
-
-
-
 ### Username
 
 The Username is found under MQTT connection details listed in the ***Devices > MQTT*** section of ThingSpeak.
-
-
-
 
 ### Password
 
 The connection password was provided when the MQTT device was created. If you lost this value, you can regenerate a password on the MQTT Device information page.
 
-
-
-
 ### Certificate File
 
 You can download the cert file for ThingSpeak.com page using a web-browser. Click on the security details of this page, and navigate the dialog (browser dependent) to download the certificate. The downloaded file is the made available for the DataLogger IoT to use as a file that is loaded at runtime)
-
-
-
 
 ## Setting Properties
 
@@ -187,8 +152,6 @@ Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert F
 !!! tip
     To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the ThingSpeak MQTT as well.
 
-
-
 ## Monitoring Output
 
 Once the connector is configured and the DataLogger IoT is connected to ThingSpeak, as data is posted, the results are show on the Channel Stats page for your Channel. For the above example, the output of a SparkFun BME280 sensor produces the following output:
@@ -196,8 +159,6 @@ Once the connector is configured and the DataLogger IoT is connected to ThingSpe
 <div style="text-align: center">
   <a href="../assets/iot_ts_channel_data.png"><img src="../assets/iot_ts_channel_data.png" width="600" height="600" alt="ThingSpeak Stats"></a>
 </div>
-
-
 
 ## Setting Up 2x or More Devices
 
