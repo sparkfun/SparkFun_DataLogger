@@ -5,12 +5,12 @@ The SparkFun DataLogger IoT is a data logger that comes preprogrammed to automat
 
 - SparkFun DataLogger IoT - 9DOF
 
-    [!DataLoggerIoT 9DOV](assets/20594-SparkFun_DataLogger_IoT-ESP32_01.jpg)
+    ![DataLoggerIoT 9DOV](assets/20594-SparkFun_DataLogger_IoT-ESP32_01.jpg)
     [:octicons-arrow-right-24: At SparkFun.com](https://www.sparkfun.com/products/20594)
 
 - SparkFun DataLogger IoT
 
-    [!DataLoggerIoT 9DOV](assets/22462-_DEV_SparkFun_DataLogger_IoT-1.jpg)
+    ![DataLoggerIoT 9DOV](assets/22462-_DEV_SparkFun_DataLogger_IoT-1.jpg)
     [:octicons-arrow-right-24: At SparkFun.com](https://www.sparkfun.com/products/22462)
 
 </div>
