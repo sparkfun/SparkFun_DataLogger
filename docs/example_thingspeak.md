@@ -33,9 +33,7 @@ The concept of Channels that contain Fields in ThingSpeak is similar to the Devi
 * **Devices == Channels**
 * **Data == Fields**
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_mapping.png"><img src="../assets/iot_ts_mapping.png"  width="1000" height="667" alt="DataLogger to ThingSpeak Mapping"></a>
-</div>
+![DATALOGGER TO THINGSPEAK MAPPING](assets/iot_ts_mapping.png)
 
 During configuration of the DataLogger IoT, the mapping between the Device and ThingSpeak channel is specified. The data to field mapping is automatically created by the DataLogger IoT following the data reporting order from the specific device driver.
 
@@ -43,24 +41,17 @@ During configuration of the DataLogger IoT, the mapping between the Device and T
 
 The following discussion outlines the basic steps taken to create a Channel in ThingSpeak and then connect it to the DataLogger's Device. First step is to log into your [ThingSpeak](https://thingspeak.com/) and create a Channel.
 
-<div style="text-align: center"><a href="https://thingspeak.com/" target="thingspeak" class="md-button">Click Here to Log into ThingSpeak</a></div>
-
 Once logged into your ThingSpeak account, select ***Channels > My Channels*** menu item and on the **My Channel** page, select the **New Channel** button.
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_channel.png"><img src="../assets/iot_ts_channel.png"  width="600" height="600" alt="New Channel"></a>
-</div>
+![New Channel](assets/iot_ts_channel.png)
 
 On the presented channel page, name the channel and fill in the specific channel fields. The fields should map to the data fields reported from the Device being linked to this channel. Order is important, and is determined by looking at output of a device to the serial device (or reviewing the device driver code).
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_new_channel.png"><img src="../assets/iot_ts_new_channel.png" width="600" height="600" alt="New Channel"></a>
-</div>
+![New Channel](assets/iot_ts_new_channel.png)
 
 Once the values are entered, select **Save Channel**. ThingSpeak will now show list of **Channel Stats**, made up of line plots for each field specified for the channel.
 
-!!! note
-    Key note - at the top of this page is listed the **Channel ID**. Note this number - it is used to map a Device to a ThingSpeak Channel.
+Key note - at the top of this page is listed the **Channel ID**. Note this number - it is used to map a Device to a ThingSpeak Channel.
 
 ## Setting Up ThingSpeak MQTT
 
@@ -68,21 +59,15 @@ The DataLogger IoT uses MQTT to post data to a channel. From the ThingSpeak menu
 
 On the presented dialog, enter a name for the MQTT connection and in the **Authorize channels to access**, select the channel created earlier. Once you select a channel, click the **Add Channel** button.
 
-!!! note
-    More channels can be added later.
+More channels can be added later.
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_mqtt.png"><img src="../assets/iot_ts_mqtt.png" width="600" height="600" alt="MQTT on ThingSpeak"></a>
-</div>
+![MQTT On Thingspeak](assets/iot_ts_mqtt.png)
 
-!!! note
-    When the MQTT device is created, a set of credentials (Client ID, Username, and Password) is provided. **Copy or download** these values, since the password in not accessible after this step.
+When the MQTT device is created, a set of credentials (Client ID, Username, and Password) is provided. **Copy or download** these values, since the password in not accessible after this step.
 
 The selected Channel is then listed in the **Authorized Channel** table. Ensure that the Allow Publish and Allow Subscribe attributes are enabled for the added channel.
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_mqtt_channel_auth.png"><img src="../assets/iot_ts_mqtt_channel_auth.png" width="600" height="600" alt="MQTT Channel Authorization on ThingSpeak"></a>
-</div>
+![MQTT Channel Authorization On ThingSpeak](assets/iot_ts_mqtt_channel_auth.png)
 
 At this point, the ThingSpeak Channel is setup for access by the DataLogger IoT.
 
@@ -123,9 +108,7 @@ The above property values must be set on the DataLogger IoT before use. They can
 
 For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>12</kbd> to enter the ThingSpeak MQTT Menu. When the menu system for the ThingSpeak MQTT connection is presented, you will need to configure the property values as listed in the JSON file.  Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
 
-<div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_ThingSpeak_MQTT_Menu.JPG" width="600" height="600"  alt="ThingSpeak MQTT Menu"></a>
-</div>
+![ThingSpeak MQTT Menu](assets/sparkfun_datalogger_iot_thingspeak_mqtt_menu.jpg)
 
 The alternative to using the menu system is a JSON file. These values can be set using a JSON file that is loaded by the system at startup. For the ThingSpeak example outlined in this document, the entries in the settings JSON file are as follows:
 
@@ -144,21 +127,17 @@ The alternative to using the menu system is a JSON file. These values can be set
   }
 ```
 
-!!! note
-    The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma. In this case, the device name `BME280` and the channel ID was `2054891`. Make sure to match the device name that was loaded on start up with the unique channel ID that was generated when creating a ThingSpeak Channel.
+The **Channels** value is a list of **[DEVICE NAME]=[Channel ID]** pairs. Each pair is separated by a comma. In this case, the device name `BME280` and the channel ID was `2054891`. Make sure to match the device name that was loaded on start up with the unique channel ID that was generated when creating a ThingSpeak Channel.
 
 Besides updating the `Server`, `Client Name`, `Username`, `Password`, `CA Cert Filename`, and `Channels`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the ThingSpeak service. Don't forget to enable ThingSpeak MQTT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
-!!! tip
-    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the ThingSpeak MQTT as well.
+To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the ThingSpeak MQTT as well.
 
 ## Monitoring Output
 
 Once the connector is configured and the DataLogger IoT is connected to ThingSpeak, as data is posted, the results are show on the Channel Stats page for your Channel. For the above example, the output of a SparkFun BME280 sensor produces the following output:
 
-<div style="text-align: center">
-  <a href="../assets/iot_ts_channel_data.png"><img src="../assets/iot_ts_channel_data.png" width="600" height="600" alt="ThingSpeak Stats"></a>
-</div>
+![ThingSpeak Stats](assets/iot_ts_channel_data.png)
 
 ## Setting Up 2x or More Devices
 
@@ -181,13 +160,12 @@ The following example demonstrates how to set up two devices for ThingSpeak on t
 
 Once the channels are created, you will be provided with a unique channel ID for each channel. Make sure to take note of the number as explained earlier.
 
-!!! note
-    The alternative I<sup>2</sup>C address for the BME688 and BME680 uses the same address as the default of the other sensor:
+The alternative I<sup>2</sup>C address for the BME688 and BME680 uses the same address as the default of the other sensor:
 
-    * BME680: **0x77 (Default)** or 0x76
-    * BME688: **0x76 (Default)** or 0x77
+* BME680: **0x77 (Default)** or 0x76
+* BME688: **0x76 (Default)** or 0x77
 
-    Make sure to avoid using the same address when connecting the sensors to the same DataLogger IoT.
+Make sure to avoid using the same address when connecting the sensors to the same DataLogger IoT.
 
 When setting up the connection, you will need to authorize both channels. In this example, we included the channels for the BME688 [x076] and BME680 [x077].
 

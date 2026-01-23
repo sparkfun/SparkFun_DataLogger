@@ -2,6 +2,7 @@
 icon: material/email-fast
 ---
 
+# MQTT IoT
 
 ## Connecting and Publishing Data to MQTT
 
@@ -85,7 +86,7 @@ We'll need to adjust the settings for the MQTT Client using the MQTT Menu System
 
 For users that are interested in using the menu system, open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**.  Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then type ```9``` to enter the MQTT Client Menu. When the menu system for the MQTT connection is presented, the following options are displayed:
 
-![MQTT Menu](assets/SparkFun_Datalogger_IoT_MQTT_Client_Menu.JPG)
+![MQTT Menu](assets/sparkfun_datalogger_iot_mqtt_client_menu.jpg)
 
 The options are:
 
