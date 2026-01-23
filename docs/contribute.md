@@ -32,9 +32,3 @@ This hardware design is open-source! Please help us make it better.
 3. File a pull request with your changes, and enjoy making the ~~words~~ ~~worlds~~ world a better place.
     * Once received, the engineer in charge of the original design will automatically be notified.
     * We will review your suggested improvements, if they are within our board design standards and meet our product design requirements, we will flag these changes for our next board revision. *(Please note, that even if your suggestion is accepted, these changes may not be immediate. We may have to cycle through our current product inventory first.)*
-
-## Contributors
-
-Let's provided some recognition to the contributors for this project!
-
-[GitHub Contributors Image](https://img.shields.io/github/contributors/sparkfun/SparkFun_DataLogger.svg)
