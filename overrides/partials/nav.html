@@ -25,55 +25,38 @@
 <!-- Determine base classes -->
 {% set class = "md-nav md-nav--primary" %}
 {% if "navigation.tabs" in features %}
-  {% set class = class ~ " md-nav--lifted" %}
+{% set class = class ~ " md-nav--lifted" %}
 {% endif %}
 {% if "toc.integrate" in features %}
-  {% set class = class ~ " md-nav--integrated" %}
+{% set class = class ~ " md-nav--integrated" %}
 {% endif %}
 
 <!-- Navigation -->
-<nav
-  class="{{ class }}"
-  aria-label="{{ lang.t('nav') }}"
-  data-md-level="0"
->
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
 
-  <!-- Site title -->
-  <!-- title="{{ config.site_name | e }}" -->
-  <label class="md-nav__title" for="__drawer">
-    <a
-      href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-      title="SparkFun Product Page"
-      class="md-nav__button md-logo"
-      aria-label="{{ config.site_name }}"
-      data-md-component="logo"
-    >
-      {% include "partials/logo.html" %}
-    </a>
-    {{ config.site_name }}
-  </label>
+    <!-- Site title -->
+    <!-- title="{{ config.site_name | e }}" -->
+    <label class="md-nav__title" for="__drawer">
+        <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="SparkFun Product Page"
+            class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+            {% include "partials/logo.html" %}
+        </a>
+        {{ config.site_name }}
+    </label>
 
-  <!-- Repository information -->
-  {% if config.repo_url %}
+    <!-- Repository information -->
+    {% if config.repo_url %}
     <div class="md-nav__source">
-      {% include "partials/source.html" %}
+        {% include "partials/source.html" %}
     </div>
-  {% endif %}
+    {% endif %}
 
-  <!-- Navigation list -->
-  <ul class="md-nav__list" data-md-scrollfix>
-    {% for nav_item in nav %}
-      {% set path = "__nav_" ~ loop.index %}
-      {{ item.render(nav_item, path, 1) }}
-    {% endfor %}
+    <!-- Navigation list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+        {% for nav_item in nav %}
+        {% set path = "__nav_" ~ loop.index %}
+        {{ item.render(nav_item, path, 1) }}
+        {% endfor %}
 
-    <!-- Add Hard Copies to NAV menu -->
-    <li class="md-nav__item">
-      <a href="/SparkFun_DataLogger/hard_copy/" class="md-nav__link">
-      <span class="md-ellipsis">
-          Hard Copies&nbsp;{% include ".icons/material/book-open-variant.svg" %}
-      </span>
-      </a>
-    </li>
-  </ul>
+    </ul>
 </nav>
