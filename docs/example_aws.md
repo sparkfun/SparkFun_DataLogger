@@ -26,23 +26,16 @@ The actual IoT device communicates with it's AWS representation via a secure MQT
 
 ## Creating a Device in AWS IoT
 
-The following discussion outlines the basic steps taken to create a Thing in AWS IoT that the DataLogger IoT can connect to. First step is to log into your AWS account and create a thing.
-
-<div style="text-align: center"><a href="https://aws.amazon.com/iot-core/" target="aws_iot_core" class="md-button">Click Here to Log into AWS</a></div>
+The following discussion outlines the basic steps taken to create a Thing in AWS IoT that the DataLogger IoT can connect to. First step is to [log into]("https://aws.amazon.com/iot-core/) your AWS account and create a thing.
 
 Once logged into your AWS account, select **IoT Core** from the menu of services.
-
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_core.png"><img src="../assets/iot_aws_iot_core.png" width="600" height="600" alt="AWS IoT Core"></a>
-</div>
+![AWS IoT Core](assets/iot_aws_iot_core.png)
 
 From the IoT Core console page, under the **Manage** section, select **All Devices > Things**  
 
 On the resultant Things Page, select the **Create Things** button.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_thing_create.png"><img src="../assets/iot_aws_thing_create.png" width="600" height="600" alt="AWS IoT Thing Create"></a>
-</div>
+![Aws Iot Thing Create](assets/iot_aws_thing_create.png)
 
 AWS IoT will then take you through the steps to create a device. Selections made for a demo Thing are:
 
@@ -63,9 +56,7 @@ Upon creation, AWS IoT presents you with a list of downloadable certificates and
 
 At this point, the new AWS IoT thing is created and listed on the AWS IoT Things Console
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_thing_list.png"><img src="../assets/iot_aws_thing_list.png" width="600" height="600" alt="New Thing Listed"></a>
-</div>
+![New Thing Listed](assets/iot_aws_thing_list.png)
 
 ### Security Policy
 
@@ -73,9 +64,7 @@ To write to the IoT device, a security policy that enables this is needed, and t
 
 To create a Policy, select the ***Manage > Security > Policies*** menu item from the left side menu of the AWS IoT panel. Once on this page, select the **Create policy** button to create a new policy.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_thing_policy.png"><img src="../assets/iot_aws_thing_policy.png" width="600" height="600" alt="New Policy"></a>
-</div>
+![New Policy](assets/iot_aws_thing_policy.png)
 
 When entering the policy, provide a name that fits your need. For this example, the name **NewThing23Policy** is used. For the Policy document, you can manually enter the security entires, or enter them as a JSON document. The JSON document used for this example is:
 
@@ -117,9 +106,7 @@ When entering the policy, provide a name that fits your need. For this example, 
 }
 ```
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_thing_create_policy.png"><img src="../assets/iot_aws_thing_create_policy.png" width="600" height="600" alt="Create Policy"></a>
-</div>
+![Create Policy](assets/iot_aws_thing_create_policy.png)
 
 Once the policy is created, go back to the IoT Device/Thing created above and associate this policy to the device Certificate.
 
@@ -129,9 +116,7 @@ Once the policy is created, go back to the IoT Device/Thing created above and as
 * Select the listed Certificate (it's a very long hex number)
 * At the bottom right of the page, select the ***Attach policies*** button and select the Policy created above.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_attach_policy.png"><img src="../assets/iot_aws_iot_attach_policy.png" width="600" height="600" alt="Attach Policy"></a>
-</div>
+![Attach Policy](assets/iot_aws_iot_attach_policy.png)
 
 At this point, AWS IoT is ready for a device to connect and receive data.
 
@@ -150,15 +135,11 @@ The specifics for the AWS IoT Thing must be configured. This includes the follow
 
 This value is obtained from the AWS IoT Device page for the created device. When on this page, select the ***Device Shadows*** tab, and then select the ***Classic Shadow*** shadow, which is listed. Note a secure connection is used, so the port for the connection is `8883`.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_dev_attr.png"><img src="../assets/iot_aws_iot_dev_attr.png" width="600" height="600" alt="Shadow Details"></a>
-</div>
+![Shadow Details](assets/iot_aws_iot_dev_attr.png)
 
 Selecting the ***Classic Shadow*** entry provides the Server Name/Hostname for the device, as well as the MQTT topic for this device.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_shadow_details.png"><img src="../assets/iot_aws_iot_shadow_details.png" width="600" height="600" alt="Shadow Details"></a>
-</div>
+![Shadow Details](assets/iot_aws_iot_shadow_details.png)
 
 !!! note
     The server name is obtained from the Device Shadow URL entry
@@ -167,7 +148,9 @@ Selecting the ***Classic Shadow*** entry provides the Server Name/Hostname for t
 
 The MQTT topic value is based uses the ***MQTT topic prefix*** from above, and has the value ***update*** added to it. So for this example, the MQTT topic is:
 
+```mqtt
     $aws/things/TestThing23/shadow/update
+```
 
 ### Client Name
 
@@ -189,11 +172,9 @@ This value was downloaded as a file during the creation process. The contents of
 
 The above property values must be set on the DataLogger before use. They can be set manually by using the menu system like the previous MQTT example.
 
-For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>11</kbd> to enter the AWS IoT Menu. When the menu system for the AWS IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
+For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <```1``` to enter the Settings menu. Then type ```11``` to enter the AWS IoT Menu. When the menu system for the AWS IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
 
-<div style="text-align: center">
-  <a href="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_AWS_Menu.JPG" width="600" height="600"  alt="AWS IoT Menu"></a>
-</div>
+![Aws Iot Menu](assets/sparkfun_datalogger_iot_aws_menu.jpg)
 
 The alternative to using the menu system is a JSON file. These values can be set using a JSON file that is loaded by the system at startup. For the DataLogger IoT example outlined in this document, the entries in the settings JSON file are as follows:
 
@@ -218,19 +199,14 @@ The alternative to using the menu system is a JSON file. These values can be set
 
 Besides updating the `Server`, `MQTT Topic`, `Client Name`, `CA Cert Filename`, `Client Cert Filename`, and `Client Key Filename`, you will need to also ensure that the `port` is set to `8883`. The default in previous firmware versions was `1883`. As of firmware v01.00.04, the default is `8883`. You will need to adjust the port value to properly connect to the [AWS IoT service](https://aws.amazon.com/about-aws/whats-new/2018/02/aws-iot-core-now-supports-mqtt-connections-with-certificate-based-client-authentication-on-port-443/). Don't forget to enable AWS IoT service by setting the value to `true`. If the JSON file is saved in the microSD card, you can load the credentials to the DataLogger IoT.
 
-!!! tip
-    To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the AWS IoT as well.
+To load the values by the system at startup using a JSON file and microSD card, you will need to [configure the Save Settings](../configuration#general-save-settings). This JSON file will be created with the "**Save to Fallback**" option. Make sure to enable the AWS IoT as well.
 
 ## Operation
 
 Once the device is configured and running, updates in AWS IoT are listed in the ***Activity*** tab of the devices page. For the test device in this document, this page looks like:
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_shadow_updates.png"><img src="../assets/iot_aws_iot_shadow_updates.png" width="600" height="600" alt="Shadow Activity"></a>
-</div>
+![Shadow Activity](assets/iot_aws_iot_shadow_updates.png)
 
 Opening up an update, you can see the data being set to AWS IoT in a JSON format.
 
-<div style="text-align: center">
-  <a href="../assets/iot_aws_iot_shadow_data.png"><img src="../assets/iot_aws_iot_shadow_data.png" width="600" height="600" alt="Shadow Data"></a>
-</div>
+![Shadow Data](assets/iot_aws_iot_shadow_data.png)

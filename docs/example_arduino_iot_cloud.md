@@ -125,7 +125,7 @@ The above property values must be set in the DataLogger's Arduino Cloud driver b
 
 For users that are interested in using the menu system, open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1```` to enter the Settings menu. Then select the Arduino IoT Menu. When the menu system for the Arduino IoT is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
 
-![Arduino IoT Cloud Menu Options](assets/SparkFun_DataLogger_IoT_Arduino_IoT_Cloud_Menu.JPG)
+![Arduino IoT Cloud Menu Options](assets/sparkfun_datalogger_iot_arduino_iot_cloud_menu.jpg)
 
 The alternative to using the menu system is a JSON file. These values can be set using a JSON file that is loaded by the system at startup. For the DataLogger Arduino Cloud example outlined in this document, the entries in the setting's JSON file are as follows:
 

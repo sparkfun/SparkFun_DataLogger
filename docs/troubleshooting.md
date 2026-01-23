@@ -20,7 +20,7 @@ The following error occurred when the DataLogger IoT was initializing with AWS.
 [W] AWS IoT disconnected - reconnecting.......[E] AWS IoT: MQTT connection failed. Error Code: -2
 ```
 
-![Configuration entered incorrectly, DataLogger not connecting to IoT Service](assets/Incorrect_Configuration_Connection_Failed_IoT_Service_AWS.JPG)
+![Configuration entered incorrectly, DataLogger not connecting to IoT Service](assets/incorrect_configuration_connection_failed_iot_service_aws.jpg)
 
 In this case, the DataLogger IoT failed to connect to AWS IoT service because the port was using the default value that was saved: `1883`. Ensure that the port is set to `8883` for your IoT service (e.g. AWS IoT, Azure, and ThingSpeak) and saved in persistent memory in order for the DataLogger IoT to successfully connect. As of firmware v01.00.04, the default is `8883`.
 
