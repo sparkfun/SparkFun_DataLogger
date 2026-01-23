@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Adds print page button -->
+<a class="md-content__button md-icon" title="Print Page" href="#" onclick="window.print(); return false;">
+    {% include ".icons/material/printer.svg" %}
+</a>
 
 <!-- Adds file-eye icon to view hookup guide as a single page -->
 {% if "single_page.md" %}
@@ -8,10 +12,6 @@
     {% include ".icons/material/file-eye-outline.svg" %}
     <!-- .icons/fontawesome/solid/scroll.svg -->
 </a>
-<a class="md-content__button md-icon" title="Print Page" href="#" onclick="window.print(); return false;">
-    {% include ".icons/material/printer.svg" %}
-</a>
-
 {% endif %}
 
 

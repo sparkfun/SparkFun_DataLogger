@@ -257,11 +257,8 @@ nav:
       - Hardware Overview: hardware_overview.md
       - Hardware Hookup: hardware_hookup.md
       - Preparing Your MicroSD Card: prepare_your_microsd_card.md
+  - Reference:
       - Configuration: configuration.md
-      - Supported Qwiic Devices: supported_devices.md
-      - Suggested Reading: suggested-reading.md
-
-  - Examples:
       - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md
       - Factory Reset: factory_reset.md
@@ -274,7 +271,10 @@ nav:
       - Arduino Cloud: example_arduino_iot_cloud.md
       - Viewing and Downloading Log Files using the IoT Web Server: example_iot_web_server.md
       - How to Convert Comma Separated Values (CSV) to a Spreadsheet: example_CSV_to_spreadsheet.md
-  - Resources: resources.md
+  - Resources:
+      - Downloads: resources.md
+      - Supported Qwiic Devices: supported_devices.md
+      - Suggested Reading: suggested-reading.md
   - Support:
       - Troubleshooting: troubleshooting.md
       - Submit Issues: file_issue.md
