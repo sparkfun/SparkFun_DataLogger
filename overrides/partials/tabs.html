@@ -23,29 +23,14 @@
 {% import "partials/tabs-item.html" as item with context %}
 
 <!-- Navigation tabs -->
-<nav
-  class="md-tabs"
-  aria-label="{{ lang.t('tabs') }}"
-  data-md-component="tabs"
->
-  <div class="md-tabs__inner md-grid">
+<nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
 
-    <!-- Adds tab on right side of header -->
-    {% if "hard_copy.md" %}
-    <ul class="md-tabs__list" style="float: right;">
-      <li class="md-tabs__item">
-        <a href="/SparkFun_DataLogger/hard_copy/" class="md-tabs__link">
-          Hard Copies 🖨️
-        </a>
-      </li>
-    </ul>
-    {% endif %}
-
-    <!-- Original tabbed sections -->
-    <ul class="md-tabs__list">
-      {% for nav_item in nav %}
-        {{ item.render(nav_item) }}
-      {% endfor %}
-    </ul>
-  </div>
+        <!-- Original tabbed sections -->
+        <ul class="md-tabs__list">
+            {% for nav_item in nav %}
+            {{ item.render(nav_item) }}
+            {% endfor %}
+        </ul>
+    </div>
 </nav>

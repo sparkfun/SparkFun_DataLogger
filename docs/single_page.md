@@ -5,9 +5,6 @@ hide:
 icon: fontawesome/solid/scroll
 ---
 
-<a class="list-group-item" href="#" onclick="window.print(); return false;">
-          Print Page
-        </a>
 
 # Introduction
 

@@ -260,7 +260,6 @@ nav:
       - Configuration: configuration.md
       - Supported Qwiic Devices: supported_devices.md
       - Suggested Reading: suggested-reading.md
-      - View as Single Page: single_page.md
 
   - Examples:
       - Connecting to a WiFi Network: wifi_network.md
