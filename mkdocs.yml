@@ -10,6 +10,7 @@ repo_name: sparkfun/SparkFun_DataLogger
 copyright:
   Copyright 2023-2026 - <a href="https://www.sparkfun.com/" target="_blank" rel="noopener">SparkFun Electronics&#174;<br>
   <a href="https://goo.gl/maps/vkstCpQZW6jZMjzYA" target="_blank" rel="noopener">6333 Dry Creek Parkway, Niwot, Colorado 80503</a>
+  <a href="#__consent">Change cookie settings</a>
 
 # Default edit/view actions to "main" branch, instead of "master"
 edit_uri: blob/main/docs/
@@ -80,7 +81,7 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: grey
+      primary: black
       accent: red
       scheme: slate
       toggle:
