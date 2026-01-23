@@ -37,8 +37,7 @@ Connect the DataLogger IoT to a USB cable and connect to your computer. The addr
 * 'w' &mdash; Disable WiFi
 * 's' &mdash; Disable preference restore during startup
 
-!!! note
-    The amount of time the start-up menu is displayed is adjustable. This settings can be configured in the **Settings/Application Settings** page, under the Advanced section.
+The amount of time the start-up menu is displayed is adjustable. This settings can be configured in the **Settings/Application Settings** page, under the Advanced section.
 
 You should see the following output when the board initializes:
 

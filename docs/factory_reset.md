@@ -2,6 +2,8 @@
 icon: material/arrow-u-left-bottom
 ---
 
+# Factory Reset
+
 A factory reset will move the boot firmware of the device to the firmware imaged installed at the ***factory*** and erase any on-board stored settings on the device. This is helpful if an update fails, or an update has issues that prevent proper operations.
 
 This option is available on ESP32 devices that contained a ***factory*** firmware partition that contains a bootable firmware image. Consult the specific product's production and build system for further details.

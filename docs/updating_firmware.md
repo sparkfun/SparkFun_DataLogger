@@ -13,12 +13,12 @@ To download the latest firmware and update through the microSD card, you will ne
 
 Once downloaded, insert the microSD card into a card reader or USB adapter. Then move the files into the memory card's root directory. Below shows an image of v01.00.01 and v01.00.02 on a Windows OS.
 
-![microSD Card Firmware Files](assets/Explorer_MicroSD_Card_Firmware_Files.PNG)
+![microSD Card Firmware Files](assets/explorer_microsd_card_firmware_files.png)
 
 Once the files are copied to the memory card, eject the microSD card from your computer. Insert the card back into the DataLogger IoT's microSD card socket. Connect the DataLogger IoT to your computer using a USB cable.
 
-![Insert MicroSD Card](assets/DataLogger_IoT_Insert_MicroSD_Card.jpg)
-![DataLogger IoT Connecting USB](assets/DataLogger_IoT_USB.jpg)
+![Insert MicroSD Card](assets/datalogger_iot_insert_microsd_card.jpg)
+![DataLogger IoT Connecting USB](assets/datalogger_iot_usb.jpg)
 
 Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then select the System Update Menu. Finally, type ```3``` to update the firmware from the microSD card. You should see an image similar to the output below.
 
@@ -47,25 +47,25 @@ This option is available on ESP32 devices that contained two update firmware (OT
 
 If you have not already, connect the DataLogger IoT to your computer using a USB cable.
 
-![DataLogger IoT Connecting USB](assets/DataLogger_IoT_USB.jpg)
+![DataLogger IoT Connecting USB](assets/datalogger_iot_usb.jpg)
 
 Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then enter the System Update Menu. Finally, type ```4``` to update the firmware over-the-air.
 
-![System Update Menu Options](SparkFun_Datalogger_IoT_System_Restart_Factory_Restore_Update_Firmware.JPG)
+![System Update Menu Options](assets/sparkfun_datalogger_iot_system_restart_factory_restore_update_firmware.jpg)
 
 When this option is selected, the system will contact the update server and search for available upgrade firmware, selecting the latest version available. If a newer version is found, a prompt is presented to confirm the upgrade.
 
-![Select OTA Update](assets/DataLogger_IoT_OTA_Update_1.PNG)
+![Select OTA Update](assets/datalogger_iot_ota_update_1.png)
 
 **NOTE** For the upgrade option to occur, a the system must be connected to a network and have access to the firmware OTA server.
 
 Typing ```Y``` (or hitting enter) starts the update operation. As the firmware is downloaded, the percent complete status is updated. If connectivity fails during the download, the operation is halted and the update aborted.
 
-![OTA Update Downloading](assets/DataLogger_IoT_OTA_Update_2.PNG)
+![OTA Update Downloading](assets/datalogger_iot_ota_update_2.png)
 
 Once the update file is downloaded, it is verified as being the correct file. Once verified, the system is rebooted and starts using the new firmware image! You will notice the firmware version change as the DataLogger IoT initializes.
 
-![Updated OTA and Rebooted](assets/DataLogger_IoT_OTA_Update_3.PNG)
+![Updated OTA and Rebooted](assets/datalogger_iot_ota_update_3.png)
 
 ## If the Firmware is overwritten by an Arduino Sketch
 
