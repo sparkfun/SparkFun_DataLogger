@@ -45,17 +45,17 @@ theme:
 
     # Enables anchor tracking (updates page url with the section user is on)
     # i.e. https://docs.sparkfun.com/<page link>/#<sub-section>
-    - navigation.tracking
-    - navigation.tabs.sticky
+    # - navigation.tracking
+    # - navigation.tabs.sticky
 
-    # Enables tabs for navigating the website
-    - navigation.tabs
-    # Keeps tabs visible in the header when scrolling
-    - navigation.tabs.sticky
+    # # Enables tabs for navigating the website
+    # - navigation.tabs
+    # # Keeps tabs visible in the header when scrolling
+    # - navigation.tabs.sticky
 
-    # Adds pop-up button just below the header (when the user starts to scroll up)
-    # Allows users to easily jump to the beginning of the page
-    - navigation.top
+    # # Adds pop-up button just below the header (when the user starts to scroll up)
+    # # Allows users to easily jump to the beginning of the page
+    # - navigation.top
 
     # Renders path for page navigation at top of the page (makes page navigation more mobile friendly)
     - navigation.path
@@ -137,15 +137,15 @@ plugins:
       redirect_maps:
         "index.md": "introduction.md"
   # Add revision date
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-  # Add git committers at bottom of the page
-  - git-committers:
-      repository: sparkfun/SparkFun_DataLogger
-      branch: main
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     type: timeago
+  # # Add git committers at bottom of the page
+  # - git-committers:
+  #     repository: sparkfun/SparkFun_DataLogger
+  #     branch: main
   # Add git authors at bottom of the page
-  - git-authors
+  # - git-authors
   # Enables use of Git submodules and larger code base
   - monorepo
   # For PDF rendering
