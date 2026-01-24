@@ -72,11 +72,9 @@ These values are set using the standard DataLogger methods - the interactive men
 
 ### Menu System
 
-For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then type <kbd>14</kbd> to enter the HTTP IoT Menu. When the menu system for the HTTP IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
+For users that are interested in using the menu system, you will need to open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then enter the HTTP IoT Menu. When the menu system for the HTTP IoT connection is presented, you will need to configure the property values as listed in the JSON file. Saving the values through the menu system will save the credentials to the ESP32's persistent memory. The following options are displayed:
 
-<div style="text-align: center">
-  <a href="../assets/assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG"><img src="../assets/SparkFun_Datalogger_IoT_HTTP_Menu.JPG" width="600" height="600" alt="HTTP Menu"></a>
-</div>
+![Http Menu](assets/sparkfun_datalogger_iot_http_menu.jpg)
 
 The options are:
 
@@ -84,19 +82,15 @@ The options are:
 * Set the URL for the endpoint
 * Set the name of the CA Cert file for a secure connection (HTTP)
 
-To set the HTTP URL/endpoint - select two (2) in the menu, and enter the URL. For this example, we'll enter: <kbd>http://mysparkfunexample.com:8091</kbd> .
+To set the HTTP URL/endpoint - select two (2) in the menu, and enter the URL. For this example, we'll enter: ```http://mysparkfunexample.com:8091```.
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_url.png"><img src="../assets/iot_http_url.png" width="600" height="600" alt="Enter a URL"></a>
-</div>
+![Enter a URL](assets/iot_http_url.png "Enter a URL")
 
 In the above example, the URL/HTTP Endpoint is on a server called `mysparkfunexample.com`, on port `8091`. Once set, the system will post data to this URL.
 
 If the endpoint is a secure ssl (HTTPS) connection, the certificate for the server is required. Because of the size of the certificates, the value is provided as a file that is loaded into the system by the attached SD card.
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_cert.png"><img src="../assets/iot_http_cert.png" width="600" height="600" alt="Cert Filename"></a>
-</div>
+![Cert filename](assets/iot_http_cert.png "Cert Filename")
 
 The above example show providing a certificate filename of `example.cer`.
 
@@ -170,9 +164,7 @@ node ./simple_http.js
 
 As data is sent by the DataLogger IoT, the following is output to the console from the server:
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_ex_http.png"><img src="../assets/iot_http_ex_http.png" width="600" height="600" alt="HTTP Output"></a>
-</div>
+![Http Output](assets/iot_http_ex_http.png "Http Output")
 
 ## Obtaining a Sites Security Certificate
 
@@ -180,20 +172,14 @@ Accessing a sites SSL/Secure Certificate is done via a web browser. The method f
 
 First, browse to the desired site/server. Click the Secure/Security area/button next to the URL to bring up the security detail page. On this page, select the *Connection is secure* menu option
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_cert_1.png"><img src="../assets/iot_http_cert_1.png" width="600" height="600" alt="cert step 1"></a>
-</div>
+![Cert Step 1](assets/iot_http_cert_1.png "Cert Step 1")
 
 Next, on the page shown, select the certificate button on the upper right of the dialog.
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_cert_2.png"><img src="../assets/iot_http_cert_2.png" width="600" height="600" alt="cert step 2"></a>
-</div>
+![Cert Step 2](assets/iot_http_cert_2.png "Cert Step 2")
 
 When you select this button, the certificate details dialog is displayed. On this page, select the *Details* tab, and select the *Export...* button on the lower right of the dialog. This will save the sites SSL/Security certificate to a location you specify.
 
-<div style="text-align: center">
-  <a href="../assets/iot_http_cert_3.png"><img src="../assets/iot_http_cert_3.png" width="600" height="600"  alt="cert step 3"></a>
-</div>
+![Cert Step 3](assets/iot_http_cert_3.png "Cert Step 3")
 
 Once saved, place this file on the SD card your system/DataLogger is using, and set the filename in the HTTP connection menu or settings JSON file.
