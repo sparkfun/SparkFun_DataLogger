@@ -70,16 +70,16 @@ To use this feature, ou will need to make sure that the ESP32 is on the same net
 
 Once the web server is enabled and the settings are saved, you will need to reboot the DataLogger IoT. As the DatLogger initializes, it will connect to your WiFi Network. Take note of the mDNS address, in this case, it was "`http://dataloggerAD6B8.local`".
 
-![DataLogger IoT Initializing, WiFi Connected, Web Server Enabled](assets/SparkFun_Datalogger_IoT_Initializing_WiFI_Connected_IoT_Web_Server_Enabled_v01p02p00.JPG)
+![DataLogger IoT Initializing, WiFi Connected, Web Server Enabled](assets/sparkfun_datalogger_iot_initializing_wifi_connected_iot_web_server_enabled_v01p02p00.jpg)
 
 Once the DataLogger IoT has finished initializing, open web browser. Connect the DataLogger IoT by entering the address "`http://dataloggerXXXXX.local`", where `XXXX` is the last 5x characters of your board ID. You will be presented with the log files available on the microSD card. Click on a log file to download and save it to your computer.
 
-![Viewing Available Log Files through a Web Browser](assets/iot_web_server-Chrome_Browser-Available_Log_Files.JPG)
+![Viewing Available Log Files through a Web Browser](assets/iot_web_server-chrome_browser-available_log_files.jpg)
 
 ### Using the DataLogger IoT IP Address
 
 If mDNS is not supported on your network, you can also enter the IP address of the Datalogger IoT into a web browser to view and download the log files. You can view the IP address when the DataLogger IoT is initializing. If you have administrative privileges to the WiFi Network, you can also view the IP address through your  WiFi router as well.
 
-![Viewing Available Log Files through a Web Browser using IP Address](assets/iot_web_server-Chrome_Browser-Available_Log_Files_IP_Address.JPG)
+![Viewing Available Log Files through a Web Browser using IP Address](assets/iot_web_server-chrome_browser-available_log_files_ip_address.jpg)
 
 Now that you have downloaded the log files, try graphing the data on a spreadsheet!
