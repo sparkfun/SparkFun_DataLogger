@@ -2,13 +2,13 @@
 icon: material/wifi
 ---
 
-
+# WiFi Network
 
 To take advantage of syncing the DataLogger to the Network Time Protocol (NTP), logging data to an IoT service, or updating firmware OTA, you will need to connect to a 2.4GHz WiFi network.
 
 **Note**  The DataLogger IoT boards can only connect to a 2.4GHz WiFi network.
 
-Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type <kbd>1</kbd> to enter the Settings menu. Then send a <kbd>4</kbd> to configure the WiFi settings.
+Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then select the WiFi Settings menu option to configure.
 
 ![WiFi Network Menu Options](assets/sparkfun_datalogger_iot_wifi_network_menu.jpg)
 
