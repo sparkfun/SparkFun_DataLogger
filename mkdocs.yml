@@ -59,6 +59,7 @@ theme:
 
     # Renders path for page navigation at top of the page (makes page navigation more mobile friendly)
     - navigation.path
+    - navigation.expand
 
   # Adds light/dark theme to the webpage
   palette:
