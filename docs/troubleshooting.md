@@ -32,7 +32,7 @@ The following error occurred when the DataLogger IoT was initializing with Thing
 [I] ThingSpeak MQTT: connecting to MQTT endpoint mqtt3.thingspeak.com:8883 .......[E] ThingSpeak MQTT: Connection Error [4]
 ```
 
-![Configuration entered incorrectly, DataLogger not connecting to IoT Service - ThingSpeak](assets/Incorrect_Configuration_Connection_Failed_IoT_Service_ThingSpeak.JPG)
+![Configuration entered incorrectly, DataLogger not connecting to IoT Service - ThingSpeak](assets/incorrect_configuration_connection_failed_iot_service_thingspeak.jpg)
 
 In this case, the DataLogger IoT failed to connect to ThingSpeak service because the credentials were entered incorrectly. Ensure that the  and saved in persistent memory in order for the DataLogger IoT to successfully connect.
 
@@ -49,7 +49,7 @@ The following error was occurred when the DataLogger IoT was initializing with A
 [E] Arduino IoT Cloud not available or account credentials incorrect
 ```
 
-![Configuration entered incorrectly, DataLogger not connecting to IoT Service](assets/Arduion_IoT_Error_Connecting_Incorrect_Configuration.JPG)
+![Configuration entered incorrectly, DataLogger not connecting to IoT Service](assets/arduion_iot_error_connecting_incorrect_configuration.jpg)
 
 In this case, the DataLogger IoT failed to connect to the Arduino Cloud service because the credentials were incorrect. Ensure that the credentials (i.e. API client ID, API secret, device secret, device ID) are entered correctly and saved in persistent memory in order for the DataLogger IoT to successfully connect.
 
@@ -83,21 +83,21 @@ In this case, the DataLogger IoT failed to connect to the Arduino Cloud service 
 
 If your DataLogger IoT is connected to ThingSpeak but you do not see any data, ensure that the device name matches the Qwiic device that is connect to the DataLogger IoT. For example, the DataLogger IoT and Qwiic-enabled ENS160 was able to connect to ThingSpeak as shown in the following image:
 
-![DataLogger Connected to ThingSpeak](assets/DataLogger_Connected_ThingSpeak.JPG)
+![DataLogger Connected to ThingSpeak](assets/datalogger_connected_thingspeak.jpg)
 
 However, there were no data points in any of the graphs as shown on ThingSpeak:
 
-![No Data Points in ThingSpeak Channel](assets/ThingSpeak_ENS160_No_Data.JPG)
+![No Data Points in ThingSpeak Channel](assets/thingspeak_ens160_no_data.jpg)
 
 If you head back into the configuration menu for the DataLogger's ThingSpeak channel, make sure that the ```<device name>``` matches the connected Qwiic device's name that was shown during initialization.  In this case, the device that was loaded and detected was **ENS160**. Then add the channel ID before saving the system settings.
 
-![Matching Device Name with Qwiic-Enabled ENS160 Breakout Board](assets/Device_Name_ENS160.JPG)
+![Matching Device Name with Qwiic-Enabled ENS160 Breakout Board](assets/device_name_ens160.jpg)
 
 > **NOTE** Only one device can be loaded per channel! ThingSpeak is not able graph two different devices in the same channel.
 
 Head back to your ThingSpeak Channel to verify that data is being plotted on the graphs.
 
-![ThingSpeak Outputting ENS160 Sensor Data on Graphs](assets/ThingSpeak_ENS160_with_Data.JPG)
+![ThingSpeak Outputting ENS160 Sensor Data on Graphs](assets/thingspeak_ens160_with_data.jpg)
 
 ### U-Blox Device Disappears when IoT DataLogger Initializes
 
@@ -107,6 +107,6 @@ If you have issues where a u-blox device that is connected via qwiic fails to co
 [W] GNSS::isConnected no traffic seen (first attempt)
 ```
 
-![No Satellite Lock... Bug](assets/No_GNSS_Satellite_Lock.PNG)
+![No Satellite Lock... Bug](assets/no_gnss_satellite_lock.png)
 
 If you see the following output and the IoT DataLogger not loading your u-blox device, you will need to [update the firmware to v01.00.03 and above](https://github.com/sparkfun/SparkFun_DataLogger/releases). For more information, make sure to check out the [tutorial on updating your IoT DataLogger's firmware](https://docs.sparkfun.com/SparkFun_DataLogger/updating_firmware/).
