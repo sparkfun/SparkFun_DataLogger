@@ -18,6 +18,9 @@ Once downloaded, insert the microSD card into a card reader or USB adapter. Then
 Once the files are copied to the memory card, eject the microSD card from your computer. Insert the card back into the DataLogger IoT's microSD card socket. Connect the DataLogger IoT to your computer using a USB cable.
 
 ![Insert MicroSD Card](assets/datalogger_iot_insert_microsd_card.jpg)
+
+Insert the USB Cable
+
 ![DataLogger IoT Connecting USB](assets/datalogger_iot_usb.jpg)
 
 Open a Serial Terminal, connect to the COM port that your DataLogger enumerated to, and set it to  **115200** baud. In this case, we connected to **COM13**. Press any key to enter the Main Menu. Type ```1``` to enter the Settings menu. Then select the System Update Menu. Finally, type ```3``` to update the firmware from the microSD card. You should see an image similar to the output below.
