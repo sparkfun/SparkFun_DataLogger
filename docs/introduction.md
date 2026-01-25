@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/information
----
+--- -->
 
 ![SparkFun DataLogger IoT]( assets/gh-banner-hug-datalogger.png)
 
