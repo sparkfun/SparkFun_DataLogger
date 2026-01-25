@@ -43,6 +43,9 @@ theme:
     # Enable Navigation buttons in the footer (i.e. previous/next)
     - navigation.footer
 
+    # show all section contents
+    - navigation.sections
+
     # Enables anchor tracking (updates page url with the section user is on)
     # i.e. https://docs.sparkfun.com/<page link>/#<sub-section>
     # - navigation.tracking
@@ -55,7 +58,7 @@ theme:
 
     # # Adds pop-up button just below the header (when the user starts to scroll up)
     # # Allows users to easily jump to the beginning of the page
-    # - navigation.top
+    - navigation.top
 
     # Renders path for page navigation at top of the page (makes page navigation more mobile friendly)
     - navigation.path
@@ -77,13 +80,13 @@ theme:
       accent: red
       scheme: default
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to system preference
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: black
-      accent: red
+      accent: blue
       scheme: slate
       toggle:
         icon: material/weather-night

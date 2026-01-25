@@ -2,6 +2,7 @@
 icon: material/download
 ---
 
+# Firmware Update
 
 ## Firmware Update - SD Card
 
