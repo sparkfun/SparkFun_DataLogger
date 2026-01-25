@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/gauge
----
+--- -->
 
 # DataLogger IoT Supported Devices
 

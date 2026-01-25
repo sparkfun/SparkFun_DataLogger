@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/help-circle-outline
----
+--- -->
 
 # Troubleshooting and Support
 

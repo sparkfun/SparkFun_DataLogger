@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/alert-circle-outline
----
+--- -->
 
 # Submitting an Issue or Suggestion
 

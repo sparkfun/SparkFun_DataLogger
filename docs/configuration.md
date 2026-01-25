@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/cog
----
+--- -->
 
 # Configuration
 

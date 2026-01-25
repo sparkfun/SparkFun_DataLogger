@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/web
----
+--- -->
 # The DataLogger IoT Web Server
 
 As of firmware v01.02.00, log files can be viewed and downloaded over a WiFi network! This saves you time by allowing you to download the files without the need to disconnect the DataLogger IoT and manually remove microSD card.

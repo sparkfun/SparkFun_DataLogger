@@ -1,7 +1,6 @@
----
+<!-- ---
 icon: material/all-inclusive-box
----
-
+--- -->
 
 # Creating and Connecting to an Arduino Cloud Device
 

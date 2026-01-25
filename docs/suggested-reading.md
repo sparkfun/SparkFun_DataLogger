@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/book-open-variant
----
+--- -->
 
 # Suggested Reading
 

@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/microsoft-azure
----
+--- -->
 
 # Creating and Connecting to an Azure IoT Device
 

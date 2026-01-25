@@ -1,6 +1,6 @@
----
+<!-- ---
 icon: material/aws
----
+--- -->
 
 # Creating and Connecting to an AWS IoT Device (Thing)
 

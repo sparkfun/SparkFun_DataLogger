@@ -1,7 +1,6 @@
----
+<!-- ---
 icon: material/package-variant-closed-plus
----
-
+--- -->
 
 # Contribute
 
