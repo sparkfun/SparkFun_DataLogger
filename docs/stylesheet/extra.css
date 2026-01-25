@@ -72,7 +72,7 @@ pre code {
 
 .md-typeset .admonitoin-title,
 .md-typset details {
-    background-color: transparent;
+    background-color: var(--md-default-bg-color);
 }
 
 /* ================================================================================== */
