@@ -43,9 +43,6 @@ theme:
     # Enable Navigation buttons in the footer (i.e. previous/next)
     - navigation.footer
 
-    # show all section contents
-    - navigation.sections
-
     # Enables anchor tracking (updates page url with the section user is on)
     # i.e. https://docs.sparkfun.com/<page link>/#<sub-section>
     # - navigation.tracking
@@ -72,7 +69,7 @@ theme:
       accent: red
       toggle:
         icon: material/brightness-auto
-        name: Switch to dark mode
+        name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -81,7 +78,7 @@ theme:
       scheme: default
       toggle:
         icon: material/weather-sunny
-        name: Switch to system preference
+        name: Switch to darkmode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -90,7 +87,7 @@ theme:
       scheme: slate
       toggle:
         icon: material/weather-night
-        name: Switch to light mode
+        name: Switch to system
 
   # Configures icons
   icon:

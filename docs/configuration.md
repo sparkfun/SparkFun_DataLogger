@@ -15,7 +15,8 @@ There are plenty of free alternatives out there to configure the DataLogger IoT.
 * Minicom (Linux, Unix, MacOS)
 * [Screen (Linux, Unix, MacOS)](https://learn.sparkfun.com/tutorials/terminal-basics/all#command-line-windows-mac-linux)
 
-> **NOTE** You will need a serial terminal client that supports edit characters. Most if not all modern serial terminal programs will have the ability to support interactive edits. Unfortunately, we have not had any success with CoolTerm. We have tested the DataLogger IoT with Tera Term, Minicom, and Screen.
+!!! note
+     A serial terminal client that supports edit characters is required. Most if not all modern serial terminal programs will have the ability to support interactive edits. We have tested the DataLogger IoT with the Tera Term application, ```minicom``` command, and the ```screen``` command.
 
 If this is the your first time using a terminal window, We recommend checking out the [Serial Terminal Basics](https://learn.sparkfun.com/tutorials/terminal-basics) tutortial.
 
