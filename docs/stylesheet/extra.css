@@ -67,6 +67,7 @@ pre code {
 .md-typeset details {
     border-width: 0;
     border-left-width: 4px;
+    box-shadow: none;
 }
 
 /* ================================================================================== */
