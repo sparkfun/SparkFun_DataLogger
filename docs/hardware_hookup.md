@@ -16,7 +16,7 @@ If all you want to do is display your sensor readings in a serial terminal or mo
 
 You probably already have a microSD card laying around but if you need any additional units, we have plenty [in the store](https://www.sparkfun.com/products/15107). The DataLogger IoT can use any size microSD card as long as it is formatted correctly. Please ensure your SD card is formatted correctly. There are different software tools available. Some are built into your operating system. We recommend using the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/) to easily format the memory card as FAT32 using the GUI. Flip over the DataLogger IoT and you’ll see the latching microSD card socket. Slide in your formatted SD card and it will click neatly into place. Part of the edge of the SD card will stick out when fully inserted in the microSD card socket.
 
-!!! note "SD Card Insertion and Removal"
+!!! warning "SD Card Insertion and Removal"
 
     Only insert or remove the SD card while the **power is turned off or disconnected**. Removal while in use could result in data corruption. Insertion is not detected when the DataLogger is powered on and running.
 
