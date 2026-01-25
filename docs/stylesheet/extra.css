@@ -71,14 +71,10 @@ pre code {
 }
 
 .md-typeset .admonition-title,
-.md-typset summary {
-    background-color: var(--md-default-bg-color);
+.md-typeset summary {
+    background-color: transparent;
 }
 
-/* .md-typeset .code>.admonition-title,
-.md-typeset .code>summary {
-    background-color: rgba(158, 158, 158, 0.1);
-} */
 /* ================================================================================== */
 /* Custom Admonitions                                                                 */
 /* ================================================================================== */
