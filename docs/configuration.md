@@ -29,7 +29,7 @@ The above guides will show you how to open the correct port for the DataLogger I
 
 Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. As of firmware **v1.0.2.00 - build 00013e**, a **Startup Menu** was added to the system. This allows you to change the behavior of the DataLogger at start-up. This change only affects the current system session.
 
-![Output when DataLogger IoT - 9DoF Start-up menu](assets/sparkfun_datalogger_iot-esp32_start-up_menu.jpg)
+![Output when DataLogger IoT - 9DoF Start-up menu](assets/sfe-datalogger-startup-menu.png)
 /// caption
 Startup Menu Options
 ///
@@ -44,7 +44,7 @@ The amount of time the start-up menu is displayed is adjustable. This settings c
 
 You should see the following output when the board initializes:
 
-![Output when DataLogger IoT - 9DoF is initializing](assets/sparkfun_datalogger_iot_initializing_v1p02p00.jpg)
+![Output when DataLogger IoT - 9DoF is initializing](assets/sfe-datalogger-startup-about.png)
 /// caption
 Startup Output Information
 ///
@@ -79,14 +79,14 @@ Compact Startup Mode Output
 
 Once the DataLogger IoT has initialized, the DataLogger IoT will begin outputting comma separated values (CSV). This is the default output that is set for the DataLogger IoT - 9DoF. Of course, you will not have as many readings on the DataLogger IoT since the 6DoF IMU and magnetometer are not populated on that version of the board.
 
-![CSV Output on the DataLogger IoT - 9DoF v01.02.00](assets/sparkfun_datalogger_iot_output_v1p02p00.jpg)
+![CSV Output on the DataLogger IoT - 9DoF v01.02.00](assets/sfe-datalogger-csv-output.png)
 /// caption
 CSV Output to the Serial Console
 ///
 
 Depending on your DataLogger IoT preferences, your device may output as a JSON format like the image shown below.
 
-![JSON Output on the DataLogger -IoT - 9DoF](assets/sparkfun_datalogger_iot_output_json_v01p02p00.jpg)
+![JSON Output on the DataLogger -IoT - 9DoF](assets/sfe-datalogger-json-output.png)
 /// caption
 JSON Output to the Serial Console
 ///
