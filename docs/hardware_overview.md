@@ -22,7 +22,7 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
 * The "35 / A7" PTH on the edge of the board is replace with a "5" PTH.
 
 ![Datalogger IoT (Top View)](assets/sfe-datalogger-top-bottom.png)
-///
+/// caption
 DataLogger IoT
 ///
 
@@ -31,6 +31,9 @@ DataLogger IoT
 The DataLogger IoT is populated with [Espressif's ESP32-WROOM-32E module](https://www.sparkfun.com/products/17830). Espressif's ESP32 WROOM ubiquitous IoT microcontroller is a powerful WiFi, BT, and BLE MCU module that targets a wide variety of applications. For the DataLogger IoT, the firmware currently utilizes the WiFi feature.
 
 ![ESP32-Wroom Highlighted On The Datalogger Iot - 9dof](assets/20594-sparkfun_datalogger_iot-esp32.jpg)
+/// caption
+ESP32 WROOM Module on the DataLogger
+///
 
 ## Power
 
@@ -47,9 +50,10 @@ The DataLogger IoT comes equipped with a USB type C socket which you can use to 
 
 There is also a **5V** power input pin. You can use this to feed in 5V power from an external source. The maximum voltage is **6.0V**. The 5V pin is diode-protected and so is the USB-C power input, so it is OK to have both connected at the same time. This pin is ideal if you want to power your DataLogger from regulated solar power or a different type of power supply. You can not use the 5V pin as an output.
 
-![USB C Connector, 3.3V Voltage Regulator, 5V PTH](assets/20594-sparkfun_datalogger_iot-esp32_top_power_in_usb_5v_pth.jpg)
-
-![5V PTH](assets/20594-sparkfun_datalogger_iot-esp32_bottom_power_in_5v_pth.jpg)
+![USB C Connector, 3.3V Voltage Regulator, 5V PTH](assets/sfe-datalogger-over-power.png)
+/// caption
+DataLogger IoT Power- USB-C and 5v
+///
 
 Voltage from the USB is regulated down to the XC6222 **3.3V**/700mA voltage regulators for the system voltage and Qwiic-enabled devices. USB power is also connected to the MCP73831 to charge a single cell LiPo battery at a default rate of **500mA**.
 
@@ -60,29 +64,39 @@ For customers in North America, our [NEMA Raspberry Pi Wall Adapter](https://www
 
 ### LiPo Battery Input, Charger, and Fuel Gauge
 
-**Battery Polarity:*** Please make sure that you use one of our recommended Lithium Ion batteries. Some batteries use the same JST connector as ours but have the[opposite polarity](https://learn.sparkfun.com/tutorials/polarity/all#other-polarized-components). Connecting one of these to your DataLogger IoT will destroy it. If you are going to use your own battery, it is up to you to ensure it has the correct polarity.
+But of course you’re going to want to use the DataLogger IoT to log sensor data while on the move too. You can connect one of our [standard single cell LiPo batteries](https://www.sparkfun.com/products/13855) to the DataLogger IoT and power it for hours, days or weeks depending on what sensors you have attached and how often you log data.
 
-But of course you’re going to want to use the DataLogger IoT to log sensor data while on the move too. You can connect one of our [standard single cell LiPo batteries](https://www.sparkfun.com/products/13855) to the DataLogger IoT and power it for hours, days or weeks depending on what sensors you have attached and how often you log data. The DataLogger IoT uses the built-in MCP73831 charger too which will charge your battery at 500mA when USB-C is connected. Please make sure your battery capacity is at least **500mAh** (0.5Ah); bad things will happen if you try to charge our smallest batteries at 500mA. The board also includes the MAX17048 LiPo Fuel Gauge which allows you to determine how much power your LiPo battery has available. The 2-pin JST connector pins are broken out to PTHs on the edge of the board if you decide to solder a single cell LiPo battery directly to the board or power another device.
+The DataLogger IoT uses the built-in MCP73831 charger too which will charge your battery at 500mA when USB-C is connected. Please make sure your battery capacity is at least **500mAh** (0.5Ah).
 
-![LiPo Charger And Fuel Gauge Circuit Highlighted On The Datalogger Iot - 9dof (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_max17043_fuel_gauge_lipo_charger_mcp73831_battery_input.jpg)
+The board also includes the MAX17048 LiPo Fuel Gauge which allows you to determine how much power your LiPo battery has available.
 
-![LiPo Charger and Fuel Gauge Circuit Highlighted on the DataLogger IoT - 9DoF (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_battery_input.jpg)
+The 2-pin JST connector pins are broken out to PTHs on the edge of the board if you decide to solder a single cell LiPo battery directly to the board or power another device.
+
+!!! warning "Battery Polarity"
+    Make sure that you use one of our recommended Lithium Ion batteries. Some batteries use the same JST connector as ours but have the[opposite polarity](https://learn.sparkfun.com/tutorials/polarity/all#other-polarized-components). Connecting one of these to your DataLogger IoT will destroy it. If you are going to use your own battery, it is up to you to ensure it has the correct polarity.
+
+![LiPo Charger And Fuel Gauge Circuit Highlighted On The Datalogger IoT](assets/sfe-datalogger-battery-inputs.png)
+///caption
+LiPo Charger, Fuel Guage and Battery Connections
+///
 
 ### 3V3 Pins
 
 For those going the old school route, you can also bypass the voltage regulators by [soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering) directly to the 3V3 and GND pin to provide power if your application has a regulated 3.3V. Note that this is only connected to the system voltage. You will also need to provide power to the 3V3 SWCH or Qwiic-enabled devices should you decide to bypass the voltage regulator.
 
-![3.3V Voltage Regulators, PTHs, and Qwiic Connectors Highlighted on the DataLogger IoT - 9DoF (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_3v3_system_qwiic.jpg)
-
-**3.3V Voltage Regulators, PTHs, and Qwiic Connectors Highlighted on the DataLogger IoT - 9DoF (Top View)**
-
-![3.3V Voltage Regulators, PTHs, and Qwiic Connectors Highlighted on the DataLogger IoT - 9DoF (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_3v3_system_qwiic.jpg)
+![3.3V Voltage Regulators, PTHs, and Qwiic Connectors Highlighted on the DataLogger IoT](assets/sfe-datalogger-3v3-system.png)
+/// caption
+3.3V Voltage Regulators, PTHs, and Qwiic Connectors
+///
 
 ## CH340 USB-to-Serial Converter
 
 The top side of the board includes a CH340 USB-to-Serial Converter. The chip can be used to send serial data between the device and computer. You can view the output or configure the device through a serial terminal.
 
-![Ch340 highlighted on the datalogger iot - 9dof (top view)](assets/20594-sparkfun_datalogger_iot-esp32_top_ch340_usb-to-serial.jpg)
+![CH340 highlighted on the DataLogger IoT](assets/20594-sparkfun_datalogger_iot-esp32_top_ch340_usb-to-serial.jpg)
+/// caption
+CH340 USB-to-Serial Converter IC
+///
 
 The driver should automatically install on most operating systems. However, there is a wide range of operating systems out there. You may need to install drivers the first time you connect the chip to your computer's USB port or when there are operating system updates. For more information, check out our [How to Install CH340 Drivers Tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers).
 
@@ -93,27 +107,31 @@ The hardware serial UART pins are broken out on the edge of the board. For more 
 * **TXD**: UART transmit pin. This is connected to pin `16`.
 * **RXD**: UART receive pin. This is connected to pin `17`.
 
-![Uart Pins Highlighted On The Datalogger Iot - 9dof (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_uarts.jpg)
+![Uart Pins Highlighted On The Datalogger Iot](assets/sfe-datalogger-uarts.png)
+/// caption
+UART Pins Highlighted On The DataLogger IoT
+///
 
-![Uart pins highlighted on the datalogger iot - 9dof (bottom view)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_uart.jpg)
-
-## Qwiic and I<sup>2</sup>C
-
-!!! note
-    You may notice a thin film over the vertial Qwiic connector. This is used by a pick-and-place machine when populating the component on the board before it goes through the reflow oven. This can be removed if you decide to use the vertical Qwiic connector with Qwiic-enabled devices.
+## Qwiic
 
 [SparkFun's Qwiic Connect System](https://www.sparkfun.com/qwiic) uses 4-pin JST style connectors to quickly interface development boards with I<sup>2</sup>C sensors and more. No soldering required and there's no need to worry about accidentally swapping the SDA and SCL wires. The Qwiic connector is polarized so you know you’ll have it wired correctly every time, right from the start. Qwiic boards are daisy chain-able too so you can connect multiple sensors to the DataLogger IoT and log readings from all of them.
 
+!!! note "Vertical qwiic Connector"
+    You may notice a thin film over the vertial Qwiic connector. This is used by a pick-and-place machine when populating the component on the board before it goes through the reflow oven. Remove this film before using the vertical qwiic connector
+
 The board is populated with vertical and horizontal Qwiic connectors. These are also broken out to PTHs on the edge of the board.
 
-![Qwiic Connector And I2C PTH Highlighted On The Datalogger Iot - 9Dof (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_qwiic_i2c.jpg)
+![Qwiic Connector And I2C PTH Highlighted](assets/sfe-datalogger-over-qwiic.png)
+/// caption
+Qwiic Connector And I2C PTH Highlighted
+///
 
-![Qwiic Connector and I2C PTH Highlighted on the DataLogger IoT - 9DoF (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_qwiic_i2c.jpg)
-
-* **SCL**: I<sup>2</sup>C clock pin. This is connected to pin `22` and a 2.2k&ohm; pull-up resistor.
-* **SDA**: I<sup>2</sup>C data pin. This is connected to pin `21` and a 2.2k&ohm; pull-up resistor.
-* **3V3 SW**: The 3.3v pin is connected to the XC6222 voltage regulator's output to power the Qwiic devices.
-* **GND**: Common, ground voltage (0V reference) for the system
+|Pin|Description|
+|--|--|
+|**SCL**|I<sup>2</sup>C clock pin. This is connected to pin `22` and a 2.2k&ohm; pull-up resistor.|
+|**SDA**|I<sup>2</sup>C data pin. This is connected to pin `21` and a 2.2k&ohm; pull-up resistor.|
+|**3V3 SW**|The 3.3v pin is connected to the XC6222 voltage regulator's output to power the Qwiic devices.|
+|**GND**|Common, ground voltage (0V reference) for the system|
 
 Connected to the line I<sup>2</sup>C line is the MAX17048 LiPo fuel gauge (7-bit unshifted address = **0x36**).
 
