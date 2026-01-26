@@ -72,7 +72,7 @@ The messages in the serial terminal provide us with the DataLogger's configurati
 
 As of firmware v01.02.00, there is also a compact mode! By adjusting the setting, the ESP32 will output less at startup. This settings can be configured in the **Settings/Application Settings** page, under the Advanced section.
 
-![Output when DataLogger IoT - 9DoF is initializing, compact](assets/sparkfun_datalogger_iot_initializing_compactv1p02p00.jpg)
+![Output when DataLogger IoT - 9DoF is initializing, compact](assets/sfe-datalogger-compact-startup.png)
 /// caption
 Compact Startup Mode Output
 ///
