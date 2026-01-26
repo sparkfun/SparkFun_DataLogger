@@ -29,7 +29,7 @@ Format of exFat - Not Compatable
 The format should be ```FAT32```
 
 ![FAT32 Format](assets/microsd_card_check_file_system_fat32.jpg)
-///
+/// caption
 FAT32 Format - Compatable with the DataLogger IoT
 ///
 
@@ -65,21 +65,29 @@ There are a few methods and programs available to reformat your microSD card as 
 After downloading and installing the software, open the Raspberry Pi Imager.
 
 ![Raspberry Pi Imager](assets/raspberry_pi_imager.jpg)
+/// caption
+Raspberry Pi Imager
+///
 
 Under "**Operating System**", select "**Erase**" to "format card as FAT32."
 
 ![Raspberry Pi Imager - Erase : Format as FAT32](assets/raspberry_pi_imager_erase_format.jpg)
+/// caption
+Select 'ERASE' for Operating System
+///
 
 Under "**Storage**", select the drive that the microSD card appeared as on your computer.
 
 ![Raspberry Pi Imager - Select Storage Drive](assets/raspberry_pi_imager_select_drive.jpg)
+/// caption
+Storage is the SD Card
+///
 
 When ready, select "**Write**". After a few minutes, the microSD card should be formatted with FAT32.
 
 ![Raspberry Pi Imager - Write](assets/raspberry_pi_imager_write.jpg)
+/// caption
+Writing/Reformatting the SD Card
+///
 
-Once the memory card has finished formatting, eject the microSD from your computer. To check to see if the microSD card is formatted as FAT32, you can check its properties as explained earlier with your operating system. Below shows a screenshot from a Windows and macOS showing that the microSD card reformatted as a FAT32 file system.
-
-![Check File System Windows](assets/microsd_card_check_file_system_fat32.jpg)
-
-![Check File System macOS](assets/mac_microsd_fat32.png)
+Once the memory card has finished formatting, eject the microSD from your computer. To check to see if the microSD card is formatted as FAT32, you can check its properties as explained earlier with your operating system.
