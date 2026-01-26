@@ -150,7 +150,7 @@ As of firmware v01.02.00, commands can be executed directly from the serial cons
 
 Typing a quick command and hitting the ```Enter``` button will result in the DataLogger IoT executing the command without the need to go through the menu system. Below is an example showing the `!about` quick command being sent and then executing the command as the DataLogger IoT is outputting CSV values to the serial terminal.
 
-![Quick Command Entered](assets/sparkfun_datalogger_iot_output_quick_command.jpg)
+![Quick Command Entered](assets/sfe-datalogger-quick-cmd.png)
 /// caption
 Enter a quick command
 ///
@@ -186,7 +186,7 @@ Timeout in the Menu
 
 Let's start by configuring the DataLogger's system settings. Send a ```1``` through the serial terminal. You will have the option to adjust various settings ranging from the your preferences, time source to synchronize the date and time, WiFi network, how the device logs data, which IoT service to use, and firmware updates.
 
-![settings menu options](assets/sparkfun_datalogger_iot_settings_menu_v01p02p00.jpg)
+![settings menu options](assets/sfe-datalogger-settings-menu.png)
 /// caption
 The Settings Menu
 ///
@@ -198,10 +198,11 @@ We'll go over each of these options below.
 
 ### General: Application Settings
 
-In the Settings Menu, send a ```1``` to adjust the Application Settings. As of firmware v01.00.02, users can now adjust the baud rate of the serial console output and the menu system's timeout value.
-![application settings options](assets/sparkfun_datalogger_iot_applications_settings_menu_2-v01p02p00.jpg)
+In the Settings Menu, send a ```1``` to adjust the Application Settings.
+
+![application settings options](assets/sfe-datalogger-app-menu.png)
 /// caption
-Settings Menu for Version 1.0.2 of the Firmware
+Application Settings Menu
 ///
 
 In the Application Settings Menu, users will be able to configure the addressable RGB's LED through software, menu timeout, microSD card's output format, serial console's output format, terminal's baud rate, deep sleep parameters, and view the current settings of the DataLogger IoT similar to when the board was initialized. Depending on your preference and how you are logging data, you can adjust the data as CSV or JSON.
@@ -350,355 +351,249 @@ If you saved your preferences to a JSON file on your microSD card's root directo
 
 ### Network: NTP Client
 
-In the Settings menu, send a ```5``` to adjust the NTP Client settings. As of firmware v01.01.01, time zone support is at the clock level, not tied to the NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
+In the Settings menu, select the NTP Client settings.
+
 ![NTP Client Menu Options](assets/sparkfun_datalogger_iot_ntp_client_menu.jpg)
+/// caption
+NTP Client
+///
 
 In this menu, users will have the option to enable/disable the NTP client, select the primary/secondary server, or adjust the time zone for your area.
 
-* ```1``` **Enabled** - Enable or Disable the NTP Client
-  * Accepts a boolean value:
-    * ```1``` to enable _(default)_
-    * ```0``` to disable
-* ```2``` **NTP Server One** - The primary NTP Server to use
-  * Accepts a string:
-    * ```time.nist.gov``` _(default)_
-* ```3``` **NTP Server Two** -  The secondary NTP Server to use
-  * Accepts a string:
-    * ```pool.ntp.org``` _(default)_
-* ```b``` **Back**
+* **Enabled** - Enable or Disable the NTP Client
+* **NTP Server One** - The primary NTP Server to use
+* **NTP Server Two** -  The secondary NTP Server to use
 
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
+When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. S
 
 ### Logging: Logger
 
-In the Settings menu, send a ```6``` to adjust how data is logged.
+In the Settings menu, select the Logger menu to adjust how data is logged.
 ![Logger Menu Options](assets/sparkfun_datalogger_iot_logger_menu_v01p02p00.jpg "Logger Menu Options")
+/// caption
+Logger Menu Options
+///
 
 In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
 
-* ```1``` **Timestamp Mode** - Enable timestamp output and set the format of a log entry timestamp
-  * ```1``` for no timestamp _(default)_ = 0
-  * ```2``` for milliseconds since program start = 1
-  * ```3``` for seconds since Epoch = 2
-  * ```4``` for Date Time - USA Date format = 3
-  * ```5``` for Date Time = 4
-  * ```6``` for ISO08601 Timestamp = 5
-  * ```7``` for ISO08601 Timestamp with Time Zone = 6
-* ```2``` **Sample Numbering** - An incremental count of the current log entry
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```3``` **Numbering Increment** - Increment amount for Sample Numbering
-  * Accepts an unsigned integer between ```1``` to ```10000```:
-    * ```1``` _(default)_
-* ```4``` **Output ID** - Include the Board ID in the log output _(added as of firmware v01.02.00)_
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```5``` **Output Name** - Include the Board Name in the log output _(added as of firmware v01.02.00)_
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```6``` **Rate Metric** - Enable to record the logging rate data _(added as of firmware v01.02.00)_
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```7``` **SD Card Format** - Enable and set the output format
-  * Accepts an integer:
-    * ```1``` to disable  = 0
-    * ```2``` CSV format  = 1 _(default)_
-    * ```3``` JSON format = 2
-* ```8``` **Serial Console Format** - Enable and set the output format
-  * Accepts an integer:
-    * ```1``` to disable  = 0
-    * ```2``` CSV format  = 1 _(default)_
-    * ```3``` JSON format = 2
-* ```9``` **System Info** - Log system information _(added as of firmware v01.02.00)_
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```10``` **Reset Sample Counter** - Reset the sample number counter to the provided value
-  * Accepts an unsigned integer between ```0``` to ```10000```:
-    * ```0``` _(default)_
-* ```b``` **Back**
+* **Timestamp Mode** - Enable timestamp output and set the format of a log entry timestamp
+* **Sample Numbering** - An incremental count of the current log entry
+* **Numbering Increment** - Increment amount for Sample Numbering
+* **Output ID** - Include the Board ID in the log output _(added as of firmware v01.02.00)_
+* **Output Name** - Include the Board Name in the log output _(added as of firmware v01.02.00)_
+* **Rate Metric** - Enable to record the logging rate data _(added as of firmware v01.02.00)_
+* **SD Card Format** - Enable and set the output format
+* **Serial Console Format** - Enable and set the output format
+* **System Info** - Log system information _(added as of firmware v01.02.00)_
+* **Reset Sample Counter** - Reset the sample number counter to the provided value
+  
+When finished, you will need to exit the menus so that the DataLogger IoT saves the changes.
 
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
-
-Press the reset button or cycle power to restart the DataLogger IoT. You can also go through the menu and reset the device through software as well. Below is an example with the ISO08601 time that was added to the output.
+Below is an example with the ISO08601 time that was added to the output.
 
 ![DataLogger IoT Re-Initializing and Outputting Time in ISO08601 Time Format](assets/sparkfun_datalogger_iot_output_timestamp.jpg)
+/// caption
+Outputting Time in ISO08601 Time Format
+///
 
 ### Logging: Logging Timer
 
-In the Settings menu, send an ```7``` to adjust the Logging Timer.
-![Logging Timer Menu Options](assets/sparkfun_datalogger_iot_logger_timer_menu.jpg "Logging Timer Menu Options")
+In the Settings menu,  select the Timer option adjust the Logging Timer.
+![Logging Timer Menu Options](assets/sparkfun_datalogger_iot_logger_timer_menu.jpg )
+/// caption
+Logging Timer Menu Options
+///
 
 Adjusting the interval for the Logging Timer will change the amount of time between log entries.
 
-* ```1``` **Interval** - The timer interval in milliseconds
-  * Accepts an integer:
-    * ```15000``` milliseconds _(default)_
-* ```b``` **Back**
-
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
+* **Interval** - The timer interval in milliseconds
 
 ### Logging: Data File
 
-In the Settings menu, send an ```8``` to adjust the Logging Data File.
-![Data File Menu Options](assets/sparkfun_datalogger_iot_file_rotation_menu.jpg "Data File Menu Options")
+In the Settings menu, select the Data File Menu Item to adjust the Logging Data File.
+
+![Data File Menu Options](assets/sparkfun_datalogger_iot_file_rotation_menu.jpg )
+/// captions
+Data File Menu Options
+///
 
 Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card. For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. The DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
 
-* ```1``` **Rotate Period** - Time between file rotation
-  * Accepts the following values:
-    * ```1``` for 6 hours = 6
-    * ```2``` for 12 hours  = 12
-    * ```3``` for 1 day (24 hours)  = 24 _(default)_
-    * ```4``` for 2 days (48 hours)  = 48
-    * ```5``` for 1 week (168 hours)  = 168
-* ```2``` **File Start Number** - The number the filename rotation starts with
-  * Accepts an unsigned integer:
-    * ```1``` _(default)_
-* ```3``` **Filename Prefix** - The prefix string for the generated filenames
-  * Accepts a string:
-    * ```sfe``` _(default)_
-* ```b``` **Back**
-
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
+* **Rotate Period** - Time between file rotation
+* **File Start Number** - The number the filename rotation starts with
+* **Filename Prefix** - The prefix string for the generated filenames
 
 The contents of the file will depend on how the data was saved (either CSV or JSON). Make sure that the SD Card format is enabled to either CSV or JSON with your desired device outputs turned on so that the DataLogger can save the readings.
 
 When removing the microSD card, make sure to remove your power source. Then insert into it into microSD card adapter or USB reader. When connecting the memory card to your computer, you can use a text editor to view the saved readings. In this case, a Windows operating system was viewing the file **sfe0000.txt** and it was only file available in the microSD card.
+
 ![Readings Saved In Text File Shown In A Windows File Explorer](assets/datalogger_iot_text_file.jpg)
+/// caption
+Reading data value from Text File
+///
+
+## IoT Services
+
+To access the available IoT Services, select the `IoT Services` menu option in the main menu
 
 ### IoT Services: MQTT Client
 
-In the Settings menu, send an ```9``` to adjust settings for the MQTT Client.
-![MQTT Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_client_menu.jpg "MQTT Client Menu Options")
+In the Settings menu, select the MQTT Client.
 
-* ```1``` **Enabled** - Enable or Disable MQTT Client
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Port** - The MQTT broker port to connect to
-  * Accepts an unsigned integer:
-    * ```1883``` _(default)_
-* ```3``` **Server** - The MQTT server to connect to
-  * Accepts a string
-* ```4``` **MQTT Topic** - The MQTT  topic to publish to
-  * Accepts a string
-* ```5``` **Client Name** - Name of this device used for MQTT Communications
-  * Accepts a string
-* ```6``` **Username** - Username to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```7``` **Password** - Password to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```8``` **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
-  * Accepts an unsigned int16:
-    * ```0``` for dynamic buffer size _(default)_
-* ```b``` **Back**
+![MQTT Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_client_menu.jpg )
+///caption
+MQTT Client Menu Options
+///
+
+* **Enabled** - Enable or Disable MQTT Client
+* **Port** - The MQTT broker port to connect to
+* **Server** - The MQTT server to connect to
+* **MQTT Topic** - The MQTT  topic to publish to
+* **Client Name** - Name of this device used for MQTT Communications
+* **Username** - Username to connect to an MQTT broker, if required.
+* **Password** - Password to connect to an MQTT broker, if required.
+* **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
 
 ### IoT Services: MQTT Secure Client
 
-In the Settings menu, send an ```10``` to adjust settings for the MQTT Secure Client.
-![MQTT Secure Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_secure_client_menu.jpg "MQTT Secure Client Menu Options")
+In the Settings menu, select the MQTT Secure Client.
 
-* ```1``` **Enabled** - Enable or Disable MQTT Secure Client
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Port** - The MQTT broker port to connect to
-  * Accepts an unsigned integer:
-    * ```8883``` _(default, as of firmware v01.00.04)_
-* ```3``` **Server** - The MQTT server to connect to
-  * Accepts a string
-* ```4``` **MQTT Topic** - The MQTT  topic to publish to
-  * Accepts a string
-* ```5``` **Client Name** - Name of this device used for MQTT Communications
-  * Accepts a string
-* ```6``` **Username** - Username to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```7``` **Password** - Password to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```8``` **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
-  * Accepts an unsigned int16:
-    * ```0``` for dynamic buffer size _(default)_
-* ```9``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```10``` **Client Cert Filename** - The File to load the client certificate from
-  * Accepts a string
-* ```11``` **Client Key Filename** - The File to load the client key from
-  * Accepts a string
-* ```b``` **Back**
+![MQTT Secure Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_secure_client_menu.jpg)
+/// caption
+MQTT Secure Client Menu Options
+///
+
+* **Enabled** - Enable or Disable MQTT Secure Client
+* **Port** - The MQTT broker port to connect to
+* **Server** - The MQTT server to connect to
+* **MQTT Topic** - The MQTT  topic to publish to
+* **Client Name** - Name of this device used for MQTT Communications
+* **Username** - Username to connect to an MQTT broker, if required.
+* **Password** - Password to connect to an MQTT broker, if required.
+* **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
+* **CA Cert Filename** - The File to load the certificate from
+* **Client Cert Filename** - The File to load the client certificate from
+* **Client Key Filename** - The File to load the client key from
 
 ### IoT Services: AWS IoT
 
-In the Settings menu, send an ```11``` to adjust settings for the AWS IoT.
+In the Settings menu, select AWS IoT.
 
-![AWS IoT Menu Options](assets/sparkfun_datalogger_iot_aws_menu.jpg "AWS IoT Menu Options")
+![AWS IoT Menu Options](assets/sparkfun_datalogger_iot_aws_menu.jpg)
+/// caption
+AWS IoT Menu Options
+///
 
-* ```1``` **Enabled** - Enable or Disable AWS IoT
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Port** - The MQTT broker port to connect to
-  * Accepts an unsigned integer:
-    * ```8883``` _(default, as of firmware v01.00.04)_
-* ```3``` **Server** - The MQTT server to connect to
-  * Accepts a string
-* ```4``` **MQTT Topic** - The MQTT  topic to publish to
-  * Accepts a string
-    * **$aws/things//shadow/update** _(default)_
-* ```5``` **Client Name** - Name of this device used for MQTT Communications
-  * Accepts a string
-* ```6``` **Username** - Username to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```7``` **Password** - Password to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```8``` **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
-  * Accepts an unsigned int16:
-    * ```0``` for dynamic buffer size _(default)_
-* ```9``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```10``` **Client Cert Filename** - The File to load the client certificate from
-  * Accepts a string
-* ```11``` **Client Key Filename** - The File to load the client key from
-  * Accepts a string
-* ```b``` **Back**
+* **Enabled** - Enable or Disable AWS IoT
+* **Port** - The MQTT broker port to connect to
+* **Server** - The MQTT server to connect to
+* **MQTT Topic** - The MQTT  topic to publish to
+* **Client Name** - Name of this device used for MQTT Communications
+* **Username** - Username to connect to an MQTT broker, if required.
+* **Password** - Password to connect to an MQTT broker, if required.
+* **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
+* **CA Cert Filename** - The File to load the certificate from
+* **Client Cert Filename** - The File to load the client certificate from
+* **Client Key Filename** - The File to load the client key from
 
 ### IoT Services: ThingSpeak MQTT
 
-In the Settings menu, send an ```12``` to adjust settings for ThingSpeak MQTT
-![ThingSpeak MQTT Menu Options](assets/sparkfun_datalogger_iot_thingspeak_mqtt_menu.jpg "ThingSpeak MQTT Menu Options")
+In the Settings menu, select  ThingSpeak MQTT
 
-* ```1``` **Enabled** - Enable or Disable ThingSpeak MQTT
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Port** - The MQTT broker port to connect to
-  * Accepts an unsigned integer:
-    * ```8883``` _(default, as of firmware v01.00.04)_
-* ```3``` **Server** - The MQTT server to connect to
-  * Accepts a string
-* ```4``` **MQTT Topic** - The MQTT  topic to publish to
-  * Accepts a string
-* ```5``` **Client Name** - Name of this device used for MQTT Communications
-  * Accepts a string
-* ```6``` **Username** - Username to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```7``` **Password** - Password to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```8``` **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
-  * Accepts an unsigned int16:
-    * ```0``` for dynamic buffer size _(default)_
-* ```9``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```10``` **Client Cert Filename** - The File to load the client certificate from
-  * Accepts a string
-* ```11``` **Client Key Filename** - The File to load the client key from
-  * Accepts a string
-* ```12``` **Channels** - Comma separated list of ```<device name>=<thingspeak channel ID>```
-  * Accepts a string
-* ```b``` **Back**
+![ThingSpeak MQTT Menu Options](assets/sparkfun_datalogger_iot_thingspeak_mqtt_menu.jpg)
+/// caption
+ThingSpeak MQTT Menu Options
+///
+
+* **Enabled** - Enable or Disable ThingSpeak MQTT
+* **Port** - The MQTT broker port to connect to
+* **Server** - The MQTT server to connect to
+* **MQTT Topic** - The MQTT  topic to publish to
+* **Client Name** - Name of this device used for MQTT Communications
+* **Username** - Username to connect to an MQTT broker, if required.
+* **Password** - Password to connect to an MQTT broker, if required.
+* **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
+* **CA Cert Filename** - The File to load the certificate from
+* **Client Cert Filename** - The File to load the client certificate from
+* **Client Key Filename** - The File to load the client key from
+* **Channels** - Comma separated list of ```<device name>=<thingspeak channel ID>```
 
 ### IoT Services: Azure IoT
 
-In the Settings menu, send an ```13``` to adjust settings for the Azure IoT.
-![Azure IoT Menu Options](assets/sparkfun_datalogger_iot_azure_menu.jpg "Azure IoT Menu Options")
+In the Settings menu, select Azure IoT.
 
-* ```1``` **Enabled** - Enable or Disable Azure IoT
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Port** - The MQTT broker port to connect to
-  * Accepts an unsigned integer:
-    * ```8883``` _(default, as of firmware v01.00.04)_
-* ```3``` **Server** - The MQTT server to connect to
-  * Accepts a string
-* ```4``` **MQTT Topic** - The MQTT  topic to publish to
-  * Accepts a string
-* ```5``` **Client Name** - Name of this device used for MQTT Communications
-  * Accepts a string
-* ```6``` **Username** - Username to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```7``` **Password** - Password to connect to an MQTT broker, if required.
-  * Accepts a string
-* ```8``` **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
-  * Accepts an unsigned int16:
-    * ```0``` for dynamic buffer size _(default)_
-* ```9``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```10``` **Client Cert Filename** - The File to load the client certificate from
-  * Accepts a string
-* ```11``` **Client Key Filename** - The File to load the client key from
-  * Accepts a string
-* ```11``` **Device ID** - The device id for the Azure IoT device
-  * Accepts a string
-* ```12``` **Device Key** - The device key for the Azure IoT device
-  * Accepts a string
-* ```b``` **Back**
+![Azure IoT Menu Options](assets/sparkfun_datalogger_iot_azure_menu.jpg)
+/// caption
+Azure IoT Menu Options
+///
+
+* **Enabled** - Enable or Disable Azure IoT
+* **Port** - The MQTT broker port to connect to
+* **Server** - The MQTT server to connect to
+* **MQTT Topic** - The MQTT  topic to publish to
+* **Client Name** - Name of this device used for MQTT Communications
+* **Username** - Username to connect to an MQTT broker, if required.
+* **Password** - Password to connect to an MQTT broker, if required.
+* **Buffer Size** - MQTT payload buffer size. If 0, the buffer size is dynamic
+* **CA Cert Filename** - The File to load the certificate from
+* **Client Cert Filename** - The File to load the client certificate from
+* **Client Key Filename** - The File to load the client key from
+* **Device ID** - The device id for the Azure IoT device
+* **Device Key** - The device key for the Azure IoT device
 
 ### IoT Services: HTTP IoT
 
-In the Settings menu, send an ```14``` to adjust settings for the Azure IoT.
-![HTTP IoT Menu Options](assets/sparkfun_datalogger_iot_http_menu.jpg "HTTP IoT Menu Options")
+In the Settings menu, select HTTP IoT
 
-* ```1``` **Enabled** - Enable or Disable the HTTP Client
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **URL** - The URL to call with log information
-  * Accepts a string
-* ```3``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```b``` **Back**
+![HTTP IoT Menu Options](assets/sparkfun_datalogger_iot_http_menu.jpg)
+/// caption
+HTTP IoT Menu Options
+///
+
+* **Enabled** - Enable or Disable the HTTP Client
+* **URL** - The URL to call with log information
+* **CA Cert Filename** - The File to load the certificate from
 
 ### IoT Services: MachineChat
 
-In the Settings menu, send an ```15``` to adjust settings for MachineChat.
-![MachineChat Menu Options](assets/sparkfun_datalogger_iot_machinechat_menu.jpg "MachineChat Menu Options")
+In the Settings menu, select MachineChat
 
-* ```1``` **Enabled** - Enable or Disable the HTTP Client
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **URL** - The URL to call with log information
-  * Accepts a string
-* ```3``` **CA Cert Filename** - The File to load the certificate from
-  * Accepts a string
-* ```b``` **Back**
+![MachineChat Menu Options](assets/sparkfun_datalogger_iot_machinechat_menu.jpg)
+/// caption
+MachineChat Menu Options
+///
+
+* **Enabled** - Enable or Disable the HTTP Client
+* **URL** - The URL to call with log information
+* **CA Cert Filename** - The File to load the certificate from
 
 ### IoT Services: Arduino Cloud
 
-In the Settings menu, send an ```16``` to adjust settings for Arduino Cloud. This feature was added as of firmware v01.01.01.
-![Arduino Cloud Menu Options](assets/sparkfun_datalogger_iot_arduino_iot_cloud_menu.jpg "Arduino Cloud Menu Options")
+In the Settings menu, select Arduino Cloud.
 
-* ```1``` **Enabled** - Enable or Disable the Arduino IoT Client
-  * Accepts a boolean value:
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Thing Name** - The Thing Name to use for the IoT Device connection
-  * Accepts a string
-* ```3``` **Thing ID** - The Thing ID to use for the IoT Device connection
-  * Accepts a string
-* ```4``` **API Client ID** - The Arduino Cloud API Client ID
-  * Accepts a string
-* ```5``` **API Secret** - The Arduino Cloud API Secret
-  * Accepts a string
-* ```6``` **Device Secret** - The Arduino IoT Device Secret
-  * Accepts a string
-* ```7``` **Device ID** - The Arduino IoT Cloud Device ID
-  * Accepts a string
-* ```b``` **Back**
+![Arduino Cloud Menu Options](assets/sparkfun_datalogger_iot_arduino_iot_cloud_menu.jpg)
+/// caption
+Arduino Cloud Menu Options
+///
+
+* **Enabled** - Enable or Disable the Arduino IoT Client
+* **Thing Name** - The Thing Name to use for the IoT Device connection
+* **Thing ID** - The Thing ID to use for the IoT Device connection
+* **API Client ID** - The Arduino Cloud API Client ID
+* **API Secret** - The Arduino Cloud API Secret
+* **Device Secret** - The Arduino IoT Device Secret
+* **Device ID** - The Arduino IoT Cloud Device ID
 
 ### IoT Web Server
 
-As of firmware v01.02.00, log files can be viewed and downloaded using the IoT Web Server feature if mDNS (multicast DNS) is supported on your network. This functionality is accessed via the Settings Menu, Type ```17``` to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
-![IoT Web Server Options](assets/sparkfun_datalogger_iot_web_server_menu.jpg "IoT Web Server Options")
+Log files can be viewed and downloaded using the IoT Web Server feature if mDNS (multicast DNS) is supported on your network.
+
+This functionality is accessed by selecting the IoT Web Server menu. Once this menu entry is selected, the following menu options are presented:
+
+![IoT Web Server Options](assets/sparkfun_datalogger_iot_web_server_menu.jpg)
+/// caption
+IoT Web Server Options
+///
 
 * ```1``` **Enabled** - Enabled or Disable the Web Server
   * Accepts a boolean value
