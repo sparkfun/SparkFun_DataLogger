@@ -6,13 +6,15 @@ icon: material/magnify
 
 In this section, we will highlight the hardware and pins that are broken out on the SparkFun DataLogger IoT. At the time of writing, we highlighted the SparkFun DataLogger IoT - 9DoF. However, this also applies for the SparkFun DataLogger IoT.
 
-DataLogger IoT - 9DoF (Top View)
-
 ![Datalogger Iot - 9dof (Top View)](assets/20594-sparkfun_datalogger_iot-9dof_top.jpg)
-
-DataLogger IoT - 9DoF (Bottom View)
+/// caption
+DataLogger IoT - 9DoF (Top View)
+///
 
 ![Datalogger Iot - 9dof (Bottom View)](assets/20594-sparkfun_datalogger_iot-9dof_bottom.jpg)
+/// caption
+DataLogger IoT - 9DoF (Bottom View)
+///
 
 The SparkFun DataLogger is pretty much the same with the exception of the following features listed below. We'll include notes highlighting the differences in each section.
 

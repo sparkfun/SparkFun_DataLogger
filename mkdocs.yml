@@ -138,9 +138,9 @@ plugins:
       redirect_maps:
         "index.md": "introduction.md"
   # Add revision date
-  # - git-revision-date-localized:
-  #     enable_creation_date: true
-  #     type: timeago
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
   # # Add git committers at bottom of the page
   # - git-committers:
   #     repository: sparkfun/SparkFun_DataLogger
@@ -186,6 +186,7 @@ markdown_extensions:
   - admonition
   - md_in_html
   - attr_list
+  - pymdownx.blocks.caption
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

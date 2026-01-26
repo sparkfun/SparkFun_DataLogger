@@ -70,20 +70,7 @@ pre code {
     box-shadow: none;
 }
 
-/* .md-typeset .admonition-title,
-.md-typeset summary {
-    background-color: transparent;
-}
 
-.md-typeset .admonition-title,
-.md-typset summary {
-    background-color: var(--md-default-bg-color);
-}
-
-.md-typeset .code>.admonition-title,
-.md-typeset .code>summary {
-    background-color: rgba(0, 0, 0, 0);
-} */
 
 /* ================================================================================== */
 /* Custom Admonitions                                                                 */
