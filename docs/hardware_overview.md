@@ -288,14 +288,14 @@ There are seven jumpers on the back of the DataLogger IoT - 9DoF. For more infor
 |MAG INT|This jumper connects the MMC5983MA  magnetometer's interrupt pin to pin `35` and it is open by default. Add a solder jumper to connect.|
 
 ![Jumpers](assets/20594-sparkfun_datalogger_iot-esp32_bottom_jumpers.jpg)
-/// captions
+/// caption
 Jumper Locations
 ///
 
 On the DataLogger IoT, the IMU INT2 or MAG INT jumpers are not included since it does not have the built in 6DoF IMU or magnetometer. With the extra real estate on the board, we were able to include a **MEAS** PTH and jumper on the board. By default, the jumper is closed. You can cut this jumper on the bottom side of the board to measure the DataLogger IoT’s current draw from external power.
 
 ![Meas jumper on the datalogger iot ](assets/sfe-datalogger-over-jumpers.png)
-// Captions
+/// caption
 Measurment Jumpers
 ///
 
