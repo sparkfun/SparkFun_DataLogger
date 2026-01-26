@@ -14,21 +14,47 @@ While you can simply insert the microSD card into your DataLogger IoT and start 
 
 To check to see if it is the correct format on a Windows you could head to the drive, right click, and select **Properties**.
 
-![MicroSD Card Properties](assets/microsd_card_properties.JPG)
+![MicroSD Card Properties](assets/microsd_card_properties.jpg)
+/// caption
+SD Card Properties Menu Entry on Windows
+///
 
 Once the properties are open, you should be able to tell what file system that the memory card uses. In this case, it was exFAT which is not compatible with the DataLogger IoT. You will need to reformat the memory card since it is not formatted as FAT32.
 
 ![Check File System Windows](assets/microsd_card_check_file_system_exfat.jpg)
+/// caption
+Format of exFat - Not Compatable
+///
+
+The format should be ```FAT32```
+
+![FAT32 Format](assets/microsd_card_check_file_system_fat32.jpg)
+///
+FAT32 Format - Compatable with the DataLogger IoT
+///
 
 ### Checking MicroSD Card Format - macOS
 
 To check to see if it is the correct format on a macOS, you could head to the drive on your desktop. Then right click, and select **Get Info**.
 
 ![Get Info on microSD card](assets/mac_get_info.png)
+/// caption
+"Get Info" on MacOS
+///
 
 A window will pop up indicating the microSD card properties. Under **General:** > **Format:**, you should be able to tell what file system that the memory card uses. In this case, it was exFAT which is not compatible with the DataLogger IoT. You will need to reformat the memory card since it is not formatted as FAT32.
 
 ![Exfat](assets/mac_microsd_exfat.png)
+/// caption
+Showing Format as exFat
+///
+
+To reformat the drive, the built in `Disk Utility` application on macOS can be used. Once the SD Card is reformatted, the `Get Info` dialog will show:
+
+![FAT32 on MacOS](assets/mac_microsd_fat32.png)
+/// caption
+FAT32 Format on macOS
+///
 
 ## Download Raspberry Pi Imager
 
