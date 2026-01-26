@@ -114,7 +114,7 @@ The output will vary depending on what is connected so you may get additional re
 
 Right! Let's open the main menu by pressing on any key in the serial terminal program.
 
-![DataLogger IoT Main Menu](assets/sparkfun_datalogger_iot_main_menu.jpg)
+![DataLogger IoT Main Menu](assets/sfe-datalogger-main-menu.png)
 ///
 Main Menu
 ///
@@ -159,7 +159,7 @@ Enter a quick command
 
 When exiting the menus, you will be prompted with either an ```x``` or ```b```. You can use either character when exiting the menus as well as ```X``` or ```B```. Note that you will need to use either of these keys when making a change in order for the DataLogger IoT to save any changes in memory. Make sure that you receive the following message indicating that the settings were saved: ```[I] Saving System Settings```. The DataLogger IoT will the continue reading the devices and outputting the readings through the serial terminal.
 
-![Output Save Settings](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg)
+![Output Save Settings](assets/sfe-datalogger-settings-exit.png)
 /// caption
 Save Settings When Exiting the Menu
 ///
@@ -168,7 +168,7 @@ Save Settings When Exiting the Menu
 
 You can also use any of your ```Esc``` to exit. However, using the escape will not save any changes in memory once the reset button is hit or whenever power is cycled.
 
-![Output when Cancelling Changes](assets/sparkfun_datalogger_iot_system_escape_menu.jpg)
+![Output when Cancelling Changes](assets/sfe-datalogger-settings-escape.png)
 /// caption
 Escape to Exit a Menu
 ///
