@@ -177,7 +177,7 @@ Escape to Exit a Menu
 
 The menus will slowly exit out after 2 minutes of inactivity, so if you do not press a key the DataLogger IoT will return to its previous menu. It will continue to move back until it reaches the main menu. After another additional 2 minutes of inactivity, the board will exit begin logging data again. When the menu exits from inactivity, any changes will not be saved in memory as well.
 
-![output when timing out](assets/sparkfun_datalogger_iot_system_no_user_input_exit_menu.jpg)
+![output when timing out](assets/sfe-datalogger-settings-auto-esc.png)
 /// caption
 Timeout in the Menu
 ///
@@ -228,18 +228,11 @@ In the Application Settings Menu, users will be able to configure the addressabl
 !!! note
     Once the baud rate is changed and saved, make sure to adjust the baud rate of your serial terminal when the board is reset. If you forgot the baud rate, you can hold the BOOT button down for 20 seconds to erase the on-board preferences (besides the baud rate, this also includes any other settings that were saved) and restart the board.
 
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-
-![save settings menu](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg)
-/// caption
-Exit the Menu System
-///
-
 ### General: Save Settings
 
 In the Settings menu, select the Save Settings menu. As of firmware v01.01.01, the JSON output buffer size is now user configurable. This will be under option "**JSON File Buffer Size**" when in the Save Settings Menu.
 
-![save settings menu](assets/sparkfun_datalogger_iot_save_settings_menu.jpg)
+![save settings menu](assets/sfe-datalogger-set-save-settings.png)
 /// caption
 Save Settings  Menu
 ///
@@ -271,7 +264,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 
 In the Settings Menu, select the time reference sources. As of firmware v01.01.01, time zone support is at the clock level, not tied to NTP. The option to adjust the Time Zone is moved to the Time Sources menu.
 
-![Time Source Menu Options](assets/sparkfun_datalogger_iot_time_sources_menu.jpg)
+![Time Source Menu Options](assets/sfe-datalogger-set-time-settings.png)
 /// caption
 Time Source Menu
 ///
@@ -320,7 +313,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 
 In the Settings Menu, select the WiFi settings. Up to 4 sets of WiFi credentials can be saved.
 
-![WiFi Network Menu Options](assets/sparkfun_datalogger_iot_wifi_network_menu_2.png)
+![WiFi Network Menu Options](assets/sfe-datalogger-wifi-settings.png)
 /// caption
 Enter WiFi Networks
 ///
@@ -341,10 +334,7 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 
 Press the reset button or cycle power to restart the DataLogger IoT. You can also go through the menu and reset the device through software as well. Once the board is reset, the DataLogger will attempt to connect to a WiFi network. If you are successful, the output will indicate that the board connected to a WiFi network and will update the current time through a NTP Client.
 
-![DataLogger IoT Re-initializing and Outputting WiFi Connected Message](assets/sparkfun_datalogger_iot_initializing_wifi_connected.jpg)
-/// caption
-DataLogger IoT Re-initializing and Outputting WiFi Connected Message
-///
+#### Using a NFC to Set WiFi Credentials
 
 If you have a [Qwiic Dynamic NFC/RFID Tag](https://www.sparkfun.com/products/21274) connected to the board's Qwiic connector, you can easily update your WiFi credentials! Just make sure to save the WiFi credentials to the tag.
 
@@ -354,7 +344,7 @@ If you saved your preferences to a JSON file on your microSD card's root directo
 
 In the Settings menu, select the NTP Client settings.
 
-![NTP Client Menu Options](assets/sparkfun_datalogger_iot_ntp_client_menu.jpg)
+![NTP Client Menu Options](assets/sfe-datalogger-set-ntp.png)
 /// caption
 NTP Client
 ///
@@ -370,7 +360,8 @@ When finished, you will need to exit the menus so that the DataLogger IoT saves 
 ### Logging: Logger
 
 In the Settings menu, select the Logger menu to adjust how data is logged.
-![Logger Menu Options](assets/sparkfun_datalogger_iot_logger_menu_v01p02p00.jpg "Logger Menu Options")
+
+![Logger Menu Options](assets/sfe-datalogger-set-logger.png)
 /// caption
 Logger Menu Options
 ///
@@ -400,7 +391,7 @@ Outputting Time in ISO08601 Time Format
 ### Logging: Logging Timer
 
 In the Settings menu,  select the Timer option adjust the Logging Timer.
-![Logging Timer Menu Options](assets/sparkfun_datalogger_iot_logger_timer_menu.jpg )
+![Logging Timer Menu Options](assets/sfe-datalogger-set-timer.png )
 /// caption
 Logging Timer Menu Options
 ///
@@ -413,7 +404,7 @@ Adjusting the interval for the Logging Timer will change the amount of time betw
 
 In the Settings menu, select the Data File Menu Item to adjust the Logging Data File.
 
-![Data File Menu Options](assets/sparkfun_datalogger_iot_file_rotation_menu.jpg )
+![Data File Menu Options](assets/sfe-datalogger-set-datafile.png )
 /// captions
 Data File Menu Options
 ///
@@ -441,7 +432,7 @@ To access the available IoT Services, select the `IoT Services` menu option in t
 
 In the Settings menu, select the MQTT Client.
 
-![MQTT Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_client_menu.jpg )
+![MQTT Client Menu Options](assets/sfe-datalogger-set-mqtt.png )
 ///caption
 MQTT Client Menu Options
 ///
@@ -459,7 +450,7 @@ MQTT Client Menu Options
 
 In the Settings menu, select the MQTT Secure Client.
 
-![MQTT Secure Client Menu Options](assets/sparkfun_datalogger_iot_mqtt_secure_client_menu.jpg)
+![MQTT Secure Client Menu Options](assets/sfe-datalogger-set-mqttsec.png)
 /// caption
 MQTT Secure Client Menu Options
 ///
@@ -480,7 +471,7 @@ MQTT Secure Client Menu Options
 
 In the Settings menu, select AWS IoT.
 
-![AWS IoT Menu Options](assets/sparkfun_datalogger_iot_aws_menu.jpg)
+![AWS IoT Menu Options](assets/sfe-datalogger-set-aws.png)
 /// caption
 AWS IoT Menu Options
 ///
@@ -501,7 +492,7 @@ AWS IoT Menu Options
 
 In the Settings menu, select  ThingSpeak MQTT
 
-![ThingSpeak MQTT Menu Options](assets/sparkfun_datalogger_iot_thingspeak_mqtt_menu.jpg)
+![ThingSpeak MQTT Menu Options](assets/sfe-datalogger-set-thingspeak.png)
 /// caption
 ThingSpeak MQTT Menu Options
 ///
@@ -523,7 +514,7 @@ ThingSpeak MQTT Menu Options
 
 In the Settings menu, select Azure IoT.
 
-![Azure IoT Menu Options](assets/sparkfun_datalogger_iot_azure_menu.jpg)
+![Azure IoT Menu Options](assets/sfe-datalogger-set-azure.png)
 /// caption
 Azure IoT Menu Options
 ///
@@ -546,7 +537,7 @@ Azure IoT Menu Options
 
 In the Settings menu, select HTTP IoT
 
-![HTTP IoT Menu Options](assets/sparkfun_datalogger_iot_http_menu.jpg)
+![HTTP IoT Menu Options](assets/sfe-datalogger-set-http.png)
 /// caption
 HTTP IoT Menu Options
 ///
@@ -559,7 +550,7 @@ HTTP IoT Menu Options
 
 In the Settings menu, select MachineChat
 
-![MachineChat Menu Options](assets/sparkfun_datalogger_iot_machinechat_menu.jpg)
+![MachineChat Menu Options](assets/sfe-datalogger-set-machcht.png)
 /// caption
 MachineChat Menu Options
 ///
@@ -572,7 +563,7 @@ MachineChat Menu Options
 
 In the Settings menu, select Arduino Cloud.
 
-![Arduino Cloud Menu Options](assets/sparkfun_datalogger_iot_arduino_iot_cloud_menu.jpg)
+![Arduino Cloud Menu Options](assets/sfe-datalogger-set-arduino.png)
 /// caption
 Arduino Cloud Menu Options
 ///
