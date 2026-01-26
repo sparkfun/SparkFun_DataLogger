@@ -303,12 +303,7 @@ Measurment Jumpers
 
 The overall length and width with the antenna connector is about 1.66" x 2.00". There are four mounting holes in the center of the board. Due to the size of the board and the ESP32 module, the mounting holes are positioned in a way for users to add two Qwiic enabled boards with a width of 1.0" instead of one Qwiic board.
 
-![DataLogger IoT - 9DoF Board Dimensions](assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png)
+![DataLogger IoT Board Dimensions](assets/sfe-datalogger-over-dims.png)
 /// caption
-DataLogger IoT - 9DoF Dimensions
-///
-
-![Datalogger IoT board dimensions](assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png)
-/// caption
-DataLogger IoT Dimensions
+DataLogger IoT Board Dimensions
 ///
