@@ -146,78 +146,85 @@ The DataLogger IoT includes a dedicated 3.3V regulator for the Qwiic connector. 
 
 The SPI pins are broken out on the edge of the board. For those that are unfamiliar to PICO and POCI, check out the [SPI tutorial](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all#receiving-data) for more information.
 
-* **SCK**: SPI clock pin. This is connect to pin `18`.
-* **PICO**: SPI Peripheral In Controller Out. This is connected to pin `23`.
-* **POCI**: SPI Peripheral Out Controller In. This is connected to pin `19`.
+|Pin|Description|
+|--|--|
+|**SCK**|SPI clock pin. This is connect to pin `18`.|
+|**PICO**|SPI Peripheral In Controller Out. This is connected to pin `23`.|
+|**POCI**|SPI Peripheral Out Controller In. This is connected to pin `19`.|
 
-![Spi Pins Highlighted On The Datalogger Iot - 9dof (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_spi.jpg)
-
-![Spi Pins Highlighted on the DataLogger IoT - 9DoF (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_spi.jpg)
+![SPI Pins Highlighted on the Datalogger IoT ](assets/sfe-datalogger-over-spi.png)
+/// caption
+SPI Pins Highlighted
+///
 
 Not shown in the image are the chip select (CS) pins. The 6DoF IMU's CS pin is connected to pin `5`. The magnetometer's CS pin is connected to pin `27` which is not broken out.
 
 On the DataLogger IoT, the IMU and magnetometer are not connected to the SPI port since they are not included on the board. Instead of pin "35 / A7" being broken out, pin "5" is broken out on the edge of the board.
 
-![Pin 5 highlighted on the DataLogger IoT (Top View)](assets/22462-dev_sparkfun_datalogger_iot_pin_5-top.jpg)
-**Pin 5 Highlighted on the DataLogger IoT (Top View)**
-
-![Pin 5 highlighted on the DataLogger IoT (Bottom View)](assets/22462-dev_sparkfun_datalogger_iot_pin_5-bottom.jpg)
-
-**Pin 5 Highlighted on the DataLogger IoT (Bottom View)**
+![Pin 5 highlighted on the DataLogger IoT ](assets/sfe-datalogger-over-pin5.png)
+/// caption
+Pin 5 Highlighted on the DataLogger IoT
+///
 
 ## MicroSD Card Socket
 
 The DataLogger IoT supports full 4-bit SDIO for fast logging and uses common microSD cards to record clear text, comma separated files. Flip over the DataLogger IoT and you'll see the latching microSD card socket. You probably already have a microSD card laying around. However, if you need any additional units, we have plenty [in the SparkFun catalog](https://www.sparkfun.com/categories/351). The DataLogger can use any size microSD card and supports FAT32 cards in addition to FAT16. Please ensure that your SD card is formatted correctly; we recommend the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/).
 
 ![MicroSD Card](assets/20594-sparkfun_datalogger_iot-esp32_bottom_microsd_card.jpg)
+/// caption
+MicroSD Card
+///
 
 Slide in your formatted SD card and it will click neatly into place. The edge of the SD card will stick out on the edge of the circuit board when it is inserted correctly.
 
 You should only insert or remove the SD card while the power is turned off or disconnected. Removing the card while the DataLogger IoT is logging will almost certainly corrupt your data.
 
-## 9 Degrees of Freedom (9DOF)
+## DataLogger IoT - 9DoF (9 Degrees of Freedom)
 
-As stated earlier, included on every DataLogger IoT - 9DoF is a 6DoF Inertial Measurement Unit (IMU) for built-in logging of triple-axis accelerometer and gyro. There is also a built-in triple-axis magnetometer for a complete 9 degrees of freedom. Beside each IC is a silkcreen showing the reference axis. Both are connected to the ESP32 via the SPI port. Combined, you have 9 degrees of inertial measurement! Whereas the [original 9DOF Razor](https://www.sparkfun.com/products/14001) used the old MPU-9250, this uses the ISM330DHCX and MMC5983MA. Oh, and if that wasn’t enough, it comes with a built-in temperature sensor on each IC too. So if you want to use the DataLogger IoT as a transportation logger, it will do that straight out of the anti-static bag!  
+As stated earlier, included on every **DataLogger IoT - 9DoF** is a 6DoF Inertial Measurement Unit (IMU) for built-in logging of triple-axis accelerometer and gyro. There is also a built-in triple-axis magnetometer for a complete 9 degrees of freedom. Beside each IC is a silkcreen showing the reference axis. Both are connected to the ESP32 via the SPI port. Combined, you have 9 degrees of inertial measurement! Whereas the [original 9DOF Razor](https://www.sparkfun.com/products/14001) used the old MPU-9250, this uses the ISM330DHCX and MMC5983MA. Oh, and if that wasn’t enough, it comes with a built-in temperature sensor on each IC too. So if you want to use the DataLogger IoT as a transportation logger, it will do that straight out of the anti-static bag!  
 
 ![Accelerometer, Gyro, and Magnetometer](assets/20594-sparkfun_datalogger_iot-esp32_top_9dof_imu_accelerometer_gyro_magnetometer.jpg)
-
-For users using the SparkFun DataLogger, there 6DoF IMU and magnetometer is not populated on the board. The associated silkscreen and jumpers for the sensors are also not included on the board.
-
-![DataLogger IoT (Top View)](assets/22462-dev_sparkfun_datalogger_iot-top.jpg)
-
-![DataLogger IoT (Bottom View)](assets/22462-dev_sparkfun_datalogger_iot-bottom.jpg)
+/// caption
+DataLogger IoT - 9DOF - Accelerometer, Gyro, and Magnetometer
+///
 
 ## Analog Pins
 
 There are three 12-bit analog pins available and broken out on edge of the board.
 
-* **36 / A0**: Analog A0. This is connected to pin `36`.
-* **39 / A3**: Analog A3. This is connected to pin `39`.
-* **35 / A7**: Analog A7. This is connected to pin `35`.
+|Pin|Description|
+|--|--|
+|**36 / A0**|Analog A0. This is connected to pin `36`.|
+|**39 / A3**|Analog A3. This is connected to pin `39`.|
+|**35 / A7**|Analog A7. This is connected to pin `35`.|
 
-![Analog Pins Highlighted on the DataLogger IoT (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_analog.jpg)
-
-![Analog Pins Highlighted on the DataLogger IoT (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_analog.jpg)
+![Analog Pins Highlighted on the DataLogger IoT ](assets/sfe-datalogger-over-analog.png)
+/// caption
+Analog Pins Highlighted
+///
 
 ## Reset and Boot Buttons
 
-You may notice a thin film over buttons. This is used by a pick-and-place machine when populating the component on the board before it goes through the reflow oven. This can be removed.
-
 There are two buttons available on the board for reset and boot. These are also broken out on the edge of the board as PTHs. If you have your DataLogger IoT mounted in an enclosure, you can also attach an external boot or reset switch too. Any Single Pole Normally-Open Push-To-Close momentary switch will do. Solder pin headers or wires to the RST and GND breakout pins and connect your external switch to those.
 
-**RESET**: Pressing this button will pull the pin LOW and reset the program running on the ESP32 without unplugging the board.
+|Button|Description|
+|--|--|
+|**RESET**|Pressing this button will pull the pin LOW and reset the program running on the ESP32 without unplugging the board.|
+|**BOOT**|The boot button usually allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32. The ESP32 will remain in this mode until there is a power cycle or the reset button is pressed. As of firmware v01.00.02, this button has an extra function: pressing down on the user button for 20 seconds will erase on-board preference storage and restart the board. This is connected to pin `0` on the ESP32.|
 
-**BOOT**: The boot button usually allows users to force the ESP32 into bootloader mode to manually flash new firmware to the ESP32. The ESP32 will remain in this mode until there is a power cycle or the reset button is pressed. As of firmware v01.00.02, this button has an extra function: pressing down on the user button for 20 seconds will erase on-board preference storage and restart the board. This is connected to pin `0` on the ESP32.
+![Reset and Boot Buttons (and Associated PTHs) Highlighted on the DataLogger IoT](assets/sfe-datalogger-over-buttons.png)
+/// caption
+Reset and Boot Buttons (and Associated PTHs) Highlighted
+///
 
-![Reset and Boot Buttons (and Associated PTHs) Highlighted on the DataLogger IoT - 9DoF (Top View)](assets/20594-sparkfun_datalogger_iot-esp32_top_reset_boot_buttons.jpg)
-
-![Reset and Boot Buttons (and Associated PTHs) Highlighted on the Datalogger IoT - 9dof (Bottom View)](assets/20594-sparkfun_datalogger_iot-esp32_bottom_reset_boot_buttons.jpg)
+!!! note
+    You may notice a thin film over buttons. This is used by a pick-and-place machine when populating the component on the board before it goes through the reflow oven. This can be removed.
 
 Like other ESP32 development boards, these buttons are populated so that users can place the ESP32 module in bootloader mode. For users that need to place the board in bootloader mode when powered, you will need to:
 
-* Press the BOOT button.
-* While holding on the BOOT button, press the RESET button momentarily.
-* Finally, release the BOOT button.
+1) Press the BOOT button.
+1) While holding on the BOOT button, press the RESET button momentarily.
+1) Finally, release the BOOT button.
 
 Most of the time, users will simply have the board executing the firmware that is loaded on the ESP32 module and updating through the configuration menu either through the microSD card or OTA.
 
@@ -225,7 +232,8 @@ Most of the time, users will simply have the board executing the firmware that i
 
 Please think very carefully before uploading any Arduino sketches to your DataLogger IoT.
 
-**You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.**
+!!! danger "Uploading Arduino Sketches"
+    You will overwrite the DataLogger IoT firmware, leaving it unable to update or restore itself.
 
 The DataLogger IoT comes pre-programmed with amazing firmware which can do _so_ much. It is designed to be able to update itself and restore itself if necessary. But it can not do that if you overwrite the firmware with any Arduino sketch. It is just like erasing the restore partition on your computer hard drive. Do not do it - unless you _really_ know what you are doing.
 
@@ -233,9 +241,11 @@ The DataLogger IoT comes pre-programmed with amazing firmware which can do _so_ 
 
 There are three LEDs populated on the board. These can be disabled with their respective jumpers on the back of the board.
 
-* **STAT**: The status LED is connected to pin `25`.
-* **RGB**: The WS2812-2020 RGB addressable LED is connected to pin `26`. In addition to being disabled through the jumper on the back, you can also disable the LED through software.
-* **CHG**: The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.
+|LED|Description|
+|--|--|
+|**STAT**|The status LED is connected to pin `25`.|
+|**RGB**|The WS2812-2020 RGB addressable LED is connected to pin `26`. In addition to being disabled through the jumper on the back, you can also disable the LED through software.|
+|**CHG**|The on-board yellow CHG LED can be used to get an indication of the **charge status** of your battery. Below is a table of other status indicators depending on the state of the charge IC.|
 
 ### RGB LED Color Values
 
@@ -258,9 +268,10 @@ The following colors represent different states that the board is in.
 |Charging|On|
 |Charge Complete|Off|
 
-![LEDs](assets/20594-sparkfun_datalogger_iot-esp32_top_user_led_rgb_ws2812.jpg)
-
-![Pths Connected To Leds](assets/20594-sparkfun_datalogger_iot-esp32_bottom_user_led_rgb_ws2812.jpg)
+![LEDs](assets/sfe-datalogger-over-leds.png)
+/// caption
+LEDs and PTHs Connected to LEDs
+///
 
 ## Jumpers
 
@@ -277,21 +288,27 @@ There are seven jumpers on the back of the DataLogger IoT - 9DoF. For more infor
 |MAG INT|This jumper connects the MMC5983MA  magnetometer's interrupt pin to pin `35` and it is open by default. Add a solder jumper to connect.|
 
 ![Jumpers](assets/20594-sparkfun_datalogger_iot-esp32_bottom_jumpers.jpg)
+/// captions
+Jumper Locations
+///
 
 On the DataLogger IoT, the IMU INT2 or MAG INT jumpers are not included since it does not have the built in 6DoF IMU or magnetometer. With the extra real estate on the board, we were able to include a **MEAS** PTH and jumper on the board. By default, the jumper is closed. You can cut this jumper on the bottom side of the board to measure the DataLogger IoT’s current draw from external power.
 
-![Meas jumper on the datalogger iot (top view)](assets/22462-dev_sparkfun_datalogger_iot_meas_jumper-top.jpg)
-
-![Meas Jumper on the DataLogger IoT (Bottom View)](assets/22462-dev_sparkfun_datalogger_iot_meas_jumper-bottom.jpg)
+![Meas jumper on the datalogger iot ](assets/sfe-datalogger-over-jumpers.png)
+// Captions
+Measurment Jumpers
+///
 
 ## Board Dimensions
 
 The overall length and width with the antenna connector is about 1.66" x 2.00". There are four mounting holes in the center of the board. Due to the size of the board and the ESP32 module, the mounting holes are positioned in a way for users to add two Qwiic enabled boards with a width of 1.0" instead of one Qwiic board.
 
-### DataLogger IoT - 9DoF
+![DataLogger IoT - 9DoF Board Dimensions](assets/board_files/DataLogger_IoT_9DoF/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png)
+/// caption
+DataLogger IoT - 9DoF Dimensions
+///
 
-![DataLogger IoT - 9DoF Board Dimensions](assets/board_files/datalogger_IoT_9DoF/Sparkfun_DataLogger_IoT_9DoF_Board_Dimensions.png)
-
-### DataLogger IoT
-
-![Datalogger iot board dimensions](assets/board_files/Datalogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png)
+![Datalogger IoT board dimensions](assets/board_files/DataLogger_IoT/SparkFun_DataLogger_IoT_Board_Dimensions.png)
+/// caption
+DataLogger IoT Dimensions
+///
