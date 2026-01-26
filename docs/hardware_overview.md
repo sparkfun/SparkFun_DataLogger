@@ -6,14 +6,9 @@ icon: material/magnify
 
 In this section, we will highlight the hardware and pins that are broken out on the SparkFun DataLogger IoT. At the time of writing, we highlighted the SparkFun DataLogger IoT - 9DoF. However, this also applies for the SparkFun DataLogger IoT.
 
-![Datalogger Iot - 9dof (Top View)](assets/20594-sparkfun_datalogger_iot-9dof_top.jpg){width=400}
+![Datalogger Iot - 9dof (Top View)](assets/sfe-datalogger-9dof-top-bottom.png)
 /// caption
-DataLogger IoT - 9DoF (Top View)
-///
-
-![Datalogger Iot - 9dof (Bottom View)](assets/20594-sparkfun_datalogger_iot-9dof_bottom.jpg){align=right}
-/// caption
-DataLogger IoT - 9DoF (Bottom View)
+DataLogger IoT - 9DoF
 ///
 
 The SparkFun DataLogger is pretty much the same with the exception of the following features listed below. We'll include notes highlighting the differences in each section.
@@ -26,13 +21,10 @@ The SparkFun DataLogger is pretty much the same with the exception of the follow
 * Included MEAS PTH Jumper
 * The "35 / A7" PTH on the edge of the board is replace with a "5" PTH.
 
-DataLogger IoT (Top View)
-
-![Datalogger IoT (Top View)](assets/22462-dev_sparkfun_datalogger_iot-top.jpg)
-
-DataLogger IoT (Bottom View)
-
-![Datalogger Iot (Bottom View)](assets/22462-dev_sparkfun_datalogger_iot-bottom.jpg)
+![Datalogger IoT (Top View)](assets/sfe-datalogger-top-bottom.png)
+///
+DataLogger IoT
+///
 
 ## ESP32-WROOM Module
 
