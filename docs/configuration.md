@@ -222,6 +222,7 @@ In the Application Settings Menu, users will be able to configure the addressabl
 * **Startup Messages** Level of message output at startup
 * **Startup Delay** Startup Menu Delay in Seconds
 * **Device Names** Name always includes the device address
+* **Verbose Messages** Enable verbose messaging
 * **About...** - Details about the system
 
 !!! note
@@ -590,27 +591,17 @@ Log files can be viewed and downloaded using the IoT Web Server feature if mDNS 
 
 This functionality is accessed by selecting the IoT Web Server menu. Once this menu entry is selected, the following menu options are presented:
 
-![IoT Web Server Options](assets/sparkfun_datalogger_iot_web_server_menu.jpg)
+![IoT Web Server Options](assets/sfe-datalogger-web-server.png)
 /// caption
 IoT Web Server Options
 ///
 
-* ```1``` **Enabled** - Enabled or Disable the Web Server
-  * Accepts a boolean value
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```2``` **Username** - Web access control. Leave empty to disable authentication
-  * Accepts a string
-* ```3``` **Password** - Web access control.
-  * Accepts a string
-* ```4``` **mDNS Support** - Enable a name for the web address this device
-  * Accepts a boolean value
-    * ```1``` to enable
-    * ```0``` to disable _(default)_
-* ```5``` **mDNS Name** - mDNS Name used for this device address
-  * Accepts a string
-    * dataloggerXXXXX, where XXXXX is the taken from the last 5x characters from your DataLogger IoT's board ID _(default)_
-* ```b``` **Back**
+* **Enabled** - Enabled or Disable the Web Server
+* **Username** - Web access control. Leave empty to disable authentication
+* **Password** - Web access control.
+* **mDNS Support** - Enable a name for the web address this device
+* **mDNS Name** - mDNS Name used for this device address
+  * dataloggerXXXXX, where XXXXX is the taken from the last 5x characters from your DataLogger IoT's board ID _(default)_
 
 You will need to make sure that the ESP32 is on the same network as your computer in order to access the log files.
 
@@ -621,6 +612,9 @@ The SparkFun Datalogger IoT requires restarting if the web interface is enabled.
 For more information on how to use this feature, check out the [section on viewing and downloading log files using the IoT web server](../example_iot_web_server/).
 
 [Examples: Viewing and Downloading Log Files using the IoT Web Server](../example_iot_web_server)
+/// caption
+Viewing Log Files using the Web Server
+///
 
 ### Advanced: System Update
 
@@ -630,32 +624,17 @@ New sensors and features are being added all the time and we've made it really e
 * Performing a Factory Reset on the device
 * Updated the device firmware from a file on an SD Card.
 
-!!! note
-    What's going on here?!? This tutorial was updated for firmware version **01.02.00**!!! You will notice this menu option has changed to ```18``` !!!
-
 This functionality is accessed via the Settings Menu, which is required to use this capability. Type ```18``` to enter the System Update menu. Once this menu entry is selected, the following menu options are presented:
 
-![System Update Menu Options](assets/sparkfun_datalogger_iot_system_restart_factory_restore_update_firmware_v01p02p00.jpg "System Update Menu Options")
+![System Update Menu Options](assets/sfe-datalogger-update.png)
+/// caption
+System Update Menu Options
+///
 
-* ```1``` **Device Restart** - Restart/reboot the device
-  * Accepts the following values:
-    * ```Y``` or ```Y``` to restart or reboot the device using the current firmware and system preferences
-    * ```N``` or ```n``` to cancel
-* ```2``` **Factory Reset** - Erase all settings and revert to original firmware
-  * Accepts the following values:
-    * ```Y``` or ```Y``` to factory reset the device
-    * ```N``` or ```n``` to cancel
-* ```3``` **Update Firmware - SD Card** - Update the firmware from the SD card
-  * Accepts firmware in the **/root** directory of the microSD card with the file naming pattern __SparkFunDataLoggerIoT_.bin_*, where the asterisk **&ast;** is the firmware version number (i.e. **SparkFunDataLoggerIoT_01.00.01.bin**).
-* ```4``` **Update Firmware - OTA** - Update the firmware over-the-air
-  * Connects to a server and searches for the latest firmware that is available. Note that you must be connected to a WiFi network to be able to update the board over-the-air.
-  * Accepts the following values if there is new firmware available.
-    * ```Y``` or ```Y``` to update over-the-air
-    * ```N``` or ```n``` to cancel
-* ```b``` **Back**
-
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
+* **Device Restart** - Restart/reboot the device
+* **Factory Reset** - Erase all settings and revert to original firmware
+* **Update Firmware - SD Card** - Update the firmware from the SD card
+* **Update Firmware - OTA** - Update the firmware over-the-air
 
 For more information on how to update firmware manually or over-the-air, check out the section under [Examples: Updating Firmware](../updating_firmware/).
 
@@ -663,130 +642,18 @@ For more information on how to update firmware manually or over-the-air, check o
 
 In the Main Menu, send a ```2``` through the serial terminal to adjust the devices settings.
 
-![Device Settings Menu Options](assets/sparkfun_datalogger_iot_device_settings_menu.jpg "Device Settings Menu Options")
+![Device Settings Menu Options](assets/sfe-datalogger-dev-menu.png)
+/// caption
+Device Settings Menu Options
+///
 
-This will bring up the connected devices that are currently available. You can configure each device and enable/disable each output. Below is a sample of the on-board devices available for the DataLogger IoT - 9DoF when only the MAX17048, ISM330, and MMC5983 are connected. As the DataLogger IoT - 9DoF initializes, the board will populate additional devices in this window if they are detected. Your mileage will vary depending on what is connected. On the DataLogger IoT you will not see the ISM330 or MMC5983  as an option since the 6DoF IMU and magnetometer are not populated on that version of the board.
+This will bring up the connected devices that are currently available. Selecting a connected device allows you to configure settings for that particular device as well as enable/disable output values from the device.
 
-* ```1``` **MAX17048** - MAX17048 LiPo Battery Fuel Gauge
-  * ```1``` **Voltage (V)** - Battery voltage (Volts)
-    * ```1``` to enable Voltage (V) _(default)_
-    * ```2``` to disable Voltage (V)
-  * ```2``` **State of Charge (%)** - Battery state of charge (%)
-    * ```1``` to enable state of charge (%) _(default)_
-    * ```2``` to disable state of charge  (%)
-  * ```3``` **Charge Rate (%/hr)** - Battery charge change rate (%/hr)
-    * ```1``` to enable change rate (%/hr) _(default)_
-    * ```2``` to disable change rate (%/hr)
-* ```2``` **ISM330** - ISM330 Inertial Measurement Unit
-  * ```1``` **Accel Data Rate (HZ)** - Accelerometer Data Rate (Hz)
-    * ```1``` for Off
-    * ```2``` for 12.5 Hz
-    * ```3``` for 26 Hz
-    * ```4``` for 52 Hz
-    * ```5``` for 104 Hz _(default)_
-    * ```6``` for 208 Hz
-    * ```7``` for 416 Hz
-    * ```8``` for 833 Hz
-    * ```9``` for 1666 Hz
-    * ```10``` for 3332 Hz
-    * ```11``` for 6667 Hz
-    * ```12``` for 1.6 Hz
-  * ```2``` **Accel Full Scale (g)** - Accelerometer Full Scall (g)
-    * ```1``` for 2 g
-    * ```2``` for 16 g
-    * ```3``` for 4 g _(default)_
-    * ```4``` for 8 g
-  * ```3``` **Gyro Data Rate (Hz)** - Gyro Data Rate (Hz)
-    * ```1``` for Off
-    * ```2``` for 12.5 Hz
-    * ```3``` for 26 Hz
-    * ```4``` for 52 Hz
-    * ```5``` for 104 Hz _(default)_
-    * ```6``` for 208 Hz
-    * ```7``` for 416 Hz
-    * ```8``` for 833 Hz
-    * ```9``` for 1666 Hz
-    * ```10``` for 3332 Hz
-    * ```11``` for 6667 Hz
-  * ```4``` **Gyro Full Scale (dps)** - Gyro Full Scale (dps)
-    * ```1``` for 125 dps
-    * ```2``` for 250 dps
-    * ```3``` for 500 dps _(default)_
-    * ```4``` for 1000 dps
-    * ```5``` for 2000 dps
-    * ```6``` for 4000 dps
-  * ```5``` **Accel Filter LP2** - Accelerometer Filter LP2
-    * ```1``` to enable _(default)_
-    * ```2``` to disable
-  * ```6``` **Gyro Filter LP1** - Gyro Filter LP1
-    * ```1``` to enable _(default)_
-    * ```2``` to disable
-  * ```7``` **Accel Slope Filter** - Accelerometer Slope Filter
-    * ```1``` for ODR/4
-    * ```2``` for ODR/10
-    * ```3``` for for ODR/20
-    * ```4``` for ODR/45
-    * ```5``` for ODR/100 _(default)_
-    * ```6``` for ODR/200
-    * ```7``` for ODR/400
-    * ```8``` for ODR/800
-  * ```8``` **Gyro LP1 Filter Bandwidth** -  Gyro LP1 Filter Bandwidth
-    * ```1``` Ultra Light
-    * ```2``` Very Light
-    * ```3``` Light
-    * ```4``` Medium _(default)_
-    * ```5``` Strong
-    * ```6``` Very Strong
-    * ```7``` Aggressive
-    * ```8``` Extreme
-  * ```9``` **Accel X (milli-g)** - Accelerometer X (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```10``` **Accel Y (milli-g)** - Accelerometer Y (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```11``` **Accel Z (milli-g)** - Accelerometer Z (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```12``` **Gyro X (milli-dps)** - Gyro X (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```13``` **Gyro Y (milli-dps)** - Gyro Y (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```14``` **Gyro Z (milli-dps)** - Gyro Z (milli-g)
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```15``` **Temperature (C)** - The temperature in degrees C
-    * ```1``` to enable
-    * ```2``` to disable
-* ```3``` **MMC5983** - MMC5983 Magnetometer
-  * ```1``` **Filter Bandwidth (Hz)** - The filter bandwidth in Hz
-    * ```1``` 100 Hz _(default)_
-    * ```2``` 200 Hz
-    * ```3``` 400 Hz
-    * ```4``` 800 Hz
-  * ```2``` **Auto-Reset** - Auto-Reset
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```3``` **X Field (Gauss)** - The X Field strength in Gauss
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```4``` **Y Field (Gauss)** - The Y Field strength in Gauss
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```5``` **Z Field (Gauss)** - The Z Field strength in Gauss
-    * ```1``` to enable
-    * ```2``` to disable
-  * ```6``` **Temperature (C)** - The ambient temperature in degrees C
-    * ```1``` to enable
-    * ```2``` to disable
-* ```b``` **Back**
+The following is an example settings page for the SparkFun BMV080 Environmental Sensor:
 
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
-
-![Output Save Settings Confirmation](assets/sparkfun_datalogger_iot_system_save_settings_menu.jpg "Output Save Settings Confirmation")
+![BMV080 Settings](assets/sfe-datalogger-bmv080-settings.png)
+/// caption
+BMV080 Device Settings Page
+///
 
 As you connect additional devices to the DataLogger IoT, the values associated with each device in this menu will change! Make sure to check your device settings menu after additional devices are attached should you decide to configure the additional devices and enable/disable their outputs.
-
-![Additional Devices Connected and Showing Up as Menu Options](assets/sparkfun_datalogger_iot_device_settings_menu_additional_devices.jpg)
