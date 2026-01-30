@@ -10,6 +10,9 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 
 * [SparkFun Air Quality PM1/PM2.5/PM10 Sensor - BMV080 (Qwiic)](https://www.sparkfun.com/sparkfun-air-quality-pm1-pm2-5-pm10-sensor-bmv080-qwiic.html)
 * [SparkFun Spectral Sensor - AS7343 (Qwiic)](https://www.sparkfun.com/sparkfun-spectral-sensor-as7343-qwiic.html)
+* [SparkFun Soil Moisture Sensor](https://www.sparkfun.com/sparkfun-soil-moisture-sensor.html) - NON-qwiic version
+* Log Analog Device/GPIO pin values
+* Log text input from a Serial/UART Input device
 
 ## Version 1.1.0
 

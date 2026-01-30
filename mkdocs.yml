@@ -274,7 +274,7 @@ nav:
       - The IoT Web Server: example_iot_web_server.md
   - Resources:
       - Downloads: resources.md
-      - Supported Qwiic Devices: supported_devices.md
+      - Supported Devices: supported_devices.md
       - Release Notes: release_notes.md
       - Suggested Reading: suggested-reading.md
   - Support:
