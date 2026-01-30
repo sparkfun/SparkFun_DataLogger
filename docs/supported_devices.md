@@ -6,7 +6,12 @@ icon: material/gauge
 
 The following lists the devices/boards supported by the DataLogger IoT boards. New drivers to support a device will be listed under the firmware version.
 
-## Version 01.01.00
+## Version 1.5.0
+
+* [SparkFun Air Quality PM1/PM2.5/PM10 Sensor - BMV080 (Qwiic)](https://www.sparkfun.com/sparkfun-air-quality-pm1-pm2-5-pm10-sensor-bmv080-qwiic.html)
+* [SparkFun Spectral Sensor - AS7343 (Qwiic)](https://www.sparkfun.com/sparkfun-spectral-sensor-as7343-qwiic.html)
+
+## Version 1.1.0
 
 * [SparkFun Indoor Air Quality Sensor - ENS160 (Qwiic)](https://www.sparkfun.com/products/20844)
 * [SparkFun Photoacoustic Spectroscopy CO2 Sensor - PASCO2V01 (Qwiic)](https://www.sparkfun.com/products/22956)
@@ -14,7 +19,7 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun Tristimulus Color Sensor - OPT4048DTSR](https://www.sparkfun.com/products/22638)
 * [SparkFun Triad Spectroscopy Sensor - AS7265x](https://www.sparkfun.com/products/15050)
 
-## Version 01.00.00
+## Version 1.0.0
 
 * [ACS37800 Power Meter](https://www.sparkfun.com/products/17873)
 * [SparkFun Qwiic 12 Bit ADC - 4 Channel (ADS1015)](https://www.sparkfun.com/products/15334)
