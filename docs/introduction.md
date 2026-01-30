@@ -19,9 +19,9 @@ The following devices support the DataLogger IoT functionality discussed in this
 * <a href="https://www.sparkfun.com/products/22462" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT   :octicons-link-external-24: </a>
 * <a href="https://www.sparkfun.com/products/20594" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT - 9DoF   :octicons-link-external-24: </a>
 
-## STOP - NEXT
+<!-- ## STOP - NEXT -->
 
-## Quick Start  - maybe another section
+## Quick Start
 
 ### Required Materials for the Hookup Guide Project
 
