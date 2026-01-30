@@ -2,14 +2,26 @@
 icon: material/information
 --- -->
 
+# Introduction
+
 ![SparkFun DataLogger IoT]( assets/gh-banner-hug-datalogger.png)
 
-The SparkFun DataLogger IoT is a data logger that comes preprogrammed to automatically log IMU, GPS, and various pressure, humidity, and distance sensors.  All without writing a single line of code! They come in two flavors: The [SparkFun DataLogger IoT - 9DoF](https://www.sparkfun.com/products/20594) and the [SparkFun DataLogger IoT](https://www.sparkfun.com/products/22462). Both versions of the DataLogger IoT automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data to a CSV or JSON file, and get back to their larger project. Save the data to a microSD card or send it wirelessly to your preferred Internet of Things (IoT) service!
+The SparkFun DataLogger IoT is a data logger that comes preprogrammed and ready to use immediatly - no programming, no setup - just plug in the board, add a [supported qwiic sensor or two](supported_devices.md) and start logging data. The built-in firmware automatically detects attached qwiic sensors, peforms any setup and starts logging sensor data. And with minimal configuration, the DataLogger IoT can connect to a local WiFi network and post data to a wide range of IoT data services.
 
-This guide covers the use of the following SparkFun DataLogger Products:
+The DataLogger IoT automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data with minimal setup or development. It delivers a ready-to-use device that enables saving data to a microSD card, output it to a serial console andor send it wirelessly to your preferred Internet of Things (IoT) services - all at that same time!
+
+To configure the DataLogger, a menu system is accessed via a serial connection and provides access to all available settings for the system. Changes are automatically saved in persistant storage on the device, and are also settable/accessable as `json` file if desired.  Details on setting up the system are outlined in the [Configuration](configuration.md) sectoin of this manual.
+
+## DataLogger Devices
+
+The following devices support the DataLogger IoT functionality discussed in this document.
 
 * <a href="https://www.sparkfun.com/products/22462" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT   :octicons-link-external-24: </a>
 * <a href="https://www.sparkfun.com/products/20594" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT - 9DoF   :octicons-link-external-24: </a>
+
+## STOP - NEXT
+
+## Quick Start  - maybe another section
 
 ### Required Materials for the Hookup Guide Project
 
