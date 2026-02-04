@@ -255,9 +255,10 @@ extra_javascript:
 # Configures webpage navigation
 nav:
   - Introduction: introduction.md
-  - Hardware Overview: hardware_overview.md
-  - Hardware Hookup: hardware_hookup.md
-  - Reference:
+  - Hardware:
+      - Hardware Overview: hardware_overview.md
+      - Hardware Hookup: hardware_hookup.md
+  - User Reference:
       - Configuration: configuration.md
       - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md
