@@ -258,19 +258,23 @@ nav:
   - Hardware:
       - Hardware Overview: hardware_overview.md
       - Hardware Hookup: hardware_hookup.md
-  - User Reference:
+  - General Operation:
       - Configuration: configuration.md
       - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md
       - Factory Reset: factory_reset.md
       - Updating Firmware: updating_firmware.md
+  - Network:
+      - WiFi Network: net-wifi-setup.md
+      - NTP Setup: net-ntp-setup.md
+  - IoT Services:
       - MQTT: example_mqtt.md
       - AWS: example_aws.md
       - ThingSpeak: example_thingspeak.md
       - Azure: example_azure.md
       - HTTP: example_http.md
       - Arduino Cloud: example_arduino_iot_cloud.md
-      - The IoT Web Server: example_iot_web_server.md
+  - IoT Web Server: example_iot_web_server.md
   - Resources:
       - MicroSD Card Setup: prepare_your_microsd_card.md
       - Serial Terminal Setup: ref-serial-terms.md
