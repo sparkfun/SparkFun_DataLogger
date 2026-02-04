@@ -260,12 +260,11 @@ nav:
       - Hardware Hookup: hardware_hookup.md
   - General Operation:
       - Configuration: configuration.md
-      - Connecting to a WiFi Network: wifi_network.md
       - Adding a Timestamp to Data: example_timestamp.md
       - Factory Reset: factory_reset.md
       - Updating Firmware: updating_firmware.md
   - Network:
-      - WiFi Network: net-wifi-setup.md
+      - WiFi Setup: net-wifi-setup.md
       - NTP Setup: net-ntp-setup.md
   - IoT Services:
       - MQTT: example_mqtt.md

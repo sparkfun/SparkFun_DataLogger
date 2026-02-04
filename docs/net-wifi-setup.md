@@ -12,21 +12,27 @@ Enter WiFi Networks
 
 Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
 
-* **Enabled** - Enable or Disable the WiFi Network connection
-* **Network Name** - The SSID of the WiFi network
-* **Password** - The Password to connect to the WiFi network
-* **Network 2 Name** - Alternative network 2 SSID
-* **Network 2 Password** - Alternative network 2 Password
-* **Network 3 Name** - Alternative network 2 SSID
-* **Network 3 Password** - Alternative network 3 Password
-* **Network 4 Name** - Alternative network 2 SSID
-* **Network 4 Password** - Alternative network 4 Password
+The WiFi system of the DataLoggerIoT can store up to four sets of WiFi creditials, but only one is required for connected operation. When connecting to the WiFi network, the DataLoggerIoT will attempt to locate and connect to a specified WiFi network, until a valid network is found. Having multi networks allows the DataLoggerIoT to move between locations and continue to operate without any user interaction.
 
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes. Send a ```b``` to exit out this menu, ```b``` to exit out of the DataLogger IoT settings, and ```x``` to exit out of the main menu.
+## WiFi Configuration
 
-Press the reset button or cycle power to restart the DataLogger IoT. You can also go through the menu and reset the device through software as well. Once the board is reset, the DataLogger will attempt to connect to a WiFi network. If you are successful, the output will indicate that the board connected to a WiFi network and will update the current time through a NTP Client.
+The following configuration properties are provided for the WiFi connection:
 
-#### Using a NFC to Set WiFi Credentials
+|Setting|Description|
+|--|--|
+|**Enabled**|Enable or Disable the WiFi Network connection|
+|**Network Name**|The SSID of the WiFi network|
+|**Password**|The Password to connect to the WiFi network|
+|**Network 2 Name**|Alternative network 2 SSID|
+|**Network 2 Password**|Alternative network 2 Password|
+|**Network 3 Name**|Alternative network 2 SSID|
+|**Network 3 Password**|Alternative network 3 Password|
+|**Network 4 Name**|Alternative network 2 SSID|
+|**Network 4 Password**|Alternative network 4 Password|
+
+When settings are changed, the DataLoggerIoT should be restarted to have the new settings take effect.
+
+## Using a NFC to Set WiFi Credentials
 
 If you have a [Qwiic Dynamic NFC/RFID Tag](https://www.sparkfun.com/products/21274) connected to the board's Qwiic connector, you can easily update your WiFi credentials! Just make sure to save the WiFi credentials to the tag.
 
