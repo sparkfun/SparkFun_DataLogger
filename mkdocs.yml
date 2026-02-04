@@ -254,11 +254,9 @@ extra_javascript:
 
 # Configures webpage navigation
 nav:
-  - Getting Started:
-      - Introduction: introduction.md
-      - Hardware Overview: hardware_overview.md
-      - Hardware Hookup: hardware_hookup.md
-      - Preparing Your MicroSD Card: prepare_your_microsd_card.md
+  - Introduction: introduction.md
+  - Hardware Overview: hardware_overview.md
+  - Hardware Hookup: hardware_hookup.md
   - Reference:
       - Configuration: configuration.md
       - Connecting to a WiFi Network: wifi_network.md
@@ -273,10 +271,11 @@ nav:
       - Arduino Cloud: example_arduino_iot_cloud.md
       - The IoT Web Server: example_iot_web_server.md
   - Resources:
+      - MicroSD Card Setup: prepare_your_microsd_card.md
+      - Serial Terminal Setup: ref-serial-terms.md
       - Downloads: resources.md
       - Supported Devices: supported_devices.md
       - Release Notes: release_notes.md
-      - Serial Terminals: ref-serial-terms.md
       - Suggested Reading: suggested-reading.md
   - Support:
       - Troubleshooting: troubleshooting.md

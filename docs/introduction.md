@@ -16,8 +16,8 @@ To configure the DataLogger, a menu system is accessed via a serial connection a
 
 The following devices support the DataLogger IoT functionality discussed in this document.
 
-* <a href="https://www.sparkfun.com/products/22462" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT   :octicons-link-external-24: </a>
-* <a href="https://www.sparkfun.com/products/20594" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT - 9DoF   :octicons-link-external-24: </a>
+* <a href="https://www.sparkfun.com/products/22462" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT   :octicons-link-external-24: </a> - the core DataLoggerIoT Device
+* <a href="https://www.sparkfun.com/products/20594" target="_blank" rel="noopener noreferrer">SparkFun DataLogger IoT - 9DoF   :octicons-link-external-24: </a> - A DataLoggerIoT Device with on-board 9DoF (Direction-of-Freedom) sensors.
 
 <!-- ## STOP - NEXT -->
 
