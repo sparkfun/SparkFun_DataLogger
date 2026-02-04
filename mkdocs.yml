@@ -255,10 +255,10 @@ extra_javascript:
 # Configures webpage navigation
 nav:
   - Introduction: introduction.md
-  - Hardware:
-      - Hardware Overview: hardware_overview.md
-      - Hardware Hookup: hardware_hookup.md
+  - Hardware Overview: hardware_overview.md
+  - Hardware Hookup: hardware_hookup.md
   - General Operation:
+      - Application Settings: gen-app-set.md
       - Configuration: configuration.md
       - Adding a Timestamp to Data: example_timestamp.md
       - Factory Reset: factory_reset.md

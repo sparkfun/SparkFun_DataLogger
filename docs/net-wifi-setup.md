@@ -1,16 +1,13 @@
-### WiFi Settings
-
-!!! note
-    The ESP32-WROOM can only connect to a 2.4GHz WiFi network.
+# WiFi Settings
 
 In the Settings Menu, select the WiFi settings. Up to 4 sets of WiFi credentials can be saved.
+
+Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
 
 ![WiFi Network Menu Options](assets/sfe-datalogger-wifi-settings.png)
 /// caption
 Enter WiFi Networks
 ///
-
-Once you are in the WiFi Network menu, you can enable/disable WiFi and save the WiFi network credentials. Once connected to a 2.4GHz WiFi network, you can synchronize the date and time, connect to an IoT service to log data, and update the latest firmware over-the-air. Since the WiFi is turned on by default, you will simply need to save the WiFi network's name and password.
 
 The WiFi system of the DataLoggerIoT can store up to four sets of WiFi creditials, but only one is required for connected operation. When connecting to the WiFi network, the DataLoggerIoT will attempt to locate and connect to a specified WiFi network, until a valid network is found. Having multi networks allows the DataLoggerIoT to move between locations and continue to operate without any user interaction.
 
@@ -31,6 +28,9 @@ The following configuration properties are provided for the WiFi connection:
 |**Network 4 Password**|Alternative network 4 Password|
 
 When settings are changed, the DataLoggerIoT should be restarted to have the new settings take effect.
+
+!!! note
+    The ESP32-WROOM can only connect to a 2.4GHz WiFi network.
 
 ## Using a NFC to Set WiFi Credentials
 
