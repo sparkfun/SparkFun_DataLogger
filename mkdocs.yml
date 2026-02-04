@@ -257,23 +257,27 @@ nav:
   - Introduction: introduction.md
   - Hardware Overview: hardware_overview.md
   - Hardware Hookup: hardware_hookup.md
-  - General Operation:
-      - Application Settings: gen-app-set.md
-      - Configuration: configuration.md
-      - Adding a Timestamp to Data: example_timestamp.md
+  - Configuration: configuration.md
+  - Settings:
+      - General:
+          - Application Settings: gen-app-set.md
+          - Time Setup: gen-time-setup.md
+          - Save Settings: gen-save-settings.md
+      - Network:
+          - WiFi Setup: net-wifi-setup.md
+          - NTP Setup: net-ntp-setup.md
+      - Logging:
+          - Adding a Timestamp to Data: example_timestamp.md
+      - IoT Services:
+          - MQTT: example_mqtt.md
+          - AWS: example_aws.md
+          - ThingSpeak: example_thingspeak.md
+          - Azure: example_azure.md
+          - HTTP: example_http.md
+          - Arduino Cloud: example_arduino_iot_cloud.md
+      - IoT Web Server: example_iot_web_server.md
+      - System Update: updating_firmware.md
       - Factory Reset: factory_reset.md
-      - Updating Firmware: updating_firmware.md
-  - Network:
-      - WiFi Setup: net-wifi-setup.md
-      - NTP Setup: net-ntp-setup.md
-  - IoT Services:
-      - MQTT: example_mqtt.md
-      - AWS: example_aws.md
-      - ThingSpeak: example_thingspeak.md
-      - Azure: example_azure.md
-      - HTTP: example_http.md
-      - Arduino Cloud: example_arduino_iot_cloud.md
-  - IoT Web Server: example_iot_web_server.md
   - Resources:
       - MicroSD Card Setup: prepare_your_microsd_card.md
       - Serial Terminal Setup: ref-serial-terms.md
