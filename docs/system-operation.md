@@ -1,9 +1,9 @@
 
-# System Operation
+# Operation Overview
 
 The main interface for the DataLogger IoT is a menuing system accessed via a serial terminal. You can use any interactive serial terminal emulator to quickly and easily change and store the DataLoggerIoT settings via its USB-C interface.
 
-Before proceeding - ensure you are using an approriate [Serial Terminal application](ref-serial-terms.md) to communicate with the DataLoggerIoT.
+Before proceeding - ensure you are using an appropriate [Serial Terminal application](ref-serial-terms.md) to communicate with the DataLoggerIoT.
 
 ## General Operation
 
@@ -17,7 +17,7 @@ When connected to a Serial Terminal, the displayed output has the following sequ
 
 ## Startup Menu
 
-Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. In the Serial Termainl,  a *Startup Menu* is presnted, which llows you to change the behavior of the DataLogger at start-up. This change only affects the current system session.
+Connect the DataLogger IoT to a USB cable and connect to your computer. The addressable RGB LED will light up green as it initializes. In the Serial Terminal,  a *Startup Menu* is presented, which allows you to change the behavior of the DataLogger at start-up. This change only affects the current system session.
 
 ![Output when DataLogger IoT - 9DoF Start-up menu](assets/sfe-datalogger-startup-menu.png)
 /// caption
