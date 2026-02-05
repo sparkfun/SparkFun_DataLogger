@@ -270,6 +270,7 @@ nav:
           - Logger Settings: log-settings-logger.md
           - Logging Timer: log-settings-timer.md
           - Data File: log-settings-file.md
+          - Interrupt Trigger: log-settings-interrupt.md
       - Services:
           - IoT Services:
               - MQTT: example_mqtt.md
