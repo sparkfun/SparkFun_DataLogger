@@ -280,8 +280,7 @@ nav:
               - Arduino Cloud: example_arduino_iot_cloud.md
           - IoT Web Server: example_iot_web_server.md
       - Advanced:
-          - System Update: updating_firmware.md
-      - Factory Reset: factory_reset.md
+          - System Update: adv-system-update.md
   - Resources:
       - MicroSD Card Setup: prepare_your_microsd_card.md
       - Serial Terminal Setup: ref-serial-terms.md
