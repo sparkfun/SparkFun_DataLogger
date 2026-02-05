@@ -1,31 +1,99 @@
 
 # Logger Setup
 
-In the Settings menu, select the Logger menu to adjust how data is logged.
+In the Settings menu, select the Logger menu to adjust how data is logged, including what additional data to provide besides sensor readings.
+
+When this menu option is selected, the following menu is presented:
 
 ![Logger Menu Options](assets/sfe-datalogger-set-logger.png)
 /// caption
 Logger Menu Options
 ///
 
-In the Logger menu, users will have the option to add a timestamp, increment sample numbering, data format, or reset the sample counter. Note that the timestamp is the system clock and syncs with the reference clock that was chosen. Data from the Qwiic-enabled devices that keep track of time can also be included for each data entry by default.
+Details of menu item are outlined in the following sections.
 
-* **Timestamp Mode** - Enable timestamp output and set the format of a log entry timestamp
-* **Sample Numbering** - An incremental count of the current log entry
-* **Numbering Increment** - Increment amount for Sample Numbering
-* **Output ID** - Include the Board ID in the log output *(added as of firmware v01.02.00)*
-* **Output Name** - Include the Board Name in the log output *(added as of firmware v01.02.00)*
-* **Rate Metric** - Enable to record the logging rate data *(added as of firmware v01.02.00)*
-* **SD Card Format** - Enable and set the output format
-* **Serial Console Format** - Enable and set the output format
-* **System Info** - Log system information *(added as of firmware v01.02.00)*
-* **Reset Sample Counter** - Reset the sample number counter to the provided value
-  
-When finished, you will need to exit the menus so that the DataLogger IoT saves the changes.
+## Settings
 
-Below is an example with the ISO08601 time that was added to the output.
+### Timestamp Mode
 
-![DataLogger IoT Re-Initializing and Outputting Time in ISO08601 Time Format](assets/sparkfun_datalogger_iot_output_timestamp.jpg)
+This setting is used to add a timestamp to the output logging stream for each data sample/observation. The format of the timestamp is also selected.
+
+The options for this settings are:
+
+* No Timestamp - no timestamp is added to the output - this is the default option
+* Milliseconds since program start - Time since the system was started, in milliseconds
+* Seconds since Epoch - Seconds since epoch (January 1, 1970 00:00:00.00 UTC). A valid system time is required for this value to be accurate.
+* Milliseconds since Epoch - Milliseconds since epoch (January 1, 1970 00:00:00.00 UTC). A valid system time is required for this value to be accurate.
+* Date Time - USA Date format - a data/time string formatted using standard US date format - MM-DD-YYYY
+* Date Time - A standard non-USA formatted date string - DD-MM-YYYY
+* ISO8601 Timestamp - an ISO8601 formatted timestamp
+* ISO8601 Timestamp with Time Zone - an ISO8601 formatted timestamp with the current time zone included
+* ISO8601 Timestamp - Week Date - an ISO8601 formatted timestamp using a week date format
+* ISO8601 Timestamp - Week Date with Time Zone - an ISO8601 formatted timestamp using a week date format and the current time zone.
+
+### Sample Numbering
+
+The "sample number" for a the logged data is included in the log stream. This is incremented with each log event by the value of the ***Number Increment*** setting value
+
+### Numbering Increment
+
+The amount to increment the output Sample Number after each logged observation.
+
+### Output ID
+
+Include the DataLoggerIoT board ID in the output log stream
+
+### Output Name
+
+Include the DataLoggerIoT board Name in the output log stream
+
+### Rate Metric
+
+If enabled, the system will record the logging data rate. This is helpful in determining the performance of the datalogger.
+
+### Output Source Name
+
+When enabled, the source of the logging *event* is included in the log stream. This could include values like 'timer', 'GPIO Interrupt', 'GNSS PPS' ...etc.
+
+## Output
+
+These settings are used to control output format and additional values for the datalogger.
+
+### SD Card Format
+
+The format used when writing to the SD Card - options are *CSV*, *JSON*, or *None*.
+
+### Serial Console Format
+
+The format used when writing data to the serial console - options are *CSV*, *JSON*, or *None*.
+
+### System Info
+
+When enabled, the following data is added to the log stream:
+
+* WiFi SSID
+* WiFi RSSI
+* System uptime
+* System SD Card free space
+* System memory heap
+
+## Functions
+
+### Reset Sample Counter
+
+This will reset the sample counter in the logger to a provided value.
+
+## Example Output
+
+The following image is JSON formatted serial console output for the datalogger. The following options are enabled:
+
+* Timestamp enabled - ISO8601 Timestamp format
+* Board ID
+* Board Name
+* Trigger source
+* System Info
+
+![DataLogger IoT Re-Initializing and Outputting Time in ISO08601 Time Format](assets/sfe-dl-log-kitchen-sink.png)
 /// caption
-Outputting Time in ISO08601 Time Format
+JSON Formatted Log Output to the Serial Console
 ///
