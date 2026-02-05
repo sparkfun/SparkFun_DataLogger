@@ -16,7 +16,7 @@ Data File Menu Options
 
 Adjusting these parameters allows you to change the filename prefix, the number the files starts at, and how often the DataLogger will create a new file on the microSD card.
 
-The file naming scheming used is:  [prefix string][number].txt
+The file naming scheming used is:  ```[prefix string][number].txt```
 
 For example, the default file will be saved as **sfe0001.txt**. After 1 day, the DataLogger will rotate files by creating a new file named **sfe0002.txt**. The DataLogger will begin logging data in this new file. The purpose of this log rotation is to limit the size of each file prevent issues when opening large files.
 
