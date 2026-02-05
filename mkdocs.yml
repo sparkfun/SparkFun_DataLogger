@@ -257,7 +257,7 @@ nav:
   - Introduction: introduction.md
   - Hardware Overview: hardware_overview.md
   - Hardware Hookup: hardware_hookup.md
-  - Configuration: configuration.md
+  - Operation Overview: system_operation.md
   - Settings:
       - General:
           - Application Settings: gen-app-set.md
@@ -267,7 +267,9 @@ nav:
           - WiFi Setup: net-wifi-setup.md
           - NTP Setup: net-ntp-setup.md
       - Logging:
-          - Adding a Timestamp to Data: example_timestamp.md
+          - Logger Settings: log-settings-logger.md
+          - Logging Timer: log-settings-timer.md
+          - Data File: log-settings-file.md
       - IoT Services:
           - MQTT: example_mqtt.md
           - AWS: example_aws.md
