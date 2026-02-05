@@ -270,15 +270,17 @@ nav:
           - Logger Settings: log-settings-logger.md
           - Logging Timer: log-settings-timer.md
           - Data File: log-settings-file.md
-      - IoT Services:
-          - MQTT: example_mqtt.md
-          - AWS: example_aws.md
-          - ThingSpeak: example_thingspeak.md
-          - Azure: example_azure.md
-          - HTTP: example_http.md
-          - Arduino Cloud: example_arduino_iot_cloud.md
-      - IoT Web Server: example_iot_web_server.md
-      - System Update: updating_firmware.md
+      - Services:
+          - IoT Services:
+              - MQTT: example_mqtt.md
+              - AWS: example_aws.md
+              - ThingSpeak: example_thingspeak.md
+              - Azure: example_azure.md
+              - HTTP: example_http.md
+              - Arduino Cloud: example_arduino_iot_cloud.md
+          - IoT Web Server: example_iot_web_server.md
+      - Advanced:
+          - System Update: updating_firmware.md
       - Factory Reset: factory_reset.md
   - Resources:
       - MicroSD Card Setup: prepare_your_microsd_card.md
