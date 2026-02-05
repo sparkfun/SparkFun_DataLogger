@@ -1,7 +1,7 @@
-
 # Logging Timer
 
 In the Settings menu,  select the Timer option adjust the Logging Timer.
+
 ![Logging Timer Menu Options](assets/sfe-datalogger-set-timer.png )
 /// caption
 Logging Timer Menu Options

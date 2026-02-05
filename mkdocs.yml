@@ -257,7 +257,7 @@ nav:
   - Introduction: introduction.md
   - Hardware Overview: hardware_overview.md
   - Hardware Hookup: hardware_hookup.md
-  - Operation Overview: system_operation.md
+  - Operation Overview: system-operation.md
   - Settings:
       - General:
           - Application Settings: gen-app-set.md
