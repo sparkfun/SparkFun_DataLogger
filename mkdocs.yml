@@ -272,7 +272,8 @@ nav:
           - Data File: log-settings-file.md
           - Interrupt Trigger: log-settings-interrupt.md
       - GPIO Devices:
-          - External Serial: gpio-ext-serial.md
+          - External Serial: gpio-extern-serial.md
+          - Soil Moisture Sensor: gpio-soil-moisture.md
       - Services:
           - IoT Services:
               - MQTT: example_mqtt.md
