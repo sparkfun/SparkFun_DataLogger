@@ -271,6 +271,8 @@ nav:
           - Logging Timer: log-settings-timer.md
           - Data File: log-settings-file.md
           - Interrupt Trigger: log-settings-interrupt.md
+      - GPIO Devices:
+          - External Serial: gpio-ext-serial.md
       - Services:
           - IoT Services:
               - MQTT: example_mqtt.md
