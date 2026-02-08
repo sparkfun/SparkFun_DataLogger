@@ -18,7 +18,7 @@ SparkFun DataLogger IoT products include Internet connectivity built in, and inc
 
 The DataLogger IoT products are highly configurable via an easily to use serial interface. Simply plug in a USB C cable and open a terminal at 115200 Kbps. By default the logging output is automatically streamed to the serial terminal - pressing any key will bring up the menu system. Device settings are also configurable via a JSON file contained on an inserted SD card - enabling rapid configuration for multiple devices.
 
-Configuration details are outlined in [DataLogger IoT Documentation](https://docs.sparkfun.com/SparkFun_DataLogger/configuration/).
+Configuration details are outlined in [DataLogger IoT Documentation](https://docs.sparkfun.com/SparkFun_DataLogger/introduction/).
 
 The functionality of the DataLogger IoT firmware will continue to grow as SparkFun develops new Qwiic sensor boards, adds additional IoT services and product features. The board is easily updated via the on-board settings system. See below for future information on updates and the latest Firmware release.  
 
