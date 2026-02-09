@@ -62,6 +62,8 @@ To exit a menu perform on of the following:
 !!! warning
     If you make configuration changes, but don't exit the menu to save the changes, the changes will not be saved to on-device storage.
 
+Once menu navigation is understood, explore the options available and make changes to meet your needs. The configuration options are detailed in a majority of this on-line guide.
+
 ### The Sensors
 
 Straight out of the ~~box~~ anti-static bag, the DataLogger IoT 9DoFis ready to log data from its built-in ISM330DHCX Inertial Measurement Unit (IMU) and MMC5983MA magnetometer. Only want to log magnetometer, accelerometer, gyro or temperature data? You’re good to go! But the fun is only just beginning…
