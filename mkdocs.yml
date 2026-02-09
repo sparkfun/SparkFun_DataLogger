@@ -277,13 +277,13 @@ nav:
           - Analog Pin Sensor: gpio-analog-pin-sensor.md
       - Services:
           - IoT Services:
-              - MQTT: example_mqtt.md
-              - AWS: example_aws.md
-              - ThingSpeak: example_thingspeak.md
-              - Azure: example_azure.md
-              - HTTP: example_http.md
-              - Arduino Cloud: example_arduino_iot_cloud.md
-          - IoT Web Server: example_iot_web_server.md
+              - MQTT: iot_mqtt.md
+              - AWS: iot_aws.md
+              - ThingSpeak: iot_thingspeak.md
+              - Azure: iot_azure.md
+              - HTTP: iot_http.md
+              - Arduino Cloud: iot_arduino_iot_cloud.md
+          - IoT Web Server: iot_web_server.md
       - Advanced:
           - System Update: adv-system-update.md
   - Resources:
