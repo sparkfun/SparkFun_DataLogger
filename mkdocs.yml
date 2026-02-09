@@ -274,6 +274,7 @@ nav:
       - GPIO Devices:
           - External Serial: gpio-extern-serial.md
           - Soil Moisture Sensor: gpio-soil-moisture.md
+          - Analog Pin Sensor: gpio-analog-pin-sensor.md
       - Services:
           - IoT Services:
               - MQTT: example_mqtt.md
