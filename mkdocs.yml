@@ -286,6 +286,8 @@ nav:
           - IoT Web Server: iot_web_server.md
       - Advanced:
           - System Update: adv-system-update.md
+  - Devices Settings:
+      - GNSS PPS Logging: gnss-pps-log.md
   - Resources:
       - MicroSD Card Setup: prepare_your_microsd_card.md
       - Serial Terminal Setup: ref-serial-terms.md
