@@ -6,82 +6,68 @@ icon: fontawesome/solid/scroll
 ---
 
 
-# Introduction
-
 --8<-- "./docs/introduction.md"
-
-# Hardware Overview
 
 --8<-- "./docs/hardware_overview.md"
 
-# Hardware Hookup
-
 --8<-- "./docs/hardware_hookup.md"
 
-# Preparing Your MicroSD card
+--8<-- "./docs/system-operation.md"
 
---8<-- "./docs/prepare_your_microsd_card.md"
+--8<-- ".docs/gen-app-set.md"
 
-# Configuration
+--8<-- ".docs/gen-time-setup.md"
 
---8<-- "./docs/configuration.md"
+--8<-- ".docs/gen-save-settings.md"
 
-# Example - Connecting to a WiFi Network
+--8<-- ".docs/net-wifi-setup.md"
 
---8<-- "./docs/wifi_network.md"
+--8<-- ".docs/net-ntp-setup.md"
 
-# Example - Adding a Timestamp to Data
+--8<-- ".docs/log-settings-logger.md"
 
---8<-- "./docs/example_timestamp.md"
+--8<-- ".docs/log-settings-timer.md"
 
-# Example - Factory Reset
+--8<-- ".docs/log-settings-file.md"
 
---8<-- "./docs/factory_reset.md"
+--8<-- ".docs/og-settings-interrupt.md"
 
-# Example - Updating Firmware
+--8<-- ".docs/gpio-extern-serial.md"
 
---8<-- "./docs/updating_firmware.md"
+--8<-- ".docs/gpio-soil-moisture.md"
 
-# Example - MQTT
+--8<-- ".docs/gpio-analog-pin-sensor.md"
 
---8<-- "./docs/example_mqtt.md"
+--8<-- ".docs/iot_mqtt.md"
 
-# Example - AWS
+--8<-- ".docs/iot_aws.md"
 
---8<-- "./docs/example_aws.md"
+--8<-- ".docs/iot_thingspeak.md"
 
-# Example - ThingSpeak
+--8<-- ".docs/iot_azure.md"
 
---8<-- "./docs/example_thingspeak.md"
+--8<-- ".docs/iot_http.md"
 
-# Example - Azure
+--8<-- ".docs/iot_arduino_iot_cloud.md"
 
---8<-- "./docs/example_azure.md"
+--8<-- ".docs/iot_web_server.md"
 
-# Example - HTTP
+--8<-- ".docs/adv-system-update.md"
 
---8<-- "./docs/example_http.md"
+--8<-- ".docs/prepare_your_microsd_card.md"
 
-# Example - Arduino Cloud
+--8<-- ".docs/ref-serial-terms.md"
 
---8<-- "./docs/example_arduino_iot_cloud.md"
+--8<-- ".docs/resources.md"
 
-# Viewing and Downloading Log Files using the IoT Web Server
+--8<-- ".docs/supported_devices.md"
 
---8<-- "./docs/example_iot_web_server.md"
+--8<-- ".docs/release_notes.md"
 
-# Example - How to Convert Comma Separated Values (CSV) to a Spreadsheet
+--8<-- ".docs/suggested-reading.md"
 
---8<-- "./docs/example_CSV_to_spreadsheet.md"
+--8<-- ".docs/troubleshooting.md"
 
-# Appendix - Supported Qwiic Devices
+--8<-- ".docs/file_issue.md"
 
---8<-- "./docs/supported_devices.md"
-
-# Troubleshooting
-
---8<-- "./docs/troubleshooting.md"
-
-# Resources
-
---8<-- "./docs/resources.md"
+--8<-- ".docs/contribute.md"

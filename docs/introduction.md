@@ -10,7 +10,7 @@ The SparkFun DataLogger IoT is a data logger that comes preprogrammed and ready 
 
 The DataLogger IoT automatically detects, configures, and logs Qwiic sensors. It was specifically designed for users who just need to capture a lot of data with minimal setup or development. It delivers a ready-to-use device that enables saving data to a microSD card, output it to a serial console andor send it wirelessly to your preferred Internet of Things (IoT) services - all at that same time!
 
-To configure the DataLogger, a menu system is accessed via a serial connection and provides access to all available settings for the system. Changes are automatically saved in persistant storage on the device, and are also settable/accessable as a `json` file if desired.  Details on setting up the system are outlined in the [Configuration](configuration.md) section of this manual.
+To configure the DataLogger, a menu system is accessed via a serial connection and provides access to all available settings for the system. Changes are automatically saved in persistant storage on the device, and are also settable/accessable as a `json` file if desired.  Details on setting up the system are outlined in the [Settings](gen-app-set.md) section of this manual.
 
 ## DataLogger Devices
 

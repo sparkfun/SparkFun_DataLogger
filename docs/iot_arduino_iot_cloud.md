@@ -155,8 +155,6 @@ Once the DataLogger IoT device is configured and running, updates in Arduino Clo
 
 ![Cloud Variables](assets/aiot_cloud_vars.jpg)
 
-> Not seeing certain variables on your list? Check your connections to make sure that the compatible device is connected to the DataLogger IoT. You may also have certain outputs disabled (like the connected [sensors](../configuration/#device-settings) or [timestamp](../example_timestamp)).
->
 > Having problems connecting new variables with the DataLogger IoT? When swapping out compatible Qwiic enabled devices, you may need to delete previous cloud variables so that the DataLogger IoT is able re-initialize them on the next power cycle.
 
 ### Create a Dashboard
