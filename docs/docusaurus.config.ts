@@ -74,7 +74,7 @@ const config: Config = {
             // Public API key: it is safe to commit it
             apiKey: '981767a679772e5d03f0f8968a3d7a11',
 
-            indexName: 'SparkFun Documentation Site',
+            indexName: 'SparkFun_Documentation_Site',
 
             // Optional: see doc section below
             // contextualSearch: true,
