@@ -77,7 +77,7 @@ const config: Config = {
             indexName: 'SparkFun Documentation Site',
 
             // Optional: see doc section below
-            contextualSearch: true,
+            // contextualSearch: true,
 
             // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
             //externalUrlRegex: 'external\\.com|domain\\.com',
@@ -89,13 +89,13 @@ const config: Config = {
             // },
 
             // Optional: Algolia search parameters
-            searchParameters: {},
+            // searchParameters: {},
 
             // Optional: path for search page that enabled by default (`false` to disable it)
             searchPagePath: 'search',
 
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-            insights: false,
+            // insights: false,
 
             // // Optional: whether you want to use the new Ask AI feature (undefined by default)
             // askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
