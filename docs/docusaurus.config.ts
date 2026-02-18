@@ -63,7 +63,7 @@ const config: Config = {
             id: `announcementBar-v1.5.0.beta1`, // Increment on new announcement
             textColor: '#fff',
             backgroundColor: '#25444a',
-            content: `<b><a target="_blank" href="https://github.com/sparkfun/SparkFun_DataLogger/releases/tag/v01.05.00-beta1">DataLogger v1.5.0 Beta</a> is out for testing!</b>`,
+            content: `<b><a target="_blank" href="https://github.com/sparkfun/SparkFun_DataLogger/releases/tag/v01.05.00-beta2">DataLogger v1.5.0 Beta 2</a> is out for testing!</b>`,
         },
         // ...
 
