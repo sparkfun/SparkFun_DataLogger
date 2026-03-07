@@ -94,9 +94,9 @@ const config: Config = {
             // Optional: path for search page that enabled by default (`false` to disable it)
             searchPagePath: 'search',
 
-            // only search in the SparkFun DataLogger documentation
+            // only search in the SparkFun DataLogger documentation - restrict on the section facet
             searchParameters: {
-                filters: ['url:https://docs.sparkfun.com/SparkFun_DataLogger/'],
+                facetFilters: ['section:SparkFun_DataLogger'],
             },
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             // insights: false,
