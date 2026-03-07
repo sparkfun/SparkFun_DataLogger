@@ -96,7 +96,7 @@ const config: Config = {
 
             // only search in the SparkFun DataLogger documentation
             searchParameters: {
-                facetFilters: ['url:https://docs.sparkfun.com/SparkFun_DataLogger/'],
+                filters: ['url:https://docs.sparkfun.com/SparkFun_DataLogger/'],
             },
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             // insights: false,
