@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-    
+
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
@@ -25,11 +25,15 @@ jobs:
           node-version: 20
           cache: npm
           cache-dependency-path: ./docs/package-lock.json
-          
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build website
+        env:
+          ALGOLIA_APP_KEY: ${{ secrets.ALGOLIA_APP_KEY }}
+          ALGOLIA_APPID: ${{ secrets.ALGOLIA_APPID }}
+          ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
         run: npm run build
 
       - name: Upload Build Artifact

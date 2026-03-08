@@ -2,6 +2,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// our search keys
+const appKey = process.env.ALGOLIA_APP_KEY;
+const appID = process.env.ALGOLIA_APPID;
+const indexName = process.env.ALGOLIA_INDEX_NAME;
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -69,12 +74,12 @@ const config: Config = {
 
         algolia: {
             // The application ID provided by Algolia
-            appId: '43ODL9UA7J',
+            appId: appID,
 
             // Public API key: it is safe to commit it
-            apiKey: '981767a679772e5d03f0f8968a3d7a11',
+            apiKey: appKey,
 
-            indexName: 'SparkFun_Documentation_Site',
+            indexName: indexName,
 
             // Optional: see doc section below
             contextualSearch: false,
