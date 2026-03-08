@@ -6,6 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const appKey = process.env.ALGOLIA_APP_KEY;
 const appID = process.env.ALGOLIA_APPID;
 const indexName = process.env.ALGOLIA_INDEX_NAME;
+const assistantId = process.env.ALGOLIA_ASK_AI_ASSISTANT_ID;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -105,10 +106,9 @@ const config: Config = {
             },
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             // insights: false,
-
-            // // Optional: whether you want to use the new Ask AI feature (undefined by default)
-            // askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
-
+            askAi: {
+                assistantId: assistantId,
+            },
             //... other Algolia params
         },
 
