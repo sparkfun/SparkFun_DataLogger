@@ -73,7 +73,7 @@ const config: Config = {
         },
         // ...
 
-        docsearch: {
+        algolia: {
             // The application ID provided by Algolia
             appId: appID,
 
@@ -107,11 +107,7 @@ const config: Config = {
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             // insights: false,
             askAi: {
-                assistantId: assistantId,
-                sidePanel: true,
-                searchParameters: {
-                    facetFilters: ['section:SparkFun_DataLogger'],
-                },
+                assistantId: assistantId
             },
             //... other Algolia params
         },
