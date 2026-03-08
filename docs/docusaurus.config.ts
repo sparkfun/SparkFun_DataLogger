@@ -19,7 +19,7 @@ const config: Config = {
     future: {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
     },
-
+    plugins: ['@docsearch/docusaurus-adapter'],
     // Set the production url of your site here
     url: 'https://docs.sparkfun.com',
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -73,7 +73,7 @@ const config: Config = {
         },
         // ...
 
-        algolia: {
+        docsearch: {
             // The application ID provided by Algolia
             appId: appID,
 
@@ -108,6 +108,7 @@ const config: Config = {
             // insights: false,
             askAi: {
                 assistantId: assistantId,
+                sidePanel: true,
             },
             //... other Algolia params
         },
