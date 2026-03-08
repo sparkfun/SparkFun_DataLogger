@@ -109,6 +109,9 @@ const config: Config = {
             askAi: {
                 assistantId: assistantId,
                 sidePanel: true,
+                searchParameters: {
+                    facetFilters: ['section:SparkFun_DataLogger'],
+                },
             },
             //... other Algolia params
         },
