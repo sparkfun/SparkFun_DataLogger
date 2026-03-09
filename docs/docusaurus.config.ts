@@ -108,6 +108,10 @@ const config: Config = {
             // insights: false,
             askAi: {
                 assistantId: assistantId,
+                sidePanel: true,
+                searchParameters: {
+                    facetFilters: ['section:SparkFun_DataLogger'],
+                },
             },
             //... other Algolia params
         },
