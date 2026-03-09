@@ -103,6 +103,16 @@ const config: Config = {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
             },
+            translations: {
+                button: {
+                    buttonText: 'Go on, give it a search...',
+                },
+                modal: {
+                    footer: {
+                        poweredByText: 'Powered by',
+                    },
+                },
+            },
 
         },
 
