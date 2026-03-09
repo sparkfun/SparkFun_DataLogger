@@ -108,10 +108,8 @@ const config: Config = {
             // insights: false,
             askAi: {
                 assistantId: assistantId,
-                sidePanel: {
-
-                    container: '#__docusaurus',
-                },
+                sidePanel: true,
+                sidePanelContainer: '#__docusaurus',
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
