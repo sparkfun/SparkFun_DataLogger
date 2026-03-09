@@ -109,6 +109,12 @@ const config: Config = {
             askAi: {
                 assistantId: assistantId,
                 sidePanel: true,
+                appId: appID,
+
+                // Public API key: it is safe to commit it
+                apiKey: appKey,
+
+                indexName: indexName,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
