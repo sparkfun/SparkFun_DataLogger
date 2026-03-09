@@ -76,10 +76,7 @@ const config: Config = {
         docsearch: {
             // The application ID provided by Algolia
             appId: appID,
-
-            // Public API key: it is safe to commit it
             apiKey: appKey,
-
             indexName: indexName,
 
             // Optional: see doc section below
@@ -98,19 +95,9 @@ const config: Config = {
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
-                sidePanel: true,
+                // sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
-                },
-            },
-            translations: {
-                button: {
-                    buttonText: 'Go on, give it a search...',
-                },
-                modal: {
-                    footer: {
-                        poweredByText: 'Powered by',
-                    },
                 },
             },
 
