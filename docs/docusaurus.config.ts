@@ -73,7 +73,7 @@ const config: Config = {
         },
         // ...
 
-        algolia: {
+        docsearch: {
             // The application ID provided by Algolia
             appId: appID,
 
