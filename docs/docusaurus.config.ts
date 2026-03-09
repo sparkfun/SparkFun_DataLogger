@@ -19,7 +19,7 @@ const config: Config = {
     future: {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
     },
-    plugins: ['@docsearch/docusaurus-adapter'],
+
     // Set the production url of your site here
     url: 'https://docs.sparkfun.com',
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -83,7 +83,7 @@ const config: Config = {
             indexName: indexName,
 
             // Optional: see doc section below
-            contextualSearch: true,
+            contextualSearch: false,
 
             // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
             //externalUrlRegex: 'external\\.com|domain\\.com',
@@ -107,7 +107,7 @@ const config: Config = {
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             // insights: false,
             askAi: {
-                assistantId: assistantId
+                assistantId: assistantId,
             },
             //... other Algolia params
         },
