@@ -59,7 +59,12 @@ const config: Config = {
             } satisfies Preset.Options,
         ],
     ],
-
+    // fix a css issue for docsearch - see https://github.com/facebook/docusaurus/issues/11746
+    future: {
+        experimental_faster: {
+            lightningCssMinimizer: false,
+        },
+    },
     themeConfig: {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
@@ -99,7 +104,7 @@ const config: Config = {
                 apiKey: appKey,
                 appId: appID,
                 // March 2026 - the side panel isn't working -- need to revisit.
-                // sidePanel: true,
+                sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
