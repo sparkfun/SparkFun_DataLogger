@@ -95,7 +95,7 @@ const config: Config = {
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
-                // sidePanel: true,
+                sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
