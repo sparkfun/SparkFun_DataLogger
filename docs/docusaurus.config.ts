@@ -104,7 +104,7 @@ const config: Config = {
                 apiKey: appKey,
                 appId: appID,
                 // March 2026 - the side panel isn't working -- need to revisit.
-                sidePanel: true,
+                // sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
