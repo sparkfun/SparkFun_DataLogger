@@ -91,7 +91,7 @@ const config: Config = {
             },
 
             askAi: {
-                indexName: indexName,
+                indexName: "SparkFun_Documenation_Site_MarkDown",
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
