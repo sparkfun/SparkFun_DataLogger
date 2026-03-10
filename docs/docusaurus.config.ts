@@ -90,12 +90,15 @@ const config: Config = {
                 facetFilters: ['section:SparkFun_DataLogger'],
             },
 
+            // note - using a "markdown" index that is separate from the main documentation index.
+            // this is recommended by docsearch
             askAi: {
                 indexName: "SparkFun_Documenation_Site_MarkDown",
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
-                sidePanel: true,
+                // March 2026 - the side panel isn't working -- need to revisit.
+                // sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
