@@ -75,16 +75,10 @@ const config: Config = {
         // ...
 
         docsearch: {
-            // The application ID provided by Algolia
-            // appId: appID,
-            // apiKey: appKey,
-            // indexName: indexName,
-            appId: '43ODL9UA7J',
-
-            // Public API key: it is safe to commit it
-            apiKey: '981767a679772e5d03f0f8968a3d7a11',
-
-            indexName: 'SparkFun_Documentation_Site',
+            The application ID provided by Algolia
+            appId: appID,
+            apiKey: appKey,
+            indexName: indexName,
 
             // Optional: see doc section below
             contextualSearch: false,
@@ -100,26 +94,16 @@ const config: Config = {
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
             askAi: {
-                // indexName: "SparkFun_Documentation_Site_MarkDown",
-                // assistantId: assistantId,
-                // apiKey: appKey,
-                // appId: appID,
-                // // March 2026 - the side panel isn't working -- need to revisit.
+                indexName: "SparkFun_Documentation_Site_MarkDown",
+                assistantId: assistantId,
+                apiKey: appKey,
+                appId: appID,
+                // March 2026 - the side panel isn't working -- need to revisit.
                 // sidePanel: true,
-                // searchParameters: {
-                //     facetFilters: ['section:SparkFun_DataLogger'],
-                // },
-                assistantId: 'mTRSg6ncrYkO',
-                appId: '43ODL9UA7J',
-
-                // Public API key: it is safe to commit it
-                apiKey: '981767a679772e5d03f0f8968a3d7a11',
-
-                indexName: 'SparkFun_Documentation_Site_MarkDown',
-                sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
+
             },
 
         } satisfies AlgoliaConfig,
