@@ -19,7 +19,6 @@ const config: Config = {
     future: {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
     },
-    plugins: ['@docsearch/docusaurus-adapter'],
     // Set the production url of your site here
     url: 'https://docs.sparkfun.com',
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -41,7 +40,9 @@ const config: Config = {
         defaultLocale: 'en',
         locales: ['en'],
     },
-
+    plugins: [
+        '@docsearch/docusaurus-adapter',
+    ],
     presets: [
         [
             'classic',
@@ -93,18 +94,18 @@ const config: Config = {
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
             askAi: {
-                indexName: "SparkFun_Documenation_Site_MarkDown",
+                indexName: "SparkFun_Documentation_Site_MarkDown",
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
                 // March 2026 - the side panel isn't working -- need to revisit.
-                // sidePanel: true,
+                sidePanel: true,
                 searchParameters: {
                     facetFilters: ['section:SparkFun_DataLogger'],
                 },
             },
 
-        },
+        } satisfies AlgoliaConfig,
 
         navbar: {
             title: 'DataLogger IoT Documentation',
