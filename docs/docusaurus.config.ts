@@ -144,6 +144,7 @@ const config: Config = {
                     position: 'right',
                     className: 'header-forums-link',
                     'aria-label': 'SparkFun Community Forums',
+                    html: '<span class="tooltip">This is the tooltip!</span>'
                 },
             ],
         },

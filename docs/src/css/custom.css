@@ -185,3 +185,33 @@ html[data-theme='dark'] footer {
             var(--ifm-color-emphasis-200) 0%,
             var(--ifm-color-emphasis-100) 100%);
 }
+
+.tooltip-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+
+    /* Position above the link */
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: opacity 0.2s ease;
+}
+
+/* Show on hover */
+.tooltip-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
