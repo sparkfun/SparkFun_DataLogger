@@ -128,6 +128,21 @@ html[data-theme='dark'] footer {
 }
 
 
+.header-all-docs-link::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: flex;
+    background-color: var(--ifm-navbar-link-color);
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 2 20 L 2 18.33325 L 22 18.33325 L 22 20 L 2 20 Z M 4.15 16 L 4.15 8.06675 L 5.81675 8.06675 L 5.81675 16 L 4.15 16 Z M 8.133249 16 L 8.133249 4 L 9.8 4 L 9.8 16 L 8.133249 16 Z M 12.116751 16 L 12.116751 4 L 13.783251 4 L 13.783251 16 L 12.116751 16 Z M 19.033251 16 L 14.95 9 L 16.43325 8.16675 L 20.466749 15.16675 L 19.033251 16 Z'/%3E%3C/svg%3E");
+    transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.header-all-docs-link:hover::before {
+    background-color: var(--ifm-navbar-link-hover-color);
+}
+
+
 .header-forums-link::before {
     content: '';
     width: 24px;

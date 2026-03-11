@@ -145,6 +145,12 @@ const config: Config = {
                     className: 'header-forums-link',
                     'aria-label': 'SparkFun Community Forums',
                 },
+                {
+                    href: 'https://docs.sparkfun.com',
+                    position: 'right',
+                    className: 'header-all-docs-link',
+                    'aria-label': 'SparkFun Documentation',
+                },
             ],
         },
         footer: {
