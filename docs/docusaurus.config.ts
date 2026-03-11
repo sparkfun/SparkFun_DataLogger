@@ -168,11 +168,11 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: 'Community',
+                    title: 'Social Channels',
                     items: [
                         {
                             html: `<table style="border:none; border-collapse:collapse;">
-  <tr border="none">
+  <tr border-top=0>
     <td style="border:none; padding:0;">
       <a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on YouTube">
         <img src="img/social-youtube.svg" class="social-image" alt="SparkFun on YouTube" width="32" height="32" />
