@@ -99,7 +99,7 @@ const config: Config = {
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
             askAi: {
-                indexName: "SparkFun_Documentation_Site_MarkDown",
+                indexName: "SparkFun_Documenation_Site_MarkDown",
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
