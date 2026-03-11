@@ -182,6 +182,13 @@ const config: Config = {
                             label: 'X',
                             href: 'https://x.com/sparkfun',
                         },
+                        {
+                            html: `
+                <a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on YouTube">
+                  <img src="/img/social_youtube.svg" alt="SparkFun on YouTube" width="32" height="32" />
+                </a>
+              `,
+                        }
                     ],
                 },
                 {
