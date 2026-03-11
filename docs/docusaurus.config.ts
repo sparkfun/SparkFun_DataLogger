@@ -199,20 +199,30 @@ const config: Config = {
               `,
                         },
                         {
-                            html: `<div style="display:flex; gap:8px; align-items:center;">
-                                < a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria- label="SparkFun on YouTube" >
-                        <img src="img/social-youtube.svg" class= "social-image" alt = "SparkFun on YouTube" width = "32" height = "32" />
-                        </a>
-                        < a href = "https://www.github.com/sparkfun" target = "_blank" rel = "noreferrer noopener" aria - label="SparkFun on GitHub" >
-                        <img src="img/social-github.svg" class= "social-image" alt = "SparkFun on GitHub" width = "32" height = "32" />
-                        </a>
-                        < a href = "https://www.instagram.com/sparkfun/" target = "_blank" rel = "noreferrer noopener" aria - label="SparkFun on Instagram" >
-                        <img src="img/social-instagram.svg" class= "social-image" alt = "SparkFun on Instagram" width = "32" height = "32" />
-                        </a>
-                        < a href = "https://twitter.com/sparkfun" target = "_blank" rel = "noreferrer noopener" aria - label="SparkFun on Twitter" >
-                        <img src="img/social-twitter.svg" class= "social-image" alt = "SparkFun on Twitter" width = "32" height = "32" />
-                        </a>
-                        </div>`
+                            html: `<table style="border:none; border-collapse:collapse;">
+  <tr>
+    <td style="border:none; padding:0;">
+      <a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on YouTube">
+        <img src="img/social-youtube.svg" class="social-image" alt="SparkFun on YouTube" width="32" height="32" />
+      </a>
+    </td>
+    <td style="border:none; padding:0;">
+      <a href="https://www.github.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on GitHub">
+        <img src="img/social-github.svg" class="social-image" alt="SparkFun on GitHub" width="32" height="32" />
+      </a>
+    </td>
+    <td style="border:none; padding:0;">
+      <a href="https://www.instagram.com/sparkfun/" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on Instagram">
+        <img src="img/social-instagram.svg" class="social-image" alt="SparkFun on Instagram" width="32" height="32" />
+      </a>
+    </td>
+    <td style="border:none; padding:0;">
+      <a href="https://twitter.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on Twitter">
+        <img src="img/social-twitter.svg" class="social-image" alt="SparkFun on Twitter" width="32" height="32" />
+      </a>
+    </td>
+  </tr>
+</table>`
                         }
                     ],
                 },
