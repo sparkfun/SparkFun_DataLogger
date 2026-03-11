@@ -146,6 +146,7 @@ const config: Config = {
                     'aria-label': 'SparkFun Community Forums',
                 },
             ],
+            hideOnScroll: true,
         },
         footer: {
             logo: {
