@@ -138,7 +138,13 @@ const config: Config = {
                     position: 'right',
                     className: 'header-sparkfun-link',
                     'aria-label': 'SparkFun website'
-                }
+                },
+                {
+                    href: 'https://community.sparkfun.com',
+                    position: 'right',
+                    className: 'header-forums-link',
+                    'aria-label': 'SparkFun Community Forums',
+                },
             ],
         },
         footer: {

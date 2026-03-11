@@ -128,6 +128,20 @@ html[data-theme='dark'] footer {
 }
 
 
+.header-forums-link::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: flex;
+    background-color: var(--ifm-navbar-link-color);
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 22 22 L 18 18 L 8 18 C 7.45 18 6.979167 17.804167 6.5875 17.4125 C 6.195833 17.020834 6 16.550001 6 16 L 6 15 L 17 15 C 17.550001 15 18.020834 14.804167 18.4125 14.4125 C 18.804167 14.020833 19 13.55 19 13 L 19 6 L 20 6 C 20.550001 6 21.020834 6.195833 21.4125 6.5875 C 21.804167 6.979166 22 7.449999 22 8 L 22 22 Z M 4 12.175 L 5.175 11 L 15 11 L 15 4 L 4 4 L 4 12.175 Z M 2 17 L 2 4 C 2 3.449999 2.195833 2.979166 2.5875 2.5875 C 2.979167 2.195833 3.45 2 4 2 L 15 2 C 15.55 2 16.020833 2.195833 16.4125 2.5875 C 16.804167 2.979166 17 3.449999 17 4 L 17 11 C 17 11.55 16.804167 12.020833 16.4125 12.4125 C 16.020833 12.804167 15.55 13 15 13 L 6 13 L 2 17 Z M 4 11 L 4 4 L 4 11 Z'/%3E%3C/svg%3E");
+    transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.header-forums-link:hover::before {
+    background-color: var(--ifm-navbar-link-hover-color);
+}
+
 [data-theme='light'] .DocSearch {
     /* --docsearch-primary-color: var(--ifm-color-primary); */
     /* --docsearch-text-color: var(--ifm-font-color-base); */
