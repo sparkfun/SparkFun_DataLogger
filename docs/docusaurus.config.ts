@@ -144,7 +144,6 @@ const config: Config = {
                     position: 'right',
                     className: 'header-forums-link',
                     'aria-label': 'SparkFun Community Forums',
-                    label: 'SparkFun Community Forums'
                 },
             ],
         },
