@@ -61,8 +61,9 @@ const config: Config = {
     ],
     // fix a css issue for docsearch - see https://github.com/facebook/docusaurus/issues/11746
     future: {
+        v4: true,
         experimental_faster: {
-            lightningCssMinimizer: false,
+            lightningCssMinimizer: true,
         },
     },
     themeConfig: {
