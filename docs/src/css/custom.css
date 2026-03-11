@@ -142,6 +142,14 @@ html[data-theme='dark'] footer {
     background-color: var(--ifm-navbar-link-hover-color);
 }
 
+[data-theme='light'] .social-image {
+    filter: invert(0);
+}
+
+[data-theme='dark'] .social-image {
+    filter: invert(1);
+}
+
 [data-theme='light'] .DocSearch {
     /* --docsearch-primary-color: var(--ifm-color-primary); */
     /* --docsearch-text-color: var(--ifm-font-color-base); */

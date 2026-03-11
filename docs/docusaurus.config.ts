@@ -185,7 +185,7 @@ const config: Config = {
                         {
                             html: `
                 <a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria-label="SparkFun on YouTube">
-                  <img src="img/social-youtube.svg" alt="SparkFun on YouTube" width="32" height="32" />
+                  <img src="img/social-youtube.svg" class="social-image" alt="SparkFun on YouTube" width="32" height="32" />
                 </a>
               `,
                         }
