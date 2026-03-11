@@ -199,7 +199,7 @@ const config: Config = {
               `,
                         },
                         {
-                            html: '<div style="display:flex; gap:8px; align-items:center;">
+                            html: `<div style="display:flex; gap:8px; align-items:center;">
                                 < a href="https://www.youtube.com/sparkfun" target="_blank" rel="noreferrer noopener" aria- label="SparkFun on YouTube" >
                         <img src="img/social-youtube.svg" class= "social-image" alt = "SparkFun on YouTube" width = "32" height = "32" />
                         </a>
@@ -212,29 +212,29 @@ const config: Config = {
                         < a href = "https://twitter.com/sparkfun" target = "_blank" rel = "noreferrer noopener" aria - label="SparkFun on Twitter" >
                         <img src="img/social-twitter.svg" class= "social-image" alt = "SparkFun on Twitter" width = "32" height = "32" />
                         </a>
-                        </div>'
-                            }
-            ],
-        },
+                        </div>`
+                        }
+                    ],
+                },
                 {
-    title: 'SparkFun',
-        items: [
-            {
-                label: 'Community Forum',
-                href: 'https://community.sparkfun.com/',
-            },
-            {
-                label: 'SparkFun.com',
-                href: 'https://www.sparkfun.com/',
-            },
-        ],
+                    title: 'SparkFun',
+                    items: [
+                        {
+                            label: 'Community Forum',
+                            href: 'https://community.sparkfun.com/',
+                        },
+                        {
+                            label: 'SparkFun.com',
+                            href: 'https://www.sparkfun.com/',
+                        },
+                    ],
                 },
             ],
-copyright: `Copyright © ${new Date().getFullYear()} SparkFun Electronics`,
+            copyright: `Copyright © ${new Date().getFullYear()} SparkFun Electronics`,
         },
-prism: {
-    theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
 };
