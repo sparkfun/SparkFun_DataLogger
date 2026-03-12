@@ -87,7 +87,7 @@ const config: Config = {
             indexName: indexName,
 
             // Optional: see doc section below
-            contextualSearch: true,
+            contextualSearch: false,
 
             // Optional: path for search page that enabled by default (`false` to disable it)
             searchPagePath: 'search',
