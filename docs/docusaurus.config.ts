@@ -111,7 +111,7 @@ const config: Config = {
             ///
             // Sooo - disabling AskAI for the datalogger - can revisit later.
             //
-            askAi: false,
+
             // askAi: {
             //     indexName: "SparkFun_Documenation_Site_MarkDown",
             //     assistantId: assistantId,
