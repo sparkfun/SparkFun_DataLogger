@@ -109,8 +109,11 @@ const config: Config = {
             // It appears - according to the above docs and observation, that the facet filters 
             // are limited to a small set of values. It's an optimaization most likely for now.
             ///
-            // Sooo - disabling AskAI for the datalogger - can revisit later.
+            // Sooo - options are to have unique index per doc set - hmmm , or 
+            // disabling AskAI for the datalogger - can revisit later.
             //
+            // disable for now. Wait to see if this evolves, or we feel we need to suppport
+            // ai at this level - then make a new index.
 
             // askAi: {
             //     indexName: "SparkFun_Documenation_Site_MarkDown",
