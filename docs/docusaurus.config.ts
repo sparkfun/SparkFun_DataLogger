@@ -99,26 +99,31 @@ const config: Config = {
 
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
-            askAi: {
-                // indexName: "SparkFun_Documenation_Site_MarkDown",
-                indices: [
-                    {
-                        name: "SparkFun_Documenation_Site_MarkDown",
-                        searchParameters: {
-                            facetFilters: ['section:SparkFun_DataLogger'],
-                        },
-                    }
-                ],
-                assistantId: assistantId,
-                apiKey: appKey,
-                appId: appID,
-                // March 2026 - the side panel isn't working -- need to revisit.
-                sidePanel: true,
-                // searchParameters: {
-                //     facetFilters: ['section:SparkFun_DataLogger'],
-                // },
+            //
+            // March, 2026 - Normal search used facetFilters to key off the section attribute,
+            // to limit search results to a specific section. This allows the same overall index
+            // to be used for the datalogger.  This is not available for AskAi.
+            //
+            // see: https://docsearch.algolia.com/docs/api/#askai
+            // 
+            // It appears - according to the above docs and observation, that the facet filters 
+            // are limited to a small set of values. It's an optimaization most likely for now.
+            ///
+            // Sooo - disabling AskAI for the datalogger - can revisit later.
+            //
+            askAi: false,
+            // askAi: {
+            //     indexName: "SparkFun_Documenation_Site_MarkDown",
+            //     assistantId: assistantId,
+            //     apiKey: appKey,
+            //     appId: appID,
+            //     // March 2026 - the side panel isn't working -- need to revisit.
+            //     sidePanel: true,
+            //     searchParameters: {
+            //         facetFilters: ['section:SparkFun_DataLogger'],
+            //     },
 
-            },
+            // },
 
         },
 
