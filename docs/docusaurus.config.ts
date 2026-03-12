@@ -103,7 +103,7 @@ const config: Config = {
                 // indexName: "SparkFun_Documenation_Site_MarkDown",
                 indices: [
                     {
-                        name"SparkFun_Documenation_Site_MarkDown",
+                        name: "SparkFun_Documenation_Site_MarkDown",
                         searchParameters: {
                             facetFilters: ['section:SparkFun_DataLogger'],
                         },
