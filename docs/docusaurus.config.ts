@@ -100,16 +100,23 @@ const config: Config = {
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
             askAi: {
-                indexName: "SparkFun_Documenation_Site_MarkDown",
+                // indexName: "SparkFun_Documenation_Site_MarkDown",
+                indices: [
+                    {
+                        name"SparkFun_Documenation_Site_MarkDown",
+                        searchParameters: {
+                            facetFilters: ['section:SparkFun_DataLogger'],
+                        },
+                    }
+                ],
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,
                 // March 2026 - the side panel isn't working -- need to revisit.
                 sidePanel: true,
-                contextualSearch: true,
-                searchParameters: {
-                    facetFilters: ['section:SparkFun_DataLogger'],
-                },
+                // searchParameters: {
+                //     facetFilters: ['section:SparkFun_DataLogger'],
+                // },
 
             },
 
