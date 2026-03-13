@@ -6,6 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const appKey = process.env.ALGOLIA_APP_KEY;
 const appID = process.env.ALGOLIA_APPID;
 const indexName = process.env.ALGOLIA_INDEX_NAME;
+const indexNameAI = process.env.ALGOLIA_INDEX_NAME_AI;
 const assistantId = process.env.ALGOLIA_ASK_AI_ASSISTANT_ID;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -92,10 +93,14 @@ const config: Config = {
             // Optional: path for search page that enabled by default (`false` to disable it)
             searchPagePath: 'search',
 
-            // only search in the SparkFun DataLogger documentation - restrict on the section facet
-            searchParameters: {
-                facetFilters: ['section:SparkFun_DataLogger'],
-            },
+            // Move to it's own index for now - so don't need this.
+            //------------------------------------------------------------------
+            // NOTE: If using the overall doc index, set  this facet filter up
+            //------------------------------------------------------------------
+            // // only search in the SparkFun DataLogger documentation - restrict on the section facet
+            // searchParameters: {
+            //     facetFilters: ['section:SparkFun_DataLogger'],
+            // },
 
             // note - using a "markdown" index that is separate from the main documentation index.
             // this is recommended by docsearch
@@ -107,26 +112,22 @@ const config: Config = {
             // see: https://docsearch.algolia.com/docs/api/#askai
             // 
             // It appears - according to the above docs and observation, that the facet filters 
-            // are limited to a small set of values. It's an optimaization most likely for now.
+            // are limited to a small set of values. It's an optimization most likely for now.
             ///
             // Sooo - options are to have unique index per doc set - hmmm , or 
             // disabling AskAI for the datalogger - can revisit later.
             //
-            // disable for now. Wait to see if this evolves, or we feel we need to suppport
+            // disable for now. Wait to see if this evolves, or we feel we need to support
             // ai at this level - then make a new index.
+            // using it's own idex March 2026 -
+            askAi: {
+                indexName: indexNameAI,
+                assistantId: assistantId,
+                apiKey: appKey,
+                appId: appID,
+                sidePanel: true,
 
-            // askAi: {
-            //     indexName: "SparkFun_Documenation_Site_MarkDown",
-            //     assistantId: assistantId,
-            //     apiKey: appKey,
-            //     appId: appID,
-            //     // March 2026 - the side panel isn't working -- need to revisit.
-            //     sidePanel: true,
-            //     searchParameters: {
-            //         facetFilters: ['section:SparkFun_DataLogger'],
-            //     },
-
-            // },
+            },
 
         },
 
