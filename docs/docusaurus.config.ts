@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const appKey = process.env.ALGOLIA_APP_KEY;
 const appID = process.env.ALGOLIA_APPID;
 const indexName = process.env.ALGOLIA_INDEX_NAME;
-const indexNameAI = process.env.ALGOLIA_INDEX_NAME_AI;
 const assistantId = process.env.ALGOLIA_ASK_AI_ASSISTANT_ID;
+const assistantIndexName = process.env.ALGOLIA_ASK_AI_INDEX_NAME;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -121,7 +121,7 @@ const config: Config = {
             // ai at this level - then make a new index.
             // using it's own idex March 2026 -
             askAi: {
-                indexName: indexNameAI,
+                indexName: assistantIndexName,
                 assistantId: assistantId,
                 apiKey: appKey,
                 appId: appID,

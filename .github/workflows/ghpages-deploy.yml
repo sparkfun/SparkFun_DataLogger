@@ -31,10 +31,11 @@ jobs:
 
       - name: Build website
         env:
-          ALGOLIA_APP_KEY: ${{ secrets.ALGOLIA_APP_KEY }}
-          ALGOLIA_APPID: ${{ secrets.ALGOLIA_APPID }}
+          ALGOLIA_APP_KEY: ${{ secrets.DOCS_ALGOLIA_APP_KEY }}
+          ALGOLIA_APPID: ${{ secrets.DOCS_ALGOLIA_APPID }}
           ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
           ALGOLIA_ASK_AI_ASSISTANT_ID: ${{ secrets.ALGOLIA_ASK_AI_ASSISTANT_ID }}
+          ALOGLIA_ASK_AI_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME_AI }}
         run: npm run build
 
       - name: Upload Build Artifact
