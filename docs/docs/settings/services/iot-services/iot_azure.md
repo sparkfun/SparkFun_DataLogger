@@ -147,12 +147,6 @@ To load the values by the system at startup using a JSON file and microSD card, 
 
 Once the DataLogger IoT device is configured and running, the Azure IoT capability in the DataLogger IoT posts messages via MQTT to the connected Azure Device via it's IoT Hub. Messages to the device are posted as ***Telemetry Data*** for the device.
 
-The easiest method to view the Telemetry data being sent to an Azure Iot Device is via the Azure IoT Hub extension for the Visual Studio Code editor.
-
-![Azure IoT Hub Extension](/img/iot_az_iot_hub_ext.png)
-
-Once installed, and connected to Azure via the Azure Account extension, you can connect to the target IoT Hub, and monitor telemetry data for a IoT device.
-
 ### Connect to Your Azure IoT Hub
 
 To validate that the DataLoggerIot is communicating with your Azure IoT Hub and the associated devices, several methods are available. All these methods read and post the messages or 'telemetry' sent by the DataLogger to the Azure IoT device.
