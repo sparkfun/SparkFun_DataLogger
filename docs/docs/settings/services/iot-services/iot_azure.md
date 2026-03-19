@@ -97,9 +97,21 @@ The Certificate Authority file for Azure is downloaded from this page:
 
 [Microsoft: Azure Certificate Authority Details](https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details)
 
-The file to download is the ***Baltimore CyberTrust Root*** entry in the **Root Certificate Authorities** section of the page.
-
+The file to download is the ***DigiCert Global Root G2*** entry in the **Root Certificate Authorities** section of the page.
+<figure align="center">
 ![Azure Root CA](/img/iot_az_ca_file.png)
+<figcaption>CA Selection</figcaption>
+</figure>
+
+The CA file is in a binary format and requires conversion to a standard `pem` format  (which starts with ```-----BEGIN CERTIFICATE-----``` to use by the DataLogger's Azure driver.  
+
+To convert the file, the following command is used at the command line of systems with openssl installed
+
+```sh
+openssl x509 -inform DER -in yourcert.crt -out yourcert.pem
+```
+
+Copy the file `yourcert.pem` to an SD card, insert the SD card into the Datalogger and enter the filename `yourcert.pen` in the Azure preferences, or use the JSON file mentioned in the following section.
 
 ## Setting Properties
 
@@ -143,32 +155,43 @@ Once installed, and connected to Azure via the Azure Account extension, you can 
 
 ### Connect to Your Azure IoT Hub
 
-On the Explorer panel of Visual Studio Code, click on the **...** menu of the **AZURE IOT HUB** section. In the popup menu, select the **Select IoT Hub** menu entry.
+To validate that the DataLoggerIot is communicating with your Azure IoT Hub and the associated devices, several methods are available. All these methods read and post the messages or 'telemetry' sent by the DataLogger to the Azure IoT device.
 
-![Select IoT Hub](/img/iot_az_iot_hub_sel.png)
+#### Using the Azure Command Line (CLI)
 
-The available IoT Hubs are displayed in the editors command prompt. Select the desired hub and press ```Enter``` (or click).
+One of the fast methods to do this is using the Azure CLI.
 
-![Select IoT Hub](/img/iot_az_iot_hub_sel_menu.png)
+First, install the Azure CLI. Instructions are provided here: [How to install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
-### Select IoT Hub
+Once installed, the `azure-iot` CLI extension needs installation. This is done with the following command:
 
-The hub is then displayed in the **AZURE IOT HUB** section of the editor Explorer. Expanding the **Devices** section of the Hub will list the example device created above.
+```sh
+az extension add --name azure-iot
+```
 
-![Select IoT Hub](/img/iot_az_iot_hub_exp.png)
+Then make sure you have logged into the Azure with the following command:
 
-### Monitoring
+```sh
+az login
+```
 
-To monitor the telemetry data send to a device, right click on the device, ***TestDevice2023*** in this example, select the menu entry **Start Monitoring Build-in Event Endpoint**.
+Then to monitor telemetry, enter the following command:
 
-![Start Monitoring](/img/iot_az_iot_start_mon.png)
+```sh
+az iot hub monitor-events --hub-name <your-hub> --output table
+```
 
-Once selected, the editor output console will start displaying output for the selected device. For the above example, with a device that has environmental sensors attached, the output appears as follows:
+Where `<your-hub>` is the name of your Azure IoT Hub.
 
-![Monitor Output](/img/iot_az_iot_mon_output.png)
+You can also filter events for a specfic device using this variant of the command:
 
-To stop monitoring, click the **Stop Monitoring build-in event endpoint** item that is displayed in the status bar of the editor.
+```sh
+az iot hub monitor-events --hub-name <your-hub> --device-id <device-id>
+```
 
-![Stop Monitoring](/img/iot_az_iot_stop_mon.png)
+Where `<device-id>` is the ID of the device.
 
-A menu option to stop monitoring is also available from the **...** menu of the **AZURE IOT HUB** section in the editor Explorer panel.
+<figure align="center">
+![Azure CLI Output](/img/iot_az_cli_monitor.png)
+<figcaption>Monitoring Azure Telemetry</figcaption>
+</figure>
