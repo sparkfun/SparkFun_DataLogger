@@ -65,6 +65,7 @@ const config: Config = {
         v4: true,
         experimental_faster: {
             lightningCssMinimizer: true,
+            rspackBundler: false,
         },
     },
     themeConfig: {
