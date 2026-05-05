@@ -5,7 +5,8 @@
 
 * [Schematic (PDF)](/ref/SparkFun_Datalogger_IoT_9DOF_Schematic_v11.pdf)
 * [Eagle Files (ZIP)](/ref/SparkFun_DataLogger_IoT_9DOF_v11.zip)
-* [Board Dimensions (PNG)](/img/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png)
+<!-- * [Board Dimensions (PNG)](/img/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png) -->
+* <a href="/img/SparkFun_Datalogger_IoT_9DOF_Board_Dimensions.png">Board Dimensions (PNG)</a>
 * [Fritzing Part (FZPZ)](https://github.com/sparkfun/Fritzing_Parts/blob/main/products/20594_sfe_datalogger_iot_9dof_esp32_fuel_gauge_imu_micro_sd_card_qwiic.fzpz)
 
 ## DataLogger IoT
