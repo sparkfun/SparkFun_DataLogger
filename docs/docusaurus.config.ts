@@ -63,10 +63,9 @@ const config: Config = {
     // fix a css issue for docsearch - see https://github.com/facebook/docusaurus/issues/11746
     future: {
         v4: true,
-        // experimental_faster: {
-        //     lightningCssMinimizer: true,
-        //     rspackBundler: false,
-        // },
+        experimental_faster: {
+            lightningCssMinimizer: true,
+        },
     },
     themeConfig: {
         // Replace with your project's social card
