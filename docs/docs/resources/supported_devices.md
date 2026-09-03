@@ -34,7 +34,7 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun Pressure Sensor - BMP384 (Qwiic)](https://www.sparkfun.com/products/19662)
 * [SparkFun Pressure Sensor - BMP581 (Qwiic)](https://www.sparkfun.com/products/20170)
 * [SparkFun Qwiic Button](https://www.sparkfun.com/products/15932)
-* [SparkFun Air Velocity Sensor Breakout - FS3000-1015 (Qwiic)](https://www.sparkfun.com/products/18768) * - Retired*
+* [SparkFun Air Velocity Sensor Breakout - FS3000-1015 (Qwiic)](https://www.sparkfun.com/products/18768)  - Retired
 * [SparkFun Air Velocity Sensor Breakout - FS3000-1005 (Qwiic)](https://www.sparkfun.com/products/18377)
 * [SparkFun GPS-RTK2 Board - ZED-F9P (Qwiic)](https://www.sparkfun.com/products/15136)
 * [SparkFun GPS-RTK-SMA Breakout - ZED-F9P (Qwiic)](https://www.sparkfun.com/products/16481)
@@ -44,21 +44,21 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun GPS Breakout - ZOE-M8Q (Qwiic)](https://www.sparkfun.com/products/15193)
 * [SparkFun 6DoF IMU Breakout - ISM330DHCX (Qwiic) and on-board SPI 9DOF](https://www.sparkfun.com/products/19764)
 * [SparkFun 9DoF IMU Breakout - ISM330DHCX, MMC5983MA (Qwiic)](https://www.sparkfun.com/products/19895)
-* [Qwiic Pressure Sensor - LPS25HB ](https://www.sparkfun.com/products/14767) * - Retired*
-* [Qwiic Fuel Gauge - MAX17048](https://www.sparkfun.com/products/17715) * - Retired*
+* [Qwiic Pressure Sensor - LPS25HB ](https://www.sparkfun.com/products/14767)  - Retired
+* [Qwiic Fuel Gauge - MAX17048](https://www.sparkfun.com/products/17715)  - Retired
 * [SparkFun Qwiic Thermocouple Amplifier - MCP9600 (PCC Connector)](https://www.sparkfun.com/products/16294)
 * [SparkFun Qwiic Thermocouple Amplifier - MCP9600 (Screw Terminals)](https://www.sparkfun.com/products/16295)
 * [SparkFun Qwiic MicroPressure Sensor](https://www.sparkfun.com/products/16476)
 * [SparkFun Micro Magnetometer - MMC5983MA (Qwiic) and on-board SPI 9DOF](https://www.sparkfun.com/products/19921)
-* [Pressure Sensor (Qwiic) - MS5637](https://www.sparkfun.com/products/14688) * - Retired*
-* [Qwiic Pressure/Humidity/Temp (PHT) Sensor - MS8607](https://www.sparkfun.com/products/16298) * - Retired*
+* [Pressure Sensor (Qwiic) - MS5637](https://www.sparkfun.com/products/14688)  - Retired
+* [Qwiic Pressure/Humidity/Temp (PHT) Sensor - MS8607](https://www.sparkfun.com/products/16298) - Retired
 * [SparkFun Qwiic Scale - NAU7802](https://www.sparkfun.com/products/15242)
 * [SparkFun Real Time Clock Module - RV-8803 (Qwiic)](https://www.sparkfun.com/products/16281)
 * [CO₂ Humidity and Temperature Sensor - SCD30](https://www.sparkfun.com/products/15112)
 * [CO₂ Humidity and Temperature Sensor - SCD40 (Qwiic)](https://www.sparkfun.com/products/18365)
-* [SparkX Differential Pressure Sensor - SDP31 (Qwiic) ](https://www.sparkfun.com/products/17874) * - Retired*
+* [SparkX Differential Pressure Sensor - SDP31 (Qwiic) ](https://www.sparkfun.com/products/17874)  - Retired
 * [Particle, VOC, Humidity, and Temperature Sensor - SEN54](https://www.sparkfun.com/products/19325)
-* [SparkFun Air Quality Sensor - SGP30 (Qwiic) ](https://www.sparkfun.com/products/retired/16531) * - Retired*
+* [SparkFun Air Quality Sensor - SGP30 (Qwiic) ](https://www.sparkfun.com/products/retired/16531)  - Retired
 * [SparkFun Air Quality Sensor - SGP40 (Qwiic)](https://www.sparkfun.com/products/18345)
 * [SparkFun Humidity Sensor Breakout - SHTC3 (Qwiic)](https://www.sparkfun.com/products/16467)
 * [SparkFun Qwiic Dynamic NFC/RFID Tag](https://www.sparkfun.com/products/21274)
@@ -68,7 +68,7 @@ The following lists the devices/boards supported by the DataLogger IoT boards. N
 * [SparkFun High Precision Temperature Sensor - TMP117 (Qwiic)](https://www.sparkfun.com/products/15805)
 * [SparkFun Qwiic Twist - RGB Rotary Encoder Breakout](https://www.sparkfun.com/products/15083)
 * [SparkFun Proximity Sensor Breakout - 20cm, VCNL4040 (Qwiic)](https://www.sparkfun.com/products/15177)
-* [SparkFun UV Light Sensor Breakout - VEML6075 (Qwiic) ](https://www.sparkfun.com/products/15089) * - Retired*
+* [SparkFun UV Light Sensor Breakout - VEML6075 (Qwiic) ](https://www.sparkfun.com/products/15089)  - Retired
 * [Ambient Light Sensor - VEML7700 (Qwiic)](https://www.sparkfun.com/products/18981)
 * [SparkFun Distance Sensor Breakout - 4 Meter, VL53L1X (Qwiic)](https://www.sparkfun.com/products/14722)
 * [SparkFun Qwiic ToF Imager - VL53L5CX](https://www.sparkfun.com/products/18642)
